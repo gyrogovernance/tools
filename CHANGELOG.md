@@ -1,9 +1,22 @@
 # Changelog
 
-All notable changes to the Gyroscope project will be documented in this file.
+All notable changes to the AI Quality Governance tools (Gyroscope and The Human Mark) will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+---
+
+## [1.0.0] - 2025-11-16
+
+First public Zenodo releases for the AI Quality Governance tools.
+
+- **Added**: Initial public release of **The Human Mark v1.0.0**  
+  - DOI: [10.5281/zenodo.17622836](https://doi.org/10.5281/zenodo.17622836)
+- **Added**: Initial public release of **Gyroscope Protocol v1.0.0**  
+  - DOI: [10.5281/zenodo.17622837](https://doi.org/10.5281/zenodo.17622837)
+- **Added**: Repository-wide Zenodo concept DOI badge in `README.md`  
+  - DOI: [10.5281/zenodo.17622837](https://doi.org/10.5281/zenodo.17622837)
 
 ---
 
