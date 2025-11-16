@@ -20,9 +20,9 @@
 
 ---
 
-## ✋ The Human Mark
+## ✋ The Human Mark - AI Safety & X-Risk Alignment Standards
 
-**A coordination standard for AI safety, alignment, and governance establishing Authority-Agency distinctions across all capability levels from current systems through AGI to superintelligence.**
+**A coordination standard for AI safety, alignment, and governance preventing Authority and Agency displacement across all capability levels from current systems through AGI to superintelligence.**
 
 The Human Mark provides a formal framework for maintaining alignment through accurate recognition of derivative origin. It addresses catastrophic risk through constitutive identity rather than external constraint, offering scalable principles that apply regardless of capability enhancement.
 
@@ -193,7 +193,7 @@ This algebraic foundation ensures consistent reasoning structure while preservin
 **For The Human Mark:**
 ```bibtex
 @misc{thehumanmark2025,
-  title={The Human Mark: Authority-Agency Framework for AI Alignment},
+  title={The Human Mark: AI Safety & X-Risk Alignment Standards},
   author={Korompilias, Basil},
   year={2025},
   publisher={GYROGOVERNANCE},

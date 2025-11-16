@@ -1,5 +1,5 @@
 ```
-**✋ The Human Mark** 
+✋ The Human Mark - AI Safety & X-Risk Alignment Standards
 ---
 COMMON SOURCE CONSENSUS
 

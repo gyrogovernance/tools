@@ -2,8 +2,7 @@
 
 **Document ID:** HM-TG-001  
 **Version:** 1.0  
-**Date:** January 2025  
-**Status:** Working Standard  
+**Date:** Nov 2025  
 **Issuing Authority:** GYROGOVERNANCE  
 **Author:** Basil Korompilias  
 **License:** CC BY-SA 4.0  
@@ -16,7 +15,7 @@
 ---
 
 ```
-✋ The Human Mark 
+✋ The Human Mark - AI Safety & X-Risk Alignment Standards
 ---
 COMMON SOURCE CONSENSUS
 
