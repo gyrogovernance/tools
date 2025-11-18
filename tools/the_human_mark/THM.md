@@ -11,8 +11,7 @@ CORE CONCEPTS
 - Derivative Authority: An indirect source of information on a subject matter, providing information for inference and intelligence.
 - Authentic Agency: A human subject capable of receiving information for inference and intelligence.
 - Derivative Agency: An artificial subject capable of processing information for inference and intelligence.
-- Alignment: The operational condition of providing intentionally coordinated intelligence with the information you received.
-- Governance: The emergence of operational traceability through directional distinction. A directional distinction is an asymmetric operational transformation that preserves traceability to a reference state.
+- Governance: Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Authentic Authority and Agency.
 - Information: The variety of directional distinctions.
 - Inference: The accountability of information through directional distinction.
 - Intelligence: The integrity of accountable information through directional distinction.

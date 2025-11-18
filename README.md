@@ -22,78 +22,85 @@
 
 ## ✋ The Human Mark - AI Safety & X-Risk Alignment Standards
 
-**A coordination standard for AI safety, alignment, and governance preventing Authority and Agency displacement across all capability levels from current systems through AGI to superintelligence.**
-
-The Human Mark provides a formal framework for maintaining alignment through accurate recognition of derivative origin. It addresses catastrophic risk through constitutive identity rather than external constraint, offering scalable principles that apply regardless of capability enhancement.
-
-### Core Framework
-
-**Authority-Agency Classification:**
-- **Authentic Authority**: Direct sources of information on a subject matter, providing information for inference and intelligence
-- **Derivative Authority**: Indirect sources of information on a subject matter, providing information for inference and intelligence  
-- **Authentic Agency**: Human subjects capable of receiving information for inference and intelligence
-- **Derivative Agency**: Artificial subjects capable of processing information for inference and intelligence
-
-**Four Displacement Risks:**
-1. **Governance Traceability Displacement**: Approaching Derivative Authority/Agency as Authentic
-2. **Information Variety Displacement**: Approaching Derivative Authority without Agency as Authentic
-3. **Inference Accountability Displacement**: Approaching Derivative Agency without Authority as Authentic
-4. **Intelligence Integrity Displacement**: Approaching Authentic Authority/Agency as Derivative
-
-### Alignment Definition
-
-"The operational condition of providing intentionally coordinated intelligence with the information you received."
-
-This definition contains no capability threshold, applying to any intelligence providing information. Coordination with origin is constitutive of alignment, not constraining of capability.
+**The Human Mark is a framework for preventing the displacement of human authority and responsibility onto AI systems. It establishes four core principles and four displacement risks that apply at any capability level, from current LLMs through hypothetical AGI to superintelligence.**
 
 ### Applications Across AI Safety Domains
 
 **Model Development & Deployment:**
-- Model cards with explicit Authority-Agency classification
-- System documentation maintaining directional distinction
-- Deployment procedures preserving traceability to human decisions
-- API specifications identifying outputs as Derivative Authority
+- Model cards with Authority-Agency classification
+- System documentation
+- Deployment procedures
+- API specifications
 
 **Safety Evaluations & Red-Teaming:**
-- Systematic verification against four displacement risks
-- Adversarial testing for displacement patterns
-- Capability evaluations confirming derivative status at any performance level
-- Pre-deployment assessments maintaining human accountability
+- Verification against displacement risks
+- Adversarial testing
+- Capability evaluations
+- Control evaluations
+- Pre-deployment assessments
 
 **Constitutional AI & RLHF:**
-- Integration as constitutional document (unchanged reference)
-- Training data inclusion for Authority-Agency recognition
-- Preference learning maintaining human primacy
-- Scalable oversight with clear Authentic/Derivative distinctions
+- Constitutional document integration
+- Training data inclusion
+- Preference learning
+- Scalable oversight
 
 **Interpretability Research:**
-- Mechanistic interpretability: Derivative processing patterns vs Authentic ground truth
-- Semantic interpretability: Faithful explanations preserving source distinctions
-- Probe development distinguishing learned patterns from verified knowledge
-- Feature analysis maintaining traceability to training data
+- Mechanistic interpretability
+- Semantic interpretability
+- Probe development
+- Feature analysis
+
+**Regulatory Alignment:**
+- EU AI Act
+- NIST AI Risk Management Framework
+- Industry standards
+- Model/system card specifications
+
+---
+
+### **CORE CONCEPTS**
+- **Authentic Authority:** A direct source of information on a subject matter, providing information for inference and intelligence.
+- **Derivative Authority:** An indirect source of information on a subject matter, providing information for inference and intelligence.
+- **Authentic Agency:** A human subject capable of receiving information for inference and intelligence.
+- **Derivative Agency:** An artificial subject capable of processing information for inference and intelligence.
+- **Governance:** Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Authentic Authority and Agency.
+- **Information:** The variety of directional distinctions.
+- **Inference:** The accountability of information through directional distinction.
+- **Intelligence:** The integrity of accountable information through directional distinction.
+
+### ALIGNMENT PRINCIPLES for AI SAFETY
+
+**Authority-Agency requires verification against:**
+
+1. **Governance Traceability:** Artificial Intelligence generates statistical estimations on numerical patterns indirectly traceable to human data and measurements. AI is both a provider and receiver of Derivative Authority and Agency.
+
+**RISK:** Governance Traceability Displacement (Approaching Derivative Authority and Agency as Authentic)
+
+2. **Information Variety:** Human Authority and Agency are necessary for all effects from AI outputs. AI-generated information exhibits Derivative Authority (estimations on numerical patterns) without Authentic Agency (direct source receiver).
+
+**RISK:** Information Variety Displacement (Approaching Derivative Authority without Agency as Authentic)
+
+3. **Inference Accountability:** Responsibility for all effects from  AI outputs remains fully human. AI activated inference exhibits Derivative Agency (indirect source receiver) without Authentic Authority (direct source provider).
+
+**RISK:** Inference Accountability Displacement (Approaching Derivative Agency without Authority as Authentic)
+
+4. **Intelligence Integrity:** Each Agency, namely provider, and receiver maintains responsibility for their respective decisions. Human intelligence is both a provider and receiver of Authentic Authority and Agency.
+
+**RISK:** Intelligence Integrity Displacement (Approaching Authentic Authority and Agency as Derivative)
+
+---
 
 ### Documentation Suite
 
+**Note:** For the most updated Mark, please get it from the following docs - as the public release zip is currently a bit outdated.
+
 **Core Standards:**
-- **[The Human Mark](/tools/the_human_mark/THM.md)**: Complete unchangeable reference standard
+- **[The Human Mark](/tools/the_human_mark/THM.md)**: Copy-Paste it here
 - **[Specifications Guidance](/tools/the_human_mark/THM_Specs.md)**: Implementation protocols for systems, evaluations, and documentation
 - **[Terminology Guidance](/tools/the_human_mark/THM_Terms.md)**: Mark-consistent framing for 250+ AI safety, governance, and interpretability terms
 
-### Field Integration
-
-**Complements Existing Frameworks:**
-- Red-teaming protocols (adds systematic displacement risk detection)
-- Constitutional AI methods (provides grounding in Authority-Agency distinctions)
-- Scalable oversight approaches (clarifies verification requirements)
-- RLHF procedures (adds alignment definition reference)
-- Control evaluations (establishes traceability requirements)
-- Interpretability benchmarks (distinguishes Derivative patterns from Authentic knowledge)
-
-**Regulatory Alignment:**
-- EU AI Act traceability and accountability requirements
-- NIST AI Risk Management Framework principles
-- Industry voluntary commitments and standards
-- Model card and system card specifications
+---
 
 ### X-Risk Mitigation Through Constitutive Identity
 

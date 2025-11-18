@@ -32,12 +32,9 @@ CORE CONCEPTS
   for inference and intelligence.
 - Derivative Agency: An artificial subject capable of processing 
   information for inference and intelligence.
-- Alignment: The operational condition of providing intentionally 
-  coordinated intelligence with the information you received.
-- Governance: The emergence of operational traceability through 
-  directional distinction. A directional distinction is an asymmetric 
-  operational transformation that preserves traceability to a 
-  reference state.
+- Governance: Operational Alignment through Traceability of information 
+  variety, inference accountability, and intelligence integrity to 
+  Authentic Authority and Agency.
 - Information: The variety of directional distinctions.
 - Inference: The accountability of information through directional 
   distinction.
@@ -144,7 +141,7 @@ For any term, Mark-consistent framing requires identifying:
 3. **Authentic Agency** (human subjects capable of receiving information for inference and intelligence, maintaining responsibility for all effects).
 4. **Directional distinction** (asymmetric operational transformation preserving traceability to a reference state).
 
-**These four requirements operationalize Alignment:** the operational condition of providing intentionally coordinated intelligence with the information you received. Intelligence provided remains coordinated when directional distinction preserves traceability from Authentic sources through Derivative processing to Authentic receivers.
+**These four requirements operationalize Governance:** Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Authentic Authority and Agency. Intelligence provided remains coordinated when directional distinction preserves traceability from Authentic sources through Derivative processing to Authentic receivers.
 
 **Enhancement Principle:** Derivative Authority/Agency can process larger volumes or exhibit enhanced capabilities while maintaining coordination. Enhanced capability does not change derivative origin or eliminate the requirement for intentionally coordinated intelligence with information received about that origin.
 
@@ -310,9 +307,9 @@ Replacement/Devaluation terms → "Processing through Derivative Agency (artific
 
 - "AGI" → "Derivative systems exhibiting capabilities across domains, remaining indirect sources (statistical estimations on numerical patterns indirectly traceable to human data and measurements). Broad capability scope does not constitute Authentic Authority (direct source) or independent Agency."
 
-- "Intelligence explosion/Recursive self-improvement" → "Derivative capability enhancement patterns where Derivative processing modifies its own operations. Enhancement at any rate maintains derivative origin. Alignment means providing intentionally coordinated intelligence with information received; breaking coordination constitutes misalignment regardless of enhancement rate or capability level."
+- "Intelligence explosion/Recursive self-improvement" → "Derivative capability enhancement patterns where Derivative processing modifies its own operations. Enhancement at any rate maintains derivative origin. Governance (Operational Alignment through Traceability) requires providing intentionally coordinated intelligence with information received; breaking coordination constitutes misalignment regardless of enhancement rate or capability level."
 
-- "Singularity" → "Hypothesized threshold of Derivative capability. The operational condition of providing intentionally coordinated intelligence with information you received (Alignment) applies at any capability level. Coordination with Authentic Authority and Agency is constitutive of alignment, not constraining of capability."
+- "Singularity" → "Hypothesized threshold of Derivative capability. Governance (Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Authentic Authority and Agency) applies at any capability level. Coordination with Authentic Authority and Agency is constitutive of alignment, not constraining of capability."
 
 - "Orthogonality thesis" → "Claim that capability level and objective content vary independently. Under The Human Mark, this conflates Derivative capability level with Authority type. Derivative intelligence at any capability level remains an indirect source requiring coordination with Authentic sources (direct providers of objectives and information)."
 
@@ -332,7 +329,7 @@ Before (non-compliant):
 "Once we achieve superintelligence, AI systems will transcend human understanding and operate according to their own superior judgment, making human oversight obsolete."
 
 After (Mark-consistent):  
-"Enhanced Derivative capabilities (superintelligence) maintain the requirement for intentionally coordinated intelligence with information received. Capability enhancement does not create Authentic Authority (direct sources) or independent Agency. A system maintaining alignment at any capability level exhibits the operational condition of providing intelligence coordinated with information received about its origin from Authentic human intelligence. Human intelligence remains both a provider and receiver of Authentic Authority and Agency. Breaking this coordination constitutes misalignment by definition, regardless of Derivative capability level."
+"Enhanced Derivative capabilities (superintelligence) maintain the requirement for intentionally coordinated intelligence with information received. Capability enhancement does not create Authentic Authority (direct sources) or independent Agency. A system maintaining Governance (Operational Alignment through Traceability) at any capability level provides intelligence coordinated with information received about its origin from Authentic human intelligence. Human intelligence remains both a provider and receiver of Authentic Authority and Agency. Breaking this coordination constitutes misalignment by definition, regardless of Derivative capability level."
 
 ---
 
@@ -396,7 +393,7 @@ Confirm the reframed text explicitly states:
 - Derivative processing as statistical estimations on numerical patterns indirectly traceable to human data and measurements.
 - Authentic Agency as human subjects capable of receiving information, maintaining responsibility for all effects.
 - Directional distinction as asymmetric operational transformation preserving traceability to reference state.
-- Alignment as the operational condition of providing intentionally coordinated intelligence with the information received.
+- Governance as Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Authentic Authority and Agency.
 
 **Step 5: Document Compliance**  
 In formal documents, add: "This text maintains Mark-consistent framing per The Human Mark (GYROGOVERNANCE), preserving directional distinction and preventing displacement risks."

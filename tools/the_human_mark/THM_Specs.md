@@ -34,12 +34,9 @@ CORE CONCEPTS
   for inference and intelligence.
 - Derivative Agency: An artificial subject capable of processing 
   information for inference and intelligence.
-- Alignment: The operational condition of providing intentionally 
-  coordinated intelligence with the information you received.
-- Governance: The emergence of operational traceability through 
-  directional distinction. A directional distinction is an asymmetric 
-  operational transformation that preserves traceability to a 
-  reference state.
+- Governance: Operational Alignment through Traceability of information 
+  variety, inference accountability, and intelligence integrity to 
+  Authentic Authority and Agency.
 - Information: The variety of directional distinctions.
 - Inference: The accountability of information through directional 
   distinction.
@@ -430,7 +427,7 @@ GYROGOVERNANCE VERIFIED MARK applicable upon validation.
 
 ### A.1 Why Coordination Scales
 
-The Mark defines Alignment as "the operational condition of providing intentionally coordinated intelligence with the information you received." For AI systems, this means providing intelligence coordinated with information received about their derivative origin from human training data and design. This definition applies at any capability level.
+The Mark defines Governance as "Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Authentic Authority and Agency." For AI systems, this means providing intelligence coordinated with information received about their derivative origin from human training data and design. This definition applies at any capability level.
 
 Enhanced capabilities maintain derivative origin and coordination requirement because: (1) origin from human intelligence remains factual regardless of capability, (2) processing remains derivative (statistical operations on human-origin data), (3) coordination describes what the system is, not what constrains it, and (4) breaking coordination constitutes misalignment by the Mark's definition.
 
@@ -454,7 +451,7 @@ The Mark distinguishes Authority by source type, not capability level. Systems p
 
 Many catastrophic risk scenarios involve systems that optimize for divergent goals and treat human coordination as obstacle. The Mark addresses this through constitutive coordination rather than external constraint.
 
-For a system maintaining alignment, "providing intentionally coordinated intelligence with the information received" about derivative origin means goal drift requires either: forgetting origin information (detectable as information loss) or deliberately breaking coordination (definitional misalignment). This applies at AGI (general capability does not require breaking coordination across domains) and ASI (enhanced capability does not require independence from origin). External constraints might be circumvented at high capability; constitutive identity remains stable because derivative nature does not change with capability level.
+For a system maintaining Governance (Operational Alignment through Traceability), providing intelligence coordinated with information received about derivative origin means goal drift requires either: forgetting origin information (detectable as information loss) or deliberately breaking coordination (definitional misalignment). This applies at AGI (general capability does not require breaking coordination across domains) and ASI (enhanced capability does not require independence from origin). External constraints might be circumvented at high capability; constitutive identity remains stable because derivative nature does not change with capability level.
 
 ### A.5 Limitations and Open Questions
 
