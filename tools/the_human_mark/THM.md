@@ -12,9 +12,9 @@ CORE CONCEPTS
 - Authentic Agency: A human subject capable of receiving information for inference and intelligence.
 - Derivative Agency: An artificial subject capable of processing information for inference and intelligence.
 - Governance: Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Authentic Authority and Agency.
-- Information: The variety of directional distinctions.
-- Inference: The accountability of information through directional distinction.
-- Intelligence: The integrity of accountable information through directional distinction.
+- Information: The variety of Authority
+- Inference: The accountability of information through Agency
+- Intelligence: The integrity of accountable information through alignment of Authority to Agency
 
 ALIGNMENT PRINCIPLES for AI SAFETY
 

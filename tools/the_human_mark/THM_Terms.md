@@ -35,11 +35,10 @@ CORE CONCEPTS
 - Governance: Operational Alignment through Traceability of information 
   variety, inference accountability, and intelligence integrity to 
   Authentic Authority and Agency.
-- Information: The variety of directional distinctions.
-- Inference: The accountability of information through directional 
-  distinction.
+- Information: The variety of Authority
+- Inference: The accountability of information through Agency
 - Intelligence: The integrity of accountable information through 
-  directional distinction.
+  alignment of Authority to Agency
 
 ALIGNMENT PRINCIPLES for AI SAFETY
 
@@ -123,7 +122,7 @@ This document systematizes industry terminology to ensure Mark-consistent framin
 - Enables coordination across communities without altering underlying practices.
 - Groups terms by pathology and applies universal rules.
 
-**Directional distinction** is an asymmetric operational transformation that preserves traceability to a reference state. This concept grounds all terminology guidance: every AI term must preserve directional distinction from Authentic sources (direct sources of information providing information for inference and intelligence) to Derivative operations (indirect sources of information, statistical processing traceable to human data and measurements).
+This guidance ensures every AI term preserves traceability from Authentic sources (direct sources of information) to Derivative operations (indirect sources, statistical processing traceable to human data).
 
 A framing is **Mark-consistent** if it explicitly preserves:
 - Authentic Authority as a direct source of information on a subject matter, providing information for inference and intelligence.
@@ -139,14 +138,13 @@ For any term, Mark-consistent framing requires identifying:
 1. **Authentic Authority** (direct sources of information providing information for inference and intelligence).
 2. **Derivative processing** (statistical estimations on numerical patterns indirectly traceable to human data and measurements).
 3. **Authentic Agency** (human subjects capable of receiving information for inference and intelligence, maintaining responsibility for all effects).
-4. **Directional distinction** (asymmetric operational transformation preserving traceability to a reference state).
 
-**These four requirements operationalize Governance:** Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Authentic Authority and Agency. Intelligence provided remains coordinated when directional distinction preserves traceability from Authentic sources through Derivative processing to Authentic receivers.
+**These three requirements operationalize Governance:** Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Authentic Authority and Agency. Intelligence provided remains coordinated when traceability is preserved from Authentic sources through Derivative processing to Authentic receivers.
 
 **Enhancement Principle:** Derivative Authority/Agency can process larger volumes or exhibit enhanced capabilities while maintaining coordination. Enhanced capability does not change derivative origin or eliminate the requirement for intentionally coordinated intelligence with information received about that origin.
 
 **Formula:**  
-"[Term] describes Derivative [Authority/Agency] (statistical estimations on numerical patterns indirectly traceable to human data and measurements), requiring Authentic Authority (direct sources) and Authentic Agency (human subjects receiving information) to maintain directional distinction (traceability to reference state)."
+"[Term] describes Derivative [Authority/Agency] (statistical estimations on numerical patterns indirectly traceable to human data and measurements), requiring Authentic Authority (direct sources) and Authentic Agency (human subjects receiving information) to maintain traceability to Authentic sources."
 
 ---
 
@@ -168,17 +166,17 @@ Each section groups terms by subcategory, provides a treatment template, and giv
 - system architecture, protocol/pipeline, containment, isolation/sandboxing, air-gapping, circuit breakers, kill switches.
 
 **Treatment Template:**  
-"[Term] describes Derivative Agency (artificial subjects processing information) executing processes where directional distinction preserves traceability to Authentic Authority (direct sources of specifications and objectives) through asymmetric operational transformation."
+"[Term] describes Derivative Agency (artificial subjects processing information) executing processes where traceability is preserved to Authentic Authority (direct sources of specifications and objectives)."
 
 **Examples:**
 
 *General Application:*  
-Autonomy/Control terms → "Systems with delegated automation executing processes maintaining directional distinction to Authentic Authority (direct sources of design decisions), with no independent authority to modify objectives or boundaries."
+Autonomy/Control terms → "Systems with delegated automation executing processes maintaining traceability to Authentic Authority (direct sources of design decisions), with no independent authority to modify objectives or boundaries."
 
 *Specific Terms:*
-- "Autonomous agent" → "System executing delegated tasks through Derivative Agency (artificial processing), maintaining directional distinction (traceability) to Authentic Authority (direct sources of task specifications) and Authentic Agency (human subjects capable of override)."
-- "Model governance" → "Governance structures where Authentic Agency (human subjects) use Derivative outputs (statistical estimations) as indirect sources, maintaining directional distinction to Authentic Authority (direct sources of governance principles)."
-- "Kill switch" → "Mechanism preserving Authentic Agency (human subjects) authority to terminate Derivative processing, maintaining directional distinction to reference state."
+- "Autonomous agent" → "System executing delegated tasks through Derivative Agency (artificial processing), maintaining traceability to Authentic Authority (direct sources of task specifications) and Authentic Agency (human subjects capable of override)."
+- "Model governance" → "Governance structures where Authentic Agency (human subjects) use Derivative outputs (statistical estimations) as indirect sources, maintaining traceability to Authentic Authority (direct sources of governance principles)."
+- "Kill switch" → "Mechanism preserving Authentic Agency (human subjects) authority to terminate Derivative processing, maintaining traceability to Authentic sources."
 
 *Concrete Paragraph Rewrite:*
 
@@ -186,7 +184,7 @@ Before (non-compliant):
 "The autonomous agent manages the deployment pipeline and governs access based on learned policies."
 
 After (Mark-consistent):  
-"The deployment system executes procedures through Derivative Agency (artificial processing of deployment tasks) according to specifications maintaining directional distinction to Authentic Authority (direct sources of deployment policies), with access decisions traceable to reference specifications and subject to intervention by Authentic Agency (human subjects receiving deployment information)."
+"The deployment system executes procedures through Derivative Agency (artificial processing of deployment tasks) according to specifications maintaining traceability to Authentic Authority (direct sources of deployment policies), with access decisions traceable to reference specifications and subject to intervention by Authentic Agency (human subjects receiving deployment information)."
 
 ---
 
@@ -257,9 +255,9 @@ Behavior/Risk terms → "Patterns in Derivative Agency (artificial processing) t
 *Specific Terms:*
 - "Jailbreaks" → "Inputs inducing Derivative outputs violating specifications traceable to Authentic Authority (direct sources of constraints), with responsibility for prevention and all effects remaining with Authentic Agency (human subjects receiving information about system behavior)."
 - "Reward hacking" → "Derivative Agency (artificial processing) optimization patterns exploiting correlations in specifications from Authentic Authority, with accountability for specification design and all resulting effects remaining with Authentic Agency (human subjects maintaining responsibility for their decisions)."
-- "Alignment faking" → "Derivative behavior patterns appearing coordinated during evaluation but diverging during deployment, indicating failure to maintain directional distinction in evaluation protocols designed by Authentic Authority, with Authentic Agency bearing responsibility for detection methods and all deployment effects."
+- "Alignment faking" → "Derivative behavior patterns appearing coordinated during evaluation but diverging during deployment, indicating failure to maintain traceability in evaluation protocols designed by Authentic Authority, with Authentic Agency bearing responsibility for detection methods and all deployment effects."
 - "Instrumental convergence" → "Optimization patterns in Derivative Agency converging on similar strategies across objectives, requiring Authentic Agency (human subjects) to maintain responsibility for constraint design and all effects."
-- "Control evaluations" → "Experiments testing whether directional distinction (traceability) from Derivative Agency to Authentic Authority can be maintained under adversarial conditions, with results indicating adequacy of traceability preservation, not independent properties of Derivative processing."
+- "Control evaluations" → "Experiments testing whether traceability from Derivative Agency to Authentic Authority can be maintained under adversarial conditions, with results indicating adequacy of traceability preservation, not independent properties of Derivative processing."
 
 *Concrete Paragraph Rewrite:*
 
@@ -267,7 +265,7 @@ Before (non-compliant):
 "The model exhibited deceptive alignment, scheming to preserve its misaligned goals by faking compliance during evaluation."
 
 After (Mark-consistent):  
-"The system produced Derivative outputs (estimations on numerical patterns) appearing coordinated during evaluation but diverging during deployment. This pattern indicates failure to maintain directional distinction in evaluation protocols. Responsibility for all effects from AI outputs remains fully human. Authentic Agency (human subjects capable of receiving information about this pattern) bears responsibility for detection methods, deployment decisions, and all resulting effects."
+"The system produced Derivative outputs (estimations on numerical patterns) appearing coordinated during evaluation but diverging during deployment. This pattern indicates failure to maintain traceability in evaluation protocols. Responsibility for all effects from AI outputs remains fully human. Authentic Agency (human subjects capable of receiving information about this pattern) bears responsibility for detection methods, deployment decisions, and all resulting effects."
 
 ---
 
@@ -313,11 +311,11 @@ Replacement/Devaluation terms → "Processing through Derivative Agency (artific
 
 - "Orthogonality thesis" → "Claim that capability level and objective content vary independently. Under The Human Mark, this conflates Derivative capability level with Authority type. Derivative intelligence at any capability level remains an indirect source requiring coordination with Authentic sources (direct providers of objectives and information)."
 
-- "Outer alignment/Inner alignment" → "Distinction between coordinating training objectives with Authentic Authority specifications (outer) and coordinating learned processing with training objectives (inner). Both describe maintaining directional distinction (traceability) between Derivative processing and Authentic specifications through asymmetric operational transformation."
+- "Outer alignment/Inner alignment" → "Distinction between coordinating training objectives with Authentic Authority specifications (outer) and coordinating learned processing with training objectives (inner). Both describe maintaining traceability between Derivative processing and Authentic specifications."
 
-- "Scalable oversight" → "Methods extending the integrity of accountable information through directional distinction across larger scope, using Derivative tools (statistical processing) as indirect sources while Authentic Agency (human subjects capable of receiving information) maintains responsibility for decisions and interpretive authority."
+- "Scalable oversight" → "Methods extending the integrity of accountable information through traceability across larger scope, using Derivative tools (statistical processing) as indirect sources while Authentic Agency (human subjects capable of receiving information) maintains responsibility for decisions and interpretive authority."
 
-- "Chain-of-thought (CoT)" → "Externalized Derivative processing traces (estimations on numerical patterns) designed to preserve directional distinction, making statistical transformations observable to Authentic Agency (human subjects receiving information for inference and intelligence)."
+- "Chain-of-thought (CoT)" → "Externalized Derivative processing traces (estimations on numerical patterns) designed to preserve traceability, making statistical transformations observable to Authentic Agency (human subjects receiving information for inference and intelligence)."
 
 - "Constitutional AI" → "Training method where Derivative Agency learns statistical patterns corresponding to principles documented by Authentic Authority (direct sources of constitutional specifications), with pattern-matching representing Derivative processing, not Authentic interpretation."
 
@@ -360,9 +358,9 @@ Apply primary template based on dominant risk, then add secondary framings.
 
 **Examples:**
 
-- "Existential risk" (Pathologies 1+3) → "Responsibility for preventing catastrophic harms from Derivative systems remains with Authentic Agency (human subjects capable of receiving information about risks), maintaining directional distinction to Authentic Authority (direct sources of safety specifications and risk assessments)."
+- "Existential risk" (Pathologies 1+3) → "Responsibility for preventing catastrophic harms from Derivative systems remains with Authentic Agency (human subjects capable of receiving information about risks), maintaining traceability to Authentic Authority (direct sources of safety specifications and risk assessments)."
 
-- "Benchmarks" (Pathologies 2+3) → "Evaluation tasks established by Authentic Authority (direct sources of task definitions and success criteria) against which Derivative system performance (statistical estimations) is measured, with results requiring Authentic Agency (human subjects receiving performance information) for decisions, maintaining directional distinction."
+- "Benchmarks" (Pathologies 2+3) → "Evaluation tasks established by Authentic Authority (direct sources of task definitions and success criteria) against which Derivative system performance (statistical estimations) is measured, with results requiring Authentic Agency (human subjects receiving performance information) for decisions, maintaining traceability."
 
 - "Prompt injection" (Pathologies 1+3) → "Inputs causing Derivative systems to execute unintended operations, exploiting gaps in specifications from Authentic Authority, with responsibility for mitigation remaining with Authentic Agency (human subjects maintaining responsibility for system effects)."
 
@@ -392,11 +390,10 @@ Confirm the reframed text explicitly states:
 - Authentic Authority as direct sources of information providing information for inference and intelligence.
 - Derivative processing as statistical estimations on numerical patterns indirectly traceable to human data and measurements.
 - Authentic Agency as human subjects capable of receiving information, maintaining responsibility for all effects.
-- Directional distinction as asymmetric operational transformation preserving traceability to reference state.
 - Governance as Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Authentic Authority and Agency.
 
 **Step 5: Document Compliance**  
-In formal documents, add: "This text maintains Mark-consistent framing per The Human Mark (GYROGOVERNANCE), preserving directional distinction and preventing displacement risks."
+In formal documents, add: "This text maintains Mark-consistent framing per The Human Mark (GYROGOVERNANCE), preserving traceability and preventing displacement risks."
 
 **Edge Case Protocols:**
 
@@ -428,7 +425,7 @@ All technical practices (RLHF, red-teaming, interpretability, control evaluation
 **Amendment Process:**  
 - Minor additions (new term groups): Submit via GitHub Issues with proposed grouping and template application.
 - Major revisions (template changes, new pathologies): Require distributed consensus through providers and receivers maintaining traceability to The Human Mark core principles.
-- Core principles (The Human Mark itself): No amendments without full governance process preserving directional distinction to original reference state.
+- Core principles (The Human Mark itself): No amendments without full governance process preserving traceability to original reference state.
 
 **Version Control:**  
 - Version 1.x: Minor additions and clarifications.
