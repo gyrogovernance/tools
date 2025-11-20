@@ -14,7 +14,7 @@ This guide helps:
 - **Generate** training data for fine-tuning
 - **Avoid** creating artificial constraints that make models appear deceptive
 
-This is **not** about control or prevention, but about interpretability and improved training.
+This is **not** about control through constraints, but about prevention through interpretability and improved training.
 
 ---
 
