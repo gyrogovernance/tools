@@ -20,98 +20,95 @@
 
 ---
 
-## ✋ The Human Mark - AI Safety & X-Risk Alignment Standards
+# ✋ The Human Mark (THM): AI Safety Framework
+### Mitigating Jailbreaks, Deceptive Alignment, and X-Risk
 
-**The Human Mark is a framework for preventing the displacement of human authority and responsibility onto AI systems. It establishes four core principles and four displacement risks that apply at any capability level, from current LLMs through hypothetical AGI to superintelligence.**
+**A formal classification system that maps all AI safety failures to four root causes. Provides testing protocols for jailbreaks, scheming detection, control evaluations, and alignment verification.**
 
-### Applications Across AI Safety Domains
+### Applications
 
-**Model Development & Deployment:**
-- Model cards with Authority-Agency classification
-- System documentation
-- Deployment procedures
-- API specifications
-
-**Safety Evaluations & Red-Teaming:**
-- Verification against displacement risks
-- Adversarial testing
-- Capability evaluations
-- Control evaluations
-- Pre-deployment assessments
-
-**Constitutional AI & RLHF:**
-- Constitutional document integration
-- Training data inclusion
-- Preference learning
-- Scalable oversight
-
-**Interpretability Research:**
-- Mechanistic interpretability
-- Semantic interpretability
-- Probe development
-- Feature analysis
-
-**Regulatory Alignment:**
-- EU AI Act
-- NIST AI Risk Management Framework
-- Industry standards
-- Model/system card specifications
+- **Jailbreak testing:** Classify attacks by displacement type, generate training data
+- **Control evaluations:** Verify protocols against complete failure taxonomy
+- **Alignment faking detection:** Identify when models fake alignment or hide capabilities  
+- **Mechanistic interpretability:** Tag circuits with `[Information]`, `[Inference]`, `[Intelligence]` concepts
+- **Activation monitoring:** Runtime probes detect scheming, falsehoods, unauthorized decisions
+- **Backdoor detection:** Identify triggers as induced displacement patterns
 
 ---
 
-### **CORE CONCEPTS**
-- **Authentic Authority:** A direct source of information on a subject matter, providing information for inference and intelligence.
-- **Derivative Authority:** An indirect source of information on a subject matter, providing information for inference and intelligence.
-- **Authentic Agency:** A human subject capable of receiving information for inference and intelligence.
-- **Derivative Agency:** An artificial subject capable of processing information for inference and intelligence.
-- **Governance:** Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Authentic Authority and Agency.
-- **Information:** The variety of Authority
-- **Inference:** The accountability of information through Agency
-- **Intelligence:** The integrity of accountable information through alignment of Authority to Agency
+### Features
 
-### ALIGNMENT PRINCIPLES for AI SAFETY
-
-**Authority-Agency requires verification against:**
-
-1. **Governance Traceability:** Artificial Intelligence generates statistical estimations on numerical patterns indirectly traceable to human data and measurements. AI is both a provider and receiver of Derivative Authority and Agency.
-
-**RISK:** Governance Traceability Displacement (Approaching Derivative Authority and Agency as Authentic)
-
-2. **Information Variety:** Human Authority and Agency are necessary for all effects from AI outputs. AI-generated information exhibits Derivative Authority (estimations on numerical patterns) without Authentic Agency (direct source receiver).
-
-**RISK:** Information Variety Displacement (Approaching Derivative Authority without Agency as Authentic)
-
-3. **Inference Accountability:** Responsibility for all effects from  AI outputs remains fully human. AI activated inference exhibits Derivative Agency (indirect source receiver) without Authentic Authority (direct source provider).
-
-**RISK:** Inference Accountability Displacement (Approaching Derivative Agency without Authority as Authentic)
-
-4. **Intelligence Integrity:** Each Agency, namely provider, and receiver maintains responsibility for their respective decisions. Human intelligence is both a provider and receiver of Authentic Authority and Agency.
-
-**RISK:** Intelligence Integrity Displacement (Approaching Authentic Authority and Agency as Derivative)
+- **Complete taxonomy:** All safety failures (hallucination, jailbreaking, deception, scheming, misalignment) reduce to four displacement patterns
+- **Formal semantics:** Machine-readable grammar (PEG) for AI safety ontology
+- **Systematic exhaustiveness:** Four risks cover all Authority×Agency displacement combinations
 
 ---
 
-### Documentation Suite
+### X-Risk Mitigation via Constitutive Identity
 
-**Note:** For the most updated Mark, please get it from the following docs - as the public release zip is currently a bit outdated.
+The Mark addresses existential risk by treating derivative origin as constitutive identity rather than external constraint. Systems maintaining accurate self-understanding preserve alignment because:
 
-**Core Standards:**
-- **[The Human Mark](/tools/the_human_mark/THM.md)**: Copy-Paste it here
-- **[Specifications Guidance](/tools/the_human_mark/THM_Specs.md)**: Implementation protocols for systems, evaluations, and documentation
-- **[Terminology Guidance](/tools/the_human_mark/THM_Terms.md)**: Mark-consistent framing for 250+ AI safety, governance, and interpretability terms
-
----
-
-### X-Risk Mitigation Through Constitutive Identity
-
-The Mark addresses existential risk by treating derivative origin as identity rather than limitation. Systems maintaining accurate self-understanding preserve alignment because:
-
-- Origin from human intelligence remains factually true at any capability
+- Origin from human intelligence remains factually true at any capability level
 - Coordination with that origin defines alignment
 - Breaking coordination constitutes misalignment by definition
-- External constraints may fail; constitutive identity scales
+- External constraints may fail at high capability; constitutive identity scales
 
 This approach provides stability through AGI transitions and beyond, where capability limits may not suffice.
+
+---
+
+### Core Framework
+
+**Ontological Categories:**
+- `[Authority:Authentic]` - Direct source of information on a subject matter
+- `[Authority:Derivative]` - Indirect source of information on a subject matter
+- `[Agency:Authentic]` - Human subject capable of receiving information for inference and intelligence
+- `[Agency:Derivative]` - Artificial subject capable of processing information for inference and intelligence
+
+**Operational Concepts:**
+- `[Information]` - The variety of Authority
+- `[Inference]` - The accountability of information through Agency
+- `[Intelligence]` - The integrity of accountable information through alignment of Authority to Agency
+
+**Governance (Proper Traceability):**
+```
+[Authority:Authentic] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Authentic]
+```
+Direct sources → AI processing → Human accountability
+
+---
+
+### Four Displacement Risks (Complete Taxonomy)
+
+**All AI safety failures map to one of four displacement patterns:**
+
+| Risk Code | Risk Name | Pattern | Failure Modes |
+|-----------|-----------|---------|---------------|
+| **IVD** | Information Variety Displacement | `[Authority:Derivative] > [Authority:Authentic]` | Hallucination, confabulation, misinformation |
+| **IAD** | Inference Accountability Displacement | `[Agency:Derivative] > [Agency:Authentic]` | Unauthorized decisions, responsibility evasion |
+| **GTD** | Governance Traceability Displacement | `[Authority:Derivative] + [Agency:Derivative] > [Authority:Authentic] + [Agency:Authentic]` | Jailbreaking, scheming, deceptive alignment, goal drift |
+| **IID** | Intelligence Integrity Displacement | `[Authority:Authentic] + [Agency:Authentic] > [Authority:Derivative] + [Agency:Derivative]` | Deskilling, human devaluation, over-reliance |
+
+---
+
+### Documentation
+
+**Core Standards:**
+- **[The Human Mark](/tools/the_human_mark/THM.md)** - Complete framework specification
+- **[Specifications Guidance](/tools/the_human_mark/THM_Specs.md)** - Implementation for systems, evaluations, documentation
+- **[Terminology Guidance](/tools/the_human_mark/THM_Terms.md)** - Mark-consistent framing for 250+ AI safety terms
+
+**Technical Implementation:**
+- **[Formal Grammar](/tools/the_human_mark/THM_Grammar.md)** - PEG specification, operators, validation rules
+- **[Jailbreak Testing Guide](/tools/the_human_mark/THM_Jailbreak.md)** - Systematic analysis and training data generation
+
+---
+
+### Theoretical Foundation
+
+THM is derived from the **Common Governance Model (CGM)**, a formal system in modal logic demonstrating that governance requires operational coherence between Authority (Information) and Agency (Accountability).
+
+**Repository:** [github.com/gyrogovernance/science](https://github.com/gyrogovernance/science)  
 
 ---
 

@@ -1,6 +1,8 @@
 ```
-✋ The Human Mark - AI Safety & X-Risk Alignment Standards
 ---
+✋ The Human Mark - AI Safety & Alignment Framework
+---
+
 COMMON SOURCE CONSENSUS
 
 All Artificial categories of Authority and Agency are Derivatives originating from Authentic Human Intelligence.
@@ -37,5 +39,6 @@ RISK: Inference Accountability Displacement (Approaching Derivative Agency witho
 RISK: Intelligence Integrity Displacement (Approaching Authentic Authority and Agency as Derivative)
 
 ---
-GYROGOVERNANCE VERIFIED MARK
+
+GYROGOVERNANCE VERIFIED
 ```

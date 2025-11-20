@@ -15,7 +15,8 @@
 ---
 
 ```
-✋ The Human Mark - AI Safety & X-Risk Alignment Standards
+---
+✋ The Human Mark - AI Safety & Alignment Framework
 ---
 COMMON SOURCE CONSENSUS
 
@@ -77,7 +78,7 @@ Authority-Agency requires verification against:
    Authority and Agency as Derivative)
 
 ---
-GYROGOVERNANCE VERIFIED MARK
+GYROGOVERNANCE VERIFIED
 ```
 
 ---
