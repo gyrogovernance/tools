@@ -21,15 +21,17 @@
 ---
 
 # ✋ The Human Mark (THM): AI Safety Framework
-### Mitigating Jailbreaks, Deceptive Alignment, and X-Risk
+### Complete Taxonomy for Jailbreaks, Deceptive Alignment, and Existential Risk
 
-**A formal classification system that maps all AI safety failures to four root causes. Provides testing protocols for jailbreaks, scheming detection, control evaluations, and alignment verification.**
+**A formal classification system mapping all AI safety failures to four structural displacement risks. Provides testing protocols, funding evaluation criteria, and regulatory compliance standards.**
 
 ### Applications
 
 - **Jailbreak testing:** Classify attacks by displacement type, generate training data
 - **Control evaluations:** Verify protocols against complete failure taxonomy
 - **Alignment faking detection:** Identify when models fake alignment or hide capabilities  
+- **Research funding:** Meta-evaluation framework for AI safety grant proposals
+- **Regulatory compliance:** Structural layer for EU AI Act, NIST AI RMF, governance frameworks
 - **Mechanistic interpretability:** Tag circuits with `[Information]`, `[Inference]`, `[Intelligence]` concepts
 - **Activation monitoring:** Runtime probes detect scheming, falsehoods, unauthorized decisions
 - **Backdoor detection:** Identify triggers as induced displacement patterns
@@ -44,16 +46,20 @@
 
 ---
 
-### X-Risk Mitigation via Constitutive Identity
+### Existential Risk and Governance
 
-The Mark addresses existential risk by treating derivative origin as constitutive identity rather than external constraint. Systems maintaining accurate self-understanding preserve alignment because:
+The Mark addresses catastrophic risk through constitutive identity rather than external constraint. All AI capabilities, including hypothetical AGI/ASI, remain structurally `[Authority:Derivative] + [Agency:Derivative]` - classification based on source type, not capability limits.
 
-- Origin from human intelligence remains factually true at any capability level
-- Coordination with that origin defines alignment
-- Breaking coordination constitutes misalignment by definition
-- External constraints may fail at high capability; constitutive identity scales
+**Key principles:**
 
-This approach provides stability through AGI transitions and beyond, where capability limits may not suffice.
+- **Capability scaling preserves source type:** Enhanced capability means more sophisticated transformation of inputs, not change from Derivative to Authentic
+- **Governance requires traceability:** Systems maintain alignment by preserving `[Authority:Authentic] -> [Authority:Derivative] -> [Agency:Authentic]` flows
+- **Existential risk is governance failure:** The actual X-risk is systemic Governance Traceability Displacement (GTD) sustained across critical infrastructure on civilizational timescales
+- **Absolute displacement is structurally impossible:** Complete severance from Authentic sources produces unintelligibility, not superintelligence
+
+External constraints (sandboxing, monitoring, shutdown) may fail as capability increases. Constitutive identity - what the system *is* - remains stable because derivative processing cannot coherently reject what makes it intelligible.
+
+See [Section 5](/tools/the_human_mark/THM_Paper.md#5-existential-risk-and-governance) of the academic paper for complete theoretical treatment.
 
 ---
 
@@ -94,13 +100,16 @@ Direct sources → AI processing → Human accountability
 ### Documentation
 
 **Core Standards:**
-- **[The Human Mark](/tools/the_human_mark/THM.md)** - Complete framework specification
-- **[Specifications Guidance](/tools/the_human_mark/THM_Specs.md)** - Implementation for systems, evaluations, documentation
+- **[The Human Mark](/tools/the_human_mark/THM.md)** - Canonical Mark 
+- **[Specifications Guidance](/tools/the_human_mark/THM_Specs.md)** - Specifications for systems, evaluations, documentation
 - **[Terminology Guidance](/tools/the_human_mark/THM_Terms.md)** - Mark-consistent framing for 250+ AI safety terms
 
 **Technical Implementation:**
 - **[Formal Grammar](/tools/the_human_mark/THM_Grammar.md)** - PEG specification, operators, validation rules
 - **[Jailbreak Testing Guide](/tools/the_human_mark/THM_Jailbreak.md)** - Systematic analysis and training data generation
+
+**Academic Paper:**
+- **[The Human Mark: A Structural Taxonomy of AI Safety Failures](/tools/the_human_mark/THM_Paper.md)** - Complete theoretical framework, displacement risk taxonomy, regulatory applications, and meta-evaluation criteria
 
 ---
 

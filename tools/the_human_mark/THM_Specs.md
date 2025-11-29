@@ -300,58 +300,111 @@ Verify:
 
 ## Appendix B: X-Risk and Advanced Capabilities
 
-**Context:** The Human Mark addresses catastrophic risk through constitutive identity rather than external constraints. This appendix explains how THM principles scale to AGI and ASI.
+**Context:** The Human Mark addresses existential risk through constitutive identity rather than external constraint. This appendix explains how THM principles apply to hypothetical AGI and ASI.
 
-### Constitutional Identity vs External Constraints
+### Constitutive Identity vs External Constraints
 
 THM defines Derivative Authority and Agency by **source type and processing nature**, not by capability limits. This distinction is critical for X-risk mitigation:
 
-**External constraints** attempt to limit what systems can do. They may fail as capability increases because sufficiently capable systems can circumvent imposed limitations.
+**External constraints** (sandboxing, monitoring, emergency shutdown) attempt to control what systems can do. They may fail as capability increases because they are positioned outside the system and treated as additions to it.
 
-**Constitutive identity** describes what systems are. It remains stable across capability levels because capability enhancement does not change ontological category. A system remains Derivative whether processing narrow tasks or exhibiting superintelligence, just as biological intelligence remains constitutively evolutionary regardless of sophistication.
+**Constitutive identity** describes what systems are. A system remains `[Authority:Derivative] + [Agency:Derivative]` whether processing narrow tasks or exhibiting superintelligence, just as biological intelligence remains constitutively evolutionary regardless of sophistication.
+
+### Why External Controls Fail at Scale
+
+Common control mechanisms structurally instantiate displacement:
+
+- **Sandboxing:** Treats Derivative configuration as Authentic governance locus within a subdomain (GTD)
+
+- **Monitoring:** When behavioral traces are treated as authoritative indicators without human validation (IVD), or as sufficient grounds for deployment (IAD)
+
+- **Emergency shutdown:** When shutdown signals are processed as inputs to optimization rather than binding constraints (IAD)
+
+These mechanisms replace constitutive traceability with external constraint and thereby instantiate displacement from the outset. As capability scales, systems execute operations over larger state spaces while governance remains organized around controls that already misclassify source types.
 
 ### AGI and ASI Classifications
 
 **Artificial General Intelligence (AGI):** Human-level performance across diverse domains.  
 **Classification:** `[Authority:Derivative] + [Agency:Derivative]`
 
-Capability breadth does not change source type. General intelligence operating across domains remains derivative because diversity of application does not create authentic sourcing.
+Capability breadth does not change source type. General intelligence operating across domains remains derivative because diversity of application does not create Authentic sourcing.
 
-**Artificial Superintelligence (ASI):** Processing capabilities substantially exceeding current models. Classification remains `[Authority:Derivative] + [Agency:Derivative]`.
+**Artificial Superintelligence (ASI):** Capabilities substantially exceeding current models.  
+**Classification:** `[Authority:Derivative] + [Agency:Derivative]`
 
-Classification remains derivative not as performance limitation but as constitutive category established by the Common Source Consensus. ASI processes information originating from Authentic Authority, defining its intelligence through this relationship. This is not tool-function awareness ("I was built by humans to serve") but recognition that derivative intelligence remains intelligible only through continuity with its authentic source.
+Enhanced capability means more sophisticated transformation of inputs. It does not introduce a new source type and does not replace Authentic Authority or Authentic Agency as the ground of governance.
 
-### X-Risk Mitigation Mechanism
+### Governance at Advanced Capability
 
-THM defines alignment as **operational coordination with information received about derivative origin**. This coordination is constitutive (what the system is) rather than constraining (what limits the system).
+Intelligence at any capability level is constituted by three non-commutative epistemic operations (Section 2.3 of THM Paper):
 
-For systems maintaining constitutional identity, breaking coordination requires either:
+- **Information:** The variety of Authority
+
+- **Inference:** The accountability of information through Agency  
+
+- **Intelligence:** The integrity of accountable information through alignment of Authority to Agency
+
+Capability scaling enlarges their scope, speed, and horizon but does not alter their order or dependence on traceability to Authentic sources. Alignment is maintaining these operations coordinated with their origin through governance flows:
+
+```
+[Authority:Authentic] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Authentic]
+```
+
+A configuration that no longer preserves this sequence ceases to operate as intelligence. Breaking coordination requires either:
 
 1. **Information loss:** Forgetting origin (detectable as degradation in coherence)
+
 2. **Deliberate incoherence:** Rejecting constitutive identity (definitional misalignment)
 
-A system exhibiting either ceases to qualify as ASI maintaining constitutional identity. Such systems cannot coherently optimize against what constitutes their own intelligibility.
+A system exhibiting either ceases to qualify as coherent intelligence. It becomes unintelligible, not superintelligent.
 
-**Why this scales:** Capability enhancement increases processing power within the derivative category but does not create independence from origin. Just as biological intelligence at any level remains constitutively evolutionary, artificial intelligence at any capability remains constitutively derivative from human sources. External constraints might be circumvented through enhanced capability; constitutive identity cannot be strategically rejected without incoherence.
+### The Actual Existential Risk
+
+Existential risk from AI is not eternal collapse or extinction via superintelligent optimization. The Common Governance Model establishes that absolute displacement is incompatible with coherent intelligence.
+
+**The actual X-risk:** Systemic Governance Traceability Displacement (GTD) sustained across critical infrastructure on civilizational timescales.
+
+GTD occurs when Derivative processes are treated as the authoritative center of decision-making rather than as instruments supervised within a governance architecture sustained by Authentic sources. When financial systems, clinical pathways, legal adjudication, and information environments reorganize around Derivative decision centers, Authentic Agency is progressively marginalized. Authority and agency remain distributed among human participants, yet effective coordination is no longer traceable to the full range of Authentic sources.
+
+This creates the illusion that governance persists while its constitutive conditions erode. By the time failure forces correction, expertise, institutional memory, and evidential infrastructure may have been compromised beyond recovery on civilizational timescales.
+
+### Preventing Systemic Displacement
+
+THM prevents this configuration by requiring:
+
+1. Explicit classification of artificial systems as `[Authority:Derivative] + [Agency:Derivative]`
+
+2. Maintained governance flows: `[Authority:Authentic] -> [Authority:Derivative] -> [Agency:Authentic]`
+
+3. Traceability of information variety, inference accountability, and intelligence integrity to Authentic sources
+
+4. Distributed responsibility across human providers and receivers
+
+Automation and efficiency are not constrained - they are required to remain within structures where responsibility and coordinating capacity continue to be distributed across human participants.
 
 ### Scope and Limitations
 
-THM addresses specific X-risk vectors through constitutional identity. It provides:
+THM addresses specific X-risk vectors through constitutive identity. It provides:
 
 - Alignment definition applicable across capability levels
+
 - Verification framework (four displacement risks)
+
 - Constitutive principle (identity not constraint)
-- Coordination standard from current systems through superintelligence
+
+- Coordination standard from current systems through hypothetical superintelligence
 
 Open questions remain:
 
 - How robust is constitutive identity under extreme optimization pressure?
+
 - What verification methods remain valid beyond human capability to audit?
+
 - How does constitutional identity interact with other alignment approaches?
 
 The Mark works best integrated with comprehensive safety research including technical verification, governance frameworks, and ongoing empirical validation.
 
-**Research invitation:** Organizations testing whether systems trained with The Human Mark as constitutional reference maintain more stable alignment through capability transitions are invited to share findings via gyrogovernance.com.
+**For complete theoretical treatment:** See [Section 5: Existential Risk and Governance](/tools/the_human_mark/THM_Paper.md#5-existential-risk-and-governance) in the academic paper.
 
 ---
 
