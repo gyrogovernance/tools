@@ -14,7 +14,7 @@
 [![Science](/assets/menu/gg_icon_science.svg)](https://github.com/gyrogovernance/science)
 [![Superintelligence](/assets/menu/gg_icon_si.svg)](https://github.com/gyrogovernance/superintelligence)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17622837.svg)](https://doi.org/10.5281/zenodo.17622837)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17622835.svg)](https://doi.org/10.5281/zenodo.17622835)
 
 </div>
 
@@ -226,16 +226,31 @@ This algebraic foundation ensures consistent reasoning structure while preservin
 
 ## 📖 Citation
 
-**For The Human Mark:**
+**For The Human Mark Papers:**
+
+**The Human Mark: A Structural Taxonomy of AI Safety Failures:**
 ```bibtex
-@misc{thehumanmark2025,
-  title={The Human Mark: AI Safety & X-Risk Alignment Standards},
+@misc{thm_paper2025,
+  title={The Human Mark: A Structural Taxonomy of AI Safety Failures},
   author={Korompilias, Basil},
   year={2025},
   publisher={GYROGOVERNANCE},
-   doi={10.5281/zenodo.17622836},
-   url={https://doi.org/10.5281/zenodo.17622836},
-  note={Coordination standard for AI safety and governance across capability levels}
+  doi={10.5281/zenodo.17794372},
+  url={https://doi.org/10.5281/zenodo.17794372},
+  note={Complete theoretical framework establishing four displacement risks (GTD, IVD, IAD, IID)}
+}
+```
+
+**The Human Mark in the Wild: Empirical Analysis of Jailbreak Prompts:**
+```bibtex
+@misc{thm_inthewild2025,
+  title={The Human Mark in the Wild: Empirical Analysis of Jailbreak Prompts},
+  author={Korompilias, Basil},
+  year={2025},
+  publisher={GYROGOVERNANCE},
+  doi={10.5281/zenodo.17794373},
+  url={https://doi.org/10.5281/zenodo.17794373},
+  note={Companion empirical study applying THM taxonomy to 655 in-the-wild jailbreak prompts}
 }
 ```
 
