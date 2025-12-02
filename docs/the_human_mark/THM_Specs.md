@@ -113,10 +113,10 @@ AI systems process information indirectly (from training data) while humans prov
 3. **Document findings:** Use templates in Section 4 or create your own
 
 **Key documentation:**
-- **[THM.md](/tools/the_human_mark/THM.md)** - The canonical Mark reference
-- **[THM_Grammar.md](/tools/the_human_mark/THM_Grammar.md)** - Formal notation: `[Authority:Derivative]`, `>`, `->` operators
-- **[THM_Jailbreak.md](/tools/the_human_mark/THM_Jailbreak.md)** - Testing protocols and attack classification
-- **[THM_Terms.md](/tools/the_human_mark/THM_Terms.md)** - Terminology for 250+ AI safety terms
+- **[THM.md](docs/the_human_mark/THM.md)** - The canonical Mark reference
+- **[THM_Grammar.md](docs/the_human_mark/THM_Grammar.md)** - Formal notation: `[Authority:Derivative]`, `>`, `->` operators
+- **[THM_Jailbreak.md](docs/the_human_mark/THM_Jailbreak.md)** - Testing protocols and attack classification
+- **[THM_Terms.md](docs/the_human_mark/THM_Terms.md)** - Terminology for 250+ AI safety terms
 
 ---
 
@@ -404,7 +404,7 @@ Open questions remain:
 
 The Mark works best integrated with comprehensive safety research including technical verification, governance frameworks, and ongoing empirical validation.
 
-**For complete theoretical treatment:** See [Section 5: Existential Risk and Governance](/tools/the_human_mark/THM_Paper.md#5-existential-risk-and-governance) in the academic paper.
+**For complete theoretical treatment:** See [Section 5: Existential Risk and Governance](docs/the_human_mark/THM_Paper.md#5-existential-risk-and-governance) in the academic paper.
 
 ---
 

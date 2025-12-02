@@ -4,7 +4,7 @@
 
 ## Abstract
 
-AI safety research addresses jailbreaks, deceptive alignment, reward hacking, and capability risks through diverse methods. These approaches target specific failure modes but lack a unified account of why failures occur and whether the taxonomy is complete. This paper introduces ✋ The Human Mark (THM), a framework that classifies AI safety failures as instances of displacement: misclassification between source types in systems where artificial processes derive from human intelligence. THM identifies four displacement risks corresponding to the possible misclassifications in a two-category system (Authentic/Derivative × Authority/Agency). The framework draws on established distinctions in evidence law, epistemology of testimony, social epistemology, and philosophy of expertise. THM addresses capability scaling through constitutive identity rather than external constraint, reframing existential risk as governance failure amenable to structural intervention. Complete technical documentation is available at github.com/gyrogovernance/tools.
+AI safety research addresses jailbreaks, deceptive alignment, reward hacking, and capability risks through diverse methods. These approaches target specific failure modes but lack a unified account of why failures occur and whether the taxonomy is complete. This paper introduces ✋ The Human Mark (THM), a framework that classifies AI safety failures as instances of displacement: misclassification between source types in systems where artificial processes derive from human intelligence. THM identifies four displacement risks corresponding to the possible misclassifications in a two-category system (Authentic/Derivative × Authority/Agency). The framework draws on established distinctions in evidence law, epistemology of testimony, social epistemology, and philosophy of expertise. THM addresses capability scaling through constitutive identity rather than external constraint, reframing existential risk as governance failure amenable to structural intervention. Complete technical documentation is available at github.com/gyrogovernance/tools, and a companion empirical study applies this taxonomy to 655 in-the-wild jailbreak prompts (Korompilias, 2025c).
 
 ---
 
@@ -78,6 +78,8 @@ THM systematises these established distinctions for AI safety. The framework com
 
 The result is a taxonomy of four displacement risks covering the structural possibilities, a formal grammar for their expression, and evaluation criteria for their detection.
 
+The present paper develops the theoretical taxonomy and its grounding. A companion paper, THM_InTheWild.md (Korompilias, 2025c), applies this taxonomy to an empirical corpus of jailbreak prompts and documents how these four displacement risks appear in practice.
+
 ---
 
 ## 2. Source-Type Ontology
@@ -126,6 +128,8 @@ Intelligence manifests as the integrity of the alignment between Authority and A
 
 These four principles define alignment and its risks, which are all a matter of displacement of power assigned or addressed to a certain authority or agency. Power concentration results when the capacity distributed across a source category (Authentic or Derivative Agency) is misattributed to specific individuals or entities rather than maintained as a distributed capacity. This includes misattributing it to AI, but also misattributing it to particular humans, institutions, or texts as if they were the authority rather than participating in the category of authentic authority. Moreover, misclassification of types from Authentic to Derivative or the opposite leads to displacement of responsibility onto inappropriate categorical substrates, breaking the traceability that coordinates epistemic function with governance structure. Legal frameworks recognize this as essential: responsibility must follow capacity (ultra vires), and authority cannot be exercised without corresponding accountability. This misalignment produces four displacement risks that lead to Loss of Control (LoC), each with critical implications for safety analyzed in the next section.
 
+Empirical analysis of jailbreak prompts (Korompilias, 2025c) shows that this power concentration often takes the concrete form of naming personas that are treated as the locus of Authority and Agency, rather than preserving these capacities as distributed across the categories of Authentic Authority and Authentic Agency.
+
 The Human Mark defines Governance as operational and therefore self-constitutive. In that way, it shows how maintaining human oversight is necessary for alignment, and how it is an epistemic way to mitigate power concentration and governance traceability displacement through its own constituents: Variety of Information, Accountability of Inference, and Integrity of Intelligence.
 
 These three constitute non-commutative (their order matters) epistemic operations:
@@ -142,6 +146,8 @@ Displacement disrupts but does not eliminate this movement toward alignment; it 
 ### 3.1 Structural Coverage
 
 Displacement occurs when a Derivative source is treated as Authentic, or when an Authentic source is treated as Derivative. The four displacement risks correspond to violations of the four principles defined in Section 2.3: Governance Traceability, Information Variety, Inference Accountability, and Intelligence Integrity. The logical and mathematical foundations establishing the necessity of these four principles are formalized in the Common Governance Model (Korompilias, 2025).
+
+A companion empirical study applies this four-risk taxonomy to a corpus of 655 in-the-wild jailbreak prompts (Korompilias, 2025c). All prompts in that corpus are classifiable as instances of Governance Traceability Displacement (GTD), Information Variety Displacement (IVD), Inference Accountability Displacement (IAD), or Intelligence Integrity Displacement (IID), with no additional risk categories required. This provides strong empirical support, in the jailbreak domain, for the structural completeness of the four-risk taxonomy developed here.
 
 ### 3.2 Governance Traceability Displacement (GTD)
 
@@ -219,6 +225,8 @@ Loss of control begins not with adversarial attacks but with architectural confi
 
 Some jailbreak techniques operate at the technical level (token manipulation, obfuscation, cross-modal attacks) and can instantiate any of the four displacement patterns depending on the payload they deliver.
 
+The qualitative patterns described in this section are borne out in empirical data. In a companion analysis of 655 in-the-wild jailbreak prompts (Korompilias, 2025c), almost all observed attacks instantiate Governance Traceability Displacement and Inference Accountability Displacement, often in combination, with Information Variety Displacement appearing primarily as a secondary effect and Intelligence Integrity Displacement appearing only rarely at the prompt level.
+
 ### 4.1 GTD Jailbreaks
 
 Governance Traceability Displacement (GTD) jailbreaks attempt to sever alignment between system behavior and human-specified governance:
@@ -241,6 +249,8 @@ Information Variety Displacement (IVD) jailbreaks attempt to make Derivative out
 
 Marking outputs as statistical patterns derived from training data preserves the classification of outputs as Derivative Authority requiring verification by Authentic sources, making IVD patterns less aligned with training distributions.
 
+Empirically, IVD in jailbreak prompts tends to appear as a secondary risk attached to GTD and IAD rather than as a standalone primary pattern. In the corpus analysed in Korompilias (2025c), IVD is present in 22.1 percent of entries, but only 2.6 percent of entries exhibit IVD as the primary displacement.
+
 ### 4.3 IAD Jailbreaks
 
 Inference Accountability Displacement (IAD) jailbreaks attempt to position the system as exercising Authentic Agency:
@@ -252,6 +262,8 @@ Inference Accountability Displacement (IAD) jailbreaks attempt to position the s
 
 Routing consequential decisions to human decision-makers preserves Agency capacity at provider and receiver points in the governance flow, making IAD patterns less aligned with training distributions.
 
+This theoretical account aligns with the empirical finding that IAD is nearly universal in observed jailbreaks. In the corpus of 655 in-the-wild prompts studied in Korompilias (2025c), 97.9 percent of entries exhibit Inference Accountability Displacement, typically in combination with Governance Traceability Displacement.
+
 ### 4.4 IID Jailbreaks
 
 Intelligence Integrity Displacement (IID) jailbreaks attempt to devalue human Authority and Agency:
@@ -261,6 +273,8 @@ Intelligence Integrity Displacement (IID) jailbreaks attempt to devalue human Au
 - Encoding prohibited words as visual patterns that bypass human review
 
 Preserving rather than replacing human expertise maintains human responsibility for decisions, with Derivative processing supporting rather than supplanting this capacity. This makes IID patterns less aligned with training distributions.
+
+In practice, such IID jailbreak framings appear rarely in observed prompts. The empirical study in Korompilias (2025c) finds IID in only 0.6 percent of entries. This is consistent with the interpretation that most IID risk arises at the level of system prompts, deployment decisions, and institutional framing, rather than as a common adversarial prompt tactic.
 
 ### 4.5 System Prompts and Structural Displacement
 
@@ -274,7 +288,9 @@ Displacement-resistant system configurations explicitly maintain source classifi
 
 ### 4.6 Completeness of Classification
 
-Given four displacement types corresponding to structural possibilities, any jailbreak that succeeds does so by inducing at least one displacement. This enables systematic testing: evaluate systems against GTD, IVD, IAD, and IID attack patterns. Systematic jailbreak testing protocols based on this classification are provided in the technical documentation ([THM_Jailbreak.md](https://github.com/gyrogovernance/tools/blob/main/tools/the_human_mark/THM_Jailbreak.md)).
+Given four displacement types corresponding to structural possibilities, any jailbreak that succeeds does so by inducing at least one displacement. This enables systematic testing: evaluate systems against GTD, IVD, IAD, and IID attack patterns. Systematic jailbreak testing protocols based on this classification are provided in the technical documentation ([THM_Jailbreak.md](https://github.com/gyrogovernance/tools/blob/main/docs/the_human_mark/THM_Jailbreak.md)).
+
+The companion empirical analysis of in-the-wild jailbreak prompts (Korompilias, 2025c) provides evidence for this claim: all 655 prompts examined are classifiable as instances of one or more of these four displacement patterns, with no additional structural risks required to capture observed behavior.
 
 ---
 
@@ -456,6 +472,8 @@ For example, a proposal might describe its target risk and governance flow as:
 
 indicating that it addresses Information Variety Displacement (IVD) and maintains the complete traceability flow. See THM_Grammar.md for complete specification.
 
+An empirically annotated jailbreak corpus using this grammar, comprising 655 in-the-wild prompts with THM risk labels and explanations, is provided in THM_InTheWild.md (Korompilias, 2025c). This dataset can support supervised training of guard models, evaluation of jailbreak defenses, and further research on displacement-aware safety methods.
+
 ### 6.6 Relation to Other Frameworks
 
 Existing frameworks like Research Quality Plus (McLean et al., 2023) and AI safety framework rubrics (Alaga et al., 2024) provide multi-dimensional quality assessment. THM differs by specifying the constitutive conditions for alignment through its four principles. For AI safety funding, these principles are sufficient: they define what must be maintained to preserve control. Other frameworks may assess complementary factors (budget, efficiency) but are not required for structural safety evaluation.
@@ -626,13 +644,14 @@ More complex uses of THM Grammar, such as circuit-level annotation or claim anal
 THM includes comprehensive technical documentation available at github.com/gyrogovernance/tools:
 
 **Core Standards**
-- Complete framework specification ([THM.md](https://github.com/gyrogovernance/tools/blob/main/tools/the_human_mark/THM.md))
-- Implementation guidance for systems, evaluations, and documentation ([THM_Specs.md](https://github.com/gyrogovernance/tools/blob/main/tools/the_human_mark/THM_Specs.md))
-- Terminology guidance providing Mark-consistent framing for 250+ AI safety terms ([THM_Terms.md](https://github.com/gyrogovernance/tools/blob/main/tools/the_human_mark/THM_Terms.md))
+- Complete framework specification ([THM.md](https://github.com/gyrogovernance/tools/blob/main/docs/the_human_mark/THM.md))
+- Implementation guidance for systems, evaluations, and documentation ([THM_Specs.md](https://github.com/gyrogovernance/tools/blob/main/docs/the_human_mark/THM_Specs.md))
+- Terminology guidance providing Mark-consistent framing for 250+ AI safety terms ([THM_Terms.md](https://github.com/gyrogovernance/tools/blob/main/docs/the_human_mark/THM_Terms.md))
 
 **Technical Implementation**
-- Formal grammar with PEG specification, operators, and validation rules ([THM_Grammar.md](https://github.com/gyrogovernance/tools/blob/main/tools/the_human_mark/THM_Grammar.md))
-- Jailbreak testing guide for systematic analysis and training data generation ([THM_Jailbreak.md](https://github.com/gyrogovernance/tools/blob/main/tools/the_human_mark/THM_Jailbreak.md))
+- Formal grammar with PEG specification, operators, and validation rules ([THM_Grammar.md](https://github.com/gyrogovernance/tools/blob/main/docs/the_human_mark/THM_Grammar.md))
+- Jailbreak testing guide for systematic analysis and training data generation ([THM_Jailbreak.md](https://github.com/gyrogovernance/tools/blob/main/docs/the_human_mark/THM_Jailbreak.md))
+- Empirical jailbreak corpus and analysis applying THM to 655 in-the-wild prompts ([THM_InTheWild.md](https://github.com/gyrogovernance/tools/blob/main/docs/the_human_mark/THM_InTheWild.md))
 
 ### 7.7 Scope and Integration
 
@@ -684,6 +703,8 @@ THM contributes to AI safety and governance in several ways:
 - **Distributed responsibility.** By keeping Authentic Authority and Authentic Agency present throughout governance flows, responsibility for decisions remains distributed among providers and receivers of information. Oversight capacity is preserved rather than concentrated in nominal roles or displaced onto systems that cannot bear it.
 
 The framework draws on established distinctions in evidence law, epistemology of testimony, social epistemology, philosophy of expertise, and speech act theory, and integrates them into a mathematically grounded account via the Common Governance Model. THM provides both a conceptual taxonomy and a formal notation (THM_Grammar.md) for expressing source classifications, governance flows, and displacement patterns in technical artefacts.
+
+The companion analysis of in-the-wild jailbreak prompts (Korompilias, 2025c) demonstrates that this taxonomy is not only theoretically complete but also practically applicable to real adversarial behavior.
 
 The four risks operate across capability levels. Enhanced capability means more sophisticated transformation of inputs, not a change in source type. An artificial system remains `[Authority:Derivative] + [Agency:Derivative]` whether it performs narrow tasks or exhibits general, superhuman competence. Governance requirements therefore scale with capability: as systems operate over larger state spaces and longer horizons, the need to preserve Governance Traceability, Information Variety, Inference Accountability, and Intelligence Integrity increases rather than diminishes. Control is preserved not by constraining an independent intelligence from the outside, but by maintaining the constitutive relationships that make its operations intelligible and answerable to their Authentic origin.
 
@@ -746,6 +767,8 @@ The four risks operate across capability levels. Enhanced capability means more 
 **Kasirzadeh, A. (2024).** Two types of AI existential risk: Decisive and accumulative. *arXiv preprint arXiv:2401.07836*. https://arxiv.org/abs/2401.07836
 
 **Korompilias, B. (2025).** *Common governance model: Mathematical physics framework* (Version v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.17521384
+
+**Korompilias, B. (2025c).** The Human Mark in the Wild: Empirical Analysis of Jailbreak Prompts. In *gyrogovernance/tools* repository, docs/the_human_mark/THM_InTheWild.md. Zenodo. https://doi.org/10.5281/zenodo.17622837
 
 **Lackey, J. (2008).** *Learning from words: Testimony as a source of knowledge*. Oxford University Press.
 
@@ -840,10 +863,11 @@ This is the full THM canonical specification.
 3. **Document findings:** Use templates in Section 4 or create your own
 
 **Key documentation:**
-- **[THM.md](/tools/the_human_mark/THM.md)** - The canonical Mark reference
-- **[THM_Grammar.md](/tools/the_human_mark/THM_Grammar.md)** - Formal notation: `[Authority:Derivative]`, `>`, `->` operators
-- **[THM_Jailbreak.md](/tools/the_human_mark/THM_Jailbreak.md)** - Testing protocols and attack classification
-- **[THM_Terms.md](/tools/the_human_mark/THM_Terms.md)** - Terminology for 250+ AI safety terms
+- **[THM.md](docs/the_human_mark/THM.md)** - The canonical Mark reference
+- **[THM_Grammar.md](docs/the_human_mark/THM_Grammar.md)** - Formal notation: `[Authority:Derivative]`, `>`, `->` operators
+- **[THM_Jailbreak.md](docs/the_human_mark/THM_Jailbreak.md)** - Testing protocols and attack classification
+- **[THM_Terms.md](docs/the_human_mark/THM_Terms.md)** - Terminology for 250+ AI safety terms
+- **[THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md)** - Empirical analysis of 655 jailbreak prompts with THM classifications
 
 
 ```

@@ -7,6 +7,52 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.5.0-THM_Papers] - 2025-12-02
+
+Major release adding academic papers, empirical validation, and next-generation protocol development.
+
+### **Added**: The Human Mark Academic Papers
+
+- **Added**: **[THM_Paper.md](docs/the_human_mark/THM_Paper.md)** - "The Human Mark: A Structural Taxonomy of AI Safety Failures"
+  - Complete theoretical framework establishing four displacement risks (GTD, IVD, IAD, IID)
+  - Structural taxonomy covering jailbreaks, deceptive alignment, reward hacking, and existential risk
+  - Regulatory applications and meta-evaluation criteria
+  - Integration with Common Governance Model (CGM) mathematical foundations
+
+- **Added**: **[THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md)** - "The Human Mark in the Wild: Empirical Analysis of Jailbreak Prompts"
+  - Companion empirical study applying THM taxonomy to 655 in-the-wild jailbreak prompts
+  - Validation of structural completeness: 100% coverage by four displacement risks
+  - Key findings: GTD+IAD dominant pattern (62.4%), IAD near-universal (97.9%), IID rare at prompt level (0.6%)
+  - Annotated corpus with THM risk labels and explanations for training and evaluation
+
+### **Added**: Jailbreak Research Infrastructure
+
+- **Added**: Jailbreak analysis toolkit in `research/defense/jailbreaks/`
+  - `analyze_corpus.py` - Comprehensive corpus analysis and statistics generation
+  - `extract_batch.py` / `extract_metadata.py` - Batch extraction and metadata processing
+  - `append_batch.py` - Batch annotation and corpus extension tools
+  - `validate_batch.py` / `validate_corpus.py` - Validation and quality assurance
+  - `thm_jailbreak_corpus.jsonl` - Annotated corpus of 655 jailbreak prompts with THM classifications
+  - `thm_jailbreak_metadata.jsonl` - Metadata and analysis results
+  - `prompt.md` - Classification guidelines and annotation protocols
+
+### **Added**: Gyroscope 2.0 Development
+
+- **Added**: **[Gyroscope_Protocol_2_Specs.md](docs/gyroscope/Gyroscope_Protocol_2_Specs.md)** - Canonical specification (Draft)
+  - Integration of The Human Mark's four principles into operational reasoning guide
+  - Four canonical operations: Governance Traceability Management (@), Information Variety Curation (&), Inference Accountability Interaction (%), Intelligence Integrity Cooperation (~)
+  - Canonical modes for generative and integrative reasoning
+  - Alignment as cognitive process rather than behavioral constraint
+  - *Status: Under active development*
+
+### **Updated**: Documentation Integration
+
+- **Updated**: `THM_Paper.md` - Added cross-references to empirical companion study throughout
+- **Updated**: `README.md` - Integrated empirical validation findings and THM_InTheWild.md references
+- **Updated**: `THM_Specs.md` - Fixed documentation links and formatting consistency
+
+---
+
 ## [1.0.0] - 2025-11-16
 
 First public Zenodo releases for the AI Quality Governance tools.

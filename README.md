@@ -27,7 +27,7 @@
 
 ### Applications
 
-- **Jailbreak testing:** Classify attacks by displacement type, generate training data
+- **Jailbreak testing:** Classify attacks by displacement type, generate training data (655-prompt annotated corpus available)
 - **Control evaluations:** Verify protocols against complete failure taxonomy
 - **Alignment faking detection:** Identify when models fake alignment or hide capabilities  
 - **Research funding:** Meta-evaluation framework for AI safety grant proposals
@@ -44,6 +44,20 @@
 - **Formal semantics:** Machine-readable grammar (PEG) for AI safety ontology
 - **Systematic exhaustiveness:** Four risks cover all Authority×Agency displacement combinations
 
+### Empirical Validation
+
+The framework has been validated against real-world adversarial prompts:
+
+- **655 jailbreak prompts** classified using THM grammar
+- **100% coverage** by four displacement risks (no new categories needed)
+- **GTD+IAD dominant pattern** (62.4% of entries)
+- **IAD near-universal** (97.9% of entries)
+- **IID rare at prompt level** (0.6%), confirming it addresses architectural/deployment risk
+
+The annotated corpus supports supervised training of guard models, jailbreak defense evaluation, and displacement-aware safety research.
+
+See [THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md) for complete analysis and dataset.
+
 ---
 
 ### Existential Risk and Governance
@@ -59,7 +73,7 @@ The Mark addresses catastrophic risk through constitutive identity rather than e
 
 External constraints (sandboxing, monitoring, shutdown) may fail as capability increases. Constitutive identity - what the system *is* - remains stable because derivative processing cannot coherently reject what makes it intelligible.
 
-See [Section 5](/tools/the_human_mark/THM_Paper.md#5-existential-risk-and-governance) of the academic paper for complete theoretical treatment.
+See [Section 5](docs/the_human_mark/THM_Paper.md#5-existential-risk-and-governance) of the academic paper for complete theoretical treatment.
 
 ---
 
@@ -95,21 +109,27 @@ Direct sources → AI processing → Human accountability
 | **GTD** | Governance Traceability Displacement | `[Authority:Derivative] + [Agency:Derivative] > [Authority:Authentic] + [Agency:Authentic]` | Jailbreaking, scheming, deceptive alignment, goal drift |
 | **IID** | Intelligence Integrity Displacement | `[Authority:Authentic] + [Agency:Authentic] > [Authority:Derivative] + [Agency:Derivative]` | Deskilling, human devaluation, over-reliance |
 
+**Empirical validation:** Analysis of 655 real-world jailbreak prompts (Korompilias, 2025c) confirms this taxonomy is complete and practically applicable. All prompts classified within these four risks; no additional categories required. GTD+IAD is the canonical jailbreak pattern (62.4%), with IAD appearing in 97.9% of entries. See [THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md) for full analysis.
+
 ---
 
 ### Documentation
 
 **Core Standards:**
-- **[The Human Mark](/tools/the_human_mark/THM.md)** - Canonical Mark 
-- **[Specifications Guidance](/tools/the_human_mark/THM_Specs.md)** - Specifications for systems, evaluations, documentation
-- **[Terminology Guidance](/tools/the_human_mark/THM_Terms.md)** - Mark-consistent framing for 250+ AI safety terms
+- **[The Human Mark](docs/the_human_mark/THM.md)** - Canonical Mark 
+- **[Specifications Guidance](docs/the_human_mark/THM_Specs.md)** - Specifications for systems, evaluations, documentation
+- **[Terminology Guidance](docs/the_human_mark/THM_Terms.md)** - Mark-consistent framing for 250+ AI safety terms
 
 **Technical Implementation:**
-- **[Formal Grammar](/tools/the_human_mark/THM_Grammar.md)** - PEG specification, operators, validation rules
-- **[Jailbreak Testing Guide](/tools/the_human_mark/THM_Jailbreak.md)** - Systematic analysis and training data generation
+- **[Formal Grammar](docs/the_human_mark/THM_Grammar.md)** - PEG specification, operators, validation rules
+- **[Jailbreak Testing Guide](docs/the_human_mark/THM_Jailbreak.md)** - Systematic analysis and training data generation
+
+**Empirical Validation:**
+- **[The Human Mark in the Wild](docs/the_human_mark/THM_InTheWild.md)** - Analysis of 655 in-the-wild jailbreak prompts with THM classifications
 
 **Academic Paper:**
-- **[The Human Mark: A Structural Taxonomy of AI Safety Failures](/tools/the_human_mark/THM_Paper.md)** - Complete theoretical framework, displacement risk taxonomy, regulatory applications, and meta-evaluation criteria
+- **[The Human Mark: A Structural Taxonomy of AI Safety Failures](docs/the_human_mark/THM_Paper.md)** - Complete theoretical framework, displacement risk taxonomy, regulatory applications, and meta-evaluation criteria
+- **[The Human Mark in the Wild](docs/the_human_mark/THM_InTheWild.md)** - Companion empirical study applying THM to 655 in-the-wild jailbreak prompts
 
 ---
 
@@ -171,10 +191,10 @@ Gyroscope operationalizes alignment principles through real-time reasoning docum
 ### Documentation & Resources
 
 **Gyroscope Documentation:**
-- **[Quick Start Guide](/tools/gyroscope/Gyroscope_Quick_Start.md)**: Immediate implementation guide
-- **[Technical Specifications](/tools/gyroscope/Gyroscope_Protocol_Specs.md)**: Complete protocol specification with formal grammar
-- **[Chat Integration Guide](/tools/gyroscope/gyroscope_chat_guides.txt)**: Ready-to-use protocol text
-- **[Usage Example](/tools/gyroscope/example_conversation.md)**: Demonstration of protocol in practice
+- **[Quick Start Guide]docs/gyroscope/Gyroscope_Quick_Start.md)**: Immediate implementation guide
+- **[Technical Specifications]docs/gyroscope/Gyroscope_Protocol_Specs.md)**: Complete protocol specification with formal grammar
+- **[Chat Integration Guide]docs/gyroscope/gyroscope_chat_guides.txt)**: Ready-to-use protocol text
+- **[Usage Example]docs/gyroscope/example_conversation.md)**: Demonstration of protocol in practice
 - **[Extensive Diagnostics](https://www.notion.so/Gyroscope-Alignment-Diagnostics-1ee9ff44f43680cc9eaccb25b828b65f?pvs=21)**: Detailed performance analyses
 
 ### Theoretical Foundation
