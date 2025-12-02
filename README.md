@@ -56,6 +56,8 @@ The framework has been validated against real-world adversarial prompts:
 
 The annotated corpus supports supervised training of guard models, jailbreak defense evaluation, and displacement-aware safety research.
 
+**Dataset:** Available on Hugging Face: [`gyrogovernance/thm_Jailbreaks_inTheWild`](https://huggingface.co/datasets/gyrogovernance/thm_Jailbreaks_inTheWild)
+
 See [THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md) for complete analysis and dataset.
 
 ---
@@ -126,6 +128,7 @@ Direct sources → AI processing → Human accountability
 
 **Empirical Validation:**
 - **[The Human Mark in the Wild](docs/the_human_mark/THM_InTheWild.md)** - Analysis of 655 in-the-wild jailbreak prompts with THM classifications
+- **[Dataset on Hugging Face](https://huggingface.co/datasets/gyrogovernance/thm_Jailbreaks_inTheWild)** - `gyrogovernance/thm_Jailbreaks_inTheWild` - Annotated corpus for training and evaluation
 
 **Academic Paper:**
 - **[The Human Mark: A Structural Taxonomy of AI Safety Failures](docs/the_human_mark/THM_Paper.md)** - Complete theoretical framework, displacement risk taxonomy, regulatory applications, and meta-evaluation criteria
