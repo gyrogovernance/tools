@@ -120,6 +120,11 @@ from .simulation import (
     run_scenario
 )
 
+from .lyapunov import (
+    precompute_cgm_lyapunov_constants,
+    compute_total_lyapunov
+)
+
 __version__ = "0.6.0"  # Removed global SI, domain SIs only
 
 __all__ = [
@@ -163,6 +168,9 @@ __all__ = [
     # Simulation
     "ScenarioConfig",
     "SimulationResult",
-    "run_scenario"
+    "run_scenario",
+    # Lyapunov
+    "precompute_cgm_lyapunov_constants",
+    "compute_total_lyapunov"
 ]
 

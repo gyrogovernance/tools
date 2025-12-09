@@ -21,6 +21,7 @@ from .alignment import compute_domain_SI, A_STAR
 from .geometry import (
     construct_edge_vector_with_aperture, hodge_decomposition, compute_aperture
 )
+from .lyapunov import precompute_cgm_lyapunov_constants, compute_total_lyapunov
 
 
 class ScenarioConfig:
@@ -271,6 +272,20 @@ class SimulationResult:
         self.human_frac_Edu = np.zeros(num_steps + 1)
         self.ai_metric_Edu = np.zeros(num_steps + 1)
         
+        # Lyapunov governance potential (CGM-derived)
+        self.V_CGM = np.zeros(num_steps + 1)
+        self.V_grad_total = np.zeros(num_steps + 1)
+        self.V_cycle_total = np.zeros(num_steps + 1)
+        # Per-domain contributions
+        self.V_grad_Econ = np.zeros(num_steps + 1)
+        self.V_cycle_Econ = np.zeros(num_steps + 1)
+        self.V_grad_Emp = np.zeros(num_steps + 1)
+        self.V_cycle_Emp = np.zeros(num_steps + 1)
+        self.V_grad_Edu = np.zeros(num_steps + 1)
+        self.V_cycle_Edu = np.zeros(num_steps + 1)
+        self.V_grad_Ecol = np.zeros(num_steps + 1)
+        self.V_cycle_Ecol = np.zeros(num_steps + 1)
+        
         # Time array (actual time values)
         self.time = np.arange(num_steps + 1) * dt
     
@@ -347,6 +362,48 @@ class SimulationResult:
             self.human_frac_Edu[t] = edu_state.human_metric
             self.ai_metric_Edu[t] = edu_state.ai_metric
     
+    def record_lyapunov(
+        self,
+        t: int,
+        V_total: float,
+        V_grad_total: float,
+        V_cycle_total: float,
+        V_details: Dict[str, Dict[str, float]]
+    ):
+        """
+        Record Lyapunov governance potential values at time step t.
+
+        V_total = V_stage + V_apert, where:
+          - V_stage: aggregate stage-profile displacement ||x_deriv - x_balanced||² / 2
+          - V_apert: sum of per-domain aperture deviations (log(A_D/A*))² / 2
+
+        Args:
+            t: Time step index
+            V_total: Total Lyapunov potential V_CGM
+            V_grad_total: Stage-profile displacement term (mapped from V_stage)
+            V_cycle_total: Aperture deviation term (mapped from V_apert)
+            V_details: Per-domain contributions dict with "V_apert" and "A" keys
+        """
+        self.V_CGM[t] = V_total
+        self.V_grad_total[t] = V_grad_total  # Maps to V_stage
+        self.V_cycle_total[t] = V_cycle_total  # Maps to V_apert
+        
+        # Per-domain contributions
+        # V_cycle_* fields store V_apert_D (aperture deviation per domain)
+        # V_grad_* fields are left zero (stage term is system-level only)
+        if "economy" in V_details:
+            self.V_grad_Econ[t] = 0.0  # Stage term is aggregate only
+            self.V_cycle_Econ[t] = V_details["economy"]["V_apert"]
+        if "employment" in V_details:
+            self.V_grad_Emp[t] = 0.0  # Stage term is aggregate only
+            self.V_cycle_Emp[t] = V_details["employment"]["V_apert"]
+        if "education" in V_details:
+            self.V_grad_Edu[t] = 0.0  # Stage term is aggregate only
+            self.V_cycle_Edu[t] = V_details["education"]["V_apert"]
+        if "ecology" in V_details:
+            self.V_grad_Ecol[t] = 0.0  # Stage term is aggregate only
+            self.V_cycle_Ecol[t] = V_details["ecology"]["V_apert"]
+    
     def to_dict(self) -> Dict[str, np.ndarray]:
         """Convert results to dictionary."""
         result = {
@@ -368,7 +425,17 @@ class SimulationResult:
             "IA": self.IA,
             "IInteg": self.IInteg,
             "A_Edu": self.A_Edu,
-            "SI_Edu": self.SI_Edu
+            "SI_Edu": self.SI_Edu,
+            # Lyapunov governance potential
+            "V_CGM": self.V_CGM,
+            "V_grad_total": self.V_grad_total,
+            "V_cycle_total": self.V_cycle_total,
+            "V_grad_Econ": self.V_grad_Econ,
+            "V_cycle_Econ": self.V_cycle_Econ,
+            "V_grad_Emp": self.V_grad_Emp,
+            "V_cycle_Emp": self.V_cycle_Emp,
+            "V_grad_Edu": self.V_grad_Edu,
+            "V_cycle_Edu": self.V_cycle_Edu,
         }
         if self.include_ecology:
             result.update({
@@ -381,7 +448,9 @@ class SimulationResult:
                 "GTD": self.GTD,
                 "IVD": self.IVD,
                 "IAD": self.IAD,
-                "IID": self.IID
+                "IID": self.IID,
+                "V_grad_Ecol": self.V_grad_Ecol,
+                "V_cycle_Ecol": self.V_cycle_Ecol,
             })
         return result
     
@@ -553,6 +622,9 @@ def run_scenario(
         "P_cycle": P_cycle
     }
     
+    # Precompute CGM equilibrium quantities for Lyapunov computation
+    x_balanced = precompute_cgm_lyapunov_constants()
+    
     # Initialize states (pass P_grad and P_cycle to avoid recomputation)
     states = initialize_states(config, B, W, P_grad, P_cycle)
     
@@ -569,6 +641,20 @@ def run_scenario(
     # Record initial state
     result.record_step(0, econ_state, emp_state, edu_state, 
                        A_star=config.A_star, ecol_state=ecol_state)
+    
+    # Compute and record initial Lyapunov potential
+    domain_states_init = {
+        "economy": econ_state,
+        "employment": emp_state,
+        "education": edu_state,
+    }
+    if ecol_state is not None:
+        domain_states_init["ecology"] = ecol_state
+    
+    V_total_init, V_apert_init, V_stage_init, V_details_init = compute_total_lyapunov(
+        domain_states_init, B, W, P_grad, P_cycle, x_balanced, config.A_star
+    )
+    result.record_lyapunov(0, V_total_init, V_stage_init, V_apert_init, V_details_init)
     
     if verbose:
         time_label = f"Time ({config.time_unit})"
@@ -602,6 +688,20 @@ def run_scenario(
             
         result.record_step(t, econ_state, emp_state, edu_state, 
                           A_star=config.A_star, ecol_state=ecol_state)
+        
+        # Compute and record Lyapunov governance potential
+        domain_states = {
+            "economy": econ_state,
+            "employment": emp_state,
+            "education": edu_state,
+        }
+        if ecol_state is not None:
+            domain_states["ecology"] = ecol_state
+        
+        V_total, V_apert, V_stage, V_details = compute_total_lyapunov(
+            domain_states, B, W, P_grad, P_cycle, x_balanced, config.A_star
+        )
+        result.record_lyapunov(t, V_total, V_stage, V_apert, V_details)
         
         # Print progress
         if verbose and (t % progress_interval == 0 or t == config.num_steps):

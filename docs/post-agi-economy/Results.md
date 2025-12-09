@@ -1,82 +1,3 @@
-(.venv) PS D:\Development\tools> & d:/Development/tools/.venv/Scripts/python.exe d:/Development/tools/research/prevention/simulator/stability_analysis.py
-==========
-Stability Analysis
-==========
-
-Testing global attraction (1000 samples)...
-Converged: 1000/1000 (100.0%)
-SI range: [99.1, 100.0]
-SI mean: 99.4
-
-Coupling strength bifurcation:
-  kappa=0.1: SI=94.0 [OK]
-  kappa=0.5: SI=99.2 [OK]
-  kappa=1.0: SI=99.6 [OK]
-  kappa=2.0: SI=96.6 [OK]
-  kappa=5.0: SI=96.4 [OK]
-
-==========
-Summary
-==========
-A* is globally attracting (all samples converged)
-Stable kappa range: [0.1, 5.0]
-==========
-(.venv) PS D:\Development\tools> & d:/Development/tools/.venv/Scripts/python.exe d:/Development/tools/research/prevention/simulator/convergence_analysis.py
-==========
-Convergence Rate λ(κ)
-==========
-
-A* = 0.0207
-
-κ = 0.5:
-  λ_Econ = 0.0272
-  λ_Emp = 0.0226
-  λ_Edu  = 0.0420
-  λ_mean = 0.0306
-
-κ = 1.0:
-  λ_Econ = 0.0335
-  λ_Emp = 0.0220
-  λ_Edu  = 0.0292
-  λ_mean = 0.0282
-
-κ = 2.0:
-  λ_Econ = 0.0488
-  λ_Emp = 0.0247
-  λ_Edu  = 0.0366
-  λ_mean = 0.0367
-
-==========
-Summary: λ(κ)
-==========
-     κ     λ_mean
-----------
-   0.5     0.0306
-   1.0     0.0282
-   2.0     0.0367
-==========
-
-==========
-Long-Horizon Stability
-==========
-
-κ = 1.0, 1000 steps
-Transient excluded: t < 200
-
-Max |A_Econ - A*| for t >= 200: 0.000192
-Max |A_Emp - A*| for t >= 200: 0.000107
-Max |A_Edu  - A*| for t >= 200: 0.000246
-Max deviation (all domains): 0.000246
-
-Final A_Econ: 0.020724
-Final A_Emp: 0.020702
-Final A_Edu:  0.020703
-Final SI:     99.88
-
-SI post-transient: min=99.08, mean=99.51
-==========
-(.venv) PS D:\Development\tools> & d:/Development/tools/.venv/Scripts/python.exe d:/Development/tools/research/prevention/simulator/run_scenarios.py
-==========
 CGM Scenario Runner
 ==========
 
@@ -128,11 +49,11 @@ Scenario 1: Weak coupling (kappa=0.5)
 Step   Time (steps) SI_Econ    SI_Emp     SI_Edu     SI_Ecol
 ------ ------------ ---------- ---------- ---------- ----------
 0      0.00         13.80      17.25      11.50      100.00
-20     20.00        43.11      60.95      32.12      99.58
-40     40.00        69.47      95.19      55.61      99.76     
+20     20.00        43.11      60.95      32.12      99.58     
+40     40.00        69.47      95.19      55.61      99.76
 60     60.00        81.42      86.90      75.69      99.89     
-80     80.00        87.31      90.12      88.88      99.96
-100    100.00       91.37      94.47      95.71      99.98     
+80     80.00        87.31      90.12      88.88      99.96     
+100    100.00       91.37      94.47      95.71      99.98
 
 Final: SI_Econ=91.37
 
@@ -143,10 +64,10 @@ Scenario 2: Canonical coupling (kappa=1.0)
 Step   Time (steps) SI_Econ    SI_Emp     SI_Edu     SI_Ecol
 ------ ------------ ---------- ---------- ---------- ----------
 0      0.00         13.80      17.25      11.50      100.00
-20     20.00        62.01      98.71      47.68      99.63
-40     40.00        83.16      88.28      83.21      99.89     
-60     60.00        92.93      96.61      97.45      99.97
-80     80.00        97.67      99.50      99.74      99.99     
+20     20.00        62.01      98.71      47.68      99.63     
+40     40.00        83.16      88.28      83.21      99.89
+60     60.00        92.93      96.61      97.45      99.97     
+80     80.00        97.67      99.50      99.74      99.99
 100    100.00       99.29      98.66      99.47      100.00    
 
 Final: SI_Econ=99.29
@@ -187,7 +108,7 @@ Step   Time (steps) SI_Econ    SI_Emp     SI_Edu     SI_Ecol
 20     20.00        76.35      85.36      74.25      99.75     
 40     40.00        97.02      99.47      99.35      99.96
 60     60.00        99.83      98.96      99.16      100.00    
-80     80.00        99.50      99.38      99.09      100.00    
+80     80.00        99.50      99.38      99.09      100.00
 100    100.00       99.39      99.55      99.26      100.00    
 
 Final: SI_Econ=99.39
@@ -216,9 +137,9 @@ Step   Time (steps) SI_Econ    SI_Emp     SI_Edu     SI_Ecol
 0      0.00         48.31      20.70      100.00     100.00
 20     20.00        77.59      51.82      47.56      99.83
 40     40.00        63.40      81.69      79.50      99.90     
-60     60.00        72.99      96.68      97.02      99.94     
-80     80.00        83.39      95.72      95.45      99.96
-100    100.00       90.42      91.74      92.84      99.97     
+60     60.00        72.99      96.68      97.02      99.94
+80     80.00        83.39      95.72      95.45      99.96     
+100    100.00       90.42      91.74      92.84      99.97
 
 Final: SI_Econ=90.42
 
@@ -232,8 +153,8 @@ Step   Time (steps) SI_Econ    SI_Emp     SI_Edu     SI_Ecol
 20     20.00        38.62      47.37      47.98      99.87     
 40     40.00        62.23      83.87      79.74      99.88
 60     60.00        77.19      99.66      96.79      99.92     
-80     80.00        87.33      93.30      95.87      99.95     
-100    100.00       93.43      89.61      93.36      99.96
+80     80.00        87.33      93.30      95.87      99.95
+100    100.00       93.43      89.61      93.36      99.96     
 
 Final: SI_Econ=93.43
 
@@ -246,8 +167,8 @@ Step   Time (steps) SI_Econ    SI_Emp     SI_Edu     SI_Ecol
 0      0.00         13.80      17.25      11.50      100.00
 20     20.00        47.05      79.05      35.60      99.95
 40     40.00        73.94      96.38      74.91      99.98     
-60     60.00        89.83      95.92      96.45      100.00
-80     80.00        97.75      98.34      98.72      100.00    
+60     60.00        89.83      95.92      96.45      100.00    
+80     80.00        97.75      98.34      98.72      100.00
 100    100.00       99.63      99.66      98.85      100.00    
 
 Final: SI_Econ=99.63
@@ -260,17 +181,17 @@ Results exported to d:\Development\tools\research\prevention\simulator\results/
 ==========
 Summary
 ==========
-Scenario                               kappa    SI_Econ     A_Econ    SI_Ecol   Disp_GTD   
+Scenario                               kappa    SI_Econ     A_Econ    SI_Ecol   Disp_GTD     
 ----------
-1. Weak coupling                         0.5      91.37     0.0227      99.98     0.4167   
-2. Canonical coupling                    1.0      99.29     0.0208     100.00     0.4421   
-3. Strong coupling                       2.0      99.39     0.0208     100.00     0.4794   
-4. Low aperture start                    1.0      93.86     0.0194      99.94     0.2042   
-5. Asymmetric                            1.0      90.42     0.0187      99.97     0.1984   
-6. At A* (equilibrium)                   1.0      93.43     0.0193      99.96     0.2042   
-7. Uniform weights (null)                1.0      99.63     0.0206     100.00     0.3906   
+1. Weak coupling                         0.5      91.37     0.0227      99.98     0.4167     
+2. Canonical coupling                    1.0      99.29     0.0208     100.00     0.4421     
+3. Strong coupling                       2.0      99.39     0.0208     100.00     0.4794     
+4. Low aperture start                    1.0      93.86     0.0194      99.94     0.2042     
+5. Asymmetric                            1.0      90.42     0.0187      99.97     0.1984     
+6. At A* (equilibrium)                   1.0      93.43     0.0193      99.96     0.2042     
+7. Uniform weights (null)                1.0      99.63     0.0206     100.00     0.3906     
 ----------
-Target: A* = 0.0207                       --     100.00     0.0207     100.00     0.0000   
+Target: A* = 0.0207                       --     100.00     0.0207     100.00     0.0000     
 ==========
 
 Note: SI_Ecol measures structural coherence (dominated by canonical memory).
