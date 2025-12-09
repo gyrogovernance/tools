@@ -20,13 +20,11 @@
 
 ---
 
-## 🧭 Gyrogovernance Tools in This Repo
-
-This repository hosts our **practical tools**: 
+## 🧭 Gyrogovernance Tools in This Repo:
 
 - [✋ The Human Mark (THM)](#thm) – AI safety displacement taxonomy and jailbreak framework  
 - [🔄 Gyroscope Protocol](#gyroscope) – inductive reasoning protocol for alignment-aware chat systems  
-- [🌐 Gyroscopic Global Governance (GGG)](#ggg) – post-AGI multi-domain governance simulator
+- [🌐 Gyroscopic Global Governance (GGG)](#ggg) – post-AGI multi-domain governance sandbox simulator & paper
 
 ---
 
