@@ -5,6 +5,68 @@ All notable changes to the AI Quality Governance tools (Gyroscope and The Human 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+---
+
+## [1.5.0-GGG_Paper-PrePrint] - 2025-12-03 to 2025-12-09
+
+Major release adding the Gyroscopic Global Governance academic paper and complete simulator implementation.
+
+### **Added**: Gyroscopic Global Governance Academic Paper
+
+- **Added**: **[gyroscopic_global_governance.md](docs/post-agi-economy/gyroscopic_global_governance.md)** - "Gyroscopic Global Governance: Post-AGI Economy, Employment, Education and Ecology"
+  - Complete structural framework for Post-AGI governance based on CGM, THM, and Gyroscope Protocol
+  - Four structural operations: Governance Traceability, Information Variety, Inference Accountability, Intelligence Integrity
+  - Tetrahedral Hodge decomposition with aperture observable (A* ≈ 0.0207)
+  - Interpretation of ASI as structural equilibrium rather than autonomous agent
+  - Reframing of AI existential risk from autonomous superintelligence to cumulative governance failure
+
+### **Added**: Post-AGI Governance Simulator
+
+- **Added**: Complete simulator implementation in `research/prevention/simulator/`
+  - Modular architecture: `cgm_constants.py`, `geometry.py`, `domains.py`, `dynamics.py`, `alignment.py`, `simulation.py`
+  - Four coupled tetrahedral domains: Economy, Employment, Education, Ecology
+  - BU dual construction for Ecology with explicit displacement vector computation
+  - Seven scenario configurations testing convergence properties
+  - Global attraction test: 1000 random initializations, all converge to SI ≥ 99.1
+  - Coupling strength robustness: tested κ in {0.1, 0.5, 1.0, 2.0, 5.0}
+  - Long-horizon stability: 1000-step simulations with transient analysis
+  - Time scale interpretation: atomic, day, domain cycle (4 days), year
+
+### **Added**: Analysis and Visualization Tools
+
+- **Added**: `run_scenarios.py` - Main scenario runner with seven test configurations
+- **Added**: `convergence_analysis.py` - Exponential decay fitting and convergence rate estimation
+- **Added**: `stability_analysis.py` - Global attraction and coupling strength bifurcation analysis
+- **Added**: `analyze_scenarios.py` - Visualization suite for paper figures
+  - Tetrahedron schematic
+  - Per-scenario trajectory plots (SI and aperture)
+  - Convergence speed heatmap (time to SI ≥ 95)
+- **Added**: `historical_timeline.py` - Backward calibration from Post-AGI present to historical milestones
+
+### **Added**: Comprehensive Test Suite
+
+- **Added**: 43 unit tests covering:
+  - Alignment index behavior (17 tests)
+  - Domain state updates (7 tests)
+  - Geometry operations (11 tests)
+  - Simulation execution (8 tests)
+- All tests pass with deterministic dynamics (fixed seed 42 for reproducibility)
+
+### **Key Features**
+
+- **No tuned parameters**: All coupling coefficients derived from CGM invariants
+- **Explicit displacement calculation**: D = |x_deriv - x_balanced| computed at each step
+- **Separation of state and displacement**: EcologyState distinguishes BU-vertex potentials from THM displacement magnitudes
+- **Deterministic dynamics**: No stochastic terms except in global attraction test
+- **Modular design**: Core simulator requires only numpy; visualization optional
+
+### **Updated**: Documentation
+
+- **Updated**: `research/prevention/simulator/README.md` - Complete documentation of simulator architecture, usage, and results
+- **Updated**: Paper includes Appendix C on GyroSI finite-state epistemic core
+- **Updated**: All numerical results aligned with latest simulation outputs
+
 ---
 
 ## [1.5.0-THM_Papers] - 2025-12-02

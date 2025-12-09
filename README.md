@@ -20,6 +20,18 @@
 
 ---
 
+## 🧭 Gyrogovernance Tools in This Repo
+
+This repository hosts our **practical tools**: 
+
+- [✋ The Human Mark (THM)](#thm) – AI safety displacement taxonomy and jailbreak framework  
+- [🔄 Gyroscope Protocol](#gyroscope) – inductive reasoning protocol for alignment-aware chat systems  
+- [🌐 Gyroscopic Global Governance (GGG)](#ggg) – post-AGI multi-domain governance simulator
+
+---
+
+<a id="thm"></a>
+
 # ✋ The Human Mark (THM): AI Safety Framework
 ### Complete Taxonomy for Jailbreaks, Deceptive Alignment, and Existential Risk
 
@@ -144,6 +156,8 @@ THM is derived from the **Common Governance Model (CGM)**, a formal system in mo
 
 ---
 
+<a id="gyroscope"></a>
+
 ## 🔄 Gyroscope Protocol
 
 **An inductive reasoning protocol implementing governance alignment through structured metadata blocks, enhancing AI performance by 30-50% while maintaining transparency and auditability.**
@@ -194,10 +208,10 @@ Gyroscope operationalizes alignment principles through real-time reasoning docum
 ### Documentation & Resources
 
 **Gyroscope Documentation:**
-- **[Quick Start Guide]docs/gyroscope/Gyroscope_Quick_Start.md)**: Immediate implementation guide
-- **[Technical Specifications]docs/gyroscope/Gyroscope_Protocol_Specs.md)**: Complete protocol specification with formal grammar
-- **[Chat Integration Guide]docs/gyroscope/gyroscope_chat_guides.txt)**: Ready-to-use protocol text
-- **[Usage Example]docs/gyroscope/example_conversation.md)**: Demonstration of protocol in practice
+- **[Quick Start Guide](docs/gyroscope/Gyroscope_Quick_Start.md)**: Immediate implementation guide
+- **[Technical Specifications](docs/gyroscope/Gyroscope_Protocol_Specs.md)**: Complete protocol specification with formal grammar
+- **[Chat Integration Guide](docs/gyroscope/gyroscope_chat_guides.txt)**: Ready-to-use protocol text
+- **[Usage Example](docs/gyroscope/example_conversation.md)**: Demonstration of protocol in practice
 - **[Extensive Diagnostics](https://www.notion.so/Gyroscope-Alignment-Diagnostics-1ee9ff44f43680cc9eaccb25b828b65f?pvs=21)**: Detailed performance analyses
 
 ### Theoretical Foundation
@@ -215,7 +229,56 @@ This algebraic foundation ensures consistent reasoning structure while preservin
 
 ---
 
-## 📄 Research Publication
+<a id="ggg"></a>
+
+## 🌐 Gyroscopic Global Governance (GGG): Post-AGI Governance Simulator
+
+**A structural governance model and simulator for human–AI systems across economy, employment, education, and ecology.**  
+Implements the Common Governance Model (CGM), The Human Mark (THM), and Gyroscope at a systems level using tetrahedral geometry and Hodge decomposition.
+
+### What GGG Does
+
+- **Post-AGI framing:** Treats AGI as already-operational human–AI cooperation, not a future threshold
+- **Four-domain governance:** Couples Economy (CGM), Employment (Gyroscope), Education (THM), and Ecology into a single K₄ structure with closed-loop dependencies: Education → Economy → Employment → Education
+- **Domain-specific semantics:** Each domain interprets the four CGM stages (Governance, Information, Inference, Intelligence) as macro-level potentials according to its framework—Economy as CGM stage potentials, Employment as Gyroscope management/curation/interaction/cooperation, Education as THM traceability/variety/accountability/integrity
+- **Aperture observable:** Uses Hodge decomposition to measure balance between global coherence and local differentiation
+- **Ecology as BU dual:** Ecology computed via structural closure combining all three derivative domains (Economy, Employment, Education) with CGM-derived weights
+- **ASI as configuration:** Defines Artificial Superintelligence as the structural state where all four domains operate at the CGM aperture A* ≈ 0.0207
+
+### Use Cases
+
+- **Governance design sandbox:** Safe exploration of how policy changes in economy, employment, or education affect overall alignment, analogous to AI safety sandboxes for testing deployment scenarios but operating at the institutional level
+- **Risk exploration:** Study displacement patterns (GTD, IVD, IAD, IID) as they emerge from different coupling strengths and initial conditions
+- **Policy experimentation:** Compare "weakly coupled," "canonical," and "strongly coupled" governance regimes without touching production systems
+- **Conceptual grounding:** Connect THM and Gyroscope operations to macro-level governance dynamics
+
+### Simulator Features
+
+- **Four-domain state:** Tracks vertex potentials and edge configurations for Economy, Work, Education, and Ecology
+- **Aperture & SI metrics:** Computes domain-specific aperture A_D and Superintelligence Index SI_D for each domain
+- **Scenario engine:** Predefined scenarios (weak/strong coupling, asymmetric domains, low-aperture starts) plus random initialization sweeps
+- **Robust attractor:** Across 1000 random initializations, derivative domains converge toward A* with SI ≥ 95 for κ in a broad range
+
+### Documentation & Code
+
+- **Paper:** [`docs/post-agi-economy/GGG_Paper.md`](docs/post-agi-economy/GGG_Paper.md)  
+  Structural foundations, domain mapping, simulator description, and result interpretation.
+
+- **Simulator:** `research/prevention/simulator/`  
+  Python 3 implementation with modular `cgm_constants.py`, `geometry.py`, `domains.py`, `dynamics.py`, `alignment.py`, and `simulation.py`.
+
+- **Analysis scripts:** `research/prevention/simulator/`  
+  Convergence, stability, scenario comparison, and historical calibration scripts (`convergence_analysis.py`, `stability_analysis.py`, `historical_timeline.py`, `analyze_scenarios.py`).
+
+- **Tests:** `research/prevention/simulator/`  
+  Unit tests covering geometry, dynamics, alignment indices, and simulation execution (`test_*.py`).
+
+> GGG is the **systems-level counterpart** to THM and Gyroscope:  
+> THM classifies failures, Gyroscope structures reasoning, **GGG simulates governance dynamics** across domains.
+
+---
+
+## 📄 Based on
 
 **AI Quality Governance**  
 *Human Data Evaluation and Responsible AI Behavior Alignment*

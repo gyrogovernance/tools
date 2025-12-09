@@ -1,3 +1,32 @@
 # Notes - keep local only
 docs/notes/
 
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Results folder (keep structure but ignore CSV/JSON files)
+results/*.csv
+results/*.json
+
+# Keep the .gitkeep file
+!results/.gitkeep
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
