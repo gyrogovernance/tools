@@ -74,7 +74,7 @@ See [THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md) for complete analys
 
 ### Existential Risk and Governance
 
-The Mark addresses catastrophic risk through constitutive identity rather than external constraint. All AI capabilities, including hypothetical AGI/ASI, remain structurally `[Authority:Derivative] + [Agency:Derivative]` - classification based on source type, not capability limits.
+The Mark addresses catastrophic risk through constitutive identity rather than external constraint. All AI capabilities, including hypothetical AGI/ASI, remain structurally `[Authority:Derivative] + [Agency:Derivative]`, with classification based on source type rather than capability limits.
 
 **Key principles:**
 
@@ -83,7 +83,7 @@ The Mark addresses catastrophic risk through constitutive identity rather than e
 - **Existential risk is governance failure:** The actual X-risk is systemic Governance Traceability Displacement (GTD) sustained across critical infrastructure on civilizational timescales
 - **Absolute displacement is structurally impossible:** Complete severance from Authentic sources produces unintelligibility, not superintelligence
 
-External constraints (sandboxing, monitoring, shutdown) may fail as capability increases. Constitutive identity - what the system *is* - remains stable because derivative processing cannot coherently reject what makes it intelligible.
+External constraints (sandboxing, monitoring, shutdown) may fail as capability increases. Constitutive identity, which is what the system *is*, remains stable because derivative processing cannot coherently reject what makes it intelligible.
 
 See [Section 5](docs/the_human_mark/THM_Paper.md#5-existential-risk-and-governance) of the academic paper for complete theoretical treatment.
 
@@ -229,50 +229,53 @@ This algebraic foundation ensures consistent reasoning structure while preservin
 
 <a id="ggg"></a>
 
-## 🌐 Gyroscopic Global Governance (GGG): Post-AGI Governance Simulator
+## 🌐 Gyroscopic Global Governance (GGG): Post-AGI Governance Framework
 
-**A structural governance model and simulator for human–AI systems across economy, employment, education, and ecology.**  
-Implements the Common Governance Model (CGM), The Human Mark (THM), and Gyroscope at a systems level using tetrahedral geometry and Hodge decomposition.
+**A governance framework and simulator showing that aligned human–AI systems can resolve poverty, unemployment, misinformation, and ecological degradation.**  
+Reframes AGI as already-operational human–AI cooperation (not a future threshold) and demonstrates that maintaining four constitutive principles makes aligned governance attainable.
 
-### What GGG Does
+### The Problem
 
-- **Post-AGI framing:** Treats AGI as already-operational human–AI cooperation, not a future threshold
-- **Four-domain governance:** Couples Economy (CGM), Employment (Gyroscope), Education (THM), and Ecology into a single K₄ structure with closed-loop dependencies: Education → Economy → Employment → Education
-- **Domain-specific semantics:** Each domain interprets the four CGM stages (Governance, Information, Inference, Intelligence) as macro-level potentials according to its framework—Economy as CGM stage potentials, Employment as Gyroscope management/curation/interaction/cooperation, Education as THM traceability/variety/accountability/integrity
-- **Aperture observable:** Uses Hodge decomposition to measure balance between global coherence and local differentiation
-- **Ecology as BU dual:** Ecology computed via structural closure combining all three derivative domains (Economy, Employment, Education) with CGM-derived weights
-- **ASI as configuration:** Defines Artificial Superintelligence as the structural state where all four domains operate at the CGM aperture A* ≈ 0.0207
+Current governance discussions treat AGI as a future threshold requiring new controls. But human–AI cooperation already structures economy, employment, education, and ecology. The real question is therefore not how to constrain future agents, but how to govern existing systems so they resolve rather than amplify crises.
 
-### Use Cases
+### The Framework
 
-- **Governance design sandbox:** Safe exploration of how policy changes in economy, employment, or education affect overall alignment, analogous to AI safety sandboxes for testing deployment scenarios but operating at the institutional level
-- **Risk exploration:** Study displacement patterns (GTD, IVD, IAD, IID) as they emerge from different coupling strengths and initial conditions
-- **Policy experimentation:** Compare "weakly coupled," "canonical," and "strongly coupled" governance regimes without touching production systems
-- **Conceptual grounding:** Connect THM and Gyroscope operations to macro-level governance dynamics
+GGG proposes that coherent governance requires four constitutive principles:
 
-### Simulator Features
+1. **Governance Traceability:** Decisions remain traceable to human sources
+2. **Information Variety:** Multiple authentic sources are maintained
+3. **Inference Accountability:** Responsibility for decisions remains with human agency
+4. **Intelligence Integrity:** Reasoning maintains coherence over time
 
-- **Four-domain state:** Tracks vertex potentials and edge configurations for Economy, Work, Education, and Ecology
-- **Aperture & SI metrics:** Computes domain-specific aperture A_D and Superintelligence Index SI_D for each domain
-- **Scenario engine:** Predefined scenarios (weak/strong coupling, asymmetric domains, low-aperture starts) plus random initialization sweeps
-- **Robust attractor:** Across 1000 random initializations, derivative domains converge toward A* with SI ≥ 95 for κ in a broad range
+These principles are not policy preferences but constitutive conditions. When maintained at a specific balance point (aperture A* ≈ 0.0207), the framework shows that:
+- **Poverty** resolves through coherent surplus distribution
+- **Unemployment** becomes alignment work rather than residual labour
+- **Miseducation** shifts toward epistemic literacy
+- **Ecological degradation** appears as upstream displacement, not an external constraint
+
+### What the Simulator Demonstrates
+
+The simulator tests whether this balanced configuration is attainable. Across 1000 random initial conditions and multiple scenarios, all domains converge toward the target aperture with alignment indices above 95. This suggests that aligned governance is dynamically reachable from current Post-AGI states under coordinated oversight, rather than being merely aspirational.
+
+### Practical Use
+
+- **Governance sandbox:** Explore how policy changes in economy, employment, or education affect overall alignment
+- **Policy design:** Test interventions (e.g., Universal High Income mechanisms) before committing institutional resources
+- **Risk analysis:** Study how displacement patterns emerge from different governance configurations
+- **Everyday governance:** Apply the four principles at any scale, including households, teams, and organisations, without requiring formal authority
 
 ### Documentation & Code
 
 - **Paper:** [`docs/post-agi-economy/GGG_Paper.md`](docs/post-agi-economy/GGG_Paper.md)  
-  Structural foundations, domain mapping, simulator description, and result interpretation.
+  Complete framework, mathematical foundations, simulator results, and practical implications.
 
 - **Simulator:** `research/prevention/simulator/`  
-  Python 3 implementation with modular `cgm_constants.py`, `geometry.py`, `domains.py`, `dynamics.py`, `alignment.py`, and `simulation.py`.
+  Python implementation with modular architecture for running scenarios and analyzing convergence.
 
 - **Analysis scripts:** `research/prevention/simulator/`  
-  Convergence, stability, scenario comparison, and historical calibration scripts (`convergence_analysis.py`, `stability_analysis.py`, `historical_timeline.py`, `analyze_scenarios.py`).
+  Tools for convergence analysis, stability testing, scenario comparison, and historical calibration.
 
-- **Tests:** `research/prevention/simulator/`  
-  Unit tests covering geometry, dynamics, alignment indices, and simulation execution (`test_*.py`).
-
-> GGG is the **systems-level counterpart** to THM and Gyroscope:  
-> THM classifies failures, Gyroscope structures reasoning, **GGG simulates governance dynamics** across domains.
+> GGG integrates the other tools: **THM** classifies failures, **Gyroscope** structures reasoning, **GGG** simulates how maintaining the four principles resolves systemic crises across domains.
 
 ---
 
