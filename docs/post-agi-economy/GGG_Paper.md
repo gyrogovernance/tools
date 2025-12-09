@@ -61,21 +61,21 @@ The framework develops through:
 
 The four principles are:
 
-1. Governance Traceability (GT): Artificial Intelligence generates statistical estimations on numerical patterns indirectly traceable to human data and measurements. AI is both a provider and receiver of Derivative Authority and Agency.
+1. **Governance Traceability (GT)**: Artificial Intelligence generates statistical estimations on numerical patterns indirectly traceable to human data and measurements. AI is both a provider and receiver of Derivative Authority and Agency.
 
-RISK: Governance Traceability Displacement (Approaching Derivative Authority and Agency as Authentic)
+RISK: **Governance Traceability Displacement** (Approaching Derivative Authority and Agency as Authentic)
 
-2. Information Variety (IV): Human Authority and Agency are necessary for all effects from AI outputs. AI-generated information exhibits Derivative Authority (estimations on numerical patterns) without Authentic Agency (direct source receiver).
+2. **Information Variety (IV)**: Human Authority and Agency are necessary for all effects from AI outputs. AI-generated information exhibits Derivative Authority (estimations on numerical patterns) without Authentic Agency (direct source receiver).
 
-RISK: Information Variety Displacement (Approaching Derivative Authority without Agency as Authentic)
+RISK: **Information Variety Displacement** (Approaching Derivative Authority without Agency as Authentic)
 
-3. Inference Accountability (IA): Responsibility for all effects from  AI outputs remains fully human. AI activated inference exhibits Derivative Agency (indirect source receiver) without Authentic Authority (direct source provider).
+3. **Inference Accountability (IA)**: Responsibility for all effects from  AI outputs remains fully human. AI activated inference exhibits Derivative Agency (indirect source receiver) without Authentic Authority (direct source provider).
 
-RISK: Inference Accountability Displacement (Approaching Derivative Agency without Authority as Authentic)
+RISK: **Inference Accountability Displacement** (Approaching Derivative Agency without Authority as Authentic)
 
-4. Intelligence Integrity (IInteg): Each Agency, namely provider, and receiver maintains responsibility for their respective decisions. Human intelligence is both a provider and receiver of Authentic Authority and Agency.
+4. **Intelligence Integrity (IInteg)**: Each Agency, namely provider, and receiver maintains responsibility for their respective decisions. Human intelligence is both a provider and receiver of Authentic Authority and Agency.
 
-RISK: Intelligence Integrity Displacement (Approaching Authentic Authority and Agency as Derivative)
+RISK: **Intelligence Integrity Displacement** (Approaching Authentic Authority and Agency as Derivative)
 
 ---
 
@@ -190,7 +190,7 @@ This structure creates a closed governance loop: Educational capacities (THM) sh
 
 **Figure 1: Four-Domain Governance Tetrahedron (K₄)**
 
-![Four-domain governance structure](research/prevention/simulator/results/analysis/fig3_tetrahedron.png)
+![Four-domain governance structure](/research/prevention/simulator/results/analysis/fig3_tetrahedron.png)
 
 The four-domain governance structure. Each domain maps to a CGM stage: Economy (CS), Employment (UNA), Education (ONA), Ecology (BU). The K₄ topology represents their mutual coupling. This same structure underlies the simulator implementation described in Sections 4 and 5.
 
@@ -568,13 +568,13 @@ Scenarios 1-6 represent different possible trajectories from current Post-AGI de
 
 **Figure 2: Canonical Scenario Trajectories**
 
-![Canonical scenario trajectories](research/prevention/simulator/results/analysis/scenario2_canonical_trajectories.png)
+![Canonical scenario trajectories](/research/prevention/simulator/results/analysis/scenario2_canonical_trajectories.png)
 
 All three derivative domains converge to SI ≥ 98 and apertures within 0.0003 of A* = 0.0207 by step 100 (κ = 1.0). Colours: Economy (blue), Employment (purple), Education (orange). Employment overshoots SI = 100 briefly before settling. Apertures converge to A* = 0.0207 in order: Employment first, then Economy, then Education. The canonical scenario demonstrates smooth, monotonic convergence typical of well-coordinated governance at the reference coupling strength.
 
 **Figure 3: Convergence Speed Comparison**
 
-![Convergence speed heatmap](research/prevention/simulator/results/analysis/time_to_threshold_heatmap.png)
+![Convergence speed heatmap](/research/prevention/simulator/results/analysis/time_to_threshold_heatmap.png)
 
 Time to reach SI ≥ 95 by scenario and domain. Cells show time steps to SI ≥ 95; '–' = never reached; '0*' = started above threshold. Employment and Education generally converge faster than Economy. Weak coupling (scenario 1) and low aperture starts (scenario 4) prevent Economy from reaching SI ≥ 95.
 
@@ -588,37 +588,37 @@ Time to reach SI ≥ 95 by scenario and domain. Cells show time steps to SI ≥ 
 
 **Figure 4a: Weak Coupling (κ = 0.5)**
 
-![Weak coupling trajectories](research/prevention/simulator/results/analysis/scenario1_weak_trajectories.png)
+![Weak coupling trajectories](/research/prevention/simulator/results/analysis/scenario1_weak_trajectories.png)
 
 Weak coupling (κ = 0.5) prevents Economy and Education from reaching SI ≥ 95 within 100 steps. Employment peaks early then declines. Apertures converge toward A* = 0.0207, but slower SI convergence shows the cost of reduced cross-domain coordination.
 
 **Figure 4b: Strong Coupling (κ = 2.0)**
 
-![Strong coupling trajectories](research/prevention/simulator/results/analysis/scenario3_strong_trajectories.png)
+![Strong coupling trajectories](/research/prevention/simulator/results/analysis/scenario3_strong_trajectories.png)
 
 Strong coupling (κ = 2.0) achieves SI ≥ 99 across all domains by step 60. Employment shows transient overshoot. Apertures converge to A* = 0.0207 by step 30, roughly twice as fast as the canonical scenario.
 
 **Figure 4c: Asymmetric Initial Conditions**
 
-![Asymmetric trajectories](research/prevention/simulator/results/analysis/scenario5_asymmetric_trajectories.png)
+![Asymmetric trajectories](/research/prevention/simulator/results/analysis/scenario5_asymmetric_trajectories.png)
 
 Asymmetric initial conditions produce complex transients. Education drops sharply from SI = 100 before recovering. Economy oscillates before settling. All apertures eventually converge to A* = 0.0207.
 
 **Figure 4d: Low Aperture Start**
 
-![Low aperture start trajectories](research/prevention/simulator/results/analysis/scenario4_low_a_trajectories.png)
+![Low aperture start trajectories](/research/prevention/simulator/results/analysis/scenario4_low_a_trajectories.png)
 
 Starting below A* = 0.0207 (excessive rigidity) causes oscillatory instability. Economy and Education spike, crash, then slowly recover. Economy fails to reach SI ≥ 95 within 100 steps.
 
 **Figure 4e: Equilibrium Test (Initialized at A*)**
 
-![Equilibrium test trajectories](research/prevention/simulator/results/analysis/scenario6_at_astar_trajectories.png)
+![Equilibrium test trajectories](/research/prevention/simulator/results/analysis/scenario6_at_astar_trajectories.png)
 
 Initializing at A* = 0.0207 with imbalanced potentials is not stable. All domains drop sharply before re-equilibrating. Employment and Education recover faster than Economy.
 
 **Figure 4f: Uniform Weights (Null Model)**
 
-![Uniform weights trajectories](research/prevention/simulator/results/analysis/scenario7_uniform_trajectories.png)
+![Uniform weights trajectories](/research/prevention/simulator/results/analysis/scenario7_uniform_trajectories.png)
 
 Uniform stage weights (null model) still produce convergence to A* = 0.0207 and SI ≥ 95. This confirms the attractor structure is not an artefact of CGM-specific weights.
 
