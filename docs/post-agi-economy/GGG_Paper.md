@@ -57,7 +57,7 @@ The framework develops through:
 
 3. **Dynamical validation**: We demonstrate via a discrete-time simulator that this configuration is dynamically stable and functions as a robust attractor across a wide range of initial conditions.
 
-![The Four AI Displacement Risks: A Unified Framework for AI Safety](../../research/prevention/simulator/results/analysis/The%20Four%20AI%20Displacement%20Risks.png)
+![The Four AI Displacement Risks: A Unified Framework for AI Safety](/research/prevention/simulator/results/analysis/The%20Four%20AI%20Displacement%20Risks.png)
 
 The four principles are:
 
