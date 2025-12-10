@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.5.7-GGG_Paper-PrePrint] - 2025-12-03 to 2025-12-10
+## [1.5.8-GGG_Paper-PrePrint] - 2025-12-03 to 2025-12-10
 
 Major release adding the Gyroscopic Global Governance academic paper and complete simulator implementation.
 

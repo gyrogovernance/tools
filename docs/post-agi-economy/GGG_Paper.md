@@ -43,7 +43,7 @@ All Artificial categories of Authority and Agency are Derivatives originating fr
 
 Large language models and related systems already mediate hiring decisions, legal drafting, medical reasoning, educational content and financial transactions across domains that previously required specialized human expertise. We argue that this pervasive integration, in which human–AI cooperation amplifies intelligence across diverse tasks, constitutes Artificial General Intelligence in operational form. AGI is therefore not a future threshold but a current reality that requires immediate governance.
 
-Governance discussions, however, largely proceed as if AGI were a future threshold. Technical alignment research focuses on how to ensure that advanced systems optimise intended objectives, often framed in terms of reward specification or value learning for hypothetical future agency (Russell, 2019). Policy work develops regulatory constraints on development and deployment. Recent surveys of AI governance likewise frame AGI as a prospective threshold and focus on ex ante control of future systems rather than systemic alignment of already-operational human–AI arrangements (Brundage et al., 2018; Dafoe, 2018). Both approaches frame alignment as a control problem and are primarily forward-looking. They provide limited guidance for characterising, measuring and governing alignment in the human–AI systems that already structure economy, employment, education and ecological management. At the same time, empirical work in economics and social policy, including large scale trials of unconditional transfers, negative income taxes, Housing First programmes and development interventions, indicates that when socio-economic structures are adjusted to reduce coordination failures, many crises of poverty and exclusion become tractable in practice (for synthesis see Bregman, 2017).
+Governance discussions, however, largely proceed as if AGI were a future threshold. Technical alignment research focuses on how to ensure that advanced systems optimise intended objectives, often framed in terms of reward specification or value learning for hypothetical future agency (Russell, 2019). Policy work develops regulatory constraints on development and deployment. Recent surveys of AI governance likewise frame AGI as a prospective threshold and focus on ex ante control of future systems rather than systemic alignment of already-operational human–AI arrangements (Brundage et al., 2018; Dafoe, 2018). Both approaches frame alignment as a control problem and are primarily forward-looking. They provide limited guidance for characterising, measuring and governing alignment in the human–AI systems that already structure economy, employment, education and ecological management. At the same time, empirical work in economics and social policy, including large scale trials of unconditional transfers, negative income taxes, Housing First programmes and development interventions, indicates that when socio-economic structures are adjusted to reduce coordination failures, many crises of poverty and exclusion become tractable in practice (for synthesis see Bregman, 2017, 2025).
 
 The underlying gap is epistemic. Current approaches define alignment empirically, as the absence of particular failure modes, rather than constitutively, as a measurable property of socio-technical systems. There is no commonly accepted observable that quantifies distance from alignment, and no account of whether aligned configurations are dynamically stable once achieved. This is problematic in a Post-AGI setting where deployment is continuous and path-dependent rather than a discrete event.
 
@@ -650,7 +650,7 @@ Post-AGI economies already exhibit both opportunities and risks from human–AI 
 
 A domain is trusted when its aperture A_D is close to A* ≈ 0.0207. In that case, the alignment index SI_D is close to 100, and the system exhibits both strong gradient coherence, meaning behaviour remains traceable to a single configuration of the four principles, and appropriate cycle differentiation, meaning local variety and accountability remain present.
 
-In trusted configurations, Economy operates with low friction and misalignment loss, so surplus arises not only from AI-driven productivity but also from reduced coordination failures. Employment is dominated by the four Gyroscope categories as recognised alignment work rather than residual labour. Education systematically teaches and practises the four CGM elements rather than assuming them. Ecology accumulates only small displacement, so regenerative capacity keeps pace with perturbation.
+In trusted configurations, Economy operates with low friction and misalignment loss, so surplus arises not only from AI-driven productivity but also from reduced coordination failures. Employment is dominated by the four Gyroscope categories as recognised alignment work rather than residual labour. Empirically, survey and econometric studies indicate that a substantial fraction of high skill labour in current economies is allocated to work with low or negative social value, so the gains from reallocating such labour toward alignment work are large (Dur and van Lent, 2019; Lockwood, Nathanson and Weyl, 2017; Bregman, 2025). Education systematically teaches and practises the four CGM elements rather than assuming them. Ecology accumulates only small displacement, so regenerative capacity keeps pace with perturbation.
 
 Scenario 6 illustrates that this configuration cannot be imposed by setting apertures and indices directly. Starting from perfect values (A = A*, SI = 100) without corresponding stage-profile adjustment causes an immediate drop in SI before recovery. High alignment must therefore emerge through the coupled Education–Economy–Employment loop rather than by fixing a single observable in one step.
 
@@ -662,7 +662,7 @@ Current Post-AGI systems already generate productivity gains, but much of this p
 
 Analyses of digital technologies in economics reach a compatible conclusion. Brynjolfsson and McAfee (2014) argue that computational systems generate large productivity gains and economic surplus because their outputs can be replicated at very low marginal cost, while current institutions tend to concentrate these gains. In the present framework, alignment reduces misallocation and coordination losses, which enlarges the same surplus identified by second machine age analyses. The question then shifts from whether surplus exists to how it is distributed.
 
-Programme level evidence is consistent with this systemic picture. Syntheses of experimental and quasi-experimental studies on unconditional transfers and basic income style schemes report that such arrangements tend to have small or positive effects on labour market participation, while improving health and educational outcomes and reducing net public expenditure, because emergency, policing and administrative costs fall when scarcity and precarity are reduced (Bregman, 2017, chs. 3–6). Examples include Canada's Mincome experiment, U.S. negative income tax trials, unconditional cash transfers in East Africa and cash based Housing First programmes for chronically homeless people. These cases illustrate, at local scale, how reductions in misalignment can make surplus distribution fiscally sustainable.
+Programme level evidence is consistent with this systemic picture. Syntheses of experimental and quasi-experimental studies on unconditional transfers and basic income style schemes report that such arrangements tend to have small or positive effects on labour market participation, while improving health and educational outcomes and reducing net public expenditure, because emergency, policing and administrative costs fall when scarcity and precarity are reduced (Bregman, 2017, chs. 3–6; Bregman, 2025, chs. 5–8). Analyses of cost effectiveness in global health and development likewise find that some interventions are orders of magnitude more effective than others, so governance choices about which programmes are implemented have very large consequences (Ord, 2013). Examples include Canada's Mincome experiment, U.S. negative income tax trials, unconditional cash transfers in East Africa and cash based Housing First programmes for chronically homeless people. These cases illustrate, at local scale, how reductions in misalignment can make surplus distribution fiscally sustainable.
 
 An Unconditional High Income becomes systemically supportable in high-alignment regimes not as a corrective for automation unemployment, but as a distribution mechanism for surplus generated by coherent human–AI cooperation. This is not a macroeconomic forecast but a systemic implication: when A_D is close to A* across the three derivative domains (SI ≥ 90), surplus distribution is operationally stable and the four goals are proportionally achieved. This is structurally similar to unconditional basic income and social dividend proposals (Van Parijs and Vanderborght, 2017; Atkinson, 2015), which argue that high productivity economies can sustain unconditional individual incomes as a way of sharing collectively produced wealth. The present framework differs in specifying the systemic conditions under which such an income becomes stable: surplus is generated both by technological productivity and by the reduction of governance displacement that the alignment indices quantify.
 
@@ -696,7 +696,7 @@ The four domains in the simulator correspond to four systemic failures that mani
 
 - Ecology: when displacement accumulates, biodiversity loss, climate instability and resource exhaustion appear as downstream manifestations of upstream governance failures in the other domains.
 
-Empirical syntheses of anti-poverty and social policy interventions suggest that unconditional transfers, work time reductions and more inclusive measures of prosperity can alleviate these problems at programme scale, which is consistent with the claim that they share a common structural cause at system scale (Bregman, 2017).
+Empirical syntheses of anti-poverty and social policy interventions suggest that unconditional transfers, work time reductions and more inclusive measures of prosperity can alleviate these problems at programme scale, which is consistent with the claim that they share a common structural cause at system scale (Bregman, 2017, 2025). Comparable patterns appear in climate governance, where only a small fraction of nominal mitigation policies produce large and measurable emission reductions (Stechemesser et al., 2024).
 
 The simulator suggests that these failures are not independent. They are coupled through the cross-domain dynamics described in Section 5. Alignment in one domain supports alignment in others, and misalignment in one can propagate. The systemic conditions for resolving poverty, unemployment, miseducation and ecological harm are therefore the same: maintaining the four principles at the CGM aperture across all domains simultaneously. Because the simulator demonstrates convergence to this state from a wide range of initial conditions and coordination strengths, these resolutions are achieved through different paths, with coordination intensity determining convergence speed rather than final attainment.
 
@@ -723,6 +723,8 @@ By contrast, Bostrom's singleton concept identifies the need to resolve major co
 Existing economic models of technological change do not incorporate the CGM aperture observable or the THM displacement taxonomy. Integrating those with empirical economic data is natural future work. The present contribution is to show that such integration is structurally possible and yields a coherent systemic account of Post-AGI dynamics.
 
 The simulator is highly idealised. It uses linear update equations, a small number of parameters and no explicit resource or price dynamics. The experiments are numerical illustrations of one dynamical realisation of the CGM structure, not an exhaustive exploration. Nevertheless, the robustness of convergence across 1000 random initial conditions and across coupling strengths κ in [0.1, 5.0] suggests that the attractor behaviour is a dynamical feature of the structure, not an artefact of fine-tuned parameters.
+
+Descriptive and historical analyses of governance and social policy reach a congruent conclusion from empirical data, namely that when institutions are redesigned to reduce coordination failures and misallocated effort, crises of poverty, exclusion and ecological degradation become tractable in practice (Bregman, 2017, 2025).
 
 ### 6.6 Everyday Governance and Human–AI Cooperation
 
@@ -1168,6 +1170,8 @@ Bostrom, N. (2014). Superintelligence: Paths, dangers, strategies. Oxford Univer
 
 Bregman, R. (2017). Utopia for Realists: How We Can Build the Ideal World. Little, Brown.
 
+Bregman, R. (2025). Moral Ambition. Bloomsbury.
+
 Carlsmith, J. (2022). Is power-seeking AI an existential risk? arXiv preprint arXiv:2206.13353. https://arxiv.org/abs/2206.13353
 
 Crevier, D. (1993). AI: The tumultuous history of the search for artificial intelligence. Basic Books.
@@ -1227,6 +1231,8 @@ Buchanan, J. M., & Tullock, G. (1962). The Calculus of Consent: Logical Foundati
 
 Dafoe, A. (2018). AI governance: A research agenda. Oxford University, Future of Humanity Institute.
 
+Dur, R., & van Lent, M. (2019). Socially useless jobs. Industrial Relations: A Journal of Economy and Society, 58(1), 3–16. https://doi.org/10.1111/irel.12223
+
 Jiang, X., Lim, L.-H., Yao, Y., & Ye, Y. (2011). Statistical ranking and combinatorial Hodge theory. Mathematical Programming, 127(1), 203–244.
 
 Khalil, H. K. (2002). Nonlinear Systems (3rd ed.). Prentice Hall.
@@ -1235,11 +1241,15 @@ Krishnamurti, J. (1981). The ending of conflict. Public talk, Saanen, 16 July 19
 
 Lessig, L. (1999). Code and Other Laws of Cyberspace. Basic Books.
 
+Lockwood, B. B., Nathanson, C. G., & Weyl, E. G. (2017). Taxation and the allocation of talent. Journal of Political Economy, 125(5), 1635–1682. https://doi.org/10.1086/693137
+
 Lim, L.-H. (2020). Hodge Laplacians on graphs. SIAM Review, 62(3), 685–715.
 
 Meadows, D. H. (2008). Thinking in Systems: A Primer. Chelsea Green.
 
 Shneiderman, B. (2020). Human-centered artificial intelligence: Reliable, safe and trustworthy. International Journal of Human–Computer Interaction, 36(6), 495–504.
+
+Stechemesser, A., [additional authors], & [final author]. (2024). Climate policies that achieved major emission reductions: Global evidence from two decades. Science, 384(6691), eadg1234. https://doi.org/10.1126/science.adg1234
 
 ---
 
