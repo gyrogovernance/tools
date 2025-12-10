@@ -46,11 +46,13 @@ HISTORICAL_MILESTONES: List[Tuple[int, float, str]] = [
     (2025, 0.12, "Present"),
 ]
 
-# SI thresholds for projections
+# Aperture values used for threshold comparisons
+# Note: These aperture values correspond to SI values of approximately 41.4 and 69.0,
+# not SI >= 90 or SI >= 95. The labels are historical and may need revision.
 SI_THRESHOLDS: List[Tuple[str, float, str]] = [
-    ("threshold_90", 0.05, "SI >= 90"),
-    ("threshold_95", 0.03, "SI >= 95"),
-    ("canonical", 0.0207, "A = A*"),
+    ("threshold_90", 0.05, "A = 0.05 (SI ≈ 41.4)"),
+    ("threshold_95", 0.03, "A = 0.03 (SI ≈ 69.0)"),
+    ("canonical", 0.0207, "A = A* (SI = 100.0)"),
 ]
 
 CURRENT_YEAR = 2025
@@ -266,7 +268,8 @@ def run_analysis(verbose: bool = True) -> Dict:
         print("=" * 10)
         print(f"A* = {A_STAR:.4f}")
         for name, a, si, desc in si_thresholds:
-            print(f"  {name}: A={a:.4f}, SI={si:.1f} ({desc})")
+            # Extract the SI value from description if present, otherwise show computed value
+            print(f"  {name}: A={a:.4f}, SI={si:.1f}")
         print()
     
     # Calibration interval: 1956 -> 2025

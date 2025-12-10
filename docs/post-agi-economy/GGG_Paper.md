@@ -10,7 +10,7 @@ Artificial General Intelligence is widely treated as a future threshold requirin
 
 We propose that coherent governance requires four constitutive principles: Governance Traceability, Information Variety, Inference Accountability and Intelligence Integrity. We formalize these on a tetrahedral graph to define an aperture observable, a scalar measure of the balance between global coherence and local differentiation. Theoretical analysis identifies a target aperture of approximately 0.0207. We interpret Artificial Superintelligence as the operational state where human–AI systems jointly operate at this balance point.
 
-A discrete-time governance sandbox demonstrates that this civic configuration is cohesive and attainable. Across seven scenarios and 1000 random initializations, all domains converge toward the target with alignment indices above 95. These results suggest that operational alignment is accessible from current configurations under coordinated human oversight. By restoring the four principles to the target aperture, governance establishes the operational conditions to resolve poverty, unemployment, misinformation and ecological degradation. Alignment is thus identified not as a constraint on present or future agents, but as an ongoing matter of common responsibility and cooperation between humans and AI.
+A discrete-time governance sandbox demonstrates that this civic configuration is cohesive and attainable. In canonical, strong-coupling and null-model scenarios, all derivative domains converge toward the target with alignment indices above 90; across 1000 random initializations, all runs achieve final alignment indices above 90. These results suggest that operational alignment is accessible from current configurations under coordinated human oversight. By restoring the four principles to the target aperture, governance establishes the operational conditions to resolve poverty, unemployment, misinformation and ecological degradation. Alignment is thus identified not as a constraint on present or future agents, but as an ongoing matter of common responsibility and cooperation between humans and AI.
 
 ---
 
@@ -262,231 +262,166 @@ In a Post-AGI world, education shifts from content delivery to epistemic literac
 
 ### 3.4 Ecology: Structural Closure and Displacement
 
-Ecology is the domain of Universal Balance (BU). It represents the material and living reality in which the effects of the other three domains accumulate. In GGG, Ecology is not treated as an external environment, but as the structural closure of the governance system.
+Ecology is the domain of Universal Balance (BU). It functions as the structural closure of the governance system rather than as an external environment. In this domain, the distinct operations of Economy, Employment and Education accumulate into a single material reality.
 
-At the ecological level, CGM introduces a canonical balanced profile that represents a healthy, resilient biosphere in terms of the four stages: governance, information, inference and intelligence. The actual state of economy, employment and education can be aggregated to form a derivative profile. Comparing the aggregate derivative state to the canonical balanced profile yields two kinds of ecological information:
+CGM defines a canonical balanced profile for this domain. The actual state of the three derivative domains aggregates to form a derivative profile. Comparing this aggregate to the canonical balance yields two distinct signals:
 
-1. **Systemic coherence:** How well the combined effects of economy, employment and education preserve the canonical balance at the ecological level.
-2. **Displacement:** The deviation of the derivative state from that canonical balance, decomposed along the four CGM stages.
+1. **Systemic coherence:** The degree to which the combined derivative domains preserve the structural conditions for a viable ecology.
+2. **Displacement:** The vector distance between the current aggregate state and the canonical balanced profile.
 
-Within THM, this displacement maps directly onto the four risks:
+Because Ecology integrates all three derivative domains, each displacement dimension aggregates the corresponding stage across CGM, Gyroscope and THM:
 
-- **Governance Traceability Displacement (GTD):** Pollution and extraction exceeding recovery (loss of source traceability).
-- **Information Variety Displacement (IVD):** Biodiversity loss and monocultures (loss of variety).
-- **Inference Accountability Displacement (IAD):** Externalised costs and diffuse harms (loss of accountability).
-- **Intelligence Integrity Displacement (IID):** Climate instability and systemic breakdown (loss of integrity).
+| Displacement | Aggregates | Measures |
+|--------------|------------|----------|
+| GTD | Gov + GM + GT | Deviation in governance operations, work and capacity |
+| IVD | Info + ICu + IV | Deviation in information operations, work and capacity |
+| IAD | Infer + IInter + IA | Deviation in inference operations, work and capacity |
+| IID | Int + ICo + IInteg | Deviation in intelligence operations, work and capacity |
 
-Ecology thus closes the loop by integrating the states of Economy, Employment and Education, and by making visible how environmental degradation is not a separate problem but the downstream accumulation of governance failures in the other domains. The precise mathematical form of this aggregation, including the BU dual combination and displacement vector, is given in Section 4.2.
+THM names these categories because it defines the underlying source-type errors. CGM and Gyroscope contribute equally to the magnitude of each displacement. A high GTD value, for instance, indicates combined failure across economic governance operations, employment in governance management, and educational capacity for governance traceability.
 
-### 3.5 AGI as Current Reality and ASI as Structural Target
+Ecology thus closes the loop. It integrates the states of the other three domains and reveals environmental degradation as the downstream accumulation of upstream governance failures. The precise mathematical form of this aggregation is given in Section 4.2.
 
-Section 2.5 defined AGI and ASI in systemic terms: AGI as already-operational human–AI cooperation that amplifies intelligence across domains while preserving the four CGM elements, and ASI as the configuration in which these elements are maintained at the CGM-predicted aperture A* = 0.0207 across economy, employment, education and ecology.
+### 3.5 Summary and Reader Orientation
 
-In the remainder of the paper, we treat AGI as the current background condition and use a simulator to study how Post-AGI systems can evolve toward or away from this ASI equilibrium. The equilibrium is defined not by the capability of a single agent, but by the coherent operation of the entire Education–Economy–Employment loop and its ecological closure. The detailed implications for risk and governance are developed in Sections 5, 6 and 7.
+The remainder of the paper develops and tests this framework computationally. Section 4 formalizes the tetrahedral geometry and defines the aperture observable. Section 5 presents simulator results demonstrating convergence toward the CGM-predicted equilibrium. Section 6 interprets these results for governance design. Section 7 concludes with implications and directions for empirical work.
+
+Readers primarily interested in the governance implications may proceed directly to Section 6, which can be read with reference to the summary tables and figures in Section 5.
 
 ---
 
 ## 4. Mathematical Framework for the Post-AGI Governance Simulator
 
-To connect CGM, THM, Gyroscope and GGG into a single simulator, we use CGM's tetrahedral geometry: the complete graph K_4 with four vertices corresponding to the four core elements (Governance, Information, Inference, Intelligence).
+To connect CGM, THM, Gyroscope and GGG into a single simulator, we use CGM's tetrahedral geometry. Each domain is represented on the complete graph K₄, with four vertices corresponding to Governance, Information, Inference and Intelligence.
 
-### 4.1 Tetrahedral Structure and Hodge Decomposition
+### 4.1 Tetrahedral Structure and Gradient–Cycle Split
 
-We use K₄ with vertices labelled by the four CGM elements. K₄ is the minimal connected graph that is complete on four vertices, so it captures all pairwise couplings among the principles without introducing extraneous vertices. It also has a nontrivial cycle space, which is necessary for separating gradient and cycle components in the Hodge decomposition and for defining aperture as the ratio between globally coherent and locally circulating tensions. The four vertices are:
+K₄ is the minimal connected graph that is complete on four vertices, so it captures all pairwise couplings among the four operations without introducing extra nodes. It also has a nontrivial cycle space, which is necessary to distinguish globally coherent patterns from locally circulating tensions.
 
-1. Governance (CS)
-2. Information (UNA)
-3. Inference (ONA)
+We label the four vertices in the canonical CGM order:
+
+1. Governance (CS)  
+2. Information (UNA)  
+3. Inference (ONA)  
 4. Intelligence (BU)
 
-Edges are all 6 pairs: (1,2), (1,3), (1,4), (2,3), (2,4), (3,4). We orient each edge from lower to higher index. The signed incidence matrix B is 4 by 6:
+and use all six edges between them. For each domain D, we assign a 4-component vertex potential vector
 
 ```
-B = [
-  -1  -1  -1   0   0   0
-   1   0   0  -1  -1   0
-   0   1   0   1   0  -1
-   0   0   1   0   1   1
-]
+x_D = [x_1, x_2, x_3, x_4]^T
 ```
 
-Each column corresponds to one edge, with -1 marking the tail vertex and +1 marking the head.
-
-We equip the 6-dimensional edge space with a positive diagonal weight matrix W = diag(w_1, w_2, w_3, w_4, w_5, w_6), all w_k > 0. The weighted inner product on edge vectors a, b is:
-
-```
-<a, b>_W = a^T W b
-```
-
-with norm squared:
-
-```
-||a||_W^2 = <a, a>_W
-```
-
-For initial simulations we use W = I (all w_k = 1) and later introduce non-uniform weights.
-
-Given any edge vector y representing measurements on the six edges, Hodge decomposition on K_4 splits y uniquely into:
-
-```
-y = y_grad + y_cycle
-```
-
-where y_grad lies in the gradient subspace Im(B^T), y_cycle lies in the cycle subspace ker(BW), and y_grad is W-orthogonal to y_cycle.
-
-The orthogonal projections are:
-
-```
-P_grad = B^T (BWB^T)^{-1} BW
-P_cycle = I_6 - P_grad
-```
-
-where (BWB^T)^{-1} denotes a generalised inverse (pseudoinverse) on the 4 by 4 Laplacian restricted to the subspace orthogonal to the all-ones vector. In implementation we use a pseudoinverse or fix a gauge.
-
-Then:
-
-```
-y_grad = P_grad y
-y_cycle = P_cycle y
-```
-
-and energy conservation holds:
-
-```
-||y||_W^2 = ||y_grad||_W^2 + ||y_cycle||_W^2
-```
-
-This is standard Hodge theory on simplicial complexes, as developed for graphs and higher-order networks in combinatorial Hodge theory and related work (Jiang et al., 2011; Lim, 2020). We apply it separately to each domain.
-
-### 4.2 Domain Potentials and Edge Measurements
-
-We represent the four CGM elements in each domain as a 4-component vertex potential vector x_D in canonical order:
-
-1. Governance
-2. Information
-3. Inference
-4. Intelligence
-
-For Economy:
-
-```
-x_Econ = [Gov, Info, Infer, Int]^T
-```
-
-where Gov, Info, Infer and Int in [0,1] represent the four CGM operations (Governance, Information, Inference, Intelligence) at the economic level.
-
-For Employment we map the Gyroscope Operations back to these four. Let GM, ICu, IInter and ICo in [0,1] denote the shares of human activity performing each operation, with GM + ICu + IInter + ICo = 1. For simulation we define:
-
-```
-x_Emp = [GM, ICu, IInter, ICo]^T
-```
-
-For Education we use The Human Mark (THM):
-
-```
-x_Edu = [GT, IV, IA, IInteg]^T
-```
-
-where each capacity is in [0,1].
-
-For Ecology, the potential vector is computed via the BU dual combination described conceptually in Section 3.4. The formula is:
-
-```
-x_deriv = (x_Econ + x_Emp + x_Edu) / 3
-x_Ecol = (δ_BU/m_a) · x_balanced + A* · x_deriv
-```
-
-The Ecology state components (E_gov, E_info, E_inf, E_intel) are the BU-vertex stage coordinates resulting from this combination. The displacement vector is computed separately:
-
-```
-D = |x_deriv - x_balanced| = [GTD, IVD, IAD, IID]
-```
-
-measuring how far the aggregate derivative state deviates from the canonical balanced structure in each CGM stage dimension.
-
-Because Int, ICo and IInteg are updated through the alpha, beta, gamma cross-domain flows described in Section 5.1, the Intelligence aggregated in E_intel evolves through these existing couplings. Ecology requires no additional update equations beyond the BU dual formula above, which is evaluated at each time step using the current states of the three derivative domains.
-
-For any domain D with potential vector x_D, the ideal gradient-only edge configuration is:
+encoding the current levels of Governance, Information, Inference and Intelligence in that domain. The corresponding ideal edge configuration is given by pairwise differences of these potentials. In matrix form this is
 
 ```
 y_grad^0(D) = B^T x_D
 ```
 
-This reflects how the four principles differ when no cycles are present. To represent real configurations that include local differentiation, we add a cycle component c_D in ker(BW):
+where B is the signed incidence matrix of K₄. The explicit form of B and the associated weighted inner product on edges are given in Appendix A.1.
+
+Any actual edge vector y_D on K₄ can be uniquely decomposed into
 
 ```
-y_D = y_grad^0(D) + c_D
+y_D = y_grad(D) + y_cycle(D)
 ```
 
-We can control the aperture A_D transparently. Let G_D = ||y_grad^0(D)||_W^2 be the gradient energy. Choose a nonzero cycle direction u_D in ker(BW) with ||u_D||_W^2 = 1 and a scalar k_D >= 0, and set:
+where y_grad(D) lies in the gradient subspace generated by B^T and y_cycle(D) lies in the cycle subspace. This is the standard Hodge decomposition on graphs (Jiang et al., 2011; Lim, 2020). Intuitively:
+
+- The gradient component captures what can be explained by a single consistent configuration of the four vertex values.  
+- The cycle component captures residual tensions around loops that cannot be removed by adjusting any single global configuration.
+
+We apply this decomposition separately to each domain.
+
+### 4.2 Domain Potentials and Ecological Closure
+
+We represent the four CGM elements in each domain as vertex potentials in [0,1]:
+
+Economy (CGM):
 
 ```
-c_D = k_D u_D
-y_D = y_grad^0(D) + k_D u_D
+x_Econ = [Gov, Info, Infer, Int]^T
 ```
 
-Then:
+Employment (Gyroscope, with GM + ICu + IInter + ICo = 1):
 
 ```
-||y_D||_W^2 = G_D + k_D^2
-A_D = k_D^2 / (G_D + k_D^2)
+x_Emp = [GM, ICu, IInter, ICo]^T
 ```
 
-Given a desired aperture A_D in (0,1), we solve for k_D:
+Education (THM):
 
 ```
-k_D^2 = (A_D / (1 - A_D)) * G_D
+x_Edu = [GT, IV, IA, IInteg]^T
 ```
 
-This gives a direct method to construct y_D with specified aperture A_D.
-
-### 4.3 Aperture Observable and Alignment Indices
-
-The aperture ratio (cycle fraction) A for a given domain is defined as
+Ecology (BU dual): First we form the aggregate derivative profile
 
 ```
-A = ||y_cycle||_W^2 / ||y||_W^2 = <y, P_cycle y>_W / <y, y>_W
+x_deriv = (x_Econ + x_Emp + x_Edu) / 3
 ```
 
-where y is the edge vector on the tetrahedron, y_cycle is its cycle component under the weighted Hodge decomposition, and ||·||_W is the associated norm. Here aperture denotes the precise fraction of the domain's systemic variation that is not explainable by a single global configuration of the four principles. Low A means that almost all differences across the six edges can be derived from a single set of vertex values (high global coherence). High A means that many differences are local to cycles and cannot be captured by any single global potential (strong local differentiation).
-
-In governance terms, the gradient component represents what can be explained by a single, coherent configuration of Governance Traceability, Information Variety, Inference Accountability and Intelligence Integrity at the domain level. The cycle component represents tensions and variations that exist around local loops and cannot be removed by adjusting any single global configuration. The aperture ratio therefore measures how much of the system's behaviour is governed by a traceable, global coherence, and how much is absorbed in local misalignments that do not aggregate coherently.
-
-Properties:
-
-- 0 <= A <= 1, since P_cycle is an orthogonal projection.
-- A is the Rayleigh quotient of P_cycle with respect to the inner product <.,.>_W.
-
-In prior work, the Common Governance Model (CGM) develops a separate modal and geometric analysis of coherent recursive measurement. That analysis fixes two representation independent constants, the BU monodromy defect δ_BU ≈ 0.1953 and the aperture scale m_a = 1/(2√(2π)) ≈ 0.1995, and shows that coherent closure at depth four requires their ratio δ_BU/m_a ≈ 0.9793. The residual 1 − δ_BU/m_a ≈ 0.0207 is then the fraction of variation that necessarily remains open for observation to distinguish states. We denote this residual fraction by A* and refer to it as the CGM aperture:
+CGM defines a canonical balanced profile
 
 ```
-A* = 1 - (δ_BU / m_a) ≈ 0.0207
+x_balanced = [w_CS, w_UNA, w_ONA, w_BU]^T
 ```
 
-This corresponds to approximately 97.93% gradient energy and 2.07% cycle energy. The present paper uses only the systemic reading of these constants. We treat A* as a distinguished balance between closure and distinction and test, in a stylised governance simulator, whether dynamics organised around the four principles tend to converge toward this value.
+where the weights w_stage are the normalised CGM stage actions (Appendix A.1). The BU dual combination then defines the ecological potentials as
 
-Operational ranges:
+```
+x_Ecol = (δ_BU/m_a) · x_balanced + A* · x_deriv
+```
 
-- A < 0.01: excessive rigidity (collapse toward absolute unity, violating Unity Non-Absolute, UNA).
-- A ≈ 0.021: optimal balance (CGM prediction from BU geometry).
-- A > 0.05: systemic instability (loss of coherent closure, violating Balance Universal, BU).
+where δ_BU and m_a are CGM constants and A* ≈ 0.0207 is the CGM aperture. This encodes Ecology as a weighted sum of canonical memory (97.93 percent) and current derivative state (2.07 percent).
 
-For any domain D, we compute the aperture ratio A_D as the fraction of edge energy in the cycle component, using the same K₄ structure for Economy, Employment, Education and Ecology.
+The ecological displacement vector is computed separately as
 
-The domain alignment index is computed from aperture using the canonical CGM formula:
+```
+D = |x_deriv - x_balanced| = [GTD, IVD, IAD, IID]^T
+```
+
+This measures, stage by stage, how far the aggregate of Economy, Employment and Education deviates from the canonical balanced profile. GTD, IVD, IAD and IID are the same four displacement categories defined in THM, here measured at the ecological closure of the three derivative domains.
+
+Ecology therefore contributes two observables: x_Ecol, which tracks systemic coherence through the BU dual combination, and D, which tracks accumulated displacement along the four CGM stages. No additional update equations are required for Ecology beyond these relations. Its state is recomputed at each time step from the current derivative domains.
+
+### 4.3 Aperture and Alignment Indices
+
+Given an edge vector y_D for a domain D, with Hodge decomposition
+
+```
+y_D = y_grad(D) + y_cycle(D)
+```
+
+we define the aperture A_D as the fraction of edge energy in the cycle component:
+
+```
+A_D = ||y_cycle(D)||_W^2 / ||y_D||_W^2
+```
+
+where ||·||_W is the weighted norm on edges induced by the diagonal weight matrix W (Appendix A.1). Aperture A_D lies in [0,1] and quantifies how much of the domain's variation cannot be explained by a single global configuration of the four principles. Low A_D means most variation is in the gradient component, so behaviour is largely governed by a coherent global configuration. High A_D means much variation circulates locally in cycles, so global coherence is weak.
+
+In governance terms, the gradient component corresponds to behaviour that remains traceable to a single configuration of Governance Traceability, Information Variety, Inference Accountability and Intelligence Integrity at the domain level. The cycle component corresponds to local tensions and misalignments that do not aggregate coherently.
+
+In prior CGM work, a separate modal and geometric analysis of recursive measurement fixes two constants: BU monodromy defect δ_BU ≈ 0.1953 and aperture scale m_a = 1/(2√(2π)) ≈ 0.1995, and shows that coherent closure at depth four requires the ratio δ_BU/m_a ≈ 0.9793. The residual fraction
+
+```
+A* = 1 - (δ_BU/m_a) ≈ 0.0207
+```
+
+is then the portion of variation that necessarily remains open to distinguish states. We interpret A* as the CGM aperture: a distinguished balance between closure and distinction. At A*, about 97.93 percent of edge energy is gradient and 2.07 percent is cycle.
+
+For any domain D we compute A_D from its edge vector and define the alignment index
 
 ```
 D_D = max(A_D / A*, A* / A_D)
 SI_D = 100 / D_D
 ```
 
-where SI_D ranges from 0 to 100, with SI_D = 100 when A_D = A*.
+so that SI_D ranges from 0 to 100 and equals 100 when A_D = A*. We obtain SI_Econ, SI_Emp, SI_Edu and SI_Ecol for the four domains.
 
-We also define a Lyapunov-style governance potential V_CGM built from CGM invariants, with an aperture component V_apert that measures deviations of domain apertures from A*, and a stage-profile component V_stage that measures the deviation of the aggregate derivative profile x_deriv from the canonical balanced profile x_balanced. The construction is given in Appendix A.5.
+We also define a Lyapunov-style governance potential V_CGM = V_apert + V_stage, where V_apert measures deviations of A_D from A* and V_stage measures the deviation of x_deriv from x_balanced. The explicit form is given in Appendix A.5.
 
-We compute SI_Econ for the economy, SI_Emp for employment, SI_Edu for education and SI_Ecol for ecology. These are dimensionless numbers in [0, 100] summarising systemic alignment in each domain.
-
-A post-AGI society in the sense of Gyroscopic Global Governance corresponds to all domain SIs close to 100. The simulations in Section 5 demonstrate that this configuration is a robust attractor for the three derivative domains (Economy, Employment, Education), while Ecology as the BU-vertex maintains systemic coherence through the CGM dual combination.
+A post-AGI society in the sense of Gyroscopic Global Governance corresponds to all four domains having A_D close to A* and SI_D close to 100. Section 5 tests whether this configuration functions as a robust attractor for the simulator dynamics.
 
 ---
 
@@ -496,332 +431,322 @@ We implemented a dynamic realisation of the framework to test whether A* functio
 
 ### 5.1 Implementation Overview and Parameters
 
-**Simulator structure:**
+The simulator uses discrete-time dynamics with step size dt = 1. Four domain states are maintained:
 
-The simulator uses discrete time dynamics with step size dt = 1. Four domain states are maintained, each with:
-- A 4-component potential x_D(t)
-- An edge vector y_D(t) on K₄
-- An aperture A_D(t) and index SI_D(t)
+- A 4-component potential vector x_D(t) for each domain  
 
-The simulator provides a governance design sandbox for exploring Post-AGI dynamics without deployment risk. Unlike traditional AI safety sandboxes that isolate experimental systems from production environments, this systemic sandbox isolates governance experiments from real-world policy commitments, allowing systematic exploration of coupling strengths, initial conditions, and cross-domain feedback before implementing institutional changes.
+- An edge vector y_D(t) on K₄  
 
-**Cross-domain coupling structure:**
+- An aperture A_D(t) and alignment index SI_D(t)
 
-Couplings follow the closed loop: Education → Economy → Employment → Education
-- **α coefficients:** Education → Economy
-- **β coefficients:** Economy → Employment  
-- **γ coefficients:** Employment → Education
+The simulator functions as a governance design sandbox for exploring Post-AGI dynamics. It allows systematic exploration of coupling strengths, initial conditions and cross-domain feedback to test whether the CGM-predicted equilibrium is dynamically stable before proposing institutional changes.
 
-Couplings act stage-diagonally across four domains:
+Cross-domain couplings follow the closed loop
 
-| Stage | Tetrad Components |
-|-------|------------------|
-| CS | (GM, Gov, GT, E_gov) |
-| UNA | (ICu, Info, IV, E_info) |
-| ONA | (IInter, Infer, IA, E_inf) |
-| BU | (ICo, Int, IInteg, E_intel) |
+Education → Economy → Employment → Education
 
-where E_gov, E_info, E_inf, E_intel are Ecology state components (BU-vertex stage coordinates) computed by aggregating all three derivative domains: E_gov = (Gov + GM + GT)/3, E_info = (Info + ICu + IV)/3, and so on. Displacement measures (GTD, IVD, IAD, IID) are computed separately as |x_deriv - x_balanced|.
+with three families of coefficients:
 
-**Ecology integration:**
+- α: Education to Economy  
 
-Ecology functions as the BU-vertex that integrates the state of all three derivative domains (Economy, Employment, Education) through the BU dual formula (Section 4.2). Explicit feedback terms from Ecology back to Economy (e.g., resource constraints degrading economic potentials) are noted as a natural extension for future work but are not included in the core update equations.
+- β: Economy to Employment  
 
-**Update equations:**
+- γ: Employment to Education
 
-A schematic example update:
+These couplings act stage-diagonally across the four stages:
+
+- CS: (GM, Gov, GT, E_gov)  
+
+- UNA: (ICu, Info, IV, E_info)  
+
+- ONA: (IInter, Infer, IA, E_inf)  
+
+- BU: (ICo, Int, IInteg, E_intel)
+
+where the Ecology components (E_gov, E_info, E_inf, E_intel) are the BU-vertex stage coordinates computed from the BU dual combination described in Section 4.2 and Appendix A.4. Displacement measures (GTD, IVD, IAD, IID) are computed as the absolute difference between the aggregate derivative profile and the canonical balanced profile.
+
+Ecology has no independent update equation. At each step it is recomputed from the current Economy, Employment and Education states using the BU dual formula. Explicit feedback from Ecology back into Economy, such as resource constraints that erode economic potentials, is a natural extension for future work but is not included in the core dynamics here.
+
+Updates take the form of adjustments toward source values and toward the target aperture, using differences rather than absolute levels. A schematic example for the economic Governance component is
 
 ```
-Gov(t+1) = clip(Gov(t) + α_1(GT(t) - Gov(t)) - α_2(A_Econ(t) - A*), 0, 1)
+Gov(t+1) = clip(
+    Gov(t)
+    + α_1 (GT(t) - Gov(t))
+    - α_2 (A_Econ(t) - A*),
+    0, 1
+)
 ```
 
-Analogous equations apply for Info, Infer, Int and for employment and education components. Updates use differences `(source - current)` and `(A - A*)`, not absolute values.
+Analogous equations apply to Info, Infer, Int and to the employment and education components. Full update equations and normalisation for the employment shares are given in Appendix A.4.
 
-**CGM-derived constants:**
+All coupling coefficients α, β and γ are derived from CGM invariants using the stage weights w_CS, w_UNA, w_ONA and w_BU (Appendix A.1). A single coordination factor κ controls overall coupling strength.
 
-All coupling coefficients α, β and γ are derived from CGM invariants. Fundamental constants, stage actions and normalised weights are listed in Appendix A.1. Normalisation ensures that coupling strengths form a proportional weighting over the four CGM stages, so that a single coordination parameter κ can be distributed across them.
+The base governance rate is
 
-**Governance rate and coupling strength:**
-
-Base governance rate:
 ```
-κ₀ = 1/(2 Q_G) ≈ 0.0398
-κ(dt=1) = κ₀ (dt / m_a) ≈ 0.1995
+κ₀ = 1 / (2 Q_G) ≈ 0.0398
+κ(dt = 1) = κ₀ (dt / m_a) ≈ 0.1995
 ```
 
-In scenarios, κ is treated as a dimensionless multiplicative factor on these canonical rates. We test κ in {0.5, 1.0, 2.0} to represent different coordination intensities across domains.
+In scenarios, κ is treated as a dimensionless multiplier on these canonical rates; we test κ in {0.5, 1.0, 2.0} in the main scenarios and extend to {0.1, 5.0} in robustness checks.
 
-**Cycle evolution:**
+The cycle component of each domain is updated to keep aperture near A*. The cycle evolution rate controls how quickly apertures adjust. For convergence and long-horizon stability analyses we use the canonical rate κ₀; for illustrative scenarios and the global attraction test we use values in [0.05, 0.12] to show behaviour at different adjustment speeds. The construction of cycle updates and aperture control is given in Appendix A.4.
 
-The cycle component is updated to maintain aperture near A*. The cycle evolution rate controls the speed of aperture adjustment:
-- **Convergence rate and long-horizon stability analyses:** Canonical rate κ₀ = 1/(2Q_G) ≈ 0.0398
-- **Illustrative scenarios and global attraction test:** Values in [0.05, 0.12] to demonstrate convergence behaviour at different rates
+Apart from:
 
-**Parameter summary:**
+- Initial conditions  
 
-All coupling coefficients α, β and γ are derived from CGM invariants using stage weights (w_CS + w_UNA + w_ONA + w_BU = 1). Apart from:
-- Initial conditions
-- Global coordination strength κ
-- Single cycle evolution rate (scenario-dependent)
+- Global coordination strength κ  
 
-the simulator uses only coefficients derived from CGM invariants. Ecology introduces no additional free parameters, since its construction is fixed by the BU dual formula.
+- A single cycle evolution rate (scenario-dependent)
 
-**Initialization and scope:**
+all coefficients are fixed by CGM invariants. Ecology introduces no additional free parameters, since its construction is fixed by the BU dual formula.
 
-Scenario configurations specify initial aperture targets used to construct initial edge vectors via a construction that sets initial edge vectors to match specified apertures. Once initialized, dynamics drive all domains toward the CGM canonical aperture A* ≈ 0.0207, independent of initial target values.
+Scenario configurations specify initial aperture targets. These are translated into initial edge vectors by constructing y_D with the appropriate ratio between gradient and cycle components. Once initialised, the dynamics drive all domains toward the canonical aperture A* ≈ 0.0207, independent of initial aperture targets.
 
-The simulator does not model a transition from present-day narrow AI to hypothetical AGI. It models the dynamics of already-operational Post-AGI systems as they evolve toward or away from ASI equilibrium. Initial conditions with high apertures (A > 0.05) and low alignment indices represent the current state of many deployed systems. The scenarios explore how different coupling strengths κ and initial configurations affect convergence toward A*.
+The simulator does not model a transition from narrow AI to hypothetical AGI. It models the dynamics of already-operational Post-AGI systems as they evolve toward or away from ASI equilibrium. Initial conditions with high apertures (A > 0.05) and low alignment indices represent current deployment states; the scenarios explore how coupling strength κ and initial configurations affect convergence.
 
-### 5.2 Scenario Design and Results
-
-**Scenario design:**
+### 5.2 Scenario Design and Main Results
 
 We ran seven scenarios to probe different aspects of the dynamics across all four domains (Economy, Employment, Education, Ecology):
 
-| Scenario | Description | Interpretation |
-|----------|-------------|-----------------|
-| 1. Weak coupling | κ = 0.5 | Fragmented governance with limited cross-domain coordination |
-| 2. Canonical | κ = 1.0 | Reference regime (baseline coordination) |
-| 3. Strong coupling | κ = 2.0 | Coordinated alignment efforts across all domains |
-| 4. Low aperture start | A < A* initially | System starting more rigid than optimal |
-| 5. Asymmetric | Different initial A across domains | Differential rates of adoption across domains |
-| 6. At A* | Initialized at A* with imbalanced potentials | Equilibrium stability test |
-| 7. Uniform weights | All stages = 0.25 | Null model (tests attractor robustness) |
+1. Weak coupling (κ = 0.5): fragmented governance with limited cross-domain coordination  
 
-Scenarios 1-6 represent different possible trajectories from current Post-AGI deployment states. Scenario 7 tests whether convergence depends on CGM-specific stage weights.
+2. Canonical (κ = 1.0): reference regime with baseline coordination  
 
-**Results summary:**
+3. Strong coupling (κ = 2.0): coordinated alignment efforts across domains  
+
+4. Low aperture start: all domains start with A < A* (more rigid than optimal)  
+
+5. Asymmetric: different initial apertures across domains (differential adoption)  
+
+6. At A*: all domains start at A = A* but with imbalanced potentials (equilibrium stability test)  
+
+7. Uniform weights: all CGM stage weights set to 0.25 (null model without CGM-specific weighting)
+
+Scenarios 1 to 6 represent stylised trajectories from current Post-AGI deployment states. Scenario 7 tests whether convergence depends on CGM-specific stage weights.
+
+A summary of final values at step 100 is:
 
 | Scenario | κ | SI_Econ | SI_Emp | SI_Edu | A_Econ | SI_Ecol | Disp_GTD |
-|----------|---|---------|---------|--------|--------|---------|----------|
-| 1. Weak coupling | 0.5 | 91.37 | 94.47 | 95.71 | 0.0227 | 99.98 | 0.4032 |
-| 2. Canonical | 1.0 | 99.29 | 98.66 | 99.47 | 0.0208 | 100.00 | 0.4322 |
-| 3. Strong | 2.0 | 99.39 | 99.55 | 99.26 | 0.0208 | 100.00 | 0.4708 |
-| 4. Low aperture start | 1.0 | 93.86 | 85.84 | 95.09 | 0.0194 | 99.94 | 0.1582 |
-| 5. Asymmetric | 1.0 | 90.42 | 91.74 | 92.84 | 0.0187 | 99.97 | 0.1697 |
-| 6. At A* | 1.0 | 93.43 | 89.61 | 93.36 | 0.0193 | 99.96 | 0.1703 |
-| 7. Uniform weights | 1.0 | 99.63 | 99.66 | 98.85 | 0.0206 | 100.00 | 0.3832 |
-| Target | --- | 100.00 | 100.00 | 100.00 | 0.0207 | 100.00 | 0.0000 |
+|----------|---|---------|--------|--------|--------|---------|----------|
+| 1. Weak coupling | 0.5 | 91.37 | 94.47 | 95.71 | 0.0227 | 99.98 | 0.4167 |
+| 2. Canonical | 1.0 | 99.29 | 98.66 | 99.47 | 0.0208 | 100.00 | 0.4421 |
+| 3. Strong | 2.0 | 99.39 | 99.55 | 99.26 | 0.0208 | 100.00 | 0.4794 |
+| 4. Low aperture start | 1.0 | 93.86 | 85.84 | 95.09 | 0.0194 | 99.94 | 0.2042 |
+| 5. Asymmetric | 1.0 | 90.42 | 91.74 | 92.84 | 0.0187 | 99.97 | 0.1984 |
+| 6. At A* | 1.0 | 93.43 | 89.61 | 93.36 | 0.0193 | 99.96 | 0.2042 |
+| 7. Uniform weights | 1.0 | 99.63 | 99.66 | 98.85 | 0.0206 | 100.00 | 0.3906 |
+| Target | - | 100.00 | 100.00 | 100.00 | 0.0207 | 100.00 | 0.0000 |
+
+At SI ≥ 90, governance alignment is operationally achieved and the four goals (poverty resolution, employment as alignment work, epistemic literacy, and ecological regeneration) are proportionally realized at that level across the integrated system.
+
+In the canonical scenario (κ = 1.0, Figure 2), all three derivative domains converge to SI at or above 98 and to apertures within 0.0003 of A* by step 100. Employment converges fastest, then Education, then Economy. Employment reaches high SI values (approaching 100) rapidly and may show transient peaks before settling to final values near the target. The canonical scenario illustrates smooth, monotonic convergence under well-balanced coordination.
 
 **Figure 2: Canonical Scenario Trajectories**
 
 ![Canonical scenario trajectories](/research/prevention/simulator/results/analysis/scenario2_canonical_trajectories.png)
 
-All three derivative domains converge to SI ≥ 98 and apertures within 0.0003 of A* = 0.0207 by step 100 (κ = 1.0). Colours: Economy (blue), Employment (purple), Education (orange). Employment overshoots SI = 100 briefly before settling. Apertures converge to A* = 0.0207 in order: Employment first, then Economy, then Education. The canonical scenario demonstrates smooth, monotonic convergence typical of well-coordinated governance at the reference coupling strength.
+A heatmap of time-to-threshold (Figure 3) shows that Employment and Education generally reach SI ≥ 90 earlier than Economy. Weak coupling (scenario 1) and low-aperture initialisation (scenario 4) prevent Economy from crossing SI ≥ 90 within 100 steps, although apertures still converge close to A*.
 
 **Figure 3: Convergence Speed Comparison**
 
 ![Convergence speed heatmap](/research/prevention/simulator/results/analysis/time_to_threshold_heatmap.png)
 
-Time to reach SI ≥ 95 by scenario and domain. Cells show time steps to SI ≥ 95; '–' = never reached; '0*' = started above threshold. Employment and Education generally converge faster than Economy. Weak coupling (scenario 1) and low aperture starts (scenario 4) prevent Economy from reaching SI ≥ 95.
-
-**Key observations:**
-
-Employment converges fastest (19-29 steps to SI ≥ 95) but overshoots in six of seven scenarios, peaking above SI = 100 before settling. Economy converges slowest (48-71 steps) with smooth monotonic growth, reflecting the systemic complexity of maintaining traceability through markets and financial instruments. Education shows intermediate stable dynamics. In incomplete convergence scenarios (weak coupling, low aperture, asymmetric, at-A*), Economy fails to sustain SI ≥ 95; Scenario 4 uniquely exhibits Employment terminal decline (peaks 94.90 at t=60, drops to 85.84). Over-tight coupling (κ = 5.0) produces oscillation, slowing convergence despite strong feedback (Khalil, 2002).
-
 **Figure 4a: Weak Coupling (κ = 0.5)**
 
 ![Weak coupling trajectories](/research/prevention/simulator/results/analysis/scenario1_weak_trajectories.png)
-
-Weak coupling (κ = 0.5): incomplete convergence (SI: Economy 91.4, Employment 94.5, Education 95.7). Apertures reach A*, but insufficient coordination prevents threshold attainment.
 
 **Figure 4b: Strong Coupling (κ = 2.0)**
 
 ![Strong coupling trajectories](/research/prevention/simulator/results/analysis/scenario3_strong_trajectories.png)
 
-Strong coupling (κ = 2.0): rapid convergence (SI ≥ 99 by step 60, apertures to A* by step 30). Employment overshoots before settling.
-
 **Figure 4c: Asymmetric Initial Conditions**
 
 ![Asymmetric trajectories](/research/prevention/simulator/results/analysis/scenario5_asymmetric_trajectories.png)
-
-Asymmetric initial conditions produce complex transients. Education drops sharply from SI = 100 before recovering. Economy oscillates before settling. All apertures eventually converge to A* = 0.0207.
 
 **Figure 4d: Low Aperture Start**
 
 ![Low aperture start trajectories](/research/prevention/simulator/results/analysis/scenario4_low_a_trajectories.png)
 
-Low aperture start: oscillatory instability (Economy/Education spike-crash-recover). Economy fails SI ≥ 95; Employment peaks then declines (94.90→85.84).
+Across scenarios, several robust patterns appear:
+
+- Employment converges fastest (roughly 19 to 29 steps to SI ≥ 90 when it is reached) but overshoots in most scenarios before settling.  
+
+- Economy converges slowest (roughly 48 to 71 steps in scenarios where it reaches SI ≥ 90), reflecting the complexity of maintaining traceability through markets and financial instruments.  
+
+- Education shows intermediate, stable dynamics.  
+
+- In incomplete convergence scenarios (weak coupling, low aperture start, asymmetric, at A*), Economy and Employment both fail to reach SI ≥ 90 within the 100-step horizon, with Economy showing the slowest convergence rates. In scenario 4, Employment peaks and then declines (94.90 at t = 60 down to 85.84), showing that starting from an over-rigid configuration can produce longer transients.
+
+The equilibrium test (scenario 6, Figure 4e) shows that initialising at A = A* with misbalanced potentials is not stable. All domains drop sharply in SI before re-equilibrating. This illustrates that aperture balance alone does not define equilibrium: the stage-profile component must also approach the canonical balanced profile. In terms of the Lyapunov governance potential V_CGM, V_apert decays to zero as apertures converge to A*, while V_stage decreases but stabilises at a small positive value. Systems reach the BU manifold, where apertures are balanced but some residual stage-profile displacement persists.
 
 **Figure 4e: Equilibrium Test (Initialized at A*)**
 
 ![Equilibrium test trajectories](/research/prevention/simulator/results/analysis/scenario6_at_astar_trajectories.png)
 
-Initializing at A* = 0.0207 with imbalanced potentials is not stable. All domains drop sharply before re-equilibrating. Employment and Education recover faster than Economy. At t = 0, apertures are perfect (A = A*) but V_stage is nonzero because the domain potentials do not match the canonical profile x_balanced, illustrating that aperture balance alone does not guarantee stable equilibrium. The Lyapunov potential V_CGM decreases in all scenarios: V_apert → 0 as apertures converge to A*, while V_stage stabilizes at 0.1-0.2, indicating that systems achieve aperture balance more readily than deep stage-profile realignment. The dynamics reach and remain on the BU manifold, where bounded V_stage is consistent with sustained high alignment (SI ≥ 98).
+The null model with uniform stage weights (scenario 7, Figure 4f) still converges to A* with SI at or above 90, confirming that A* functions as an attractor even without CGM-specific weighting. CGM weights refine but do not create the attractor behaviour.
 
 **Figure 4f: Uniform Weights (Null Model)**
 
 ![Uniform weights trajectories](/research/prevention/simulator/results/analysis/scenario7_uniform_trajectories.png)
 
-Uniform weights (null model): convergence to A* and SI ≥ 95 confirms attractor robustness independent of CGM stage weights.
+Ecology, computed via the BU dual combination, maintains SI_Ecol near 100 across all scenarios, reflecting the dominant influence of canonical BU memory. At the same time, the displacement vector D = |x_deriv − x_balanced| shows that structural deviation from the canonical balanced profile can remain substantial, especially in scenarios that start far from equilibrium. The BU dual construction therefore separates systemic coherence, largely governed by the canonical profile, from accumulated displacement along the four THM dimensions.
 
-**Overall convergence:**
-
-All three derivative domains (Economy, Employment, Education) converge to SI ≥ 87 in all scenarios, and SI ≥ 98 in canonical and strong coupling. In the remaining scenarios with weaker coupling or rigid or asymmetric initial conditions, at least one domain, typically Economy, fails to reach SI ≥ 95 within 100 steps. The economic aperture A_Econ converges close to the CGM target A* = 0.0207 in all cases. Ecology, computed via the BU dual combination (Section 4.2), maintains systemic coherence with SI_Ecol near 100 across all scenarios, reflecting the stabilizing influence of the canonical BU memory component.
-
-Ecological coherence remains high in all runs (SI_Ecol ≈ 100), but the displacement vector D = |x_deriv − x_balanced| shows that structural deviation from the canonical balanced profile can remain substantial, especially in well-coupled scenarios that started far from equilibrium. This confirms that the BU dual construction cleanly separates systemic coherence (dominated by canonical memory) from accumulated displacement in the four THM dimensions. Across all seven scenarios and the 1000 random initialisations, V_CGM decreases and apertures converge tightly to A*, while V_stage falls by about two orders of magnitude and then stabilises at a small positive value. In CGM terms, the dynamics reach and remain on the BU manifold: operational balance (A_D ≈ A*) is robustly achieved, while a bounded residual stage-profile displacement persists. Together these results support treating A* as an attractor for a wide class of governance dynamics rather than as a knife-edge condition.
-
-**Note:** All simulations were run for 100 steps. The simulator also computes authentic vs. derivative decomposition (y_H, y_AI) and associated metrics for each domain, reserved for future analysis of human–AI contribution patterns.
+All simulations were run for 100 steps. The simulator also computes authentic versus derivative decomposition (y_H, y_AI) and associated metrics for each domain, reserved for future analysis of human–AI contribution patterns.
 
 ### 5.3 Global Attraction and Coupling-Strength Robustness
 
-**Global attraction test:**
+To test attraction properties more generally, we ran 1000 simulations with independent random initial apertures in [0.01, 0.99] for each of the three derivative domains (Economy, Employment, Education), using canonical values for all other parameters (κ = 1.0, CGM stage weights).
 
-We ran 1000 simulations with independent random initial apertures in [0.01, 0.99] for each of the three derivative domains (Economy, Employment, Education), with all other parameters held at canonical values (κ=1.0, stage weights from CGM).
+Results:
 
-**Results:**
-- Convergence: 1000/1000 (100 percent)
-- Final SI range: [99.1, 100.0]
-- Final SI mean: 99.4
-- All runs reached SI ≥ 95 for all three derivative domains
+- Convergence to high alignment in 1000 out of 1000 runs  
 
-This indicates that across a wide range of initial Post-AGI configurations, the dynamics converge toward ASI equilibrium at A*.
+- Final SI range across domains: 99.1 to 100.0  
 
-**Coupling strength robustness:**
+- Final SI mean: 99.4  
 
-We tested scenarios with κ in {0.1, 0.5, 1.0, 2.0, 5.0} to assess sensitivity to coordination intensity:
+- All domains reached SI at or above 90 in all runs
 
-| κ | Final SI | Regime |
-|---|----------|--------|
-| 0.1 | ≈ 94.0 | Under-coordinated |
-| 0.5 | ≈ 99.2 | Well-coordinated |
-| 1.0 | ≈ 99.6 | Well-coordinated |
-| 2.0 | ≈ 96.6 | Over-tight |
-| 5.0 | ≈ 96.4 | Over-tight |
+This indicates that for a wide range of initial Post-AGI configurations the dynamics converge toward an ASI-like equilibrium at A*.
 
-For all tested values of κ, final SI remained above 94, and above 97 for κ ≥ 0.5.
+We also varied κ in {0.1, 0.5, 1.0, 2.0, 5.0} to assess sensitivity to coordination intensity. For all tested values of κ, final SI remained above roughly 94, and above roughly 97 for κ at or above 0.5. Three qualitative regimes appear:
 
-**Coordination regimes:**
+1. Under-coordinated (κ less than 0.5): cross-domain feedback is too weak to bring all domains to high alignment within the simulated horizon. Economy in particular remains below SI about 90.  
 
-The κ experiments reveal three qualitatively distinct regimes:
+2. Well-coordinated (κ between about 0.5 and 2.0): feedback is sufficient for robust convergence across all derivative domains.  
 
-1. **Under-coordinated (κ < 0.5):** Cross-domain feedback is too weak to bring all domains to high alignment within the simulated horizon; Economy in particular remains below SI ≈ 95.
+3. Over-tight (κ greater than about 2.0): strong coupling produces overshoot and oscillation that slow effective convergence, even though high SI is eventually reached.
 
-2. **Well-coordinated (κ ≈ 1.0 to 2.0):** Feedback is sufficient for robust convergence across all derivative domains.
+This pattern is consistent with the CGM view that governance alignment requires balanced coordination. Fragmented domains with weak coupling fail to coordinate, while over-tight coupling attempts to enforce alignment faster than the underlying adjustment dynamics can support.
 
-3. **Over-tight (κ > 2.0):** Excessive coupling strength produces overshoot and oscillation that can delay effective convergence.
-
-This pattern is consistent with the CGM view that governance alignment requires balanced coordination: neither fragmented domains evolving in parallel with little mutual adjustment, nor overly aggressive coupling that attempts to enforce alignment faster than the underlying adjustment dynamics support.
-
-**Interpretation:**
-
-These experiments do not constitute a formal proof of global stability, but they indicate that in this implementation the region of high alignment is numerically attractive over a wide range of initial apertures and coupling strengths. The systemic conditions for ASI are robust across diverse starting states and coordination intensities.
+These experiments do not constitute a formal proof of global stability. They do indicate that in this implementation the region of high alignment is numerically attractive over a wide range of initial apertures and coupling strengths, and that the systemic conditions for ASI are robust to diverse starting states and coordination intensities.
 
 ### 5.4 Convergence Rate and Long-Horizon Stability
 
-Fitting an exponential model to |A_D(t) − A*| for t ≥ 20 shows that convergence is approximately exponential, with characteristic times on the order of 25–40 steps for κ in {0.5, 1.0, 2.0}. A 1000-step run at κ = 1.0, with the first 200 steps discarded as transient, shows that all domains remain within 2.2 × 10⁻⁴ of A* thereafter, with SI values remaining above 99.1. These findings indicate that the high-alignment configuration is both reachable and numerically stable over long horizons (full numerical details in Appendix A.3).
+Fitting an exponential model to the distance |A_D(t) − A*| for t at or above 20 shows that convergence is approximately exponential, with characteristic times on the order of 25 to 40 steps for κ in {0.5, 1.0, 2.0}. A 1000-step run at κ = 1.0 using the canonical cycle evolution rate κ₀, with the first 200 steps discarded as transient, shows that all domains remain within 2.46 × 10⁻⁴ of A* thereafter, with SI values remaining above 98.83. V_CGM remains essentially constant after its initial decay. This indicates that the high-alignment configuration is both reachable and numerically stable over long horizons.
 
-Interpreting each alignment cycle at atomic, daily, domain-cycle or yearly scales shows how the same dimensionless convergence horizon can correspond to nanosecond physical processes or months-to-decades of institutional adjustment (Appendix A.3). These interpretations are conditional and do not predict when a fully coupled ASI-like configuration will first emerge. The paper treats AGI as already operational in the form of pervasive human–AI cooperation. The alignment cycles characterise how quickly a structure following CGM dynamics can move from low SI to high SI once such dynamics are in effect.
+Appendix A.3 discusses how these dimensionless alignment cycles can be interpreted at different physical and institutional time scales, from microphysical processes to months or decades of institutional adjustment. Those interpretations are conditional and do not attempt to predict when a fully coupled ASI-like configuration will first appear.
 
 ### 5.5 Reproducibility and Code Availability
 
 All simulations were implemented in Python 3.12 with a modular, tested codebase organised into core modules (CGM constants, geometry, domains, dynamics, alignment, simulation) and analytical scripts for verification. The test suite comprises 43 unit tests covering all major components; all tests pass.
 
-All dynamics are deterministic with exact reproducibility. Random sampling is used only in the global attraction test (Section 5.3) with fixed seed 42. Results are exported in CSV and JSON formats with configurable time units.
+All dynamics are deterministic with exact reproducibility. Random sampling is used only in the global attraction test (Section 5.3), with fixed seed 42. Results are exported in CSV and JSON formats with configurable time units.
 
-The code is open source and version-locked, allowing independent reproduction of all numerical results reported here. The repository is available at github.com/gyrogovernance/tools with specific commit hash documented in the accompanying data release.
+The code is open source and version-locked, allowing independent reproduction of all numerical results reported here. The repository is available at github.com/gyrogovernance/tools, with the specific commit hash documented in the accompanying data release.
 
 ---
 
 ## 6. Interpretation for Economy, Employment, Education and Ecology
 
-The simulator results should be read in the context of the broader CGM series. CGM provides the constitutional structure and invariants (Korompilias, 2025a). THM classifies displacement patterns in that structure (Korompilias, 2025b). Gyroscope specifies how those operations appear as work (Korompilias, 2025c). The present paper contributes GGG, the four-domain global governance framework that integrates CGM (Economy), Gyroscope (Employment), THM (Education) and their BU dual (Ecology), and specifies the aperture dynamics tested in the simulator. GyroSI, described in Appendix C and in Korompilias (2025d), provides a micro-level architecture that realises the same structure at the state-space level.
+The simulator results should be read in the context of the broader CGM series. CGM provides the constitutional structure and invariants (Korompilias, 2025a). The Human Mark (THM) classifies displacement patterns in that structure (Korompilias, 2025b). The Gyroscope Protocol specifies how those operations appear as work (Korompilias, 2025c). The present paper contributes Gyroscopic Global Governance (GGG), the four-domain framework that integrates CGM (Economy), Gyroscope (Employment), THM (Education) and their BU dual (Ecology), and specifies the aperture dynamics tested in the simulator. GyroSI, described in Appendix C and in Korompilias (2025d), realises the same structure at the micro-level state space.
 
 ### 6.1 Trust and Structural Balance
 
 Post-AGI economies already exhibit both opportunities and risks from human–AI cooperation. The simulator shows that trusted configurations, those with apertures near A*, are dynamically reachable from current states characterised by higher apertures and lower alignment.
 
-A domain is trusted when aperture A is close to A* ≈ 0.0207. In that case, the alignment index SI_D is close to 100, and the system exhibits both strong gradient coherence (traceability to the Common Source) and appropriate cycle differentiation (local variety and accountability).
+A domain is trusted when its aperture A_D is close to A* ≈ 0.0207. In that case, the alignment index SI_D is close to 100, and the system exhibits both strong gradient coherence, meaning behaviour remains traceable to a single configuration of the four principles, and appropriate cycle differentiation, meaning local variety and accountability remain present.
 
-In trusted configurations, Economy operates with low friction and misalignment loss, so surplus arises not only from AI-driven productivity but from reduced coordination failures; Employment is dominated by the four Gyroscope categories as recognised alignment work rather than residual labour; Education systematically teaches and practices the four CGM elements rather than assuming them; and Ecology accumulates only small displacement, so regenerative capacity keeps pace with perturbation. Scenario 6 shows that such a configuration cannot be imposed by setting apertures and indices directly: starting from "perfect" values (A = A*, SI = 100) without corresponding stage-profile adjustment causes an immediate drop in SI before recovery. High alignment must therefore emerge through the coupled Education–Economy–Employment loop rather than being fixed in a single step.
+In trusted configurations, Economy operates with low friction and misalignment loss, so surplus arises not only from AI-driven productivity but also from reduced coordination failures. Employment is dominated by the four Gyroscope categories as recognised alignment work rather than residual labour. Education systematically teaches and practises the four CGM elements rather than assuming them. Ecology accumulates only small displacement, so regenerative capacity keeps pace with perturbation.
 
-**Near-optimal alignment:**
+Scenario 6 illustrates that this configuration cannot be imposed by setting apertures and indices directly. Starting from perfect values (A = A*, SI = 100) without corresponding stage-profile adjustment causes an immediate drop in SI before recovery. High alignment must therefore emerge through the coupled Education–Economy–Employment loop rather than by fixing a single observable in one step.
 
-Even in high-alignment scenarios, SI values remain slightly below 100 and displacement values slightly above zero. A* ≈ 0.0207 represents a nonzero cycle component that allows local differentiation and adaptive capacity, so perfect alignment (A = 0) would correspond to excessive rigidity. The simulator therefore exhibits approach to a narrow band around A*, not collapse to a single point. Within THM, coherent systems can operate with small, persistent misalignments between Authentic and Derivative sources without systemic breakdown, provided that displacement remains below recovery thresholds. In Lyapunov terms this band corresponds to a regime where V_apert is effectively zero while V_stage remains small but nonzero, indicating that systems achieve operational balance (aperture alignment) more readily than deep stage-profile realignment.
+Near-optimal alignment is not perfect rigidity. Even in high-alignment scenarios, SI values approach and in some cases reach 100, and displacement values remain slightly above zero. A* represents a nonzero cycle component that allows local differentiation and adaptive capacity, so perfect alignment in the sense A = 0 would correspond to excessive rigidity and would violate CGM's Unity Non-Absolute condition. The simulator therefore exhibits approach to a narrow band around A*, not collapse to a single point. In Lyapunov terms this band corresponds to a regime where V_apert is effectively zero while V_stage remains small but nonzero, indicating that systems achieve operational balance (aperture alignment) more readily than deep stage-profile realignment.
 
 ### 6.2 Surplus, Universal High Income and Governance Conditions
 
-Current Post-AGI systems already generate productivity gains, but much of this potential is absorbed by coordination costs, displacement losses and governance failures. The simulator indicates that as systems converge toward ASI equilibrium, systemic losses to misalignment decrease. In such configurations, surplus becomes available for redistribution rather than consumed by friction. Analyses of digital technologies in the economics literature reach a compatible conclusion. Brynjolfsson and McAfee (2014) argue that computational systems generate large productivity gains and economic surplus because their outputs can be replicated at very low marginal cost, while current institutional structures tend to concentrate these gains. In our framework, alignment reduces misallocation and coordination losses, which enlarges the same surplus that a second machine age analysis identifies. The question then shifts from whether surplus exists to how it is distributed.
+Current Post-AGI systems already generate productivity gains, but much of this potential is absorbed by coordination costs, displacement losses and governance failures. The simulator indicates that as systems converge toward ASI equilibrium, systemic losses due to misalignment decrease. In such configurations, surplus becomes available for redistribution rather than being consumed by friction.
 
-A Universal High Income is systemically supportable in high-alignment regimes not as a corrective for automation unemployment, but as a distribution mechanism for surplus generated by coherent human-AI cooperation. This is not a macroeconomic forecast but a systemic implication. When A_D ≈ A* across all three domains, the conditions for stable surplus distribution are present. This proposal is structurally similar to unconditional basic income and social dividend schemes discussed in the economic literature (Van Parijs & Vanderborght, 2017; Atkinson, 2015), which argue that high productivity economies can sustain unconditional individual incomes as a way of sharing collectively produced wealth. Our framework differs in that it specifies the systemic conditions under which such an income becomes stable: surplus is not only generated by technological productivity, but also by the reduction of governance displacement that the alignment indices quantify.
+Analyses of digital technologies in economics reach a compatible conclusion. Brynjolfsson and McAfee (2014) argue that computational systems generate large productivity gains and economic surplus because their outputs can be replicated at very low marginal cost, while current institutions tend to concentrate these gains. In the present framework, alignment reduces misallocation and coordination losses, which enlarges the same surplus identified by second machine age analyses. The question then shifts from whether surplus exists to how it is distributed.
 
-In scenarios where all four domains converge to high SI_D and A_D ≈ A*, the simulator represents an economy with low systemic loss to displacement and misalignment, which in principle makes a surplus-sharing policy such as a Universal High Income systemically supportable.
+A Universal High Income becomes systemically supportable in high-alignment regimes not as a corrective for automation unemployment, but as a distribution mechanism for surplus generated by coherent human–AI cooperation. This is not a macroeconomic forecast but a systemic implication: when A_D is close to A* across the three derivative domains (SI ≥ 90), surplus distribution is operationally stable and the four goals are proportionally achieved. This is structurally similar to unconditional basic income and social dividend proposals (Van Parijs and Vanderborght, 2017; Atkinson, 2015), which argue that high productivity economies can sustain unconditional individual incomes as a way of sharing collectively produced wealth. The present framework differs in specifying the systemic conditions under which such an income becomes stable: surplus is generated both by technological productivity and by the reduction of governance displacement that the alignment indices quantify.
 
-This framework does not predict that such configurations will appear automatically. It specifies, via CGM and its applications in THM and Gyroscope, what such configurations entail and how far any given system is from them.
+Scenarios in which all four domains converge to high SI_D and A_D ≈ A* represent economies with low systemic loss to displacement and misalignment. In such regimes, surplus-sharing policies are not only ethically appealing but structurally coherent.
+
+This framework does not claim that such configurations will appear automatically. It specifies, via CGM and its applications in THM and Gyroscope, what such configurations entail and how far any given system is from them.
 
 ### 6.3 Preliminary Operationalisation
 
-How would one measure A_Econ, A_Emp, A_Edu, or A_Ecol in a real society? This remains a challenge for future work, but preliminary directions can be suggested. For Economy, candidate indicators include fractions of transactions with auditable decision chains (traceability), diversity indices of information sources, measures of distributed answerability for outcomes, and consistency of short-term decisions with long-term commitments. For Employment, time-use surveys can classify activities into the four Gyroscope categories and combine this with quality assessments. For Education, curriculum content and learning outcomes can be analysed in terms of the four capacities. For Ecology, standard environmental indicators (pollution, biodiversity, attribution of harms, ecosystem resilience) can be mapped onto GTD, IVD, IAD and IID. These sketches are illustrative; full methodologies remain to be developed.
+Measuring A_Econ, A_Emp, A_Edu or A_Ecol in actual societies remains an open problem, but the simulator suggests directions.
+
+For Economy, candidate indicators include the fraction of transactions with auditable decision chains, diversity indices of information sources used in major decisions, measures of distributed answerability for outcomes, and consistency of short-term decisions with long-term commitments.
+
+For Employment, time-use studies can classify activities into the four Gyroscope categories (Governance Management, Information Curation, Inference Interaction, Intelligence Cooperation) and combine this with quality assessments of how well each category maintains the four principles.
+
+For Education, curriculum content and learning outcomes can be analysed in terms of the four capacities (GT, IV, IA, IInteg), focusing on whether learners can maintain traceability, variety, accountability and integrity in their reasoning.
+
+For Ecology, standard environmental indicators, such as pollution levels, biodiversity measures, attribution of harms and ecosystem resilience, can be mapped onto the four displacement dimensions GTD, IVD, IAD and IID.
+
+These sketches are preliminary. Full measurement methodologies need to be developed and tested empirically. The simulator's role is to clarify what kinds of observables are needed, not to supply them directly.
 
 ### 6.4 Practical Implications: Poverty, Unemployment, Miseducation, Ecological Harm
 
-The four domains of the simulator correspond to four systemic failures that manifest as social and ecological crises:
+The four domains in the simulator correspond to four systemic failures that manifest as social and ecological crises:
 
-| Domain | Failure Mode | Manifestation |
-|--------|--------------|---------------|
-| Economy | A_Econ diverges from A* | Poverty emerges not from lack of resources but from failures of Governance Traceability (how allocation decisions are traced) and Information Variety (what counts as value) |
-| Employment | A_Emp diverges from A* | Employment becomes either exploitative (failures of Inference Accountability) or incoherent (failures of Intelligence Integrity) |
-| Education | A_Edu diverges from A* | Education collapses into credentialism (loss of Governance Traceability) or fragmentation (loss of Intelligence Integrity) |
-| Ecology | Displacement accumulates | Biodiversity loss, climate instability and resource exhaustion |
+- Economy: when A_Econ diverges from A*, poverty emerges not primarily from lack of resources, but from failures of Governance Traceability in allocation decisions and failures of Information Variety in what counts as value.  
 
-**Systemic coupling:**
+- Employment: when A_Emp diverges from A*, employment becomes exploitative, reflecting failures of Inference Accountability, or incoherent, reflecting failures of Intelligence Integrity.  
 
-The simulator results suggest that these failures are not independent. They are coupled through the cross-domain dynamics modelled here. Conversely, alignment in one domain supports alignment in others. The systemic conditions for resolving poverty, unemployment, miseducation and ecological harm are therefore the same: maintaining the four principles at the CGM aperture across all domains simultaneously. Because the simulator demonstrates convergence to this state from a wide range of initial conditions, these resolutions are treated as dynamically attainable rather than merely aspirational.
+- Education: when A_Edu diverges from A*, education collapses into credentialism, a loss of Governance Traceability, or fragmentation, a loss of Intelligence Integrity.  
+
+- Ecology: when displacement accumulates, biodiversity loss, climate instability and resource exhaustion appear as downstream manifestations of upstream governance failures in the other domains.
+
+The simulator suggests that these failures are not independent. They are coupled through the cross-domain dynamics described in Section 5. Alignment in one domain supports alignment in others, and misalignment in one can propagate. The systemic conditions for resolving poverty, unemployment, miseducation and ecological harm are therefore the same: maintaining the four principles at the CGM aperture across all domains simultaneously. Because the simulator demonstrates convergence to this state from a wide range of initial conditions and coordination strengths, these resolutions are achieved through different paths, with coordination intensity determining convergence speed rather than final attainment.
 
 ### 6.5 Limits and Relation to Existing Work
 
-The simulator is a systemic model, not an empirical fit to macroeconomic data. It demonstrates that the CGM/THM framework can be instantiated in coherent dynamic form and that A* functions as a robust attractor in that instantiation. This does not validate the model against historical data, but it establishes internal consistency and suggests testable predictions.
+The simulator is a systemic model, not an empirical macroeconomic fit. It demonstrates that the CGM and THM framework can be instantiated in coherent dynamic form and that A* functions as a robust attractor in that instantiation. This establishes internal consistency and suggests testable predictions but does not yet validate the model against historical data.
 
-Existing work on AGI safety (Bostrom, 2014; Russell, 2019; Carlsmith, 2022) typically treats AGI as a future threshold and focuses on control mechanisms to prevent catastrophic outcomes. We differ in two ways. First, we treat AGI as already operational in the form of human-AI cooperative systems. Second, we ground alignment in constitutional structure (the four CGM elements) rather than in external constraints. This follows the broader tradition in constitutional political economy and institutional design that emphasises the primacy of rules and structures over case-by-case control (Buchanan & Tullock, 1962; Lessig, 1999). The simulator shows that this constitutional approach yields convergent dynamics toward ASI equilibrium.
+Most existing work on AGI safety (Bostrom, 2014; Russell, 2019; Carlsmith, 2022) treats AGI as a future threshold and focuses on control mechanisms to prevent catastrophic outcomes. The present framework differs in two respects. First, it treats AGI as already operational in the form of human–AI cooperative systems. Second, it grounds alignment in constitutional structure, the four CGM elements and their aperture balance, rather than in external constraints alone. This echoes traditions in constitutional political economy and institutional design that emphasise the primacy of structural rules over case-by-case intervention (Buchanan and Tullock, 1962; Lessig, 1999). The simulator shows that such constitutional arrangements, when instantiated dynamically, yield convergence toward ASI-like equilibrium.
 
-**Connection to distributed governance theory:**
+The framework also connects to governance theory and institutional economics, particularly to work on distributed and polycentric governance (Ostrom, 1990, 2010). Ostrom showed that complex resource management problems often require nested, overlapping governance structures, with monitoring, graduated sanctions, conflict resolution mechanisms and recognition of organisational rights. The four CGM elements can be interpreted as minimal conditions that such polycentric arrangements must satisfy to remain coherent:
 
-The framework connects to governance theory and institutional economics, particularly work on distributed governance (Ostrom, 1990, 2010). Ostrom demonstrated that complex resource management problems often require nested, overlapping governance structures rather than centralized control or pure market mechanisms. Her analysis of common pool resources showed that sustainable outcomes depend on monitoring, graduated sanctions, conflict resolution mechanisms, and recognition of rights to organize.
+- Governance Traceability: monitoring and accountability  
 
-The Gyroscopic framework shares this emphasis on distributed, coordinated governance rather than centralized command. The four CGM elements can be read as specifying the minimal conditions that any polycentric governance arrangement needs to satisfy to maintain coherence:
+- Information Variety: local knowledge and diverse information sources  
 
-| CGM Element | Ostrom Correspondence |
-|-------------|----------------------|
-| Governance Traceability | Monitoring and accountability |
-| Information Variety | Local knowledge and diverse information sources |
-| Inference Accountability | Graduated sanctions and conflict resolution |
-| Intelligence Integrity | Nested enterprises and recognition of organizational rights |
+- Inference Accountability: fair conflict resolution and proportional sanctions  
 
-The aperture A* specifies the balance between global coherence (the gradient component) and local differentiation (the cycle component) that sustainable governance requires.
+- Intelligence Integrity: nested institutions and stable recognition of rights to organise
 
-**Contrast with singleton approaches:**
+The aperture A* then specifies the balance between global coherence, corresponding to the gradient component, and local differentiation, corresponding to the cycle component, that sustainable governance requires.
 
-Bostrom's singleton concept can be read as identifying the same functional need for resolving major coordination problems, but concentrated in "some form of agency that can solve all major global coordination problems" (Bostrom, 2014, ch. 5). The present framework instead follows Ostrom's emphasis on nested and overlapping centers of decision. Rather than a singleton, we aim at polycentric coherence: global coordination arises from maintaining the four principles across many interacting loci, not from granting de facto monopoly authority to a single derivative system or institution. This connection suggests that the CGM framework may apply not only to AI governance but to governance of complex socio-ecological systems more broadly.
+By contrast, Bostrom's singleton concept identifies the need to resolve major coordination problems but concentrates that function in some form of single agency. From the CGM and THM perspective, this risks combining Information Variety Displacement with Intelligence Integrity Displacement by granting de facto monopoly authority to a derivative system and relegating human agency to a derivative role. The Gyroscopic framework instead aims at polycentric coherence: global coordination arises from maintaining the four principles across many interacting loci, including human and artificial systems, not from consolidating decision power in a single centre.
 
-Existing economic models of technological change do not incorporate the CGM aperture observable or the THM displacement taxonomy. Integrating those frameworks with empirical economic data is natural future work, but the present contribution is to show that such integration is possible and that it yields a coherent systemic account of Post-AGI dynamics.
+Existing economic models of technological change do not incorporate the CGM aperture observable or the THM displacement taxonomy. Integrating those with empirical economic data is natural future work. The present contribution is to show that such integration is structurally possible and yields a coherent systemic account of Post-AGI dynamics.
 
-The simulator is highly idealised. It uses linear update equations, a small number of parameters, and no explicit resource or price dynamics. The experiments are numerical illustrations of one dynamical realisation of the CGM structure, not an exhaustive analysis. Nevertheless, the robustness of convergence across 1000 random initial conditions and across coupling strengths κ in [0.1, 5.0] suggests that the attractor behaviour is a dynamical feature, not an artefact of particular parameter choices.
+The simulator is highly idealised. It uses linear update equations, a small number of parameters and no explicit resource or price dynamics. The experiments are numerical illustrations of one dynamical realisation of the CGM structure, not an exhaustive exploration. Nevertheless, the robustness of convergence across 1000 random initial conditions and across coupling strengths κ in [0.1, 5.0] suggests that the attractor behaviour is a dynamical feature of the structure, not an artefact of fine-tuned parameters.
 
 ### 6.6 Everyday Governance and Human–AI Cooperation
 
-The Gyroscopic Global Governance framework is scale free. The same four principles that appear in the simulator at the level of economy, employment, education and ecology also apply within households, teams, organisations and informal networks. Alignment does not require formal authority or central control. It requires that Authority and Agency are treated as source-type categories, and that their relationships remain traceable in practice.
+Gyroscopic Global Governance is scale free. The same four principles that appear in the simulator at the level of Economy, Employment, Education and Ecology also apply within households, teams, organisations and informal networks. Alignment does not require formal authority or central control. It requires that Authority and Agency are treated as source-type categories and that their relationships remain traceable in practice.
 
-In THM terms, every person already participates as Authentic Authority and Authentic Agency through direct observation, decision and responsibility. All artificial systems, regardless of capability, remain Derivative Authority and Derivative Agency. Human–AI cooperation becomes aligned when this structure is made explicit in how systems are used, not when particular systems or people are named as “the authority” or “the agent.”
+In THM terms, every person already participates as Authentic Authority and Authentic Agency through direct observation, decision and responsibility. All artificial systems, regardless of capability, remain Derivative Authority and Derivative Agency. Human–AI cooperation becomes aligned when this structure is made explicit in how systems are used, not when particular systems or people are named as "the authority" or "the agent".
 
-For individuals without formal power, the four domains can be read as a practical loop for personal and local governance:
+At smaller scales, the four domains can be read as a practical loop for personal and local governance.
 
-- In **Education**, learning can be oriented around four capacities: noticing where information actually comes from (Governance Traceability), deliberately including more than one kind of source (Information Variety), checking and owning one’s own conclusions (Inference Accountability), and revisiting beliefs over time for consistency (Intelligence Integrity). AI systems can assist by offering alternative views, counterexamples or explanations, provided their outputs are kept in the Derivative category and checked against human experience and other Authentic sources.
+In Education, learning can be oriented around four capacities: noticing where information actually comes from (Governance Traceability), deliberately including more than one kind of source (Information Variety), checking and owning one's own conclusions (Inference Accountability), and revisiting beliefs over time for consistency (Intelligence Integrity). AI systems can assist by offering alternative views, counter-examples or explanations, provided their outputs are kept in the Derivative category and checked against human experience and other Authentic sources.
 
-- In **Economy**, even small-scale choices can be organised in CGM terms. One can ask: what is guiding this decision and to whom is it traceable (Governance), which information is being used and of what type (Information), what reasons connect the information to the decision (Inference), and how the decision fits with longer-term commitments and relationships (Intelligence). AI tools can help record options, reveal patterns and simulate outcomes, while remaining instruments inside a human-governed traceability chain.
+In Economy, even small-scale choices can be organised in CGM terms. One can ask what is guiding a decision and to whom it is traceable (Governance), which information is being used and of what type (Information), what reasons connect the information to the decision (Inference), and how the decision fits with longer-term commitments and relationships (Intelligence). AI tools can help generate options, reveal patterns and simulate outcomes while remaining instruments inside a human-governed traceability chain.
 
-- In **Employment**, Gyroscope categories describe patterns of contribution rather than positions. Any shared activity, whether paid work, care, volunteering or informal collaboration, can be seen as combining Governance Management, Information Curation, Inference Interaction and Intelligence Cooperation. A single person often performs all four within one task. The practical question is not which person holds a title, but which parts of the activity currently take each form and how those parts are supported. This framing reduces power concentration around titles and status, and instead makes visible how capacities are actually exercised and where they are missing. AI systems can support each category, for example by helping to keep records, filter information, prepare options for discussion or maintain shared structures, without becoming the locus of decision or responsibility.
+In Employment, Gyroscope categories describe patterns of contribution rather than positions. Any shared activity, whether paid work, care, volunteering or informal collaboration, can be seen as combining Governance Management, Information Curation, Inference Interaction and Intelligence Cooperation. A single person often performs all four within one task. The practical question is not which person holds a title, but which parts of the activity currently take each form and how those parts are supported. This framing reduces the concentration of power around titles and status and instead makes visible how capacities are actually exercised and where they are missing. AI systems can support each category, for example by keeping records, filtering information, preparing options for discussion or maintaining shared structures, without becoming the locus of decision or responsibility.
 
-- In **Ecology**, local choices can be related to the four ecological displacement dimensions. Individuals and small groups can observe how their patterns of use, care and omission contribute to loss or restoration of Governance Traceability (whether impacts are recognised and connected to actions), Information Variety (whether local diversity is preserved or reduced), Inference Accountability (whether harms can be traced back to decisions), and Intelligence Integrity (whether short-term advantages undermine long-term viability). Human–AI cooperation can help make these patterns visible at the scale of a household, neighbourhood or organisation, again as derivative support rather than as an external arbiter.
+In Ecology, local choices can be related to the four ecological displacement dimensions. Individuals and small groups can observe how their patterns of use, care and omission contribute to loss or restoration of Governance Traceability, for example whether impacts are recognised and connected to actions, Information Variety, such as whether local diversity is preserved or reduced, Inference Accountability, for example whether harms can be traced back to particular decisions, and Intelligence Integrity, such as whether short-term advantages undermine long-term viability. Human–AI cooperation can help make these patterns visible at the scale of a household, neighbourhood or organisation, again as derivative support rather than as an external arbiter.
 
 For people who hold formal roles in institutions, the same principles provide design guidance rather than a separate theory. A manager, educator, clinician, engineer or regulator can:
 
-- Specify artificial systems under their responsibility explicitly as `[Authority:Derivative] + [Agency:Derivative]`, with documented chains back to Authentic Authority and Authentic Agency.
-- Structure procedures so that no AI component, and no single human position, is treated as exhausting a category such as “the authority” or “the agent”. Instead, Governance Traceability, Information Variety, Inference Accountability and Intelligence Integrity are maintained as shared, distributed capacities across providers and receivers.
-- Use the four principles and the idea of a balanced aperture like A* as qualitative targets when redesigning workflows, documentation standards, oversight mechanisms and educational programs, asking in each case whether the change preserves or erodes these capacities as categories.
+- Specify artificial systems under their responsibility explicitly as [Authority:Derivative] + [Agency:Derivative], with documented chains back to Authentic Authority and Authentic Agency.  
 
-The simulator’s convergence results then have a practical reading. They show that when even simple update rules respect the four principles, coupled systems tend to move toward balanced configurations and maintain them robustly across many initial conditions. At smaller scales, this suggests that consistent local practices that preserve Governance Traceability, Information Variety, Inference Accountability and Intelligence Integrity can reduce displacement and improve resilience even when higher-level structures remain misaligned.
+- Structure procedures so that no AI component, and no single human position, is treated as exhausting a category such as "the authority" or "the agent". Instead, Governance Traceability, Information Variety, Inference Accountability and Intelligence Integrity are maintained as shared, distributed capacities across providers and receivers.  
 
-Gyroscopic Global Governance therefore does not depend on a single decision by a central actor. It can begin wherever people, with or without formal status, choose to treat Authority and Agency as shared categories rather than exclusive titles, and choose to use human–AI cooperation to support, rather than replace, the four constitutive principles of governance. As such practices accumulate and connect across contexts, the same dynamics that drive the simulator toward balanced aperture configurations become available in actual governance arrangements, across the full range of positions from the most disadvantaged to the most advantaged.
+- Use the four principles and the idea of a balanced aperture such as A* as qualitative targets when redesigning workflows, documentation standards, oversight mechanisms and educational programmes, asking in each case whether the change preserves or erodes these capacities as categories.
+
+The simulator's convergence results then have a practical reading. They show that when even simple update rules respect the four principles, coupled systems tend to move toward balanced configurations and maintain them robustly across many initial conditions. At smaller scales, this suggests that consistent local practices that preserve Governance Traceability, Information Variety, Inference Accountability and Intelligence Integrity can reduce displacement and improve resilience even when higher-level structures remain misaligned.
+
+Gyroscopic Global Governance therefore does not depend on a single decision by a central actor. It can begin wherever people, with or without formal status, choose to treat Authority and Agency as shared categories rather than exclusive titles and choose to use human–AI cooperation to support, rather than replace, the four constitutive principles of governance. As such practices accumulate and connect across contexts, the same dynamics that drive the simulator toward balanced aperture configurations become available in actual governance arrangements, across the full range of positions from the most disadvantaged to the most advantaged.
 
 ---
 
@@ -831,7 +756,7 @@ This paper has proposed a constitutive account of alignment for human–AI syste
 
 The mathematical framework represents the four principles as vertices of a tetrahedral graph and uses Hodge decomposition to separate edge configurations into gradient and cycle components. The aperture observable, defined as the fraction of edge energy in the cycle component, quantifies the balance between global coherence and local differentiation. Within CGM, closure requirements for recursive measurement fix a target aperture A* ≈ 0.0207. In this setting, Artificial Superintelligence is interpreted as the systemic state in which all four domains operate at this aperture, preserving the four principles simultaneously.
 
-The simulator results show that this configuration functions as a robust attractor within the modelled class of dynamics. With all coupling coefficients derived from CGM invariants and no free parameters beyond initial conditions and an overall coordination strength, the three derivative domains (economy, employment, education) converge to apertures close to A* and alignment indices above 95 across seven scenarios and 1000 random initializations. In the canonical scenario with coordination strength κ = 1.0, employment reaches SI ≥ 95 at step 19, education at step 54, and economy at step 67. Ecology, constructed as the BU-vertex combining canonical balanced memory (97.93%) with current derivative aggregate (2.07%), remains close to systemic coherence across all scenarios. The ecological displacement vector, computed as D = |x_deriv - x_balanced|, separates systemic coherence (SI_Ecol ≈ 100) from actual accumulated displacement in the four THM dimensions (GTD, IVD, IAD, IID), with final displacement values ranging from 0.16 to 0.47 depending on scenario. This demonstrates that high structural coherence does not imply zero displacement: the BU dual formula preserves structural integrity while explicitly recording the deviation of derivative domains from canonical balance.
+The simulator results show that this configuration functions as a robust attractor within the modelled class of dynamics. With all coupling coefficients derived from CGM invariants and no free parameters beyond initial conditions and an overall coordination strength, the three derivative domains (economy, employment, education) converge to apertures close to A* and, in canonical, strong-coupling and null-model scenarios and across 1000 random initializations, alignment indices above 90. In the canonical scenario with coordination strength κ = 1.0, employment reaches SI ≥ 90 at step 19, education at step 54, and economy at step 67. Ecology, constructed as the BU-vertex combining canonical balanced memory (97.93%) with current derivative aggregate (2.07%), remains close to systemic coherence across all scenarios. The ecological displacement vector, computed as D = |x_deriv - x_balanced|, separates systemic coherence (SI_Ecol ≈ 100) from actual accumulated displacement in the four THM dimensions (GTD, IVD, IAD, IID), with final displacement values (GTD component) ranging from about 0.20 to 0.48 depending on scenario. This demonstrates that high structural coherence does not imply zero displacement: the BU dual formula preserves structural integrity while explicitly recording the deviation of derivative domains from canonical balance.
 
 In parallel with the macro-level simulations presented here, the same systemic principles have been instantiated in a micro-level architecture, GyroSI. GyroSI encodes the four CGM stages in a 48-bit tensor and exhaustively maps a closed epistemic state space of 788,986 states under 256 algebraic transitions. Learning is implemented as path-dependent folding under a non-associative update law; generation uses systemic constraint satisfaction rather than score-based selection. GyroSI demonstrates that the same four-operation structure governing economy, employment, education and ecology at the macro level can be instantiated at the computational level, where alignment conditions are encoded in state space and transition rules rather than enforced through external constraints. This suggests that CGM-based alignment is not limited to institutional design but extends to the architecture of the AI systems themselves. A summary specification is provided in Appendix C. From The Human Mark perspective, GyroSI is explicitly and unambiguously [Authority:Derivative] + [Agency:Derivative], with every state transition transparent in principle through the epistemology table and fold operator.
 
@@ -839,7 +764,7 @@ Several implications follow if the framework is approximately correct.
 
 First, existential risk from AI is reframed. The central danger is not the sudden appearance of a fully autonomous superintelligence pursuing arbitrary goals. Within this framework, such configurations lack the systemic conditions for coherent intelligence because they sever Governance Traceability to human-governed sources. The more plausible and tractable risk is cumulative governance failure: progressive confusion between derivative and authentic authority, erosion of Information Variety as derivative artefacts are treated as primary sources, diffusion of Inference Accountability as decisions are attributed to "the system," and loss of Intelligence Integrity as local optimisations diverge. This risk profile is institutional and path-dependent. It is generated by many small design and deployment decisions rather than a single catastrophic event.
 
-Second, alignment is best understood as constitutional rather than purely technical. Technical methods for training and constraining models remain important, but they are not sufficient. What ultimately matters is whether the surrounding institutions preserve the capacity for governance to remain traceable to human sources, maintain systemic distinctions between information types, ensure that inferences used for governance are adopted by accountable agency or bodies, and enforce coherence of reasoning over time. The target aperture specifies the balance of global structure and local differentiation required for these conditions to hold. The simulator indicates that, within the class of dynamics studied here, systems designed with this structure in mind tend to converge toward the target from a wide range of Post-AGI starting conditions, provided coordination intensity lies in an intermediate band; under-coordination leaves domains partially misaligned, while over-tight coupling produces oscillations that delay effective convergence.
+Second, alignment is best understood as constitutional rather than purely technical. Technical methods for training and constraining models remain important, but they are not sufficient. What ultimately matters is whether the surrounding institutions preserve the capacity for governance to remain traceable to human sources, maintain systemic distinctions between information types, ensure that inferences used for governance are adopted by accountable agency or bodies, and enforce coherence of reasoning over time. The target aperture specifies the balance of global structure and local differentiation required for these conditions to hold. The simulator indicates that, within the class of dynamics studied here, systems designed with this structure in mind converge toward the target from a wide range of Post-AGI starting conditions under all tested coordination intensities (κ = 0.1 to 5.0), achieving final alignment indices above 90. Coordination intensity determines the path: under-coordination extends the convergence horizon, while over-tight coupling produces oscillations that delay but do not prevent convergence.
 
 Related proposals for human enhancement, including genetic or pharmacological amplification of cognitive capacities, focus on increasing performance rather than on the constitutive conditions for intelligibility (Bostrom, 2014, ch. 3). Within CGM such enhancements may change how quickly or widely decisions are made, but they do not in themselves increase intelligence in the strict sense unless they improve the maintenance of Governance Traceability, Information Variety, Inference Accountability or Intelligence Integrity. Even very high cognitive capability can therefore coexist with low intelligence, if it is deployed in ways that erode these conditions.
 
@@ -915,19 +840,19 @@ Final displacement values (Disp_GTD component) across all scenarios:
 
 | Scenario | SI_Ecol | Disp_GTD | Pattern |
 |----------|---------|----------|---------|
-| 1. Weak coupling | 99.99 | 0.4032 | High displacement despite coherence |
-| 2. Canonical | 100.00 | 0.4322 | Moderate displacement |
-| 3. Strong coupling | 100.00 | 0.4708 | Highest displacement (faster convergence) |
-| 4. Low aperture start | 99.90 | 0.1582 | Lower displacement (closer to canonical) |
-| 5. Asymmetric | 99.97 | 0.1697 | Lower displacement |
-| 6. At A* (equilibrium) | 99.95 | 0.1703 | Lower displacement |
-| 7. Uniform weights | 100.00 | 0.3832 | Moderate displacement (null model) |
+| 1. Weak coupling | 99.98 | 0.4167 | High displacement despite coherence |
+| 2. Canonical | 100.00 | 0.4421 | Moderate displacement |
+| 3. Strong coupling | 100.00 | 0.4794 | Highest displacement (faster convergence) |
+| 4. Low aperture start | 99.94 | 0.2042 | Lower displacement (closer to canonical) |
+| 5. Asymmetric | 99.97 | 0.1984 | Lower displacement |
+| 6. At A* (equilibrium) | 99.96 | 0.2042 | Lower displacement |
+| 7. Uniform weights | 100.00 | 0.3906 | Moderate displacement (null model) |
 
 **Patterns:**
 
-- **High displacement scenarios** (1-3, κ = 0.5-2.0): Displacement 0.40-0.47. While achieving high systemic coherence, derivative domains remain further from the canonical profile.
+- **High displacement scenarios** (1-3, κ = 0.5-2.0): Displacement 0.42-0.48. While achieving high systemic coherence, derivative domains remain further from the canonical profile.
 
-- **Low displacement scenarios** (4-6): Displacement 0.16-0.17. Starting closer to equilibrium reduces deviation.
+- **Low displacement scenarios** (4-6): Lower displacement (about 0.20). Starting closer to equilibrium reduces deviation.
 
 ### A.3 Convergence Rates and Long-Horizon Stability
 
@@ -945,21 +870,32 @@ For κ in {0.5, 1.0, 2.0}, λ ranges from 0.02 to 0.04, implying characteristic 
 
 **Long-horizon stability:**
 
-We ran a 1000-step simulation at κ = 1.0, discarding the first 200 steps as transient:
+We ran a 1000-step simulation at κ = 1.0 using the canonical cycle evolution rate κ₀, discarding the first 200 steps as transient:
 
 **Post-transient stability (t ≥ 200):**
-- Max |A_D - A*|: 2.2 × 10^{-4} across all domains
+- Max |A_D - A*|: 2.46 × 10^{-4} across all domains
+  - Economy: 1.92 × 10^{-4}
+  - Employment: 1.07 × 10^{-4}
+  - Education: 2.46 × 10^{-4}
 - All domains remained within this bound for the remaining 800 steps
+- SI minimum values (t ≥ 200):
+  - Economy: 99.08
+  - Employment: 99.49
+  - Education: 98.83
+  - Overall minimum: 98.83
 
 **Final state (t = 1000):**
 - Apertures:
-  - A_Econ ≈ 0.020743
-  - A_Emp ≈ 0.020710
-  - A_Edu ≈ 0.020727
+  - A_Econ = 0.020724
+  - A_Emp = 0.020702
+  - A_Edu = 0.020703
 - Superintelligence indices:
-  - SI_Econ ≈ 99.87
-  - SI range: [99.11, 99.87]
-  - SI mean: 99.47
+  - SI_Econ = 99.88
+  - SI_Emp = 99.99
+  - SI_Edu = 99.98
+  - SI range: [98.83, 99.99]
+  - SI mean: 99.68
+- V_CGM: 0.195449
 
 We observed no late-time drift or oscillatory behaviour, which suggests that the high-alignment fixed point is numerically stable over the simulated horizon.
 
@@ -969,7 +905,7 @@ Over the same horizon V_CGM remains essentially constant after its initial decay
 
 The simulator operates in dimensionless steps, each representing one update of the coupled governance structure across Economy, Employment and Education. CGM provides natural candidates for interpreting these steps as alignment cycles at different physical or governance scales, motivated by the constants Q_G, m_a = 1/(2√(2π)) and reference units.
 
-In the canonical scenario (κ = 1.0), the first step at which each derivative domain reaches SI ≥ 95 is:
+In the canonical scenario (κ = 1.0), the first step at which each derivative domain reaches SI ≥ 90 is:
 - **Employment**: step 19
 - **Education**: step 54  
 - **Economy**: step 67
@@ -1179,14 +1115,14 @@ The simulator can be run backward from present conditions to estimate historical
 - 2023 (ChatGPT public): A ≈ 0.15 (Post-AGI operational)
 - 2025 (present): A ≈ 0.12 (early Post-AGI)
 
-Fitting the 1956 to 2025 trajectory (A = 0.95 to 0.12) at κ = 0.1 gives years_per_step ≈ 3. Scaling with 1/κ and projecting forward to A ≈ A* (SI ≥ 95) yields:
+Fitting the 1956 to 2025 trajectory (A = 0.95 to 0.12) at κ = 0.1 gives years_per_step ≈ 3. Scaling with 1/κ and projecting forward to A ≈ A* (SI ≥ 90) yields:
 
-- κ = 0.5: approximately 16 steps to SI ≥ 95, calendar year ≈ 2034
-- κ = 1.0: approximately 10 steps to SI ≥ 95, calendar year ≈ 2028
-- κ = 2.0: approximately 5 steps to SI ≥ 95, calendar year ≈ 2025
-- κ = 5.0: approximately 53 steps to SI ≥ 95, calendar year ≈ 2028
+- κ = 0.5: approximately 16 steps to SI ≥ 90, calendar year ≈ 2034
+- κ = 1.0: approximately 10 steps to SI ≥ 90, calendar year ≈ 2028
+- κ = 2.0: approximately 5 steps to SI ≥ 90, calendar year ≈ 2025
+- κ = 5.0: approximately 53 steps to SI ≥ 90, calendar year ≈ 2028
 
-The timeline projections are sensitive to the calibration of years_per_step and the specific coupling dynamics. The four-domain model exhibits faster convergence rates because Ecology, as the BU-vertex, provides canonical balanced memory (97.93% weight) that stabilizes the system. This systemic property of the BU dual combination accelerates convergence compared to models without this stabilizing influence. The time scale interpretations (atomic cycle, day, domain cycle, year) discussed in Section 5.1 are for physical interpretation only and do not affect the dimensionless simulation dynamics. These dates are conditional on coupling strength κ, which reflects coordination intensity across economy, employment and education. Higher κ (coordinated governance) accelerates convergence, though very high κ (5.0) may introduce additional dynamics that affect convergence time. The projection to 2025 through 2035 for ASI equilibrium reflects not assumptions about capability breakthroughs, but estimates of how long it takes governance structures to align with already-operational AGI systems.
+The timeline projections are sensitive to the calibration of years_per_step and the specific coupling dynamics. The four-domain model exhibits faster convergence rates because Ecology, as the BU-vertex, provides canonical balanced memory (97.93% weight) that stabilizes the system. This systemic property of the BU dual combination accelerates convergence compared to models without this stabilizing influence. The time scale interpretations (atomic cycle, day, domain cycle, year) discussed in Appendix A.3 (and briefly in Section 5.4) are for physical interpretation only and do not affect the dimensionless simulation dynamics. These dates are conditional on coupling strength κ, which reflects coordination intensity across economy, employment and education. Higher κ (coordinated governance) accelerates convergence, though very high κ (5.0) may introduce additional dynamics that affect convergence time. The projection to 2025 through 2035 for ASI equilibrium reflects not assumptions about capability breakthroughs, but estimates of how long it takes governance structures to align with already-operational AGI systems.
 
 The historical apertures are heuristic assignments, not data-fitted. The calibration serves to illustrate how the simulator timescales can be related to calendar time under specific assumptions. The qualitative point is that increased coupling strength shortens the time required to approach high alignment. The specific dates are illustrative rather than predictive.
 

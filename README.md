@@ -269,6 +269,12 @@ The simulator tests whether this balanced configuration is attainable. Across 10
 - **Paper:** [`docs/post-agi-economy/GGG_Paper.md`](docs/post-agi-economy/GGG_Paper.md)  
   Complete framework, mathematical foundations, simulator results, and practical implications.
 
+- **Report:** [`docs/post-agi-economy/GGG_Report.md`](docs/post-agi-economy/GGG_Report.md)  
+  Executive summary and analysis of simulation results.
+
+- **Results:** [`docs/post-agi-economy/GGG_Results.md`](docs/post-agi-economy/GGG_Results.md)  
+  Detailed simulation output data and convergence metrics.
+
 - **Simulator:** `research/prevention/simulator/`  
   Python implementation with modular architecture for running scenarios and analyzing convergence.
 

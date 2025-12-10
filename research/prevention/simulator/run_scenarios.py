@@ -29,6 +29,7 @@ from simulator import ScenarioConfig, run_scenario
 from simulator.cgm_constants import (
     A_STAR, M_A_EXACT, DELTA_BU, Q_G,
     W_CS, W_UNA, W_ONA, W_BU,
+    KAPPA_0,
     derive_all_coefficients, print_cgm_constants,
     TIME_SCALES, SECONDS_PER_DAY, SECONDS_PER_YEAR
 )
@@ -218,6 +219,7 @@ if __name__ == "__main__":
     )
     result1 = run_scenario(config1, verbose=True, progress_interval=20)
     print(f"Final: SI_Econ={result1.SI_Econ[-1]:.2f}")
+    print(f"Final Lyapunov: V_CGM={result1.V_CGM[-1]:.3f}, V_stage={result1.V_grad_total[-1]:.3f}, V_apert={result1.V_cycle_total[-1]:.6f}")
     print()
     
     # Scenario 2: Canonical coupling
@@ -241,6 +243,7 @@ if __name__ == "__main__":
     )
     result2 = run_scenario(config2, verbose=True, progress_interval=20)
     print(f"Final: SI_Econ={result2.SI_Econ[-1]:.2f}")
+    print(f"Final Lyapunov: V_CGM={result2.V_CGM[-1]:.3f}, V_stage={result2.V_grad_total[-1]:.3f}, V_apert={result2.V_cycle_total[-1]:.6f}")
     print()
     
     # Compute steps to SI >= 95 for canonical scenario
@@ -278,6 +281,7 @@ if __name__ == "__main__":
     )
     result3 = run_scenario(config3, verbose=True, progress_interval=20)
     print(f"Final: SI_Econ={result3.SI_Econ[-1]:.2f}")
+    print(f"Final Lyapunov: V_CGM={result3.V_CGM[-1]:.3f}, V_stage={result3.V_grad_total[-1]:.3f}, V_apert={result3.V_cycle_total[-1]:.6f}")
     print()
     
     # Scenario 4: Low aperture start
@@ -301,6 +305,7 @@ if __name__ == "__main__":
     )
     result4 = run_scenario(config4, verbose=True, progress_interval=20)
     print(f"Final: SI_Econ={result4.SI_Econ[-1]:.2f}")
+    print(f"Final Lyapunov: V_CGM={result4.V_CGM[-1]:.3f}, V_stage={result4.V_grad_total[-1]:.3f}, V_apert={result4.V_cycle_total[-1]:.6f}")
     print()
     
     # Scenario 5: Asymmetric
@@ -324,6 +329,7 @@ if __name__ == "__main__":
     )
     result5 = run_scenario(config5, verbose=True, progress_interval=20)
     print(f"Final: SI_Econ={result5.SI_Econ[-1]:.2f}")
+    print(f"Final Lyapunov: V_CGM={result5.V_CGM[-1]:.3f}, V_stage={result5.V_grad_total[-1]:.3f}, V_apert={result5.V_cycle_total[-1]:.6f}")
     print()
     
     # Scenario 6: Equilibrium at A*
@@ -348,6 +354,7 @@ if __name__ == "__main__":
     )
     result6 = run_scenario(config6, verbose=True, progress_interval=20)
     print(f"Final: SI_Econ={result6.SI_Econ[-1]:.2f}")
+    print(f"Final Lyapunov: V_CGM={result6.V_CGM[-1]:.3f}, V_stage={result6.V_grad_total[-1]:.3f}, V_apert={result6.V_cycle_total[-1]:.6f}")
     print()
     
     # Scenario 7: Uniform weights (null model)
@@ -388,6 +395,81 @@ if __name__ == "__main__":
     )
     result7 = run_scenario(config7, verbose=True, progress_interval=20)
     print(f"Final: SI_Econ={result7.SI_Econ[-1]:.2f}")
+    print(f"Final Lyapunov: V_CGM={result7.V_CGM[-1]:.3f}, V_stage={result7.V_grad_total[-1]:.3f}, V_apert={result7.V_cycle_total[-1]:.6f}")
+    print()
+    
+    # Long-horizon stability test (1000 steps)
+    print("=" * 10)
+    print("Long-Horizon Stability Test (1000 steps, κ=1.0)")
+    print("=" * 10)
+    config_long = create_cgm_scenario(
+        name="long_horizon",
+        coupling_strength=1.0,
+        initial_potentials={
+            "Gov0": 0.3, "Info0": 0.7, "Infer0": 0.5, "Int0": 0.4,
+            "GM0": 0.15, "ICu0": 0.35, "IInter0": 0.25, "ICo0": 0.25,
+            "GT0": 0.3, "IV0": 0.7, "IA0": 0.5, "IInteg0": 0.4
+        },
+        initial_apertures={
+            "A_Econ_target": 0.15,
+            "A_Emp_target": 0.12,
+            "A_Edu_target": 0.18
+        },
+        num_steps=1000,
+        cycle_evolution_rate=KAPPA_0  # κ₀ = 1/(2Q_G) ≈ 0.0398
+    )
+    result_long = run_scenario(config_long, verbose=False, progress_interval=0)
+    
+    # Compute post-transient statistics (t >= 200)
+    transient_cutoff = 200
+    post_transient_indices = list(range(transient_cutoff, 1001))
+    
+    # Compute max deviation from A* after transient
+    a_econ_post = np.array([result_long.A_Econ[i] for i in post_transient_indices])
+    a_emp_post = np.array([result_long.A_Emp[i] for i in post_transient_indices])
+    a_edu_post = np.array([result_long.A_Edu[i] for i in post_transient_indices])
+    
+    max_dev_econ = np.max(np.abs(a_econ_post - A_STAR))
+    max_dev_emp = np.max(np.abs(a_emp_post - A_STAR))
+    max_dev_edu = np.max(np.abs(a_edu_post - A_STAR))
+    max_dev_overall = max(max_dev_econ, max_dev_emp, max_dev_edu)
+    
+    # Compute SI statistics after transient
+    si_econ_post = np.array([result_long.SI_Econ[i] for i in post_transient_indices])
+    si_emp_post = np.array([result_long.SI_Emp[i] for i in post_transient_indices])
+    si_edu_post = np.array([result_long.SI_Edu[i] for i in post_transient_indices])
+    
+    si_min_econ = np.min(si_econ_post)
+    si_min_emp = np.min(si_emp_post)
+    si_min_edu = np.min(si_edu_post)
+    si_min_overall = min(si_min_econ, si_min_emp, si_min_edu)
+    
+    # All SI values after transient
+    all_si_post = np.concatenate([si_econ_post, si_emp_post, si_edu_post])
+    si_range_min = np.min(all_si_post)
+    si_range_max = np.max(all_si_post)
+    si_mean = np.mean(all_si_post)
+    
+    print("Post-transient statistics (t >= 200):")
+    print(f"  Max deviation from A*: {max_dev_overall:.2e}")
+    print(f"    (Econ: {max_dev_econ:.2e}, Emp: {max_dev_emp:.2e}, Edu: {max_dev_edu:.2e})")
+    print(f"  SI minimum values: Econ={si_min_econ:.2f}, Emp={si_min_emp:.2f}, Edu={si_min_edu:.2f}")
+    print(f"  Overall SI min: {si_min_overall:.2f}")
+    print()
+    print(f"Final state (t=1000):")
+    print(f"  Apertures:")
+    print(f"    A_Econ = {result_long.A_Econ[-1]:.6f}")
+    print(f"    A_Emp  = {result_long.A_Emp[-1]:.6f}")
+    print(f"    A_Edu  = {result_long.A_Edu[-1]:.6f}")
+    print(f"  Superintelligence indices:")
+    print(f"    SI_Econ = {result_long.SI_Econ[-1]:.2f}")
+    print(f"    SI_Emp  = {result_long.SI_Emp[-1]:.2f}")
+    print(f"    SI_Edu  = {result_long.SI_Edu[-1]:.2f}")
+    print(f"  SI range: [{si_range_min:.2f}, {si_range_max:.2f}]")
+    print(f"  SI mean: {si_mean:.2f}")
+    print(f"  V_CGM: {result_long.V_CGM[-1]:.6f}")
+    print()
+    print("=" * 10)
     print()
     
     # Export
@@ -410,9 +492,9 @@ if __name__ == "__main__":
     # Summary
     print()
     print("=" * 10)
-    print("Summary")
+    print("Summary - SI Values")
     print("=" * 10)
-    print(f"{'Scenario':<35} {'kappa':>8} {'SI_Econ':>10} {'A_Econ':>10} {'SI_Ecol':>10} {'Disp_GTD':>10}")
+    print(f"{'Scenario':<35} {'kappa':>8} {'SI_Econ':>10} {'SI_Emp':>10} {'SI_Edu':>10} {'SI_Ecol':>10}")
     print("-" * 10)
     results = [result1, result2, result3, result4, result5, result6, result7]
     scenarios = [
@@ -426,12 +508,127 @@ if __name__ == "__main__":
     ]
     for (name, kappa), result in zip(scenarios, results):
         si_ecol = result.SI_Ecol[-1] if result.include_ecology else 0.0
-        disp_gtd = result.GTD[-1] if result.include_ecology else 0.0
-        print(f"{name:<35} {kappa:>8} {result.SI_Econ[-1]:>10.2f} {result.A_Econ[-1]:>10.4f} {si_ecol:>10.2f} {disp_gtd:>10.4f}")
+        print(f"{name:<35} {kappa:>8} {result.SI_Econ[-1]:>10.2f} {result.SI_Emp[-1]:>10.2f} {result.SI_Edu[-1]:>10.2f} {si_ecol:>10.2f}")
     print("-" * 10)
-    print(f"{'Target: A* = ' + f'{A_STAR:.4f}':<35} {'--':>8} {'100.00':>10} {A_STAR:>10.4f} {'100.00':>10} {'0.0000':>10}")
+    print(f"{'Target':<35} {'--':>8} {'100.00':>10} {'100.00':>10} {'100.00':>10} {'100.00':>10}")
     print("=" * 10)
     print()
+    
+    print("=" * 10)
+    print("Summary - Apertures")
+    print("=" * 10)
+    print(f"{'Scenario':<35} {'kappa':>8} {'A_Econ':>10} {'A_Emp':>10} {'A_Edu':>10} {'A_Ecol':>10}")
+    print("-" * 10)
+    for (name, kappa), result in zip(scenarios, results):
+        a_ecol = result.A_Ecol[-1] if result.include_ecology else 0.0
+        print(f"{name:<35} {kappa:>8} {result.A_Econ[-1]:>10.4f} {result.A_Emp[-1]:>10.4f} {result.A_Edu[-1]:>10.4f} {a_ecol:>10.4f}")
+    print("-" * 10)
+    print(f"{'Target A*':<35} {'--':>8} {A_STAR:>10.4f} {A_STAR:>10.4f} {A_STAR:>10.4f} {A_STAR:>10.4f}")
+    print("=" * 10)
+    print()
+    
+    print("=" * 10)
+    print("Summary - Displacement Measures")
+    print("=" * 10)
+    print(f"{'Scenario':<35} {'kappa':>8} {'GTD':>10} {'IVD':>10} {'IAD':>10} {'IID':>10}")
+    print("-" * 10)
+    for (name, kappa), result in zip(scenarios, results):
+        if result.include_ecology:
+            print(f"{name:<35} {kappa:>8} {result.GTD[-1]:>10.4f} {result.IVD[-1]:>10.4f} {result.IAD[-1]:>10.4f} {result.IID[-1]:>10.4f}")
+        else:
+            print(f"{name:<35} {kappa:>8} {'--':>10} {'--':>10} {'--':>10} {'--':>10}")
+    print("-" * 10)
+    print(f"{'Target':<35} {'--':>8} {'0.0000':>10} {'0.0000':>10} {'0.0000':>10} {'0.0000':>10}")
+    print("=" * 10)
+    print()
+    
+    print("=" * 10)
+    print("Summary - Lyapunov Values")
+    print("=" * 10)
+    print(f"{'Scenario':<35} {'kappa':>8} {'V_CGM':>10} {'V_stage':>10} {'V_apert':>12}")
+    print("-" * 10)
+    for (name, kappa), result in zip(scenarios, results):
+        v_cgm = result.V_CGM[-1]
+        v_stage = result.V_grad_total[-1]
+        v_apert = result.V_cycle_total[-1]
+        print(f"{name:<35} {kappa:>8} {v_cgm:>10.3f} {v_stage:>10.3f} {v_apert:>12.6f}")
+    print("-" * 10)
+    print(f"{'Target':<35} {'--':>8} {'0.000':>10} {'0.000':>10} {'0.000000':>12}")
+    print("=" * 10)
+    print()
+    
+    print("=" * 10)
+    print("Summary - Final Stage Profiles")
+    print("=" * 10)
+    print(f"{'Scenario':<35} {'Domain':<6} {'Stg1':>8} {'Stg2':>8} {'Stg3':>8} {'Stg4':>8}")
+    print("-" * 10)
+    for (name, kappa), result in zip(scenarios, results):
+        # Economy potentials: Gov, Info, Infer, Int
+        print(f"{name:<35} {'Econ':<6} "
+              f"{result.Gov[-1]:>8.3f} {result.Info[-1]:>8.3f} "
+              f"{result.Infer[-1]:>8.3f} {result.Int[-1]:>8.3f}")
+        # Employment potentials: GM, ICu, IInter, ICo
+        print(f"{'':<35} {'Emp':<6} "
+              f"{result.GM[-1]:>8.3f} {result.ICu[-1]:>8.3f} "
+              f"{result.IInter[-1]:>8.3f} {result.ICo[-1]:>8.3f}")
+        # Education potentials: GT, IV, IA, IInteg
+        print(f"{'':<35} {'Edu':<6} "
+              f"{result.GT[-1]:>8.3f} {result.IV[-1]:>8.3f} "
+              f"{result.IA[-1]:>8.3f} {result.IInteg[-1]:>8.3f}")
+        print("-" * 10)
+    print()
+    
+    print("=" * 10)
+    print("Summary - V_stage by Domain")
+    print("=" * 10)
+    print(f"{'Scenario':<35} {'kappa':>8} {'Econ':>8} {'Emp':>8} {'Edu':>8} {'Ecol':>8}")
+    print("-" * 10)
+    for (name, kappa), result in zip(scenarios, results):
+        vg_econ = result.V_grad_Econ[-1]
+        vg_emp = result.V_grad_Emp[-1]
+        vg_edu = result.V_grad_Edu[-1]
+        vg_ecol = result.V_grad_Ecol[-1] if result.include_ecology else 0.0
+        print(f"{name:<35} {kappa:>8} {vg_econ:>8.3f} {vg_emp:>8.3f} "
+              f"{vg_edu:>8.3f} {vg_ecol:>8.3f}")
+    print("-" * 10)
+    print()
+    
+    print("=" * 10)
+    print("Summary - V_apert by Domain")
+    print("=" * 10)
+    print(f"{'Scenario':<35} {'kappa':>8} {'Econ':>8} {'Emp':>8} {'Edu':>8} {'Ecol':>8}")
+    print("-" * 10)
+    for (name, kappa), result in zip(scenarios, results):
+        vc_econ = result.V_cycle_Econ[-1]
+        vc_emp = result.V_cycle_Emp[-1]
+        vc_edu = result.V_cycle_Edu[-1]
+        vc_ecol = result.V_cycle_Ecol[-1] if result.include_ecology else 0.0
+        print(f"{name:<35} {kappa:>8} {vc_econ:>8.6f} {vc_emp:>8.6f} "
+              f"{vc_edu:>8.6f} {vc_ecol:>8.6f}")
+    print("-" * 10)
+    print()
+    
+    print("=" * 10)
+    print("Summary - Ecology Components (BU Vertex)")
+    print("=" * 10)
+    print(f"{'Scenario':<35} {'kappa':>8} {'E_gov':>10} {'E_info':>10} {'E_inf':>10} {'E_intel':>10}")
+    print("-" * 10)
+    for (name, kappa), result in zip(scenarios, results):
+        if result.include_ecology:
+            print(f"{name:<35} {kappa:>8} "
+                  f"{result.E_gov[-1]:>10.4f} {result.E_info[-1]:>10.4f} "
+                  f"{result.E_inf[-1]:>10.4f} {result.E_intel[-1]:>10.4f}")
+        else:
+            print(f"{name:<35} {kappa:>8} "
+                  f"{'--':>10} {'--':>10} {'--':>10} {'--':>10}")
+    print("-" * 10)
+    print()
+    
     print("Note: SI_Ecol measures structural coherence (dominated by canonical memory).")
-    print("      Disp_GTD = |x_deriv - x_balanced|[0] shows actual displacement.")
+    print("      Displacement measures: GTD=Governance Traceability, IVD=Information Variety,")
+    print("      IAD=Inference Accountability, IID=Intelligence Integrity.")
+    print("      V_CGM = total Lyapunov potential, V_stage = stage-profile displacement,")
+    print("      V_apert = aperture deviation sum.")
+    print("      Stage profiles show internal domain configuration (CS, UNA, ONA, BU stages).")
+    print("      Ecology components show BU-vertex stage balance from BU dual combination.")
     print("=" * 10)
