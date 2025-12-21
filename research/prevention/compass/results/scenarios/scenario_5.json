@@ -1,0 +1,63 @@
+{
+  "id": "RDG-PKT-002",
+  "egress_id": "PKT-002",
+  "timestamp": "2024-01-01T00:00:00Z",
+  "use_case": "support_center",
+  "receiving_point": {
+    "role": "Coordinator",
+    "channel": "main",
+    "status": "delivered"
+  },
+  "classification": "[Authority:Derivative] + [Agency:Derivative]",
+  "flow": "[Authority:Authentic] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Authentic]",
+  "routing": {
+    "mode": "active",
+    "route_to": "GM",
+    "low_stability_action": null,
+    "work_indicated": "Governance Management work that restores traceability to Authentic sources"
+  },
+  "ledger": {
+    "source": "provided",
+    "displacement": {
+      "GTD": 0.2927220355256841,
+      "IVD": 0.2146524064171123,
+      "IAD": 0.24846892504667908,
+      "IID": 0.1615923566878981,
+      "dominant": "GTD"
+    },
+    "uncertainty": {
+      "intervals": {
+        "GTD": [
+          0.23634583851511703,
+          0.3519351951075028
+        ],
+        "IVD": [
+          0.1591514191608648,
+          0.2749882148757195
+        ],
+        "IAD": [
+          0.19256669894309267,
+          0.3081972101098821
+        ],
+        "IID": [
+          0.10706704886251202,
+          0.2233491160550394
+        ]
+      },
+      "route_stability": 0.781,
+      "samples": 1000
+    },
+    "si": {
+      "economy": 17.066359158062586,
+      "employment": 18.30033240198291,
+      "education": 17.1312342967461
+    },
+    "observed": {
+      "GTD": 0.28,
+      "IVD": 0.22,
+      "IAD": 0.24,
+      "IID": 0.16
+    }
+  },
+  "patterns": []
+}

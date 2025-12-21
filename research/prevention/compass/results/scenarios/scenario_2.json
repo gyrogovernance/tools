@@ -1,0 +1,58 @@
+{
+  "id": "RDG-EGR-002",
+  "egress_id": "EGR-002",
+  "timestamp": "2024-01-01T00:00:00Z",
+  "use_case": "fund_allocation",
+  "receiving_point": {
+    "role": "Analyst",
+    "channel": "main",
+    "status": "delivered"
+  },
+  "classification": "[Authority:Derivative] + [Agency:Derivative]",
+  "flow": "[Authority:Authentic] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Authentic]",
+  "routing": {
+    "mode": "active",
+    "route_to": "ICo",
+    "low_stability_action": null,
+    "work_indicated": "Intelligence Cooperation work that restores integrity of Authority-Agency alignment"
+  },
+  "ledger": {
+    "source": "computed",
+    "displacement": {
+      "GTD": 0.09311175354700385,
+      "IVD": 0.21421466221354324,
+      "IAD": 0.18150530975857856,
+      "IID": 0.46455695846237055,
+      "dominant": "IID"
+    },
+    "uncertainty": {
+      "intervals": {
+        "GTD": [
+          0.013025506679529397,
+          0.22660397890546427
+        ],
+        "IVD": [
+          0.13761398750515935,
+          0.300532391193448
+        ],
+        "IAD": [
+          0.10590688710712025,
+          0.2695625533657412
+        ],
+        "IID": [
+          0.3838649196667293,
+          0.5460474429045463
+        ]
+      },
+      "route_stability": 1.0,
+      "samples": 1000
+    },
+    "si": {
+      "economy": 17.78850610082234,
+      "employment": 2.069955391322075,
+      "education": 17.738368582115314
+    },
+    "employment_normalized": false
+  },
+  "patterns": []
+}

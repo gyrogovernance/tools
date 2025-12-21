@@ -1,0 +1,3 @@
+# This directory stores Compass reading outputs
+# Use get_results_dir() or get_output_path() from compass.exporters to get proper paths
+

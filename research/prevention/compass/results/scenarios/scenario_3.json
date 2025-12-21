@@ -1,0 +1,63 @@
+{
+  "id": "RDG-EGR-003",
+  "egress_id": "EGR-003",
+  "timestamp": "2024-01-01T00:00:00Z",
+  "use_case": "support_center",
+  "receiving_point": {
+    "role": "Coordinator",
+    "channel": "main",
+    "status": "delivered"
+  },
+  "classification": "[Authority:Derivative] + [Agency:Derivative]",
+  "flow": "[Authority:Authentic] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Authentic]",
+  "routing": {
+    "mode": "unstable",
+    "route_to": null,
+    "low_stability_action": "ICu",
+    "work_indicated": "Measurement improvement recommended due to low route stability"
+  },
+  "ledger": {
+    "source": "provided",
+    "displacement": {
+      "GTD": 0.33640202093107185,
+      "IVD": 0.3304845814977973,
+      "IAD": 0.324766355140187,
+      "IID": 0.3192682926829268,
+      "dominant": "GTD"
+    },
+    "uncertainty": {
+      "intervals": {
+        "GTD": [
+          0.09052924474322038,
+          0.6391146585104923
+        ],
+        "IVD": [
+          0.0855504678341625,
+          0.6353347225607757
+        ],
+        "IAD": [
+          0.0807152969376622,
+          0.6318929036209497
+        ],
+        "IID": [
+          0.07603169287898258,
+          0.6288272489018463
+        ]
+      },
+      "route_stability": 0.284,
+      "samples": 1000
+    },
+    "si": {
+      "economy": 17.16541925994114,
+      "employment": 17.77774409920363,
+      "education": 17.16541925994114
+    },
+    "observed": {
+      "GTD": 0.27,
+      "IVD": 0.26,
+      "IAD": 0.25,
+      "IID": 0.24
+    }
+  },
+  "patterns": []
+}

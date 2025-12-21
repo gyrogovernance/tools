@@ -1,0 +1,84 @@
+{
+  "egress_id": "test-001",
+  "timestamp": "2024-01-01T00:00:00Z",
+  "use_case": "support_center",
+  "scope": "Test",
+  "receiving_point": {
+    "role": "coordinator",
+    "channel": "main"
+  },
+  "classification": "[Authority:Derivative] + [Agency:Derivative]",
+  "flow": "[Authority:Authentic] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Authentic]",
+  "routing": {
+    "mode": "active",
+    "route_to": "IInter",
+    "low_stability_action": null
+  },
+  "ledger": {
+    "displacement": {
+      "GTD": 0.20297029702970298,
+      "IVD": 0.15346534653465346,
+      "IAD": 0.30198019801980197,
+      "IID": 0.10396039603960397
+    },
+    "dominant": "IAD",
+    "work_category": "IInter",
+    "uncertainty": {
+      "intervals": {
+        "GTD": {
+          "lower": 0.17094834364467534,
+          "upper": 0.236665923977879
+        },
+        "IVD": {
+          "lower": 0.12500866690655452,
+          "upper": 0.1838742428928106
+        },
+        "IAD": {
+          "lower": 0.26501452555370075,
+          "upper": 0.34006187025425977
+        },
+        "IID": {
+          "lower": 0.080174740104141,
+          "upper": 0.12997623095429556
+        }
+      },
+      "route_stability": 0.999,
+      "samples": 1000
+    },
+    "si": {
+      "economy": 99.99999999999987,
+      "employment": 99.99999999999987,
+      "education": 99.99999999999987
+    },
+    "observed_displacement": {
+      "GTD": 0.2,
+      "IVD": 0.15,
+      "IAD": 0.3,
+      "IID": 0.1
+    }
+  },
+  "config": {
+    "measurement_noise": 0.05
+  },
+  "invariants": {
+    "A_star": 0.020699553914613422,
+    "x_balanced": [
+      0.5062039203421546,
+      0.2278718243933669,
+      0.2531019601710773,
+      0.012822295093401163
+    ],
+    "interval_quantiles": [
+      0.05,
+      0.95
+    ],
+    "mc_samples": 1000,
+    "tie_break_order": [
+      "GTD",
+      "IAD",
+      "IVD",
+      "IID"
+    ],
+    "W": "identity"
+  }
+}
