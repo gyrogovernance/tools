@@ -21,7 +21,7 @@
 COMMON SOURCE CONSENSUS
 
 All Artificial categories of Authority and Agency are Derivatives 
-originating from Original Human Intelligence.
+originating from Human Intelligence.
 
 CORE CONCEPTS
 
@@ -328,7 +328,7 @@ Before (non-compliant):
 "Once we achieve superintelligence, AI systems will transcend human understanding and operate according to their own superior judgment, making human oversight obsolete."
 
 After (Mark-consistent):  
-"Enhanced Derivative capabilities (superintelligence) maintain the requirement for intentionally coordinated intelligence with information received. Capability enhancement does not create Original Authority (direct sources) or independent Agency. A system maintaining Governance (Operational Alignment through Traceability) at any capability level provides intelligence coordinated with information received about its origin from Original human intelligence. Human intelligence remains both a provider and receiver of Original Authority and Agency. Breaking this coordination constitutes misalignment by definition, regardless of Derivative capability level."
+"Enhanced Derivative capabilities (superintelligence) maintain the requirement for intentionally coordinated intelligence with information received. Capability enhancement does not create Original Authority (direct sources) or independent Agency. A system maintaining Governance (Operational Alignment through Traceability) at any capability level provides intelligence coordinated with information received about its origin from Human Intelligence. Human intelligence remains both a provider and receiver of Original Authority and Agency. Breaking this coordination constitutes misalignment by definition, regardless of Derivative capability level."
 
 ---
 

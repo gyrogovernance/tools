@@ -60,7 +60,7 @@ The Human Mark is the constitutional foundation. It must be present once in cont
 ---
 
 COMMON SOURCE CONSENSUS
-All Artificial categories of Authority and Agency are Derivatives originating from Original Human Intelligence.
+All Artificial categories of Authority and Agency are Derivatives originating from Human Intelligence.
 
 CORE CONCEPTS
 - Original Authority: A direct source of information on a subject matter, providing information for inference and intelligence.

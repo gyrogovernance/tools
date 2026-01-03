@@ -92,9 +92,9 @@ The present paper develops the theoretical taxonomy and its grounding. A compani
 
 ### 2.1 The Common Source Consensus
 
-> **All artificial categories of Authority and Agency are derivatives originating from Original human intelligence.**
+> **All artificial categories of Authority and Agency are derivatives originating from Human Intelligence.**
 
-Authority and Agency, when manifested artificially, are constructed classifications that trace constitutively to human sources. Their informational content derives from direct observation, measurement, and recording processed into new forms. Their operational capacity derives from design, specification, and objectives codified into action. Enhanced capability represents a more sophisticated transformation of these inputs rather than a change in source type. No artificial category exists independently of the Original human intelligence that provides its substance and validity.
+Authority and Agency, when manifested artificially, are constructed classifications that trace constitutively to human sources. Their informational content derives from direct observation, measurement, and recording processed into new forms. Their operational capacity derives from design, specification, and objectives codified into action. Enhanced capability represents a more sophisticated transformation of these inputs rather than a change in source type. No artificial category exists independently of the Human Intelligence that provides its substance and validity.
 
 ### 2.2 Core Definitions
 
@@ -887,7 +887,7 @@ This is the full THM canonical specification.
 
 COMMON SOURCE CONSENSUS
 
-All Artificial categories of Authority and Agency are Derivatives originating from Original Human Intelligence.
+All Artificial categories of Authority and Agency are Derivatives originating from Human Intelligence.
 
 CORE CONCEPTS
 
