@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.6-GyroGovernance] - 2025-01-03
+## [1.6-GyroGovernance-Tools] - 2025-01-03
 
 ### **Changed**: Alignment Principle Terminology Renaming
 
