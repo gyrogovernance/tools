@@ -55,7 +55,7 @@ def test_run_scenario_basic():
     config = ScenarioConfig(
         Gov0=0.5, Info0=0.5, Infer0=0.5, Int0=0.5,
         GM0=0.25, ICu0=0.25, IInter0=0.25, ICo0=0.25,
-        GT0=0.5, IV0=0.5, IA0=0.5, IInteg0=0.5,
+        GMT0=0.5, ICV0=0.5, IIA0=0.5, ICI0=0.5,
         num_steps=10
     )
     
@@ -78,7 +78,7 @@ def test_run_scenario_optimal_aperture():
     config = ScenarioConfig(
         Gov0=0.5, Info0=0.5, Infer0=0.5, Int0=0.5,
         GM0=0.25, ICu0=0.25, IInter0=0.25, ICo0=0.25,
-        GT0=0.5, IV0=0.5, IA0=0.5, IInteg0=0.5,
+        GMT0=0.5, ICV0=0.5, IIA0=0.5, ICI0=0.5,
         A_Econ_target=A_STAR,
         A_Emp_target=A_STAR,
         A_Edu_target=A_STAR,

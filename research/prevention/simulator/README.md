@@ -25,8 +25,8 @@ Each domain is represented as a 4-component vector in the common CGM stage basis
     [Governance Management, Information Curation, Inference Interaction, Intelligence Cooperation]
 
 - **Education (THM)**:  
-  - [GT, IV, IA, IInteg] =  
-    [Governance Traceability, Information Variety, Inference Accountability, Intelligence Integrity]
+  - [GMT, ICV, IIA, ICI] =  
+    [Governance Management Traceability, Information Curation Variety, Inference Interaction Accountability, Intelligence Cooperation Integrity]
 
 The same tetrahedral geometry (K₄) applies to all domains; what changes is how
 the four CGM stages are interpreted in each domain.

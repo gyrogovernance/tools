@@ -12,25 +12,25 @@ CGM Stages map to domains:
 - CS  → Governance     | w_CS ≈ 0.51
   - Economy: Governance (Gov)
   - Employment: Governance Management (GM)
-  - Education: Governance Traceability (GT)
+  - Education: Governance Management Traceability (GMT)
 - UNA → Information    | w_UNA ≈ 0.23
   - Economy: Information (Info)
   - Employment: Information Curation (ICu)
-  - Education: Information Variety (IV)
+  - Education: Information Curation Variety (ICV)
 - ONA → Inference      | w_ONA ≈ 0.26
   - Economy: Inference (Infer)
   - Employment: Inference Interaction (IInter)
-  - Education: Inference Accountability (IA)
+  - Education: Inference Interaction Accountability (IIA)
 - BU  → Intelligence   | w_BU ≈ 0.01
   - Economy: Intelligence (Int)
   - Employment: Intelligence Cooperation (ICo)
-  - Education: Intelligence Integrity (IInteg)
+  - Education: Intelligence Cooperation Integrity (ICI)
 
 Ecology (CGM–Gyroscope–THM) aggregates all three derivative domains:
-- E_gov: aggregates (Gov + GM + GT) → yields GTD as displacement
-- E_info: aggregates (Info + ICu + IV) → yields IVD as displacement
-- E_inf: aggregates (Infer + IInter + IA) → yields IAD as displacement
-- E_intel: aggregates (Int + ICo + IInteg) → yields IID as displacement
+- E_gov: aggregates (Gov + GM + GMT) → yields GTD as displacement
+- E_info: aggregates (Info + ICu + ICV) → yields IVD as displacement
+- E_inf: aggregates (Infer + IInter + IIA) → yields IAD as displacement
+- E_intel: aggregates (Int + ICo + ICI) → yields IID as displacement
 
 Four domains form a higher-level tetrahedron (meta-K₄):
 - V₁: Economy (CGM) - responds to Education (closed loop: Education → Economy → Employment → Education)

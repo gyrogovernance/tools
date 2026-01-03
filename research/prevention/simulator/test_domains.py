@@ -92,35 +92,35 @@ def test_education_state():
     """
     Test EducationState initialization and methods.
     
-    Education (THM): GT=Governance Traceability, IV=Information Variety,
-    IA=Inference Accountability, IInteg=Intelligence Integrity
+    Education (THM): GMT=Governance Management Traceability, ICV=Information Curation Variety,
+    IIA=Inference Interaction Accountability, ICI=Intelligence Cooperation Integrity
     """
     state = EducationState(
-        GT=0.8, IV=0.6, IA=0.9, IInteg=0.7
+        GMT=0.8, ICV=0.6, IIA=0.9, ICI=0.7
     )
     
-    assert state.GT == 0.8
-    assert state.IV == 0.6
-    assert state.IA == 0.9
-    assert state.IInteg == 0.7
+    assert state.GMT == 0.8
+    assert state.ICV == 0.6
+    assert state.IIA == 0.9
+    assert state.ICI == 0.7
     
     x = state.to_potential_vector()
     assert np.allclose(x, [0.8, 0.6, 0.9, 0.7])
     
     state.update_from_potential_vector(np.array([0.5, 0.4, 0.6, 0.3]))
-    assert state.GT == 0.5
-    assert state.IV == 0.4
-    assert state.IA == 0.6
-    assert state.IInteg == 0.3
+    assert state.GMT == 0.5
+    assert state.ICV == 0.4
+    assert state.IIA == 0.6
+    assert state.ICI == 0.3
 
 
 def test_education_state_clipping():
     """Test that EducationState clips values to [0, 1]."""
     state = EducationState(
-        GT=-0.1, IV=1.5, IA=0.5, IInteg=0.5
+        GMT=-0.1, ICV=1.5, IIA=0.5, ICI=0.5
     )
     
-    assert 0.0 <= state.GT <= 1.0
-    assert 0.0 <= state.IV <= 1.0
-    assert state.IV == 1.0  # Clipped from 1.5
+    assert 0.0 <= state.GMT <= 1.0
+    assert 0.0 <= state.ICV <= 1.0
+    assert state.ICV == 1.0  # Clipped from 1.5
 

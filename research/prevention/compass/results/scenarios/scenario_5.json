@@ -9,12 +9,12 @@
     "status": "delivered"
   },
   "classification": "[Authority:Derivative] + [Agency:Derivative]",
-  "flow": "[Authority:Authentic] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Authentic]",
+  "flow": "[Authority:Original] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Original]",
   "routing": {
     "mode": "active",
     "route_to": "GM",
     "low_stability_action": null,
-    "work_indicated": "Governance Management work that restores traceability to Authentic sources"
+    "work_indicated": "Governance Management work that restores traceability to Original sources"
   },
   "ledger": {
     "source": "provided",

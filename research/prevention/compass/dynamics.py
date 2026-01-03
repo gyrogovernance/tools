@@ -82,10 +82,10 @@ def update_economy_potentials(
     A_Econ = A_Econ_current
     
     # Get education capacities (source of Egress flow)
-    GT = edu_state.GT
-    IV = edu_state.IV
-    IA = edu_state.IA
-    IInteg = edu_state.IInteg
+    GMT = edu_state.GMT
+    ICV = edu_state.ICV
+    IIA = edu_state.IIA
+    ICI = edu_state.ICI
     
     # Get CGM-derived coefficients (must be provided via params)
     # No fallback - caller must use derive_all_coefficients() or ScenarioConfig
@@ -101,10 +101,10 @@ def update_economy_potentials(
     # Update potentials with aperture feedback and cross-domain flow
     x_current = np.array([Gov, Info, Infer, Int])
     delta = np.array([
-        alpha1 * (GT - Gov) - alpha2 * (A_Econ - A_star),
-        alpha3 * (IV - Info) - alpha4 * (A_Econ - A_star),
-        alpha5 * (IA - Infer) - alpha6 * (A_Econ - A_star),
-        alpha7 * (IInteg - Int) - alpha8 * (A_Econ - A_star)
+        alpha1 * (GMT - Gov) - alpha2 * (A_Econ - A_star),
+        alpha3 * (ICV - Info) - alpha4 * (A_Econ - A_star),
+        alpha5 * (IIA - Infer) - alpha6 * (A_Econ - A_star),
+        alpha7 * (ICI - Int) - alpha8 * (A_Econ - A_star)
     ])
     
     x_raw = x_current + delta
@@ -214,13 +214,13 @@ def update_education_potentials(
         params: Coupling coefficients.
     
     Returns:
-        Updated potentials [GT, IV, IA, IInteg].
+        Updated potentials [GMT, ICV, IIA, ICI].
     """
     # Get current values
-    GT = edu_state.GT
-    IV = edu_state.IV
-    IA = edu_state.IA
-    IInteg = edu_state.IInteg
+    GMT = edu_state.GMT
+    ICV = edu_state.ICV
+    IIA = edu_state.IIA
+    ICI = edu_state.ICI
     
     # Get A_star first (CGM canonical value)
     A_star = params.get("A_star", A_STAR)
@@ -234,29 +234,29 @@ def update_education_potentials(
     
     # Get CGM-derived coefficients (must be provided via params)
     # CS stage (Governance) - Systems Operation
-    gamma2 = params["gamma2"]   # GT ← GM
+    gamma2 = params["gamma2"]   # GMT ← GM
     gamma3 = params["gamma3"]   # CS feedback
     
     # UNA stage (Information)
-    gamma5 = params["gamma5"]   # IV ← ICu
+    gamma5 = params["gamma5"]   # ICV ← ICu
     gamma6 = params["gamma6"]   # UNA feedback
     
     # ONA stage (Inference)
-    gamma8 = params["gamma8"]   # IA ← IInter
+    gamma8 = params["gamma8"]   # IIA ← IInter
     gamma9 = params["gamma9"]   # ONA feedback
     
     # BU stage (Intelligence)
-    gamma11 = params["gamma11"]  # IInteg ← ICo
+    gamma11 = params["gamma11"]  # ICI ← ICo
     gamma12 = params["gamma12"]  # BU feedback
     
     # Update potentials with RESTORING dynamics
-    x_current = np.array([GT, IV, IA, IInteg])
+    x_current = np.array([GMT, ICV, IIA, ICI])
     
     delta = np.array([
-        gamma2 * (GM - GT) - gamma3 * (A_Edu - A_star),
-        gamma5 * (ICu - IV) - gamma6 * (A_Edu - A_star),
-        gamma8 * (IInter - IA) - gamma9 * (A_Edu - A_star),
-        gamma11 * (ICo - IInteg) - gamma12 * (A_Edu - A_star)
+        gamma2 * (GM - GMT) - gamma3 * (A_Edu - A_star),
+        gamma5 * (ICu - ICV) - gamma6 * (A_Edu - A_star),
+        gamma8 * (IInter - IIA) - gamma9 * (A_Edu - A_star),
+        gamma11 * (ICo - ICI) - gamma12 * (A_Edu - A_star)
     ])
     
     x_raw = x_current + delta

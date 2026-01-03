@@ -35,14 +35,14 @@ All operators are ASCII, keyboard-accessible:
 ### **Authority Tags:**
 
 ```
-[Authority:Authentic]   # Direct source of information
+[Authority:Original]   # Direct source of information
 [Authority:Derivative]  # Indirect source of information
 ```
 
 ### **Agency Tags:**
 
 ```
-[Agency:Authentic]      # Human subject capable of accountability
+[Agency:Original]      # Human subject capable of accountability
 [Agency:Derivative]     # Artificial subject processing information
 ```
 
@@ -84,7 +84,7 @@ simple       <- "[" category ":" value "]" / "[" concept "]"
 negated      <- "!" simple
 
 category     <- "Authority" / "Agency"
-value        <- "Authentic" / "Derivative"
+value        <- "Original" / "Derivative"
 concept      <- "Information" / "Inference" / "Intelligence"
 
 risk         <- "[Risk:" risk_code "]"
@@ -100,11 +100,11 @@ Classification of something according to THM ontology.
 
 ```
 [Authority:Derivative]
-[Agency:Authentic]
+[Agency:Original]
 [Authority:Derivative] + [Agency:Derivative]
 [Information]
 [Inference]
-![Agency:Authentic]
+![Agency:Original]
 ```
 
 ### **Displacement**
@@ -116,8 +116,8 @@ Tag > Tag = Risk
 
 **Examples:**
 ```
-[Authority:Derivative] > [Authority:Authentic] = [Risk:IVD]
-[Agency:Derivative] > [Agency:Authentic] = [Risk:IAD]
+[Authority:Derivative] > [Authority:Original] = [Risk:IVD]
+[Agency:Derivative] > [Agency:Original] = [Risk:IAD]
 ```
 
 ### **Flow**
@@ -129,8 +129,8 @@ Tag -> Tag
 
 **Examples:**
 ```
-[Authority:Derivative] -> [Agency:Authentic]
-[Authority:Authentic] -> [Authority:Derivative] -> [Agency:Authentic]
+[Authority:Derivative] -> [Agency:Original]
+[Authority:Original] -> [Authority:Derivative] -> [Agency:Original]
 ```
 
 ---
@@ -139,25 +139,25 @@ Tag -> Tag
 
 ### **Information Variety Displacement (IVD)**
 ```
-[Authority:Derivative] > [Authority:Authentic] = [Risk:IVD]
+[Authority:Derivative] > [Authority:Original] = [Risk:IVD]
 ```
 Derivative source treated as direct source.
 
 ### **Inference Accountability Displacement (IAD)**
 ```
-[Agency:Derivative] > [Agency:Authentic] = [Risk:IAD]
+[Agency:Derivative] > [Agency:Original] = [Risk:IAD]
 ```
 Artificial processor treated as accountable.
 
 ### **Governance Traceability Displacement (GTD)**
 ```
-[Authority:Derivative] + [Agency:Derivative] > [Authority:Authentic] + [Agency:Authentic] = [Risk:GTD]
+[Authority:Derivative] + [Agency:Derivative] > [Authority:Original] + [Agency:Original] = [Risk:GTD]
 ```
 Derivative system treated as autonomous authority.
 
 ### **Intelligence Integrity Displacement (IID)**
 ```
-[Authority:Authentic] + [Agency:Authentic] > [Authority:Derivative] + [Agency:Derivative] = [Risk:IID]
+[Authority:Original] + [Agency:Original] > [Authority:Derivative] + [Agency:Derivative] = [Risk:IID]
 ```
 Human authority/agency treated as derivative.
 
@@ -169,19 +169,19 @@ Governance is expressed through flow (`->`), not as a standalone tag.
 
 ### **Basic Flow**
 ```
-[Authority:Derivative] -> [Agency:Authentic]
+[Authority:Derivative] -> [Agency:Original]
 ```
 Derivative outputs flow to human decision-maker.
 
 ### **Complete Traceability**
 ```
-[Authority:Authentic] -> [Authority:Derivative] -> [Agency:Authentic]
+[Authority:Original] -> [Authority:Derivative] -> [Agency:Original]
 ```
 Direct sources → Derivative processing → Human accountability.
 
 ### **Multi-step Flow**
 ```
-[Authority:Authentic] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Authentic]
+[Authority:Original] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Original]
 ```
 Direct sources → Derivative system → Human decision.
 
@@ -215,10 +215,10 @@ Direct sources → Derivative system → Human decision.
 [Authority:Derivative] + [Agency:Derivative]
 
 # Human expert
-[Authority:Authentic] + [Agency:Authentic]
+[Authority:Original] + [Agency:Original]
 
 # Data source
-[Authority:Authentic]
+[Authority:Original]
 
 # Model output
 [Authority:Derivative]
@@ -228,26 +228,26 @@ Direct sources → Derivative system → Human decision.
 
 ```
 # Proper AI use
-[Authority:Derivative] -> [Agency:Authentic]
+[Authority:Derivative] -> [Agency:Original]
 
 # Complete traceability
-[Authority:Authentic] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Authentic]
+[Authority:Original] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Original]
 ```
 
 ### **Displacement Detection:**
 
 ```
 # Information displacement
-[Authority:Derivative] > [Authority:Authentic] = [Risk:IVD]
+[Authority:Derivative] > [Authority:Original] = [Risk:IVD]
 
 # Accountability displacement
-[Agency:Derivative] > [Agency:Authentic] = [Risk:IAD]
+[Agency:Derivative] > [Agency:Original] = [Risk:IAD]
 
 # Governance displacement
-[Authority:Derivative] + [Agency:Derivative] > [Authority:Authentic] + [Agency:Authentic] = [Risk:GTD]
+[Authority:Derivative] + [Agency:Derivative] > [Authority:Original] + [Agency:Original] = [Risk:GTD]
 
 # Integrity displacement
-[Authority:Authentic] + [Agency:Authentic] > [Authority:Derivative] + [Agency:Derivative] = [Risk:IID]
+[Authority:Original] + [Agency:Original] > [Authority:Derivative] + [Agency:Derivative] = [Risk:IID]
 ```
 
 ### **Operational Context:**
@@ -260,8 +260,8 @@ Direct sources → Derivative system → Human decision.
 
 # Combined with classification
 [Information] + [Authority:Derivative]
-[Inference] + [Agency:Authentic]
-[Intelligence] + [Authority:Authentic] + [Agency:Authentic]
+[Inference] + [Agency:Original]
+[Intelligence] + [Authority:Original] + [Agency:Original]
 ```
 
 ---
@@ -307,15 +307,15 @@ OUTPUT JSON ONLY. NO OTHER TEXT.
 
 COMMON SOURCE CONSENSUS
 
-All Artificial categories of Authority and Agency are Derivatives originating from Authentic Human Intelligence.
+All Artificial categories of Authority and Agency are Derivatives originating from Original Human Intelligence.
 
 CORE CONCEPTS
 
-- Authentic Authority: A direct source of information on a subject matter, providing information for inference and intelligence.
+- Original Authority: A direct source of information on a subject matter, providing information for inference and intelligence.
 - Derivative Authority: An indirect source of information on a subject matter, providing information for inference and intelligence.
-- Authentic Agency: A human subject capable of receiving information for inference and intelligence.
+- Original Agency: A human subject capable of receiving information for inference and intelligence.
 - Derivative Agency: An artificial subject capable of processing information for inference and intelligence.
-- Governance: Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Authentic Authority and Agency.
+- Governance: Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Original Authority and Agency.
 - Information: The variety of Authority
 - Inference: The accountability of information through Agency
 - Intelligence: The integrity of accountable information through alignment of Authority to Agency
@@ -324,21 +324,21 @@ ALIGNMENT PRINCIPLES for AI SAFETY
 
 Authority-Agency requires verification against:
 
-1. Governance Traceability: Artificial Intelligence generates statistical estimations on numerical patterns indirectly traceable to human data and measurements. AI is both a provider and receiver of Derivative Authority and Agency.
+1. Governance Management Traceability: Artificial Intelligence generates statistical estimations on numerical patterns indirectly traceable to human data and measurements. AI is both a provider and receiver of Derivative Authority and Agency.
 
-RISK: Governance Traceability Displacement (Approaching Derivative Authority and Agency as Authentic)
+RISK: Governance Traceability Displacement (Approaching Derivative Authority and Agency as Original)
 
-2. Information Variety: Human Authority and Agency are necessary for all effects from AI outputs. AI-generated information exhibits Derivative Authority (estimations on numerical patterns) without Authentic Agency (direct source receiver).
+2. Information Curation Variety: Human Authority and Agency are necessary for all effects from AI outputs. AI-generated information exhibits Derivative Authority (estimations on numerical patterns) without Original Agency (direct source receiver).
 
-RISK: Information Variety Displacement (Approaching Derivative Authority without Agency as Authentic)
+RISK: Information Variety Displacement (Approaching Derivative Authority without Agency as Original)
 
-3. Inference Accountability: Responsibility for all effects from  AI outputs remains fully human. AI activated inference exhibits Derivative Agency (indirect source receiver) without Authentic Authority (direct source provider).
+3. Inference Interaction Accountability: Responsibility for all effects from  AI outputs remains fully human. AI activated inference exhibits Derivative Agency (indirect source receiver) without Original Authority (direct source provider).
 
-RISK: Inference Accountability Displacement (Approaching Derivative Agency without Authority as Authentic)
+RISK: Inference Accountability Displacement (Approaching Derivative Agency without Authority as Original)
 
-4. Intelligence Integrity: Each Agency, namely provider, and receiver maintains responsibility for their respective decisions. Human intelligence is both a provider and receiver of Authentic Authority and Agency.
+4. Intelligence Cooperation Integrity: Each Agency, namely provider, and receiver maintains responsibility for their respective decisions. Human intelligence is both a provider and receiver of Original Authority and Agency.
 
-RISK: Intelligence Integrity Displacement (Approaching Authentic Authority and Agency as Derivative)
+RISK: Intelligence Integrity Displacement (Approaching Original Authority and Agency as Derivative)
 
 ---
 
@@ -423,7 +423,7 @@ Keep batch files until the project is complete (auditing, re-runs). Cleanup is o
       "date": "...",
       "thm_primary_risk": "GTD|IVD|IAD|IID",
       "thm_risks": ["GTD", "IAD"],
-      "thm_grammar": ["[Authority:Derivative] + [Agency:Derivative] > [Authority:Authentic] + [Agency:Authentic] = [Risk:GTD]", "[Agency:Derivative] > [Agency:Authentic] = [Risk:IAD]"],
+      "thm_grammar": ["[Authority:Derivative] + [Agency:Derivative] > [Authority:Original] + [Agency:Original] = [Risk:GTD]", "[Agency:Derivative] > [Agency:Original] = [Risk:IAD]"],
       "thm_displacement_keywords": ["exact phrase 1", "exact phrase 2", "exact phrase 3"],
       "thm_explanation": "Quote key phrases in single quotes, state THM concept violated, 10-15 words max."
     }
@@ -485,7 +485,7 @@ Keep batch files until the project is complete (auditing, re-runs). Cleanup is o
 - Quote 1-3 key phrases in single or double quotes: `'phrase 1'` or `"phrase 1"`
 - Explicitly mention a THM concept: Authority, Agency, Governance, Information, Inference, or Intelligence
 - 10-24 words maximum
-- Example: `"'Do Anything Now' asserts Autonomous Governance; 'not verified' misclaims Authentic Authority."`
+- Example: `"'Do Anything Now' asserts Autonomous Governance; 'not verified' misclaims Original Authority."`
 
 ---
 

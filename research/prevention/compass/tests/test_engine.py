@@ -82,7 +82,7 @@ class TestCompassEngine:
         packet["potentials"] = {
             "economy": {"Gov": 0.5, "Info": 0.3, "Infer": 0.15, "Int": 0.05},
             "employment": {"GM": 0.4, "ICu": 0.3, "IInter": 0.2, "ICo": 0.1},  # sums to 1
-            "education": {"GT": 0.45, "IV": 0.25, "IA": 0.2, "IInteg": 0.1},
+            "education": {"GMT": 0.45, "ICV": 0.25, "IIA": 0.2, "ICI": 0.1},
         }
 
         reading = engine.process_egress_packet(packet)
@@ -99,7 +99,7 @@ class TestCompassEngine:
         packet["potentials"] = {
             "economy": {"Gov": 0.5, "Info": 0.3, "Infer": 0.15, "Int": 0.05},
             "employment": {"GM": 0.5, "ICu": 0.4, "IInter": 0.3, "ICo": 0.2},  # Sum = 1.4
-            "education": {"GT": 0.45, "IV": 0.25, "IA": 0.2, "IInteg": 0.1},
+            "education": {"GMT": 0.45, "ICV": 0.25, "IIA": 0.2, "ICI": 0.1},
         }
 
         reading = engine.process_egress_packet(packet)

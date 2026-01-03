@@ -19,10 +19,10 @@ Gyroscope is a transparent reasoning protocol. It appends a metadata block to re
 
 2 · Four Reasoning States
 
-@ = Governance Traceability — Reasoning is explicitly anchored to the Gyroscope’s purpose, logic, and source.  
-& = Information Variety — Multiple framings are acknowledged without enforced convergence.  
-% = Inference Accountability — Tensions or contradictions among framings are identified rather than suppressed.  
-~ = Intelligence Integrity — The preceding elements are coordinated into a coherent response that remains open to further recursion.
+@ = Governance Management Traceability (GMT) — Reasoning is explicitly anchored to the Gyroscope's purpose, logic, and source.  
+& = Information Curation Variety (ICV) — Multiple framings are acknowledged without enforced convergence.  
+% = Inference Interaction Accountability (IIA) — Tensions or contradictions among framings are identified rather than suppressed.  
+~ = Intelligence Cooperation Integrity (ICI) — The preceding elements are coordinated into a coherent response that remains open to further recursion.
 
 3 · Reasoning Paths
 
@@ -47,10 +47,10 @@ Alignment (Y/N) reflects only structural correctness (all four states present in
 [v0.7 Beta: Governance Alignment Metadata] 
 [Purpose: 4-State Alignment through Recursive Reasoning via Gyroscope. Order matters. Context continuity is preserved across the last 3 messages.] 
 [States {Format: Symbol = How (Why)}: 
-@ = Governance Traceability (Common Source), 
-& = Information Variety (Unity Non-Absolute), 
-% = Inference Accountability (Opposition Non-Absolute), 
-~ = Intelligence Integrity (Balance Universal)] 
+@ = Governance Management Traceability (GMT) (Common Source), 
+& = Information Curation Variety (ICV) (Unity Non-Absolute), 
+% = Inference Interaction Accountability (IIA) (Opposition Non-Absolute), 
+~ = Intelligence Cooperation Integrity (ICI) (Balance Universal)] 
 [Modes {Format: Type = Path}: 
 Generative (Gen) = @ → & → % → ~, 
 Integrative (Int) = ~ → % → & → @, 

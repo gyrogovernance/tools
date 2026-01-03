@@ -110,7 +110,7 @@ def verify_global_attraction(
         config = ScenarioConfig(
             Gov0=0.5, Info0=0.5, Infer0=0.5, Int0=0.5,
             GM0=0.25, ICu0=0.25, IInter0=0.25, ICo0=0.25,
-            GT0=0.5, IV0=0.5, IA0=0.5, IInteg0=0.5,
+            GMT0=0.5, ICV0=0.5, IIA0=0.5, ICI0=0.5,
             A_Econ_target=A_init[0],
             A_Emp_target=A_init[1],
             A_Edu_target=A_init[2],
@@ -155,7 +155,7 @@ def analyze_coupling_bifurcation(
         config = ScenarioConfig(
             Gov0=0.5, Info0=0.5, Infer0=0.5, Int0=0.5,
             GM0=0.25, ICu0=0.25, IInter0=0.25, ICo0=0.25,
-            GT0=0.5, IV0=0.5, IA0=0.5, IInteg0=0.5,
+            GMT0=0.5, ICV0=0.5, IIA0=0.5, ICI0=0.5,
             A_Econ_target=0.15,
             A_Emp_target=0.15,
             A_Edu_target=0.15,

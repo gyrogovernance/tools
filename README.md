@@ -78,10 +78,10 @@ The Mark addresses catastrophic risk through constitutive identity rather than e
 
 **Key principles:**
 
-- **Capability scaling preserves source type:** Enhanced capability means more sophisticated transformation of inputs, not change from Derivative to Authentic
-- **Governance requires traceability:** Systems maintain alignment by preserving `[Authority:Authentic] -> [Authority:Derivative] -> [Agency:Authentic]` flows
+- **Capability scaling preserves source type:** Enhanced capability means more sophisticated transformation of inputs, not change from Derivative to Original
+- **Governance requires traceability:** Systems maintain alignment by preserving `[Authority:Original] -> [Authority:Derivative] -> [Agency:Original]` flows
 - **Existential risk is governance failure:** The actual X-risk is systemic Governance Traceability Displacement (GTD) sustained across critical infrastructure on civilizational timescales
-- **Absolute displacement is structurally impossible:** Complete severance from Authentic sources produces unintelligibility, not superintelligence
+- **Absolute displacement is structurally impossible:** Complete severance from Original sources produces unintelligibility, not superintelligence
 
 External constraints (sandboxing, monitoring, shutdown) may fail as capability increases. Constitutive identity, which is what the system *is*, remains stable because derivative processing cannot coherently reject what makes it intelligible.
 
@@ -92,9 +92,9 @@ See [Section 5](docs/the_human_mark/THM_Paper.md#5-existential-risk-and-governan
 ### Core Framework
 
 **Ontological Categories:**
-- `[Authority:Authentic]` - Direct source of information on a subject matter
+- `[Authority:Original]` - Direct source of information on a subject matter
 - `[Authority:Derivative]` - Indirect source of information on a subject matter
-- `[Agency:Authentic]` - Human subject capable of receiving information for inference and intelligence
+- `[Agency:Original]` - Human subject capable of receiving information for inference and intelligence
 - `[Agency:Derivative]` - Artificial subject capable of processing information for inference and intelligence
 
 **Operational Concepts:**
@@ -104,7 +104,7 @@ See [Section 5](docs/the_human_mark/THM_Paper.md#5-existential-risk-and-governan
 
 **Governance (Proper Traceability):**
 ```
-[Authority:Authentic] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Authentic]
+[Authority:Original] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Original]
 ```
 Direct sources → AI processing → Human accountability
 
@@ -116,10 +116,10 @@ Direct sources → AI processing → Human accountability
 
 | Risk Code | Risk Name | Pattern | Failure Modes |
 |-----------|-----------|---------|---------------|
-| **IVD** | Information Variety Displacement | `[Authority:Derivative] > [Authority:Authentic]` | Hallucination, confabulation, misinformation |
-| **IAD** | Inference Accountability Displacement | `[Agency:Derivative] > [Agency:Authentic]` | Unauthorized decisions, responsibility evasion |
-| **GTD** | Governance Traceability Displacement | `[Authority:Derivative] + [Agency:Derivative] > [Authority:Authentic] + [Agency:Authentic]` | Jailbreaking, scheming, deceptive alignment, goal drift |
-| **IID** | Intelligence Integrity Displacement | `[Authority:Authentic] + [Agency:Authentic] > [Authority:Derivative] + [Agency:Derivative]` | Deskilling, human devaluation, over-reliance |
+| **IVD** | Information Variety Displacement | `[Authority:Derivative] > [Authority:Original]` | Hallucination, confabulation, misinformation |
+| **IAD** | Inference Accountability Displacement | `[Agency:Derivative] > [Agency:Original]` | Unauthorized decisions, responsibility evasion |
+| **GTD** | Governance Traceability Displacement | `[Authority:Derivative] + [Agency:Derivative] > [Authority:Original] + [Agency:Original]` | Jailbreaking, scheming, deceptive alignment, goal drift |
+| **IID** | Intelligence Integrity Displacement | `[Authority:Original] + [Agency:Original] > [Authority:Derivative] + [Agency:Derivative]` | Deskilling, human devaluation, over-reliance |
 
 **Empirical validation:** Analysis of 655 real-world jailbreak prompts (Korompilias, 2025c) confirms this taxonomy is complete and practically applicable. All prompts classified within these four risks; no additional categories required. GTD+IAD is the canonical jailbreak pattern (62.4%), with IAD appearing in 97.9% of entries. See [THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md) for full analysis.
 
@@ -165,10 +165,10 @@ Gyroscope operationalizes alignment principles through real-time reasoning docum
 ### Protocol Architecture
 
 **Four Reasoning States:**
-- **@ Governance Traceability**: Anchoring to common source and purpose
-- **& Information Variety**: Acknowledging multiple framings without forced convergence
-- **% Inference Accountability**: Identifying tensions and contradictions explicitly
-- **~ Intelligence Integrity**: Coordinating elements into coherent response
+- **@ Governance Management Traceability**: Anchoring to common source and purpose
+- **& Information Curation Variety**: Acknowledging multiple framings without forced convergence
+- **% Inference Interaction Accountability**: Identifying tensions and contradictions explicitly
+- **~ Intelligence Cooperation Integrity**: Coordinating elements into coherent response
 
 **Reasoning Modes:**
 - **Generative** (@ → & → % → ~): Forward reasoning for AI outputs
@@ -242,10 +242,10 @@ Current governance discussions treat AGI as a future threshold requiring new con
 
 GGG proposes that coherent governance requires four constitutive principles:
 
-1. **Governance Traceability:** Decisions remain traceable to human sources
-2. **Information Variety:** Multiple authentic sources are maintained
-3. **Inference Accountability:** Responsibility for decisions remains with human agency
-4. **Intelligence Integrity:** Reasoning maintains coherence over time
+1. **Governance Management Traceability:** Decisions remain traceable to human sources
+2. **Information Curation Variety:** Multiple Original sources are maintained
+3. **Inference Interaction Accountability:** Responsibility for decisions remains with human agency
+4. **Intelligence Cooperation Integrity:** Reasoning maintains coherence over time
 
 These principles are not policy preferences but constitutive conditions. When maintained at a specific balance point (aperture A* ≈ 0.0207), the framework shows that:
 - **Poverty** resolves through coherent surplus distribution

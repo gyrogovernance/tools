@@ -44,10 +44,10 @@ class ScenarioConfig:
         IInter0: float = 0.25,
         ICo0: float = 0.25,
         # Initial education capacities (THM principles)
-        GT0: float = 0.5,      # Governance Traceability
-        IV0: float = 0.5,     # Information Variety
-        IA0: float = 0.5,      # Inference Accountability
-        IInteg0: float = 0.5,    # Intelligence Integrity
+        GMT0: float = 0.5,      # Governance Management Traceability
+        ICV0: float = 0.5,     # Information Curation Variety
+        IIA0: float = 0.5,      # Inference Interaction Accountability
+        ICI0: float = 0.5,    # Intelligence Cooperation Integrity
         # Note: Ecology initial values are CGM-derived from derivative domains
         # via BU dual combination: x_Ecol = (δ_BU/m_a)·x_balanced + A*·x_deriv
         # No arbitrary initial ecology parameters needed.
@@ -105,10 +105,10 @@ class ScenarioConfig:
         self.ICu0 = ICu0
         self.IInter0 = IInter0
         self.ICo0 = ICo0
-        self.GT0 = GT0
-        self.IV0 = IV0
-        self.IA0 = IA0
-        self.IInteg0 = IInteg0
+        self.GMT0 = GMT0
+        self.ICV0 = ICV0
+        self.IIA0 = IIA0
+        self.ICI0 = ICI0
         # Ecology initial values are CGM-derived (no arbitrary parameters)
         self.A_Econ_target = A_Econ_target
         self.A_Emp_target = A_Emp_target
@@ -241,10 +241,10 @@ class SimulationResult:
         self.SI_Emp = np.zeros(num_steps + 1)  # Renamed from S_Work, now 0-100 scale
         
         # Education
-        self.GT = np.zeros(num_steps + 1)
-        self.IV = np.zeros(num_steps + 1)
-        self.IA = np.zeros(num_steps + 1)
-        self.IInteg = np.zeros(num_steps + 1)
+        self.GMT = np.zeros(num_steps + 1)
+        self.ICV = np.zeros(num_steps + 1)
+        self.IIA = np.zeros(num_steps + 1)
+        self.ICI = np.zeros(num_steps + 1)
         self.A_Edu = np.zeros(num_steps + 1)
         self.SI_Edu = np.zeros(num_steps + 1)  # Renamed from S_Edu, now 0-100 scale
         
@@ -326,10 +326,10 @@ class SimulationResult:
         self.SI_Emp[t] = compute_domain_SI(self.A_Emp[t], A_star)
         
         # Education
-        self.GT[t] = edu_state.GT
-        self.IV[t] = edu_state.IV
-        self.IA[t] = edu_state.IA
-        self.IInteg[t] = edu_state.IInteg
+        self.GMT[t] = edu_state.GMT
+        self.ICV[t] = edu_state.ICV
+        self.IIA[t] = edu_state.IIA
+        self.ICI[t] = edu_state.ICI
         self.A_Edu[t] = edu_state.A if edu_state.A is not None else 0.0
         # Compute SI using canonical CGM formula
         self.SI_Edu[t] = compute_domain_SI(self.A_Edu[t], A_star)
@@ -420,10 +420,10 @@ class SimulationResult:
             "ICo": self.ICo,
             "A_Emp": self.A_Emp,
             "SI_Emp": self.SI_Emp,
-            "GT": self.GT,
-            "IV": self.IV,
-            "IA": self.IA,
-            "IInteg": self.IInteg,
+            "GMT": self.GMT,
+            "ICV": self.ICV,
+            "IIA": self.IIA,
+            "ICI": self.ICI,
             "A_Edu": self.A_Edu,
             "SI_Edu": self.SI_Edu,
             # Lyapunov governance potential
@@ -506,7 +506,7 @@ def initialize_states(
     econ_state = EconomyState(config.Gov0, config.Info0, config.Infer0, config.Int0)
     emp_state = EmploymentState(config.GM0, config.ICu0, config.IInter0, config.ICo0)
     edu_state = EducationState(
-        config.GT0, config.IV0, config.IA0, config.IInteg0
+        config.GMT0, config.ICV0, config.IIA0, config.ICI0
     )
     
     # Construct initial edge vectors with target apertures

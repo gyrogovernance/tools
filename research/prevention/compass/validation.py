@@ -103,7 +103,7 @@ def validate_egress_packet(packet: Dict[str, Any]) -> List[str]:
                         elif domain == "employment":
                             required_components = ["GM", "ICu", "IInter", "ICo"]
                         elif domain == "education":
-                            required_components = ["GT", "IV", "IA", "IInteg"]
+                            required_components = ["GMT", "ICV", "IIA", "ICI"]
                         else:
                             required_components = []
                         

@@ -135,10 +135,10 @@ def derive_alpha_coefficients(
     
     Implements the closed loop: Education → Economy → Employment → Education.
     Each coefficient couples a CGM stage across domains:
-        α₁: Governance ← Governance Traceability      (CS)
-        α₃: Information ← Information Variety        (UNA)
-        α₅: Inference ← Inference Accountability     (ONA)
-        α₇: Intelligence ← Intelligence Integrity    (BU)
+        α₁: Governance ← Governance Management Traceability      (CS)
+        α₃: Information ← Information Curation Variety        (UNA)
+        α₅: Inference ← Inference Interaction Accountability     (ONA)
+        α₇: Intelligence ← Intelligence Cooperation Integrity    (BU)
     
     Args:
         kappa: Governance rate.
@@ -222,10 +222,10 @@ def derive_gamma_coefficients(
     Ingress flow; coefficients use the same kappa * w[i] structure as other domains.
     
     Each nonzero coefficient couples a CGM stage:
-        γ₂:   Governance Traceability ← Governance Management    (CS)
-        γ₅:   Information Variety ← Information Curation         (UNA)
-        γ₈:   Inference Accountability ← Inference Interaction   (ONA)
-        γ₁₁:  Intelligence Integrity ← Intelligence Cooperation  (BU)
+        γ₂:   Governance Management Traceability ← Governance Management    (CS)
+        γ₅:   Information Curation Variety ← Information Curation         (UNA)
+        γ₈:   Inference Interaction Accountability ← Inference Interaction   (ONA)
+        γ₁₁:  Intelligence Cooperation Integrity ← Intelligence Cooperation  (BU)
     
     Note: γ₁, γ₄, γ₇, γ₁₀ (economy terms) are computed as zero and not used in dynamics.
     
@@ -304,22 +304,22 @@ STAGE_VERTEX_MAP = {
     "CS": {
         "economy": "Gov",
         "employment": "GM",
-        "education": "GT"
+        "education": "GMT"
     },
     "UNA": {
         "economy": "Info",
         "employment": "ICu",
-        "education": "IV"
+        "education": "ICV"
     },
     "ONA": {
         "economy": "Infer",
         "employment": "IInter",
-        "education": "IA"
+        "education": "IIA"
     },
     "BU": {
         "economy": "Int",
         "employment": "ICo",
-        "education": "IInteg"
+        "education": "ICI"
     }
 }
 

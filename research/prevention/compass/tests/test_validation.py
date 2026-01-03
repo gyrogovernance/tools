@@ -44,7 +44,7 @@ def test_valid_packet_with_potentials():
     packet["potentials"] = {
         "economy": {"Gov": 0.5, "Info": 0.3, "Infer": 0.15, "Int": 0.05},
         "employment": {"GM": 0.4, "ICu": 0.3, "IInter": 0.2, "ICo": 0.1},
-        "education": {"GT": 0.45, "IV": 0.25, "IA": 0.2, "IInteg": 0.1},
+        "education": {"GMT": 0.45, "ICV": 0.25, "IIA": 0.2, "ICI": 0.1},
     }
 
     errors = validate_egress_packet(packet)

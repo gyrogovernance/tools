@@ -65,7 +65,7 @@ def create_scenario_packets() -> List[Dict[str, Any]]:
             "potentials": {
                 "economy": {"Gov": 0.60, "Info": 0.55, "Infer": 0.50, "Int": 0.58},
                 "employment": {"GM": 0.25, "ICu": 0.25, "IInter": 0.25, "ICo": 0.25},
-                "education": {"GT": 0.55, "IV": 0.50, "IA": 0.52, "IInteg": 0.60}
+                "education": {"GMT": 0.55, "ICV": 0.50, "IIA": 0.52, "ICI": 0.60}
             }
         }
     })

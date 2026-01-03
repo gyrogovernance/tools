@@ -225,7 +225,7 @@ def construct_edge_vector_with_aperture(
            [Governance, Information, Inference, Intelligence].
            For Economy: [Gov, Info, Infer, Int]
            For Employment: [GM, ICu, IInter, ICo]
-           For Education: [GT, IV, IA, IInteg]
+           For Education: [GMT, ICV, IIA, ICI]
            For Ecology: [E_gov, E_info, E_inf, E_intel]
         B: 4x6 incidence matrix.
         W: 6x6 weight matrix.

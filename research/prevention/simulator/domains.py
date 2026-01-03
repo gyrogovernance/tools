@@ -18,7 +18,7 @@ class DomainStateBase:
     Provides THM decomposition tracking: y = y_authentic + y_derivative.
     
     THM terminology:
-        - Authentic: self-governance contribution (local feedback)
+        - Original: self-governance contribution (local feedback)
         - Derivative: cross-domain contribution (AI-mediated flow)
     """
     
@@ -26,7 +26,7 @@ class DomainStateBase:
         self.y: Optional[np.ndarray] = None            # Edge vector (6D)
         self.y_H: Optional[np.ndarray] = None          # Alias for y_authentic
         self.y_AI: Optional[np.ndarray] = None         # Alias for y_derivative
-        self.y_authentic: Optional[np.ndarray] = None  # Authentic contribution
+        self.y_authentic: Optional[np.ndarray] = None  # Original contribution
         self.y_derivative: Optional[np.ndarray] = None # Derivative contribution
     
     def set_decomposition(
@@ -35,7 +35,7 @@ class DomainStateBase:
         y_derivative: np.ndarray
     ):
         """
-        Sets authentic and derivative components.
+        Sets Original and derivative components.
         
         Args:
             y_authentic: Self-governance contribution (6D).
@@ -214,22 +214,22 @@ class EducationState(DomainStateBase):
     """
     Education domain state (THM).
     
-    Potentials: GT, IV, IA, IInteg in [0, 1].
-    - GT: Governance Traceability
-    - IV: Information Variety
-    - IA: Inference Accountability
-    - IInteg: Intelligence Integrity
+    Potentials: GMT, ICV, IIA, ICI in [0, 1].
+    - GMT: Governance Management Traceability
+    - ICV: Information Curation Variety
+    - IIA: Inference Interaction Accountability
+    - ICI: Intelligence Cooperation Integrity
     """
     
-    def __init__(self, GT: float, IV: float, IA: float, IInteg: float,
+    def __init__(self, GMT: float, ICV: float, IIA: float, ICI: float,
                  y: Optional[np.ndarray] = None,
                  A: Optional[float] = None,
                  S: Optional[float] = None):
         super().__init__()
-        self.GT = self._clip(GT)
-        self.IV = self._clip(IV)
-        self.IA = self._clip(IA)
-        self.IInteg = self._clip(IInteg)
+        self.GMT = self._clip(GMT)
+        self.ICV = self._clip(ICV)
+        self.IIA = self._clip(IIA)
+        self.ICI = self._clip(ICI)
         if y is not None:
             self.y = y
         self.A = A
@@ -239,17 +239,17 @@ class EducationState(DomainStateBase):
         return float(np.clip(value, 0.0, 1.0))
     
     def to_potential_vector(self) -> np.ndarray:
-        """Returns [GT, IV, IA, IInteg]."""
-        return np.array([self.GT, self.IV, self.IA, self.IInteg])
+        """Returns [GMT, ICV, IIA, ICI]."""
+        return np.array([self.GMT, self.ICV, self.IIA, self.ICI])
     
     def update_from_potential_vector(self, x_new: np.ndarray):
         """Updates from length-4 vector."""
         if len(x_new) != 4:
             raise ValueError("x_new must have length 4")
-        self.GT = self._clip(x_new[0])
-        self.IV = self._clip(x_new[1])
-        self.IA = self._clip(x_new[2])
-        self.IInteg = self._clip(x_new[3])
+        self.GMT = self._clip(x_new[0])
+        self.ICV = self._clip(x_new[1])
+        self.IIA = self._clip(x_new[2])
+        self.ICI = self._clip(x_new[3])
 
 
 class EcologyState(DomainStateBase):
@@ -266,16 +266,16 @@ class EcologyState(DomainStateBase):
         - x_deriv = (x_Econ + x_Emp + x_Edu) / 3 (aggregate derivative domains)
     
     Potentials (BU-vertex stage coordinates):
-        - E_gov: Ecological Governance (aggregates Gov + GM + GT)
-        - E_info: Ecological Information (aggregates Info + ICu + IV)
-        - E_inf: Ecological Inference (aggregates Infer + IInter + IA)
-        - E_intel: Ecological Intelligence (aggregates Int + ICo + IInteg)
+        - E_gov: Ecological Governance (aggregates Gov + GM + GMT)
+        - E_info: Ecological Information (aggregates Info + ICu + ICV)
+        - E_inf: Ecological Inference (aggregates Infer + IInter + IIA)
+        - E_intel: Ecological Intelligence (aggregates Int + ICo + ICI)
     
     Displacement vector D = |x_deriv - x_balanced|:
-        - GTD: Governance Traceability Displacement
-        - IVD: Information Variety Displacement
-        - IAD: Inference Accountability Displacement
-        - IID: Intelligence Integrity Displacement
+        - GTD: Governance Traceability Displacement (preserved)
+        - IVD: Information Variety Displacement (preserved)
+        - IAD: Inference Accountability Displacement (preserved)
+        - IID: Intelligence Integrity Displacement (preserved)
     """
     
     def __init__(self, E_gov: float, E_info: float, E_inf: float, E_intel: float,

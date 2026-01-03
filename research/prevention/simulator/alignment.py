@@ -98,7 +98,7 @@ def extract_alignment_metrics(x: np.ndarray) -> tuple:
            [Governance, Information, Inference, Intelligence].
            For Economy: [Gov, Info, Infer, Int]
            For Employment: [GM, ICu, IInter, ICo]
-           For Education: [GT, IV, IA, IInteg]
+           For Education: [GMT, ICV, IIA, ICI]
     
     Returns:
         Tuple (Gov, Info, Infer, Int).

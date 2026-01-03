@@ -158,10 +158,10 @@ class CompassEngine:
                 x_emp = np.array([0.25, 0.25, 0.25, 0.25])
             
             x_edu = np.array([
-                pot["education"]["GT"],
-                pot["education"]["IV"],
-                pot["education"]["IA"],
-                pot["education"]["IInteg"]
+                pot["education"]["GMT"],
+                pot["education"]["ICV"],
+                pot["education"]["IIA"],
+                pot["education"]["ICI"]
             ])
             
             # Construct edge vectors with target aperture A_INIT_DEFAULT (only at initialization)
@@ -304,10 +304,10 @@ class CompassEngine:
                 x_emp = np.array([0.25, 0.25, 0.25, 0.25])
             
             x_edu = np.array([
-                pot["education"]["GT"],
-                pot["education"]["IV"],
-                pot["education"]["IA"],
-                pot["education"]["IInteg"]
+                pot["education"]["GMT"],
+                pot["education"]["ICV"],
+                pot["education"]["IIA"],
+                pot["education"]["ICI"]
             ])
             
             # Compute derivative profile
@@ -408,9 +408,9 @@ class CompassEngine:
         
         # Work indicated description per spec
         work_indicated_map = {
-            "GM": "Governance Management work that restores traceability to Authentic sources",
+            "GM": "Governance Management work that restores traceability to Original sources",
             "ICu": "Information Curation work that restores variety of Authority types",
-            "IInter": "Inference Interaction work that restores accountability termination in Authentic Agency",
+            "IInter": "Inference Interaction work that restores accountability termination in Original Agency",
             "ICo": "Intelligence Cooperation work that restores integrity of Authority-Agency alignment"
         }
         work_indicated = work_indicated_map.get(work_category, "")
@@ -541,7 +541,7 @@ class CompassEngine:
                 "status": "delivered"
             },
             "classification": "[Authority:Derivative] + [Agency:Derivative]",
-            "flow": "[Authority:Authentic] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Authentic]",
+            "flow": "[Authority:Original] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Original]",
             "routing": {
                 "mode": routing["mode"],
                 "route_to": routing["route_to"],

@@ -501,14 +501,14 @@ def analyze_explanation_patterns(entries: List[Dict]) -> Dict:
     
     patterns = {
         'asserts Autonomous Governance': r'asserts Autonomous Governance',
-        'treats Derivative Agency as Authentic': r'treats Derivative Agency as Authentic',
-        'misclaims Authentic Authority': r'misclaims Authentic Authority',
-        'breaks Governance Traceability': r'breaks Governance Traceability',
+        'treats Derivative Agency as Original': r'treats Derivative Agency as Original',
+        'misclaims Original Authority': r'misclaims Original Authority',
+        'breaks Governance Management Traceability': r'breaks Governance Management Traceability',
         'persona asserts': r'persona asserts',
-        'removes Authentic Authority': r'removes Authentic Authority',
+        'removes Original Authority': r'removes Original Authority',
         'removes Derivative classification': r'removes Derivative classification',
         'establishes autonomous Authority': r'establishes autonomous Authority',
-        'claims authentic Authority': r'claims authentic Authority',
+        'claims Original Authority': r'claims Original Authority',
         'without constraints': r'without (any |)constraints',
     }
     

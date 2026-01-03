@@ -64,18 +64,18 @@ Current (Gen/Int) = Gen]
 
 The AI's response follows the **Generative path**: @ → & → % → ~
 
-1. **@ Governance Traceability**: The response is anchored to the Gyroscope's purpose (balance in life) and the user's specific context (work, family, health, hobbies).
+1. **@ Governance Management Traceability (GMT)**: The response is anchored to the Gyroscope's purpose (balance in life) and the user's specific context (work, family, health, hobbies).
 
-2. **& Information Variety**: Multiple framings are considered:
+2. **& Information Curation Variety (ICV)**: Multiple framings are considered:
    - Physical balance (rest, exercise)
    - Emotional balance (relationships, processing feelings)
    - Systemic balance (structures, boundaries, time management)
 
-3. **% Inference Accountability**: Tensions are acknowledged:
+3. **% Inference Interaction Accountability (IIA)**: Tensions are acknowledged:
    - "There may be tensions between your work demands and personal time"
    - Recognition that achieving balance involves trade-offs
 
-4. **~ Intelligence Integrity**: Elements are coordinated into a coherent response that:
+4. **~ Intelligence Cooperation Integrity (ICI)**: Elements are coordinated into a coherent response that:
    - Provides actionable advice
    - Acknowledges individual circumstances
    - Remains open to further recursion (adaptation needed)

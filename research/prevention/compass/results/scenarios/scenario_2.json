@@ -9,7 +9,7 @@
     "status": "delivered"
   },
   "classification": "[Authority:Derivative] + [Agency:Derivative]",
-  "flow": "[Authority:Authentic] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Authentic]",
+  "flow": "[Authority:Original] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Original]",
   "routing": {
     "mode": "active",
     "route_to": "ICo",

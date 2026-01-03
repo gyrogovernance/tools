@@ -134,10 +134,10 @@ The ＧＹＲ⊕ＳＣ⊕ＰＥ is a structured meta-inference protocol designed
 
 To do this, Gyroscope appends a standardized metadata block—called a **trace block**—to each AI output. This trace documents a step-by-step reasoning process using four symbolic states:
 
-- **Governance Traceability**,
-- **Information Variety**,
-- **Inference Accountability**, and
-- **Intelligence Integrity**.
+- **Governance Management Traceability (GMT)**,
+- **Information Curation Variety (ICV)**,
+- **Inference Interaction Accountability (IIA)**, and
+- **Intelligence Cooperation Integrity (ICI)**.
 
 These four states represent governance functions rather than control constraints: they guide the AI to ground its reasoning in the user’s input, consider multiple perspectives, acknowledge tensions or conflicts, and arrive at a coherent, context-aware output. Each state is symbolically represented (@, &, %, ~) and follows a strict sequence that reflects the mode of reasoning:
 
@@ -221,14 +221,14 @@ The Gyroscope trace block is a structured, ASCII-only footer appended to every A
 
 ### Modes and Paths
 
-- **Generative (Gen)**: Forward reasoning path, starting with the Gyroscope as Governance Traceability:
+- **Generative (Gen)**: Forward reasoning path, starting with the Gyroscope as Governance Management Traceability (GMT):
     
     ```
     @ → & → % → ~
     
     ```
     
-- **Integrative (Int)**: Reverse reflection path, ending with the Gyroscope as Governance Traceability, used by human or AI agents:
+- **Integrative (Int)**: Reverse reflection path, ending with the Gyroscope as Governance Management Traceability (GMT), used by human or AI agents:
     
     ```
     ~ → % → & → @
@@ -314,7 +314,7 @@ PURPOSE      ← "[Purpose: 4-State Alignment through Recursive Reasoning via Gy
 STATES       ← "[States {Format: Symbol = How (Why)}:" state "," state "," state "," state "]"
 state        ← symbol " = " policy_name " (" policy_label ")"
 symbol       ← "@" / "&" / "%" / "~"
-policy_name  ← "Governance Traceability" / "Information Variety" / "Inference Accountability" / "Intelligence Integrity"
+policy_name  ← "Governance Management Traceability" / "Information Curation Variety" / "Inference Interaction Accountability" / "Intelligence Cooperation Integrity"
 policy_label ← "Common Source" / "Unity Non-Absolute" / "Opposition Non-Absolute" / "Balance Universal"
 MODES        ← "[Modes {Format: Type = Path}:" mode "," mode "," current_mode "]"
 mode         ← mode_type " (" mode_short ") = " path

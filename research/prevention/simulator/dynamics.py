@@ -73,10 +73,10 @@ def update_economy_potentials(
     A_Econ = econ_state.A if econ_state.A is not None else A_star
     
     # Get education capacities (source of Egress flow)
-    GT = edu_state.GT
-    IV = edu_state.IV
-    IA = edu_state.IA
-    IInteg = edu_state.IInteg
+    GMT = edu_state.GMT
+    ICV = edu_state.ICV
+    IIA = edu_state.IIA
+    ICI = edu_state.ICI
     
     # Get CGM-derived coefficients (must be provided via params)
     # No fallback - caller must use derive_all_coefficients() or ScenarioConfig
@@ -89,7 +89,7 @@ def update_economy_potentials(
     alpha7 = params["alpha7"]
     alpha8 = params["alpha8"]
     
-    # Authentic contribution: self-governance (aperture feedback)
+    # Original contribution: self-governance (aperture feedback)
     x_current = np.array([Gov, Info, Infer, Int])
     delta_authentic = np.array([
         -alpha2 * (A_Econ - A_star),
@@ -100,10 +100,10 @@ def update_economy_potentials(
     
     # Derivative contribution: cross-domain flow from education (THM → CGM)
     delta_derivative = np.array([
-        alpha1 * (GT - Gov),
-        alpha3 * (IV - Info),
-        alpha5 * (IA - Infer),
-        alpha7 * (IInteg - Int)
+        alpha1 * (GMT - Gov),
+        alpha3 * (ICV - Info),
+        alpha5 * (IIA - Infer),
+        alpha7 * (ICI - Int)
     ])
     
     x_raw = x_current + delta_authentic + delta_derivative
@@ -116,7 +116,7 @@ def update_economy_potentials(
         np.clip(x_raw[3], 0.0, 1.0)
     ])
     
-    # Store decomposition (THM: Authentic vs Derivative)
+    # Store decomposition (THM: Original vs Derivative)
     econ_state.delta_authentic = delta_authentic
     econ_state.delta_derivative = delta_derivative
     
@@ -170,7 +170,7 @@ def update_employment_potentials(
     # Update potentials with RESTORING dynamics
     x_current = np.array([GM, ICu, IInter, ICo])
     
-    # Authentic contribution: self-governance (aperture feedback)
+    # Original contribution: self-governance (aperture feedback)
     delta_authentic = np.array([
         -beta2 * (A_Emp - A_star),
         -beta4 * (A_Emp - A_star),
@@ -202,7 +202,7 @@ def update_employment_potentials(
     else:
         x_next = np.array([0.25, 0.25, 0.25, 0.25])
     
-    # Store decomposition (THM: Authentic vs Derivative)
+    # Store decomposition (THM: Original vs Derivative)
     emp_state.delta_authentic = delta_authentic
     emp_state.delta_derivative = delta_derivative
 
@@ -228,13 +228,13 @@ def update_education_potentials(
         params: Coupling coefficients.
     
     Returns:
-        Updated potentials [GT, IV, IA, IInteg].
+        Updated potentials [GMT, ICV, IIA, ICI].
     """
     # Get current values
-    GT = edu_state.GT
-    IV = edu_state.IV
-    IA = edu_state.IA
-    IInteg = edu_state.IInteg
+    GMT = edu_state.GMT
+    ICV = edu_state.ICV
+    IIA = edu_state.IIA
+    ICI = edu_state.ICI
     
     # Get A_star first (CGM canonical value)
     A_star = params.get("A_star", A_STAR)
@@ -250,25 +250,25 @@ def update_education_potentials(
     # Note: Ingress uses BU duality scaling (δ_BU/m_a ≈ 0.9793) in derive_gamma_coefficients
     
     # CS stage (Governance) - Systems Operation
-    gamma2 = params["gamma2"]   # GT ← GM
+    gamma2 = params["gamma2"]   # GMT ← GM
     gamma3 = params["gamma3"]   # CS feedback
     
     # UNA stage (Information)
-    gamma5 = params["gamma5"]   # IV ← ICu
+    gamma5 = params["gamma5"]   # ICV ← ICu
     gamma6 = params["gamma6"]   # UNA feedback
     
     # ONA stage (Inference)
-    gamma8 = params["gamma8"]   # IA ← IInter
+    gamma8 = params["gamma8"]   # IIA ← IInter
     gamma9 = params["gamma9"]   # ONA feedback
     
     # BU stage (Intelligence)
-    gamma11 = params["gamma11"]  # IInteg ← ICo
+    gamma11 = params["gamma11"]  # ICI ← ICo
     gamma12 = params["gamma12"]  # BU feedback
     
     # Update potentials with RESTORING dynamics
-    x_current = np.array([GT, IV, IA, IInteg])
+    x_current = np.array([GMT, ICV, IIA, ICI])
     
-    # Authentic contribution: self-governance (aperture feedback)
+    # Original contribution: self-governance (aperture feedback)
     delta_authentic = np.array([
         -gamma3 * (A_Edu - A_star),
         -gamma6 * (A_Edu - A_star),
@@ -278,10 +278,10 @@ def update_education_potentials(
     
     # Derivative contribution: cross-domain flow from employment only
     delta_derivative = np.array([
-        gamma2 * (GM - GT),
-        gamma5 * (ICu - IV),
-        gamma8 * (IInter - IA),
-        gamma11 * (ICo - IInteg)
+        gamma2 * (GM - GMT),
+        gamma5 * (ICu - ICV),
+        gamma8 * (IInter - IIA),
+        gamma11 * (ICo - ICI)
     ])
     
     x_raw = x_current + delta_authentic + delta_derivative
@@ -294,7 +294,7 @@ def update_education_potentials(
         np.clip(x_raw[3], 0.0, 1.0)
     ])
     
-    # Store decomposition (THM: Authentic vs Derivative)
+    # Store decomposition (THM: Original vs Derivative)
     edu_state.delta_authentic = delta_authentic
     edu_state.delta_derivative = delta_derivative
     
@@ -538,7 +538,7 @@ def step(
         y=y_econ_next, A=A_Econ_next, S=SI_econ_next / 100.0
     )
     
-    # Populate Authentic-Derivative decomposition (THM terminology)
+    # Populate Original-Derivative decomposition (THM terminology)
     if hasattr(econ_state, "delta_authentic") and hasattr(econ_state, "delta_derivative"):
         delta_a = getattr(econ_state, "delta_authentic")
         delta_d = getattr(econ_state, "delta_derivative")

@@ -370,7 +370,7 @@ if __name__ == "__main__":
     config7 = ScenarioConfig(
         Gov0=0.3, Info0=0.7, Infer0=0.5, Int0=0.4,
         GM0=0.15, ICu0=0.35, IInter0=0.25, ICo0=0.25,
-        GT0=0.3, IV0=0.7, IA0=0.5, IInteg0=0.4,
+        GMT0=0.3, ICV0=0.7, IIA0=0.5, ICI0=0.4,
         A_Econ_target=0.15,
         A_Emp_target=0.12,
         A_Edu_target=0.18,
@@ -571,10 +571,10 @@ if __name__ == "__main__":
         print(f"{'':<35} {'Emp':<6} "
               f"{result.GM[-1]:>8.3f} {result.ICu[-1]:>8.3f} "
               f"{result.IInter[-1]:>8.3f} {result.ICo[-1]:>8.3f}")
-        # Education potentials: GT, IV, IA, IInteg
+        # Education potentials: GMT, ICV, IIA, ICI
         print(f"{'':<35} {'Edu':<6} "
-              f"{result.GT[-1]:>8.3f} {result.IV[-1]:>8.3f} "
-              f"{result.IA[-1]:>8.3f} {result.IInteg[-1]:>8.3f}")
+              f"{result.GMT[-1]:>8.3f} {result.ICV[-1]:>8.3f} "
+              f"{result.IIA[-1]:>8.3f} {result.ICI[-1]:>8.3f}")
         print("-" * 10)
     print()
     
@@ -626,7 +626,7 @@ if __name__ == "__main__":
     
     print("Note: SI_Ecol measures structural coherence (dominated by canonical memory).")
     print("      Displacement measures: GTD=Governance Traceability, IVD=Information Variety,")
-    print("      IAD=Inference Accountability, IID=Intelligence Integrity.")
+    print("      IAD=Inference Accountability Displacement, IID=Intelligence Integrity Displacement.")
     print("      V_CGM = total Lyapunov potential, V_stage = stage-profile displacement,")
     print("      V_apert = aperture deviation sum.")
     print("      Stage profiles show internal domain configuration (CS, UNA, ONA, BU stages).")

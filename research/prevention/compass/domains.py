@@ -128,21 +128,21 @@ class EducationState(DomainStateBase):
     """
     Education domain state (THM).
     
-    Potentials: GT, IV, IA, IInteg in [0, 1].
-    - GT: Governance Traceability
-    - IV: Information Variety
-    - IA: Inference Accountability
-    - IInteg: Intelligence Integrity
+    Potentials: GMT, ICV, IIA, ICI in [0, 1].
+    - GMT: Governance Management Traceability
+    - ICV: Information Curation Variety
+    - IIA: Inference Interaction Accountability
+    - ICI: Intelligence Cooperation Integrity
     """
     
-    def __init__(self, GT: float, IV: float, IA: float, IInteg: float,
+    def __init__(self, GMT: float, ICV: float, IIA: float, ICI: float,
                  y: Optional[np.ndarray] = None,
                  A: Optional[float] = None):
         super().__init__()
-        self.GT = self._clip(GT)
-        self.IV = self._clip(IV)
-        self.IA = self._clip(IA)
-        self.IInteg = self._clip(IInteg)
+        self.GMT = self._clip(GMT)
+        self.ICV = self._clip(ICV)
+        self.IIA = self._clip(IIA)
+        self.ICI = self._clip(ICI)
         if y is not None:
             self.y = y
         self.A = A
@@ -151,16 +151,16 @@ class EducationState(DomainStateBase):
         return float(np.clip(value, 0.0, 1.0))
     
     def to_potential_vector(self) -> np.ndarray:
-        """Returns [GT, IV, IA, IInteg]."""
-        return np.array([self.GT, self.IV, self.IA, self.IInteg])
+        """Returns [GMT, ICV, IIA, ICI]."""
+        return np.array([self.GMT, self.ICV, self.IIA, self.ICI])
     
     def update_from_potential_vector(self, x_new: np.ndarray):
         """Updates from length-4 vector."""
         if len(x_new) != 4:
             raise ValueError("x_new must have length 4")
-        self.GT = self._clip(x_new[0])
-        self.IV = self._clip(x_new[1])
-        self.IA = self._clip(x_new[2])
-        self.IInteg = self._clip(x_new[3])
+        self.GMT = self._clip(x_new[0])
+        self.ICV = self._clip(x_new[1])
+        self.IIA = self._clip(x_new[2])
+        self.ICI = self._clip(x_new[3])
 
 

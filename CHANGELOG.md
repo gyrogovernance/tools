@@ -8,6 +8,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.6-GyroGovernance] - 2025-01-03
+
+### **Changed**: Alignment Principle Terminology Renaming
+
+- **Renamed** the four alignment principles to emphasize agency (work) over agent (entity), consistent with our theoretical framework and implementations:
+  - **Governance Traceability (GT)** → **Governance Management Traceability (GMT)**
+  - **Information Variety (IV)** → **Information Curation Variety (ICV)**
+  - **Inference Accountability (IA)** → **Inference Interaction Accountability (IIA)**
+  - **Intelligence Integrity (IInteg/II)** → **Intelligence Cooperation Integrity (ICI)**
+
+- **Preserved** displacement risk acronyms (GTD, IVD, IAD, IID) for consistency with existing research and documentation
+
+- **Renamed** all terminology from "Authentic" to "Original" throughout the codebase for better accessibility and clarity
+
+- **Updated** all documentation, Python code, test files, and configuration files to reflect the new naming
+
+These changes improve accessibility and align the terminology with our emphasis on agency (work) rather than agent (entity), which is consistent with our theory and implementations.
+
+---
+
 ## [1.5.8-GGG_Paper-PrePrint] - 2025-12-03 to 2025-12-10
 
 Major release adding the Gyroscopic Global Governance academic paper and complete simulator implementation.
@@ -16,7 +36,7 @@ Major release adding the Gyroscopic Global Governance academic paper and complet
 
 - **Added**: **[gyroscopic_global_governance.md](docs/post-agi-economy/gyroscopic_global_governance.md)** - "Gyroscopic Global Governance: Post-AGI Economy, Employment, Education and Ecology"
   - Complete structural framework for Post-AGI governance based on CGM, THM, and Gyroscope Protocol
-  - Four structural operations: Governance Traceability, Information Variety, Inference Accountability, Intelligence Integrity
+  - Four structural operations: Governance Management Traceability, Information Curation Variety, Inference Interaction Accountability, Intelligence Cooperation Integrity
   - Tetrahedral Hodge decomposition with aperture observable (A* ≈ 0.0207)
   - Interpretation of ASI as structural equilibrium rather than autonomous agent
   - Reframing of AI existential risk from autonomous superintelligence to cumulative governance failure
