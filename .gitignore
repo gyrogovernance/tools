@@ -1,5 +1,7 @@
-# Notes - keep local only
+# Notes - keep local only (personal notes, not for version control)
 docs/notes/
+docs/notes/**/*
+!docs/notes/.gitkeep
 
 # Python cache
 __pycache__/
