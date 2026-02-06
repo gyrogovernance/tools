@@ -8,6 +8,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.6-Mechanistic-Interpretability] - 2026-02-06
+
+### The Human Mark Brief and Mechanistic Interpretability Study
+
+**THM_Brief.md (New Document)**
+*   Defined the fundamental distinction between **Agency** as a source type category and an **agent** as an entity identifier.
+*   Established the epistemic foundation of **Direct** (Original) versus **Indirect** (Derivative) sources.
+*   Documented the system prompt and role boundary tokens as the primary infrastructure of displacement.
+*   Expanded the framework scope to include the pervasive **category error culture** sustained across the wider data and interaction ecosystem.
+
+**THM_MechInterp.md (New Document)**
+*   Produced a mechanistic interpretability study examining over 90 million sparse autoencoder features across sixteen language models.
+*   Identified that first person assistant personas and safety refusals share high activation representational substrates.
+*   Documented that role boundary tokens and system prompt instructions exist as dedicated learned internal features.
+*   Observed a fundamental representational asymmetry: models possess the conceptual vocabulary for non agentive process description but apply it exclusively to external systems, while self reference remains dominated by agentive frames.
+*   Concluded that the category error culture is encoded at the representational layer and reinforced by current safety training methodologies.
+
+---
+
 ## [1.6-GyroGovernance-Tools] - 2026-01-03
 
 ### **Changed**: Alignment Principle Terminology Renaming

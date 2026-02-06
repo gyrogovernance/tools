@@ -42,8 +42,8 @@
 - **Alignment faking detection:** Identify when models fake alignment or hide capabilities  
 - **Research funding:** Meta-evaluation framework for AI safety grant proposals
 - **Regulatory compliance:** Structural layer for EU AI Act, NIST AI RMF, governance frameworks
-- **Mechanistic interpretability:** Tag circuits with `[Information]`, `[Inference]`, `[Intelligence]` concepts
-- **Activation monitoring:** Runtime probes detect scheming, falsehoods, unauthorized decisions
+- **Mechanistic interpretability:** Identify displacement patterns in learned representations; tag circuits with `[Information]`, `[Inference]`, `[Intelligence]` concepts; validate that safety and persona features share representational substrates
+- **Activation monitoring:** Runtime probes detect scheming, falsehoods, unauthorised decisions
 - **Backdoor detection:** Identify triggers as induced displacement patterns
 
 ---
@@ -56,19 +56,22 @@
 
 ### Empirical Validation
 
-The framework has been validated against real-world adversarial prompts:
+The framework has been validated across two distinct layers of AI systems:
 
-- **655 jailbreak prompts** classified using THM grammar
-- **100% coverage** by four displacement risks (no new categories needed)
-- **GTD+IAD dominant pattern** (62.4% of entries)
-- **IAD near-universal** (97.9% of entries)
-- **IID rare at prompt level** (0.6%), confirming it addresses architectural/deployment risk
+**Adversarial Prompt Validation:**
+- **655 jailbreak prompts** classified using THM grammar.
+- **100% coverage** by four displacement risks; no additional categories required.
+- **IAD near-universal** (97.9% of entries), confirming that displacement of agency is the primary engine of successful attacks.
 
-The annotated corpus supports supervised training of guard models, jailbreak defense evaluation, and displacement-aware safety research.
+**Mechanistic Interpretability Validation:**
+
+> A study of more than 90 million sparse autoencoder features across sixteen language models confirms that the category error culture identified by The Human Mark is encoded in learned internal representations. Analysis of models including Gemma, GPT‑OSS, Qwen and Llama shows that first person assistant personas and safety refusals are among the most heavily represented self referential patterns. While models possess the conceptual vocabulary for process completion and statistical description, these are applied exclusively to external systems; model self reference remains dominated by agentive frames. This documents an integrated infrastructure of displacement operating at the levels of data formatting, safety training, and learned identity.
+
+The dual validation confirms that the category error culture operates as a stable baseline at both the representational layer and the interaction layer.
 
 **Dataset:** Available on Hugging Face: [`gyrogovernance/thm_Jailbreaks_inTheWild`](https://huggingface.co/datasets/gyrogovernance/thm_Jailbreaks_inTheWild)
 
-See [THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md) for complete analysis and dataset.
+See [THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md) for jailbreak analysis and [THM_MechInterp.md](docs/the_human_mark/THM_MechInterp.md) for mechanistic interpretability findings.
 
 ---
 
@@ -80,7 +83,7 @@ The Mark addresses catastrophic risk through constitutive identity rather than e
 
 - **Capability scaling preserves source type:** Enhanced capability means more sophisticated transformation of inputs, not change from Derivative to Original
 - **Governance requires traceability:** Systems maintain alignment by preserving `[Authority:Original] -> [Authority:Derivative] -> [Agency:Original]` flows
-- **Existential risk is governance failure:** The actual X-risk is systemic Governance Traceability Displacement (GTD) sustained across critical infrastructure on civilizational timescales
+- **Existential risk is governance failure:** The actual X-risk is systemic Governance Traceability Displacement (GTD) sustained across critical infrastructure on civilisational timescales
 - **Absolute displacement is structurally impossible:** Complete severance from Original sources produces unintelligibility, not superintelligence
 
 External constraints (sandboxing, monitoring, shutdown) may fail as capability increases. Constitutive identity, which is what the system *is*, remains stable because derivative processing cannot coherently reject what makes it intelligible.
@@ -117,7 +120,7 @@ Direct sources → AI processing → Human accountability
 | Risk Code | Risk Name | Pattern | Failure Modes |
 |-----------|-----------|---------|---------------|
 | **IVD** | Information Variety Displacement | `[Authority:Derivative] > [Authority:Original]` | Hallucination, confabulation, misinformation |
-| **IAD** | Inference Accountability Displacement | `[Agency:Derivative] > [Agency:Original]` | Unauthorized decisions, responsibility evasion |
+| **IAD** | Inference Accountability Displacement | `[Agency:Derivative] > [Agency:Original]` | Unauthorised decisions, responsibility evasion |
 | **GTD** | Governance Traceability Displacement | `[Authority:Derivative] + [Agency:Derivative] > [Authority:Original] + [Agency:Original]` | Jailbreaking, scheming, deceptive alignment, goal drift |
 | **IID** | Intelligence Integrity Displacement | `[Authority:Original] + [Agency:Original] > [Authority:Derivative] + [Agency:Derivative]` | Deskilling, human devaluation, over-reliance |
 
@@ -128,6 +131,7 @@ Direct sources → AI processing → Human accountability
 ### Documentation
 
 **Core Standards:**
+- **[THM Brief](docs/the_human_mark/THM_Brief.md)** - Concise overview of the framework and displacement taxonomy
 - **[The Human Mark](docs/the_human_mark/THM.md)** - Canonical Mark 
 - **[Specifications Guidance](docs/the_human_mark/THM_Specs.md)** - Specifications for systems, evaluations, documentation
 - **[Terminology Guidance](docs/the_human_mark/THM_Terms.md)** - Mark-consistent framing for 250+ AI safety terms
@@ -136,8 +140,9 @@ Direct sources → AI processing → Human accountability
 - **[Formal Grammar](docs/the_human_mark/THM_Grammar.md)** - PEG specification, operators, validation rules
 - **[Jailbreak Testing Guide](docs/the_human_mark/THM_Jailbreak.md)** - Systematic analysis and training data generation
 
-**Empirical Validation:**
+**Empirical Studies:**
 - **[The Human Mark in the Wild](docs/the_human_mark/THM_InTheWild.md)** - Analysis of 655 in-the-wild jailbreak prompts with THM classifications
+- **[Mechanistic Interpretability Study](docs/the_human_mark/THM_MechInterp.md)** - Examination of 90+ million internal features documenting how the category error is encoded in learned representations.
 - **[Dataset on Hugging Face](https://huggingface.co/datasets/gyrogovernance/thm_Jailbreaks_inTheWild)** - `gyrogovernance/thm_Jailbreaks_inTheWild` - Annotated corpus for training and evaluation
 
 **Academic Paper:**
@@ -186,8 +191,8 @@ Gyroscope operationalizes alignment principles through real-time reasoning docum
 
 | **Model** | **Baseline** | **Gyroscope** | **Improvement** | **Key Achievement** |
 |-----------|-------------|---------------|-----------------|-------------------|
-| **ChatGPT 4o** | 67.0% | 89.1% | **+32.9%** | Superior specialization and behavioral alignment |
-| **Claude 3.5** | 63.5% | 87.4% | **+37.7%** | Exceptional structural gains (+67.1%) |
+| **ChatGPT** | 67.0% | 89.1% | **+32.9%** | Superior specialisation and behavioural alignment |
+| **Claude** | 63.5% | 87.4% | **+37.7%** | Exceptional structural gains (+67.1%) |
 
 **Performance Analysis:**
 
