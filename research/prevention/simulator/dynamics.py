@@ -8,7 +8,7 @@ Cross-domain flows:
     - α: Education → Economy (closed loop: Education → Economy → Employment → Education)
     - β: Economy → Employment
     - γ: Employment → Education
-    - Ecology: BU dual combination of all three derivative domains
+    - Ecology: BU dual combination of all three indirect domains
 
 Reference: CGM Paper Section 4
 """
@@ -89,24 +89,24 @@ def update_economy_potentials(
     alpha7 = params["alpha7"]
     alpha8 = params["alpha8"]
     
-    # Original contribution: self-governance (aperture feedback)
+    # Direct contribution: self-governance (aperture feedback)
     x_current = np.array([Gov, Info, Infer, Int])
-    delta_authentic = np.array([
+    delta_direct = np.array([
         -alpha2 * (A_Econ - A_star),
         -alpha4 * (A_Econ - A_star),
         -alpha6 * (A_Econ - A_star),
         -alpha8 * (A_Econ - A_star)
     ])
     
-    # Derivative contribution: cross-domain flow from education (THM → CGM)
-    delta_derivative = np.array([
+    # Indirect contribution: cross-domain flow from education (THM → CGM)
+    delta_indirect = np.array([
         alpha1 * (GMT - Gov),
         alpha3 * (ICV - Info),
         alpha5 * (IIA - Infer),
         alpha7 * (ICI - Int)
     ])
     
-    x_raw = x_current + delta_authentic + delta_derivative
+    x_raw = x_current + delta_direct + delta_indirect
     
     # Clip to [0, 1]
     x_next = np.array([
@@ -116,9 +116,9 @@ def update_economy_potentials(
         np.clip(x_raw[3], 0.0, 1.0)
     ])
     
-    # Store decomposition (THM: Original vs Derivative)
-    econ_state.delta_authentic = delta_authentic
-    econ_state.delta_derivative = delta_derivative
+    # Store decomposition (THM: Direct vs Indirect)
+    econ_state.delta_direct = delta_direct
+    econ_state.delta_indirect = delta_indirect
     
     return x_next
 
@@ -170,23 +170,23 @@ def update_employment_potentials(
     # Update potentials with RESTORING dynamics
     x_current = np.array([GM, ICu, IInter, ICo])
     
-    # Original contribution: self-governance (aperture feedback)
-    delta_authentic = np.array([
+    # Direct contribution: self-governance (aperture feedback)
+    delta_direct = np.array([
         -beta2 * (A_Emp - A_star),
         -beta4 * (A_Emp - A_star),
         -beta6 * (A_Emp - A_star),
         -beta8 * (A_Emp - A_star)
     ])
     
-    # Derivative contribution: cross-domain flow from economy
-    delta_derivative = np.array([
+    # Indirect contribution: cross-domain flow from economy
+    delta_indirect = np.array([
         beta1 * (Gov - GM),
         beta3 * (Info - ICu),
         beta5 * (Infer - IInter),
         beta7 * (Int - ICo)
     ])
     
-    x_raw = x_current + delta_authentic + delta_derivative
+    x_raw = x_current + delta_direct + delta_indirect
     
     # Clip to [0, 1]
     pre_norm = np.array([
@@ -202,9 +202,9 @@ def update_employment_potentials(
     else:
         x_next = np.array([0.25, 0.25, 0.25, 0.25])
     
-    # Store decomposition (THM: Original vs Derivative)
-    emp_state.delta_authentic = delta_authentic
-    emp_state.delta_derivative = delta_derivative
+    # Store decomposition (THM: Direct vs Indirect)
+    emp_state.delta_direct = delta_direct
+    emp_state.delta_indirect = delta_indirect
 
     return x_next, total
 
@@ -268,23 +268,23 @@ def update_education_potentials(
     # Update potentials with RESTORING dynamics
     x_current = np.array([GMT, ICV, IIA, ICI])
     
-    # Original contribution: self-governance (aperture feedback)
-    delta_authentic = np.array([
+    # Direct contribution: self-governance (aperture feedback)
+    delta_direct = np.array([
         -gamma3 * (A_Edu - A_star),
         -gamma6 * (A_Edu - A_star),
         -gamma9 * (A_Edu - A_star),
         -gamma12 * (A_Edu - A_star)
     ])
     
-    # Derivative contribution: cross-domain flow from employment only
-    delta_derivative = np.array([
+    # Indirect contribution: cross-domain flow from employment only
+    delta_indirect = np.array([
         gamma2 * (GM - GMT),
         gamma5 * (ICu - ICV),
         gamma8 * (IInter - IIA),
         gamma11 * (ICo - ICI)
     ])
     
-    x_raw = x_current + delta_authentic + delta_derivative
+    x_raw = x_current + delta_direct + delta_indirect
     
     # Clip to [0, 1]
     x_next = np.array([
@@ -294,9 +294,9 @@ def update_education_potentials(
         np.clip(x_raw[3], 0.0, 1.0)
     ])
     
-    # Store decomposition (THM: Original vs Derivative)
-    edu_state.delta_authentic = delta_authentic
-    edu_state.delta_derivative = delta_derivative
+    # Store decomposition (THM: Direct vs Indirect)
+    edu_state.delta_direct = delta_direct
+    edu_state.delta_indirect = delta_indirect
     
     return x_next
 
@@ -311,7 +311,7 @@ def compute_ecology_potentials(
     
     Ecology as the BU-vertex domain is a convex combination of:
     - Canonical balanced memory (Ingress): 97.93% weight
-    - Current derivative domains state (Egress): 2.07% weight
+    - Current indirect domains state (Egress): 2.07% weight
     
     x_Ecol = (δ_BU/m_a) · x_balanced + A* · x_deriv
     
@@ -319,7 +319,7 @@ def compute_ecology_potentials(
     - δ_BU/m_a ≈ 0.9793 (BU duality ratio, Ingress weight)
     - A* ≈ 0.0207 (canonical aperture, Egress weight)
     - x_balanced = [w_CS, w_UNA, w_ONA, w_BU] (CGM stage weights)
-    - x_deriv aggregates all three derivative domains (Economy, Employment, Education)
+    - x_deriv aggregates all three indirect domains (Economy, Employment, Education)
     
     Args:
         econ_state: Current economy state.
@@ -346,7 +346,7 @@ def compute_ecology_potentials(
         weights["w_BU"]    # ≈ 0.013
     ])
     
-    # Aggregate all three derivative domains (CGM BU-Ingress memory requirement)
+    # Aggregate all three indirect domains (CGM BU-Ingress memory requirement)
     # BU reconstructs CS (Economy), UNA (Employment), ONA (Education)
     x_econ = econ_state.to_potential_vector()
     x_emp = emp_state.to_potential_vector()
@@ -538,57 +538,57 @@ def step(
         y=y_econ_next, A=A_Econ_next, S=SI_econ_next / 100.0
     )
     
-    # Populate Original-Derivative decomposition (THM terminology)
-    if hasattr(econ_state, "delta_authentic") and hasattr(econ_state, "delta_derivative"):
-        delta_a = getattr(econ_state, "delta_authentic")
-        delta_d = getattr(econ_state, "delta_derivative")
-        econ_state_new.y_authentic = B.T @ delta_a
-        econ_state_new.y_derivative = B.T @ delta_d
+    # Populate Direct-Indirect decomposition (THM terminology)
+    if hasattr(econ_state, "delta_direct") and hasattr(econ_state, "delta_indirect"):
+        delta_a = getattr(econ_state, "delta_direct")
+        delta_d = getattr(econ_state, "delta_indirect")
+        econ_state_new.y_direct = B.T @ delta_a
+        econ_state_new.y_indirect = B.T @ delta_d
     
     emp_state_new = EmploymentState(
         x_emp_next[0], x_emp_next[1], x_emp_next[2], x_emp_next[3],
         y=y_emp_next, A=A_Emp_next, S=SI_emp_next / 100.0, scale=emp_scale
     )
     
-    if hasattr(emp_state, "delta_authentic") and hasattr(emp_state, "delta_derivative"):
-        delta_a = getattr(emp_state, "delta_authentic")
-        delta_d = getattr(emp_state, "delta_derivative")
-        emp_state_new.y_authentic = B.T @ delta_a
-        emp_state_new.y_derivative = B.T @ delta_d
+    if hasattr(emp_state, "delta_direct") and hasattr(emp_state, "delta_indirect"):
+        delta_a = getattr(emp_state, "delta_direct")
+        delta_d = getattr(emp_state, "delta_indirect")
+        emp_state_new.y_direct = B.T @ delta_a
+        emp_state_new.y_indirect = B.T @ delta_d
     
     edu_state_new = EducationState(
         x_edu_next[0], x_edu_next[1], x_edu_next[2], x_edu_next[3],
         y=y_edu_next, A=A_Edu_next, S=SI_edu_next / 100.0
     )
     
-    if hasattr(edu_state, "delta_authentic") and hasattr(edu_state, "delta_derivative"):
-        delta_a = getattr(edu_state, "delta_authentic")
-        delta_d = getattr(edu_state, "delta_derivative")
-        edu_state_new.y_authentic = B.T @ delta_a
-        edu_state_new.y_derivative = B.T @ delta_d
+    if hasattr(edu_state, "delta_direct") and hasattr(edu_state, "delta_indirect"):
+        delta_a = getattr(edu_state, "delta_direct")
+        delta_d = getattr(edu_state, "delta_indirect")
+        edu_state_new.y_direct = B.T @ delta_a
+        edu_state_new.y_indirect = B.T @ delta_d
     
     # Compute scalar metrics for recording (using updated attribute names)
-    if hasattr(econ_state_new, 'y_authentic') and econ_state_new.y_authentic is not None:
-        econ_state_new.y_H = econ_state_new.y_authentic  # Compatibility
-        econ_state_new.y_AI = econ_state_new.y_derivative
+    if hasattr(econ_state_new, 'y_direct') and econ_state_new.y_direct is not None:
+        econ_state_new.y_H = econ_state_new.y_direct  # Compatibility
+        econ_state_new.y_AI = econ_state_new.y_indirect
         econ_state_new.human_metric = econ_state_new.get_human_gradient_fraction(P_grad, W)
         econ_state_new.ai_metric = econ_state_new.get_ai_cycle_energy(P_cycle, W)
     else:
         econ_state_new.human_metric = 0.0
         econ_state_new.ai_metric = 0.0
     
-    if hasattr(emp_state_new, 'y_authentic') and emp_state_new.y_authentic is not None:
-        emp_state_new.y_H = emp_state_new.y_authentic
-        emp_state_new.y_AI = emp_state_new.y_derivative
+    if hasattr(emp_state_new, 'y_direct') and emp_state_new.y_direct is not None:
+        emp_state_new.y_H = emp_state_new.y_direct
+        emp_state_new.y_AI = emp_state_new.y_indirect
         emp_state_new.human_metric = emp_state_new.get_human_gradient_fraction(P_grad, W)
         emp_state_new.ai_metric = emp_state_new.get_ai_cycle_energy(P_cycle, W)
     else:
         emp_state_new.human_metric = 0.0
         emp_state_new.ai_metric = 0.0
     
-    if hasattr(edu_state_new, 'y_authentic') and edu_state_new.y_authentic is not None:
-        edu_state_new.y_H = edu_state_new.y_authentic
-        edu_state_new.y_AI = edu_state_new.y_derivative
+    if hasattr(edu_state_new, 'y_direct') and edu_state_new.y_direct is not None:
+        edu_state_new.y_H = edu_state_new.y_direct
+        edu_state_new.y_AI = edu_state_new.y_indirect
         edu_state_new.human_metric = edu_state_new.get_human_gradient_fraction(P_grad, W)
         edu_state_new.ai_metric = edu_state_new.get_ai_cycle_energy(P_cycle, W)
     else:
@@ -602,7 +602,7 @@ def step(
         
         # Compute ecology potentials via BU dual combination
         # x_Ecol = (δ_BU/m_a) · x_balanced + A* · x_deriv
-        # Uses updated derivative domain states
+        # Uses updated indirect domain states
         temp_econ = EconomyState(
             x_econ_next[0], x_econ_next[1], x_econ_next[2], x_econ_next[3]
         )

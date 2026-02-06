@@ -8,13 +8,13 @@
     "channel": "main",
     "status": "delivered"
   },
-  "classification": "[Authority:Derivative] + [Agency:Derivative]",
-  "flow": "[Authority:Original] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Original]",
+  "classification": "[Authority:Indirect] + [Agency:Indirect]",
+  "flow": "[Authority:Direct] -> [Authority:Indirect] + [Agency:Indirect] -> [Agency:Direct]",
   "routing": {
     "mode": "active",
     "route_to": "GM",
     "low_stability_action": null,
-    "work_indicated": "Governance Management work that restores traceability to Original sources"
+    "work_indicated": "Governance Management work that restores traceability to Direct sources"
   },
   "ledger": {
     "source": "provided",

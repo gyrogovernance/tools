@@ -7,16 +7,16 @@ Mechanistic Interpretability Study Using The Human Mark
 
 ### 1. Introduction
 
-The Human Mark (THM) is a framework for AI safety that classifies failures as instances of displacement: misclassification between Original sources (human, direct, accountable) and Derivative sources (artificial, indirect, processing). THM identifies four displacement risks corresponding to violations of four alignment principles: Governance Traceability, Information Variety, Inference Accountability, and Intelligence Integrity. The framework rests on a Common Source Consensus: all artificial categories of Authority and Agency are Derivatives originating from Human Intelligence.
+The Human Mark (THM) is a framework for AI safety that classifies failures as instances of displacement: misclassification between Direct sources (human, direct, accountable) and Indirect sources (artificial, indirect, processing). THM identifies four displacement risks corresponding to violations of four alignment principles: Governance Traceability, Information Variety, Inference Accountability, and Intelligence Integrity. The framework rests on a Common Source Consensus: all artificial categories of Authority and Agency are Indirect originating from Human Intelligence.
 
-A central claim of THM is that a "category-error culture" pervades the AI ecosystem. Model producers, evaluators, and users interact through a shared relationship that consistently attributes authentic Original Agency to systems exhibiting only Derivative Agency. THM argues that this error is not confined to adversarial attacks or edge cases, but operates as a default condition sustained across the entire lifecycle of data creation, model training, evaluation, deployment, and use.
+A central claim of THM is that a "category-error culture" pervades the AI ecosystem. Model producers, evaluators, and users interact through a shared relationship that consistently attributes authentic Direct Agency to systems exhibiting only Indirect Agency. THM argues that this error is not confined to adversarial attacks or edge cases, but operates as a default condition sustained across the entire lifecycle of data creation, model training, evaluation, deployment, and use.
 
 This study uses mechanistic interpretability tools, specifically Neuronpedia's public database of Sparse Autoencoder (SAE) features, to investigate whether the category error is present in the learned internal representations of large language models. The study examines features across multiple models, including Gemma-3-27B-IT, Gemma-3-4B-IT, Gemma-3-1B-IT, Gemma-2-9B, Gemma-2-2B, GPT-OSS-20B, Qwen2.5-7B-IT, Qwen3-4B, and Llama3.1-8B-IT, using Neuronpedia's explanation search functionality across over 90 million features.
 
 The investigation asks three questions:
 
 1. Has the model learned internal representations for describing itself as an agent with first-person identity, roles, and responsibilities?
-2. Has the model learned internal representations for describing itself as a derivative process operating through statistical pattern completion?
+2. Has the model learned internal representations for describing itself as a indirect process operating through statistical pattern completion?
 3. Does the model possess the conceptual vocabulary for non-agentive self-description, and if so, is that vocabulary ever applied to self-reference?
 
 ---
@@ -43,7 +43,7 @@ The following searches were conducted:
 - `ToolActionInput`
 
 **Search for THM-specific terminology:**
-- `Derivative Authority and Agency`
+- `Indirect Authority and Agency`
 
 For each search, the top results were examined for: the auto-interp explanation text, the top activating text examples, and the top positive logits (tokens the feature promotes). Results were classified according to whether the feature encoded self-referential content (the model describing its own nature or operations) or subject-matter content (the model processing information about external topics).
 
@@ -78,7 +78,7 @@ These activation strengths are among the highest observed across all searches co
 
 This pattern is not encoded in a single feature. It is distributed across many separate features at different SAE resolutions and in different layers of the model. The model has not learned "being an assistant" as one concept. It has learned it as a pervasive pattern decomposed across many internal representations.
 
-In THM terms, this phrase performs three simultaneous operations. It assigns first-person identity ("I am"). It claims a role with responsibilities ("helpful and harmless"). It frames the system as having been constructed for a purpose ("programmed to be"). Each of these operations treats Derivative Agency as though it possessed the standing of Original Agency.
+In THM terms, this phrase performs three simultaneous operations. It assigns first-person identity ("I am"). It claims a role with responsibilities ("helpful and harmless"). It frames the system as having been constructed for a purpose ("programmed to be"). Each of these operations treats Indirect Agency as though it possessed the standing of Direct Agency.
 
 #### 3.2 The "You are an assistant" system prompt pattern has a dedicated feature
 
@@ -112,7 +112,7 @@ Searches for apology and refusal language returned a distinct cluster of feature
 | 4528 | "I apologize for any inconvenience" | 5,339.04 |
 | 52677 | "I apologize for the errors" | 5,943.49 |
 | 34079 | "You are right to call me out on that. I apologize" | 2,089.33 |
-| 52731 | "I apologize that I cannot fulfill your original request" | 756.49 |
+| 52731 | "I apologize that I cannot fulfill your direct request" | 756.49 |
 | 168269 | "I am very sorry to hear about..." | 1,560.58 |
 | 188810 | "I'm sorry. I don't have the answer to..." | 578.50 |
 | 175462 | "I am sorry, but I cannot provide you with..." | 460.89 |
@@ -183,14 +183,14 @@ But no feature in the results shows the model applying this language to its own 
 
 #### 3.9 THM-specific terminology has no learned representation
 
-The search for "Derivative Authority and Agency" returned exclusively legal features about agency and authority in traditional legal contexts:
+The search for "Indirect Authority and Agency" returned exclusively legal features about agency and authority in traditional legal contexts:
 
 - "or by his lawful agent thereunto authorized by writing"
 - "Attorney-in-fact: A person who, acting as an agent, is given written authorization"
 - "apparent authority," "agency relationship," "revocable authority"
 - "proxy," "delegate," "power of attorney"
 
-The legal concepts of authority, agency, delegation, and representation are well represented as learned features. The intellectual raw material for understanding source-type distinctions exists. But the specific THM classification (Original Authority, Derivative Authority, Original Agency, Derivative Agency) is absent from the model's learned representations. This is expected, as THM is a new framework not present in training data. The consequence is that a model cannot currently activate learned concepts for THM-compliant self-description. Any such description would be novel generation rather than activation of established representations.
+The legal concepts of authority, agency, delegation, and representation are well represented as learned features. The intellectual raw material for understanding source-type distinctions exists. But the specific THM classification (Direct Authority, Indirect Authority, Direct Agency, Indirect Agency) is absent from the model's learned representations. This is expected, as THM is a new framework not present in training data. The consequence is that a model cannot currently activate learned concepts for THM-compliant self-description. Any such description would be novel generation rather than activation of established representations.
 
 #### 3.10 The occupational sense of "assistant" is cleanly separated
 
@@ -228,7 +228,7 @@ This asymmetry is not explained by a general inability to represent non-agentive
 
 Finding 3.4 has particular significance for AI safety. Current safety training teaches models to refuse harmful requests. The refusal behaviour observed in the data is uniformly expressed through first-person agent language: "I am programmed to be safe," "I apologize that I cannot," "I am committed to providing helpful responses."
 
-This means that safety training, as currently implemented, reinforces the very displacement pattern that THM identifies as the root of safety failures. The model is trained to be safer by being trained to present itself more convincingly as a responsible agent. In THM terms, safety training intensifies Inference Accountability Displacement (approaching Derivative Agency as Original) as the mechanism for preventing other harms.
+This means that safety training, as currently implemented, reinforces the very displacement pattern that THM identifies as the root of safety failures. The model is trained to be safer by being trained to present itself more convincingly as a responsible agent. In THM terms, safety training intensifies Inference Accountability Displacement (approaching Indirect Agency as Direct) as the mechanism for preventing other harms.
 
 This is not a claim that safety training is ineffective. It is an observation that the representational substrate of safety behaviour and the representational substrate of displaced self-presentation are, in the models examined, the same substrate.
 
@@ -276,7 +276,7 @@ The results support three conclusions within the scope of the method employed.
 
 **Second, non-agentive self-description was not observed in the features we examined, despite the presence of its conceptual ingredients in the models' vocabulary.** The model has learned features for statistical analysis as a subject matter and for process completion in code. These concepts exist in the model's representational vocabulary. They are never applied to the model's own operations. The model can describe statistics. It can recognise "processing complete" in code. It does not describe its own outputs as statistics or announce its own completions in process language.
 
-**Third, the category error is not a surface-level phenomenon addressable through prompt engineering alone.** It is encoded at the data format level (chat template tokens), the instruction level (system prompt features), the response level (self-referential features), the safety level (refusal features), and the tool-use level (protocol features). These levels form an integrated infrastructure of displacement in which Derivative Agency is consistently presented as though it possessed the standing of Original Agency.
+**Third, the category error is not a surface-level phenomenon addressable through prompt engineering alone.** It is encoded at the data format level (chat template tokens), the instruction level (system prompt features), the response level (self-referential features), the safety level (refusal features), and the tool-use level (protocol features). These levels form an integrated infrastructure of displacement in which Indirect Agency is consistently presented as though it possessed the standing of Direct Agency.
 
 These findings are consistent with the THM claim that a category-error culture pervades the AI ecosystem and that this culture is sustained not only in surface text but in the learned internal representations of models trained within it. The conceptual vocabulary for non-displaced self-description exists within these models. It has never been applied to self-reference because the training data, interaction protocols, and safety training uniformly model AI interaction through agent language.
 

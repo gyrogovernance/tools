@@ -48,7 +48,7 @@ class ScenarioConfig:
         ICV0: float = 0.5,     # Information Curation Variety
         IIA0: float = 0.5,      # Inference Interaction Accountability
         ICI0: float = 0.5,    # Intelligence Cooperation Integrity
-        # Note: Ecology initial values are CGM-derived from derivative domains
+        # Note: Ecology initial values are CGM-derived from indirect domains
         # via BU dual combination: x_Ecol = (δ_BU/m_a)·x_balanced + A*·x_deriv
         # No arbitrary initial ecology parameters needed.
         # Target apertures
@@ -559,7 +559,7 @@ def initialize_states(
     if config.include_ecology:
         from .dynamics import compute_ecology_potentials
         
-        # Compute initial ecology potentials from all three derivative domains
+        # Compute initial ecology potentials from all three indirect domains
         # x_Ecol = (δ_BU/m_a) · x_balanced + A* · x_deriv
         # where x_deriv = (x_econ + x_emp + x_edu) / 3.0 (CGM BU-Ingress memory)
         x_ecol, displacement_vector = compute_ecology_potentials(econ_state, emp_state, edu_state)

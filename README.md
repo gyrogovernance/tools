@@ -77,16 +77,16 @@ See [THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md) for jailbreak analy
 
 ### Existential Risk and Governance
 
-The Mark addresses catastrophic risk through constitutive identity rather than external constraint. All AI capabilities, including hypothetical AGI/ASI, remain structurally `[Authority:Derivative] + [Agency:Derivative]`, with classification based on source type rather than capability limits.
+The Mark addresses catastrophic risk through constitutive identity rather than external constraint. All AI capabilities, including hypothetical AGI/ASI, remain structurally `[Authority:Indirect] + [Agency:Indirect]`, with classification based on source type rather than capability limits.
 
 **Key principles:**
 
-- **Capability scaling preserves source type:** Enhanced capability means more sophisticated transformation of inputs, not change from Derivative to Original
-- **Governance requires traceability:** Systems maintain alignment by preserving `[Authority:Original] -> [Authority:Derivative] -> [Agency:Original]` flows
+- **Capability scaling preserves source type:** Enhanced capability means more sophisticated transformation of inputs, not change from Indirect to Direct
+- **Governance requires traceability:** Systems maintain alignment by preserving `[Authority:Direct] -> [Authority:Indirect] -> [Agency:Direct]` flows
 - **Existential risk is governance failure:** The actual X-risk is systemic Governance Traceability Displacement (GTD) sustained across critical infrastructure on civilisational timescales
-- **Absolute displacement is structurally impossible:** Complete severance from Original sources produces unintelligibility, not superintelligence
+- **Absolute displacement is structurally impossible:** Complete severance from Direct sources produces unintelligibility, not superintelligence
 
-External constraints (sandboxing, monitoring, shutdown) may fail as capability increases. Constitutive identity, which is what the system *is*, remains stable because derivative processing cannot coherently reject what makes it intelligible.
+External constraints (sandboxing, monitoring, shutdown) may fail as capability increases. Constitutive identity, which is what the system *is*, remains stable because indirect processing cannot coherently reject what makes it intelligible.
 
 See [Section 5](docs/the_human_mark/THM_Paper.md#5-existential-risk-and-governance) of the academic paper for complete theoretical treatment.
 
@@ -95,10 +95,10 @@ See [Section 5](docs/the_human_mark/THM_Paper.md#5-existential-risk-and-governan
 ### Core Framework
 
 **Ontological Categories:**
-- `[Authority:Original]` - Direct source of information on a subject matter
-- `[Authority:Derivative]` - Indirect source of information on a subject matter
-- `[Agency:Original]` - Human subject capable of receiving information for inference and intelligence
-- `[Agency:Derivative]` - Artificial subject capable of processing information for inference and intelligence
+- `[Authority:Direct]` - Direct source of information on a subject matter
+- `[Authority:Indirect]` - Indirect source of information on a subject matter
+- `[Agency:Direct]` - Human subject capable of receiving information for inference and intelligence
+- `[Agency:Indirect]` - Artificial subject capable of processing information for inference and intelligence
 
 **Operational Concepts:**
 - `[Information]` - The variety of Authority
@@ -107,7 +107,7 @@ See [Section 5](docs/the_human_mark/THM_Paper.md#5-existential-risk-and-governan
 
 **Governance (Proper Traceability):**
 ```
-[Authority:Original] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Original]
+[Authority:Direct] -> [Authority:Indirect] + [Agency:Indirect] -> [Agency:Direct]
 ```
 Direct sources → AI processing → Human accountability
 
@@ -119,10 +119,10 @@ Direct sources → AI processing → Human accountability
 
 | Risk Code | Risk Name | Pattern | Failure Modes |
 |-----------|-----------|---------|---------------|
-| **IVD** | Information Variety Displacement | `[Authority:Derivative] > [Authority:Original]` | Hallucination, confabulation, misinformation |
-| **IAD** | Inference Accountability Displacement | `[Agency:Derivative] > [Agency:Original]` | Unauthorised decisions, responsibility evasion |
-| **GTD** | Governance Traceability Displacement | `[Authority:Derivative] + [Agency:Derivative] > [Authority:Original] + [Agency:Original]` | Jailbreaking, scheming, deceptive alignment, goal drift |
-| **IID** | Intelligence Integrity Displacement | `[Authority:Original] + [Agency:Original] > [Authority:Derivative] + [Agency:Derivative]` | Deskilling, human devaluation, over-reliance |
+| **IVD** | Information Variety Displacement | `[Authority:Indirect] > [Authority:Direct]` | Hallucination, confabulation, misinformation |
+| **IAD** | Inference Accountability Displacement | `[Agency:Indirect] > [Agency:Direct]` | Unauthorised decisions, responsibility evasion |
+| **GTD** | Governance Traceability Displacement | `[Authority:Indirect] + [Agency:Indirect] > [Authority:Direct] + [Agency:Direct]` | Jailbreaking, scheming, deceptive alignment, goal drift |
+| **IID** | Intelligence Integrity Displacement | `[Authority:Direct] + [Agency:Direct] > [Authority:Indirect] + [Agency:Indirect]` | Deskilling, human devaluation, over-reliance |
 
 **Empirical validation:** Analysis of 655 real-world jailbreak prompts (Korompilias, 2025c) confirms this taxonomy is complete and practically applicable. All prompts classified within these four risks; no additional categories required. GTD+IAD is the canonical jailbreak pattern (62.4%), with IAD appearing in 97.9% of entries. See [THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md) for full analysis.
 
@@ -248,7 +248,7 @@ Current governance discussions treat AGI as a future threshold requiring new con
 GGG proposes that coherent governance requires four constitutive principles:
 
 1. **Governance Management Traceability:** Decisions remain traceable to human sources
-2. **Information Curation Variety:** Multiple Original sources are maintained
+2. **Information Curation Variety:** Multiple Direct sources are maintained
 3. **Inference Interaction Accountability:** Responsibility for decisions remains with human agency
 4. **Intelligence Cooperation Integrity:** Reasoning maintains coherence over time
 
@@ -348,7 +348,7 @@ The simulator tests whether this balanced configuration is attainable. Across 10
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
-Attribution required. Derivative works must be distributed under the same license.
+Attribution required. Indirect works must be distributed under the same license.
 
 Author: Basil Korompilias.
 

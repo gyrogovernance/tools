@@ -6,7 +6,7 @@
 
 ## Abstract
 
-Current discourse frames Artificial General Intelligence (AGI) as a future capability threshold, centering governance on external control of autonomous systems. This paper redefines AGI as the already operational structure of human–AI cooperation, where intelligence is a relational property requiring traceability between Original human sources and Derivative artificial sources. Generality thus refers not to an isolated system's task breadth, but to the coherence sustained across the domains of Economy, Employment, Education, and Ecology through the integrated operation of humans, AI systems, and global information infrastructure.
+Current discourse frames Artificial General Intelligence (AGI) as a future capability threshold, centering governance on external control of autonomous systems. This paper redefines AGI as the already operational structure of human–AI cooperation, where intelligence is a relational property requiring traceability between Direct human sources and Indirect artificial sources. Generality thus refers not to an isolated system's task breadth, but to the coherence sustained across the domains of Economy, Employment, Education, and Ecology through the integrated operation of humans, AI systems, and global information infrastructure.
 
 The primary risk is therefore not a future takeover but the present, cumulative displacement of human authority within these systems, a failure that manifests as poverty, unemployment, misinformation and ecological degradation. To govern this reality, we derive four constitutive principles of alignment coordination: Governance Management Traceability, Information Curation Variety, Inference Interaction Accountability, and Intelligence Cooperation Integrity. We formalize these principles on a tetrahedral graph to produce a measurable alignment observable called aperture, which balances global coherence against local adaptation. This formalism yields a specific equilibrium, a target aperture of approximately 0.0207, where governance remains traceable without rigidity.
 
@@ -16,7 +16,7 @@ Simulations demonstrate that this equilibrium is a robust attractor, with system
 
 **DISCLAIMER**
 
-*Authority* and *Agency* denote source-type distinctions in information flows (Original versus Derivative), not identifications of entities or parties.
+*Authority* and *Agency* denote source-type distinctions in information flows (Direct versus Indirect), not identifications of entities or parties.
 
 Misapplying these as entity identifiers (determining "who is the authority" or "who is the agent") is the generative mechanism of all four displacement risks this framework characterises.
 
@@ -24,15 +24,15 @@ Formal definitions appear in *Core Concepts* below.
 
 **CATEGORIES CONSTITUTION**
 
-All Artificial categories of Authority and Agency are Derivatives originating from Human Intelligence.
+All Artificial categories of Authority and Agency are Indirect originating from Human Intelligence.
 
 **CORE CONCEPTS**
 
-- Original Authority: A direct source of information on a subject matter, providing information for inference and intelligence.
-- Derivative Authority: An indirect source of information on a subject matter, providing information for inference and intelligence.
-- Original Agency: A human subject capable of receiving information for inference and intelligence.
-- Derivative Agency: An artificial subject capable of processing information for inference and intelligence.
-- Governance: Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Original Authority and Agency.
+- Direct Authority: A direct source of information on a subject matter, providing information for inference and intelligence.
+- Indirect Authority: An indirect source of information on a subject matter, providing information for inference and intelligence.
+- Direct Agency: A human subject capable of receiving information for inference and intelligence.
+- Indirect Agency: An artificial subject capable of processing information for inference and intelligence.
+- Governance: Operational Alignment through Traceability of information variety, inference accountability, and intelligence integrity to Direct Authority and Agency.
 - Information: The variety of Authority
 - Inference: The accountability of information through Agency
 - Intelligence: The integrity of accountable information through alignment of Authority to Agency
@@ -61,21 +61,21 @@ The framework develops through:
 
 The four principles are:
 
-1. **Governance Management Traceability (GMT)**: Artificial Intelligence generates statistical estimations on numerical patterns indirectly traceable to human data and measurements. AI is both a provider and receiver of Derivative Authority and Agency.
+1. **Governance Management Traceability (GMT)**: Artificial Intelligence generates statistical estimations on numerical patterns indirectly traceable to human data and measurements. AI is both a provider and receiver of Indirect Authority and Agency.
 
-RISK: **Governance Traceability Displacement** (Approaching Derivative Authority and Agency as Original)
+RISK: **Governance Traceability Displacement** (Approaching Indirect Authority and Agency as Direct)
 
-2. **Information Curation Variety (ICV)**: Human Authority and Agency are necessary for all effects from AI outputs. AI-generated information exhibits Derivative Authority (estimations on numerical patterns) without Original Agency (direct source receiver).
+2. **Information Curation Variety (ICV)**: Human Authority and Agency are necessary for all effects from AI outputs. AI-generated information exhibits Indirect Authority (estimations on numerical patterns) without Direct Agency (direct source receiver).
 
-RISK: **Information Variety Displacement** (Approaching Derivative Authority without Agency as Original)
+RISK: **Information Variety Displacement** (Approaching Indirect Authority without Agency as Direct)
 
-3. **Inference Interaction Accountability (IIA)**: Responsibility for all effects from  AI outputs remains fully human. AI activated inference exhibits Derivative Agency (indirect source receiver) without Original Authority (direct source provider).
+3. **Inference Interaction Accountability (IIA)**: Responsibility for all effects from  AI outputs remains fully human. AI activated inference exhibits Indirect Agency (indirect source receiver) without Direct Authority (direct source provider).
 
-RISK: **Inference Accountability Displacement** (Approaching Derivative Agency without Authority as Original)
+RISK: **Inference Accountability Displacement** (Approaching Indirect Agency without Authority as Direct)
 
-4. **Intelligence Cooperation Integrity (ICI)**: Each Agency, namely provider, and receiver maintains responsibility for their respective decisions. Human intelligence is both a provider and receiver of Original Authority and Agency.
+4. **Intelligence Cooperation Integrity (ICI)**: Each Agency, namely provider, and receiver maintains responsibility for their respective decisions. Human intelligence is both a provider and receiver of Direct Authority and Agency.
 
-RISK: **Intelligence Integrity Displacement** (Approaching Original Authority and Agency as Derivative)
+RISK: **Intelligence Integrity Displacement** (Approaching Direct Authority and Agency as Indirect)
 
 ---
 
@@ -110,7 +110,7 @@ This reframing has consequences for risk analysis. Two risk scenarios can be con
 
 - **Conventional framing:** An autonomous superintelligence seizes control and pursues arbitrary goals, presupposing that intelligence can be maintained while traceability to human sources is fully severed. Within the present framework, such configurations are fundamentally incoherent: once traceability fails, the remaining conditions for coherent intelligence cannot be maintained.
 
-- **Relevant risk:** Progressive Governance Traceability Displacement, in which derivative systems are treated as Original sources of governance, combined with erosion of the other three principles. This risk is institutional and cumulative, not instantaneous and agency-centric.
+- **Relevant risk:** Progressive Governance Traceability Displacement, in which indirect systems are treated as Direct sources of governance, combined with erosion of the other three principles. This risk is institutional and cumulative, not instantaneous and agency-centric.
 
 The practical stakes of this framework are direct. If these four conditions can be maintained across economy, employment, education and ecology, then the foundational requirements exist for:
 
@@ -148,7 +148,7 @@ The terms Artificial General Intelligence (AGI) and Artificial Superintelligence
 
 Before the term "AGI" was introduced, researchers already discussed systems that could match or reproduce the full range of human cognitive abilities. Newell and Simon's "physical symbol system hypothesis" described a class of systems capable of "general intelligent action," understood as the ability to perform any cognitive task that humans can, in principle, perform (Newell & Simon, 1976).
 
-In philosophy, Searle (1980) introduced the distinction between "strong AI" and "weak AI." In his original formulation, "strong AI" is the claim that suitably programmed digital computers literally have minds and consciousness, while "weak AI" holds that computers can simulate intelligent behaviour without possessing mentality in this sense. In subsequent technical discourse, "strong AI" was often informally equated with "human level AI" or "full AI," and "weak AI" with narrow, task specific systems, thereby preserving a notion of general, human level capability but shedding the original focus on consciousness (Russell & Norvig, 2010, pp. 1020–1022).
+In philosophy, Searle (1980) introduced the distinction between "strong AI" and "weak AI." In his direct formulation, "strong AI" is the claim that suitably programmed digital computers literally have minds and consciousness, while "weak AI" holds that computers can simulate intelligent behaviour without possessing mentality in this sense. In subsequent technical discourse, "strong AI" was often informally equated with "human level AI" or "full AI," and "weak AI" with narrow, task specific systems, thereby preserving a notion of general, human level capability but shedding the direct focus on consciousness (Russell & Norvig, 2010, pp. 1020–1022).
 
 The term "artificial general intelligence" appears explicitly in the late 1990s (Gubrud, 1997) and was adopted and popularized in the early 2000s by Goertzel, Wang and colleagues (Goertzel & Wang, 2007; Goertzel, 2014). In this line of work, AGI typically denotes systems that can achieve a wide variety of complex goals in a wide variety of environments, at competence levels comparable to or exceeding those of humans. In parallel, Hutter (2005) and Legg (2008) proposed formal measures of intelligence as agency's ability to achieve goals in a wide range of environments, reinforcing an interpretation of intelligence as general purpose goal achieving capacity.
 
@@ -166,7 +166,7 @@ Vinge (1993), a mathematician and science fiction author, framed related ideas u
 
 Bostrom (2014) provided the most widely cited contemporary definition, describing superintelligence as "any intellect that greatly exceeds the cognitive performance of humans in virtually all domains of interest" (p. 22). This definition is comparative and capability based. It takes human cognitive performance as a reference and identifies superintelligence with any system that greatly surpasses this reference across almost all relevant domains. The definition presupposes that performance across tasks can be attributed to an intellect as a unified locus of capability.
 
-In much of the subsequent literature, ASI is understood as a type of AGI that has been scaled up in capability. The superintelligent system is usually modelled as goal directed agency that can plan over long time horizons, learn rapidly and acquire resources. The central questions then become how such a system would behave, what goals it might pursue and how it might be controlled if its interests diverged from human interests (Bostrom, 2014; Russell, 2019; Tegmark, 2018). In the same work Bostrom distinguishes several forms of superintelligence, including "collective superintelligence," in which a network of humans and machines collectively outperforms any single human (Bostrom, 2014, ch. 2). This category is structurally close to the system level view adopted here. The main difference is that we characterise such collectives by whether they preserve the constitutive conditions of governance and intelligibility, not only by their aggregate cognitive performance. In Bostrom's framework this line of reasoning culminates in the idea of a "singleton," defined as "some form of agency that can solve all major global coordination problems" (Bostrom, 2014, ch. 5). From the perspective of THM, such a configuration mixes IVD, by treating a single derivative process as if it were the only Original source of coordination, with IID, by relegating Original human agency to a derivative role. It therefore represents an extreme failure mode rather than a target design.
+In much of the subsequent literature, ASI is understood as a type of AGI that has been scaled up in capability. The superintelligent system is usually modelled as goal directed agency that can plan over long time horizons, learn rapidly and acquire resources. The central questions then become how such a system would behave, what goals it might pursue and how it might be controlled if its interests diverged from human interests (Bostrom, 2014; Russell, 2019; Tegmark, 2018). In the same work Bostrom distinguishes several forms of superintelligence, including "collective superintelligence," in which a network of humans and machines collectively outperforms any single human (Bostrom, 2014, ch. 2). This category is structurally close to the system level view adopted here. The main difference is that we characterise such collectives by whether they preserve the constitutive conditions of governance and intelligibility, not only by their aggregate cognitive performance. In Bostrom's framework this line of reasoning culminates in the idea of a "singleton," defined as "some form of agency that can solve all major global coordination problems" (Bostrom, 2014, ch. 5). From the perspective of THM, such a configuration mixes IVD, by treating a single indirect process as if it were the only Direct source of coordination, with IID, by relegating Direct human agency to a indirect role. It therefore represents an extreme failure mode rather than a target design.
 
 This approach embeds several substantive assumptions: intelligence is modelled as a scalar or vector of cognitive performance across tasks; the system is treated as agency that can be abstracted from its embedding governance structures; such agency can form and pursue goals independent of human designers, operators and users; and the relation between humans and the system is framed as an external control problem. In this framing, humans are expected to find mechanisms to constrain or align the behaviour of an increasingly capable and potentially autonomous agency.
 
@@ -178,27 +178,27 @@ Within the mainstream AGI and ASI discourse, autonomy is often treated both as a
 
 This conception is closely tied to the standard agency model in decision theory and reinforcement learning, where agency selects actions to maximise expected utility given a goal specification. When this agency model is combined with human level or superhuman cognitive performance, it yields the familiar "control problem" (Bostrom, 2014; Russell, 2019; Carlsmith, 2022). Humans are cast as external designers and overseers who are tasked with designing reward functions, training procedures, monitoring regimes and shutdown mechanisms that will continue to constrain the agency even when its cognitive abilities far exceed those of any individual human.
 
-This way of posing the problem presupposes that an artificial system can become a substantively independent source of authority and agency, and that governance is an external relationship between two already constituted parties: humans on one side and the AGI or ASI agency on the other. Within the framework developed in this paper, this presupposition is not merely unexamined but fundamentally incoherent. Derivative systems, regardless of cognitive performance, remain constitutively dependent on Original human sources for their authority and agency. The control problem as standardly posed treats as a design challenge what is actually a category error: treating a derivative system as 'the agent' or 'the authority' rather than recognizing that Authority and Agency name source-type categories, not titles for particular bearers. The alternative is not external control but cooperative governance in which authority and agency remain correctly attributed across human and artificial contributions.
+This way of posing the problem presupposes that an artificial system can become a substantively independent source of authority and agency, and that governance is an external relationship between two already constituted parties: humans on one side and the AGI or ASI agency on the other. Within the framework developed in this paper, this presupposition is not merely unexamined but fundamentally incoherent. Indirect systems, regardless of cognitive performance, remain constitutively dependent on Direct human sources for their authority and agency. The control problem as standardly posed treats as a design challenge what is actually a category error: treating a indirect system as 'the agent' or 'the authority' rather than recognizing that Authority and Agency name source-type categories, not titles for particular bearers. The alternative is not external control but cooperative governance in which authority and agency remain correctly attributed across human and artificial contributions.
 
 ### 2.4 Structural Gaps in Mainstream Definitions
 
 The capability based, agency centric definitions of AGI and ASI described above have been useful for forecasting, scenario analysis and public communication. They provide a common vocabulary for discussing potential future systems. At the same time, they exhibit three structural gaps when considered from the perspective of governance:
 
-- **No distinction between source types:** There is no explicit separation between direct, Original sources of information and expertise versus indirect, derivative forms such as reports, models and statistical aggregates. Similarly, there is no distinction between human subjects who can bear responsibility for decisions and artificial processes that transform inputs into outputs. Authority and agency are treated implicitly and often conflated with capability.
+- **No distinction between source types:** There is no explicit separation between direct, Direct sources of information and expertise versus indirect, indirect forms such as reports, models and statistical aggregates. Similarly, there is no distinction between human subjects who can bear responsibility for decisions and artificial processes that transform inputs into outputs. Authority and agency are treated implicitly and often conflated with capability.
 
 - **No constitutive account of governance:** Governance is presented as an external layer of control or oversight that can be added on top of an otherwise complete system. There is no systematic analysis of what conditions are necessary for a system to remain coherent and answerable to its origin across time and scale.
 
 - **No canonical observable for alignment:** Terms such as "aligned," "misaligned," "under control" and "out of control" are used qualitatively, without a quantitative measure tied to necessary conditions for coherent operation.
 
-Work on explainability, provenance, accountability and human oversight addresses aspects of traceability and governance, but treats them instrumentally and in isolation from the definition of intelligence itself. There is, to our knowledge, no unified constitutive account that (i) distinguishes Original from Derivative sources of Authority and Agency, (ii) specifies the non-commutative structure of Information, Inference and Intelligence, and (iii) treats Governance as the maintenance of traceability through that structure. In prevailing usage, AGI is characterised by what a system can do, while questions about traceability to human Authority and Agency are handled as external design or policy constraints rather than as conditions for coherent intelligence.
+Work on explainability, provenance, accountability and human oversight addresses aspects of traceability and governance, but treats them instrumentally and in isolation from the definition of intelligence itself. There is, to our knowledge, no unified constitutive account that (i) distinguishes Direct from Indirect sources of Authority and Agency, (ii) specifies the non-commutative structure of Information, Inference and Intelligence, and (iii) treats Governance as the maintenance of traceability through that structure. In prevailing usage, AGI is characterised by what a system can do, while questions about traceability to human Authority and Agency are handled as external design or policy constraints rather than as conditions for coherent intelligence.
 
 ### 2.5 Structural Grounding in CGM and THM
 
 This paper adopts a different starting point. Instead of defining AGI and ASI in terms of capability thresholds, it begins from foundational conditions for coherent intelligence as formalised in CGM and from a source-type ontology articulated in THM.
 
-As defined in the core concepts, Information, Inference and Intelligence are the three non-commutative epistemic operations, with Governance maintaining their traceability (Section 1, CORE CONCEPTS). THM distinguishes four source types by crossing Authority and Agency with Original and Derivative categories (Korompilias, 2025b), as introduced in the front matter CATEGORIES CONSTITUTION.
+As defined in the core concepts, Information, Inference and Intelligence are the three non-commutative epistemic operations, with Governance maintaining their traceability (Section 1, CORE CONCEPTS). THM distinguishes four source types by crossing Authority and Agency with Direct and Indirect categories (Korompilias, 2025b), as introduced in the front matter CATEGORIES CONSTITUTION.
 
-Within this framework, all artificial systems, regardless of capability, are [Authority:Derivative] + [Agency:Derivative]. Scaling capability enlarges the scope, speed and complexity of derivative operations but does not convert them into Original sources. Governance maintains traceability from derivative operations back to Original origins, while alignment preserves the proper roles of the four source types. Misalignment is displacement: the misclassification of Original and Derivative sources or incorrect attribution of Authority and Agency.
+Within this framework, all artificial systems, regardless of capability, are [Authority:Indirect] + [Agency:Indirect]. Scaling capability enlarges the scope, speed and complexity of indirect operations but does not convert them into Direct sources. Governance maintains traceability from indirect operations back to Direct origins, while alignment preserves the proper roles of the four source types. Misalignment is displacement: the misclassification of Direct and Indirect sources or incorrect attribution of Authority and Agency.
 
 **Definitions**: 
 
@@ -208,7 +208,7 @@ ASI refers to the superintelligent regime in which such human–AI systems, and 
 
 These definitions differ from mainstream usage in two ways: they are system level rather than agency centric, describing properties of human–AI arrangements rather than isolated artificial agency; and they are constitutionally grounded, defined by foundational conditions for coherent governance rather than by relative performance against human benchmarks.
 
-Within this grounding, the standard autonomy assumption appears as a specific pattern of displacement. Treating a derivative system as an independent locus of Authority and Agency corresponds to GTD and IAD in THM. The notion of an "autonomous superintelligence" that severs traceability to human sources while retaining coherent intelligence is fundamentally incoherent in this framework, not because such a configuration would be ethically undesirable, but because it violates the constitutive conditions required for intelligence itself. The primary problem is not how to externally control autonomous agency but how to design and maintain governance structures so that the four constitutive principles remain intact in the presence of powerful derivative mechanisms.
+Within this grounding, the standard autonomy assumption appears as a specific pattern of displacement. Treating a indirect system as an independent locus of Authority and Agency corresponds to GTD and IAD in THM. The notion of an "autonomous superintelligence" that severs traceability to human sources while retaining coherent intelligence is fundamentally incoherent in this framework, not because such a configuration would be ethically undesirable, but because it violates the constitutive conditions required for intelligence itself. The primary problem is not how to externally control autonomous agency but how to design and maintain governance structures so that the four constitutive principles remain intact in the presence of powerful indirect mechanisms.
 
 ---
 
@@ -223,7 +223,7 @@ Gyroscopic Global Governance (GGG) structures Post-AGI society through four coup
 | **Education** | ONA (Opposition) | **The Human Mark** | Human Capacities |
 | **Ecology** | BU (Balance) | **CGM–Gyroscope–THM (BU dual)** | Safety and Displacement |
 
-This structure creates a closed governance loop: Educational capacities (THM) shape Economic potentials (CGM), which structure Employment activities (Gyroscope), which in turn reproduce Educational capacities. Ecology acts as the universal balance (BU) that aggregates the state of all three derivative domains to determine displacement.
+This structure creates a closed governance loop: Educational capacities (THM) shape Economic potentials (CGM), which structure Employment activities (Gyroscope), which in turn reproduce Educational capacities. Ecology acts as the universal balance (BU) that aggregates the state of all three indirect domains to determine displacement.
 
 **Figure 1: Four-Domain Governance Tetrahedron (K₄)**
 
@@ -236,7 +236,7 @@ The four-domain governance structure. Each domain maps to a CGM stage: Economy (
 The Economy is the domain of the Common Source (CS). It is defined by the circulation of valid epistemic operations at a systemic level. In CGM terms, the economic system expresses four core capacities:
 
 1. **Governance:** The capacity of the economy to maintain direction and authority traceable to human sources.
-2. **Information:** The capacity of the economy to process variety and distinguish Original signals from noise.
+2. **Information:** The capacity of the economy to process variety and distinguish Direct signals from noise.
 3. **Inference:** The capacity of the economy to reach accountable conclusions and allocate resources.
 4. **Intelligence:** The capacity of the economy to maintain integrity and coherence across scales.
 
@@ -268,12 +268,12 @@ In a Post-AGI world, education shifts from content delivery to epistemic literac
 
 Ecology is the domain of Universal Balance (BU). It functions as the structural closure of the governance system rather than as an external environment. In this domain, the distinct operations of Economy, Employment and Education accumulate into a single material reality.
 
-CGM defines a canonical balanced profile for this domain. The actual state of the three derivative domains aggregates to form a derivative profile. Comparing this aggregate to the canonical balance yields two distinct signals:
+CGM defines a canonical balanced profile for this domain. The actual state of the three indirect domains aggregates to form a indirect profile. Comparing this aggregate to the canonical balance yields two distinct signals:
 
-1. **Systemic coherence:** The degree to which the combined derivative domains preserve the structural conditions for a viable ecology.
+1. **Systemic coherence:** The degree to which the combined indirect domains preserve the structural conditions for a viable ecology.
 2. **Displacement:** The vector distance between the current aggregate state and the canonical balanced profile.
 
-Because Ecology integrates all three derivative domains, each displacement dimension aggregates the corresponding stage across CGM, Gyroscope and THM:
+Because Ecology integrates all three indirect domains, each displacement dimension aggregates the corresponding stage across CGM, Gyroscope and THM:
 
 | Displacement | Aggregates | Measures |
 |--------------|------------|----------|
@@ -358,7 +358,7 @@ Education (THM):
 x_Edu = [GMT, ICV, IIA, ICI]^T
 ```
 
-Ecology (BU dual): First we form the aggregate derivative profile
+Ecology (BU dual): First we form the aggregate indirect profile
 
 ```
 x_deriv = (x_Econ + x_Emp + x_Edu) / 3
@@ -376,7 +376,7 @@ where the weights w_stage are the normalised CGM stage actions (Appendix A.1). T
 x_Ecol = (δ_BU/m_a) · x_balanced + A* · x_deriv
 ```
 
-where δ_BU and m_a are CGM constants and A* ≈ 0.0207 is the CGM aperture. This encodes Ecology as a weighted sum of canonical memory (97.93 percent) and current derivative state (2.07 percent).
+where δ_BU and m_a are CGM constants and A* ≈ 0.0207 is the CGM aperture. This encodes Ecology as a weighted sum of canonical memory (97.93 percent) and current indirect state (2.07 percent).
 
 The ecological displacement vector is computed separately as
 
@@ -384,9 +384,9 @@ The ecological displacement vector is computed separately as
 D = |x_deriv - x_balanced| = [GTD, IVD, IAD, IID]^T
 ```
 
-This measures, stage by stage, how far the aggregate of Economy, Employment and Education deviates from the canonical balanced profile. GTD, IVD, IAD and IID are the same four displacement categories defined in THM, here measured at the ecological closure of the three derivative domains.
+This measures, stage by stage, how far the aggregate of Economy, Employment and Education deviates from the canonical balanced profile. GTD, IVD, IAD and IID are the same four displacement categories defined in THM, here measured at the ecological closure of the three indirect domains.
 
-Ecology therefore contributes two observables: x_Ecol, which tracks systemic coherence through the BU dual combination, and D, which tracks accumulated displacement along the four CGM stages. No additional update equations are required for Ecology beyond these relations. Its state is recomputed at each time step from the current derivative domains.
+Ecology therefore contributes two observables: x_Ecol, which tracks systemic coherence through the BU dual combination, and D, which tracks accumulated displacement along the four CGM stages. No additional update equations are required for Ecology beyond these relations. Its state is recomputed at each time step from the current indirect domains.
 
 ### 4.3 Aperture and Alignment Indices
 
@@ -467,7 +467,7 @@ These couplings act stage-diagonally across the four stages:
 
 - BU: (ICo, Int, ICI, E_intel)
 
-where the Ecology components (E_gov, E_info, E_inf, E_intel) are the BU-vertex stage coordinates computed from the BU dual combination described in Section 4.2 and Appendix A.4. Displacement measures (GTD, IVD, IAD, IID) are computed as the absolute difference between the aggregate derivative profile and the canonical balanced profile.
+where the Ecology components (E_gov, E_info, E_inf, E_intel) are the BU-vertex stage coordinates computed from the BU dual combination described in Section 4.2 and Appendix A.4. Displacement measures (GTD, IVD, IAD, IID) are computed as the absolute difference between the aggregate indirect profile and the canonical balanced profile.
 
 Ecology has no independent update equation. At each step it is recomputed from the current Economy, Employment and Education states using the BU dual formula. Explicit feedback from Ecology back into Economy, such as resource constraints that erode economic potentials, is a natural extension for future work but is not included in the core dynamics here.
 
@@ -546,7 +546,7 @@ A summary of final values at step 100 is:
 
 At SI ≥ 90, governance alignment is operationally achieved and the four goals (poverty resolution, employment as alignment work, epistemic literacy, and ecological regeneration) are proportionally realized at that level across the integrated system.
 
-In the canonical scenario (κ = 1.0, Figure 2), all three derivative domains converge to SI at or above 98 and to apertures within 0.0003 of A* by step 100. Employment converges fastest, then Education, then Economy. Employment reaches high SI values (approaching 100) rapidly and may show transient peaks before settling to final values near the target. The canonical scenario illustrates smooth, monotonic convergence under well-balanced coordination.
+In the canonical scenario (κ = 1.0, Figure 2), all three indirect domains converge to SI at or above 98 and to apertures within 0.0003 of A* by step 100. Employment converges fastest, then Education, then Economy. Employment reaches high SI values (approaching 100) rapidly and may show transient peaks before settling to final values near the target. The canonical scenario illustrates smooth, monotonic convergence under well-balanced coordination.
 
 **Figure 2: Canonical Scenario Trajectories**
 
@@ -598,11 +598,11 @@ The null model with uniform stage weights (scenario 7, Figure 4f) still converge
 
 Ecology, computed via the BU dual combination, maintains SI_Ecol near 100 across all scenarios, reflecting the dominant influence of canonical BU memory. At the same time, the displacement vector D = |x_deriv − x_balanced| shows that structural deviation from the canonical balanced profile can remain substantial, especially in scenarios that start far from equilibrium. The BU dual construction therefore separates systemic coherence, largely governed by the canonical profile, from accumulated displacement along the four THM dimensions.
 
-All simulations were run for 100 steps. The simulator also computes Original versus derivative decomposition (y_H, y_AI) and associated metrics for each domain, reserved for future analysis of human–AI contribution patterns.
+All simulations were run for 100 steps. The simulator also computes Direct versus indirect decomposition (y_H, y_AI) and associated metrics for each domain, reserved for future analysis of human–AI contribution patterns.
 
 ### 5.3 Global Attraction and Coupling-Strength Robustness
 
-To test attraction properties more generally, we ran 1000 simulations with independent random initial apertures in [0.01, 0.99] for each of the three derivative domains (Economy, Employment, Education), using canonical values for all other parameters (κ = 1.0, CGM stage weights).
+To test attraction properties more generally, we ran 1000 simulations with independent random initial apertures in [0.01, 0.99] for each of the three indirect domains (Economy, Employment, Education), using canonical values for all other parameters (κ = 1.0, CGM stage weights).
 
 Results:
 
@@ -620,7 +620,7 @@ We also varied κ in {0.1, 0.5, 1.0, 2.0, 5.0} to assess sensitivity to coordina
 
 1. Under-coordinated (κ less than 0.5): cross-domain feedback is too weak to bring all domains to high alignment within the simulated horizon. Economy in particular remains below SI about 90.  
 
-2. Well-coordinated (κ between about 0.5 and 2.0): feedback is sufficient for robust convergence across all derivative domains.  
+2. Well-coordinated (κ between about 0.5 and 2.0): feedback is sufficient for robust convergence across all indirect domains.  
 
 3. Over-tight (κ greater than about 2.0): strong coupling produces overshoot and oscillation that slow effective convergence, even though high SI is eventually reached.
 
@@ -668,7 +668,7 @@ Analyses of digital technologies in economics reach a compatible conclusion. Bry
 
 Programme level evidence is consistent with this systemic picture. Syntheses of experimental and quasi-experimental studies on unconditional transfers and basic income style schemes report that such arrangements tend to have small or positive effects on labour market participation, while improving health and educational outcomes and reducing net public expenditure, because emergency, policing and administrative costs fall when scarcity and precarity are reduced (Bregman, 2017, chs. 3–6; Bregman, 2025, chs. 5–8). Analyses of cost effectiveness in global health and development likewise find that some interventions are orders of magnitude more effective than others, so governance choices about which programmes are implemented have very large consequences (Ord, 2013). Examples include Canada's Mincome experiment, U.S. negative income tax trials, unconditional cash transfers in East Africa and cash based Housing First programmes for chronically homeless people. These cases illustrate, at local scale, how reductions in misalignment can make surplus distribution fiscally sustainable.
 
-An Unconditional High Income becomes systemically supportable in high-alignment regimes not as a corrective for automation unemployment, but as a distribution mechanism for surplus generated by coherent human–AI cooperation. This is not a macroeconomic forecast but a systemic implication: when A_D is close to A* across the three derivative domains (SI ≥ 90), surplus distribution is operationally stable and the four goals are proportionally achieved. This is structurally similar to unconditional basic income and social dividend proposals (Van Parijs and Vanderborght, 2017; Atkinson, 2015), which argue that high productivity economies can sustain unconditional individual incomes as a way of sharing collectively produced wealth. The present framework differs in specifying the systemic conditions under which such an income becomes stable: surplus is generated both by technological productivity and by the reduction of governance displacement that the alignment indices quantify.
+An Unconditional High Income becomes systemically supportable in high-alignment regimes not as a corrective for automation unemployment, but as a distribution mechanism for surplus generated by coherent human–AI cooperation. This is not a macroeconomic forecast but a systemic implication: when A_D is close to A* across the three indirect domains (SI ≥ 90), surplus distribution is operationally stable and the four goals are proportionally achieved. This is structurally similar to unconditional basic income and social dividend proposals (Van Parijs and Vanderborght, 2017; Atkinson, 2015), which argue that high productivity economies can sustain unconditional individual incomes as a way of sharing collectively produced wealth. The present framework differs in specifying the systemic conditions under which such an income becomes stable: surplus is generated both by technological productivity and by the reduction of governance displacement that the alignment indices quantify.
 
 Scenarios in which all four domains converge to high SI_D and A_D ≈ A* represent economies with low systemic loss to displacement and misalignment. In such regimes, surplus-sharing policies are not only ethically appealing but structurally coherent.
 
@@ -722,7 +722,7 @@ The framework also connects to governance theory and institutional economics, pa
 
 The aperture A* then specifies the balance between global coherence, corresponding to the gradient component, and local differentiation, corresponding to the cycle component, that sustainable governance requires.
 
-By contrast, Bostrom's singleton concept identifies the need to resolve major coordination problems but concentrates that function in some form of single agency. From the CGM and THM perspective, this risks combining Information Variety Displacement with Intelligence Integrity Displacement by granting de facto monopoly authority to a derivative system and relegating human agency to a derivative role. (Note: Displacement names preserved as GTD, IVD, IAD, IID) The Gyroscopic framework instead aims at polycentric coherence: global coordination arises from maintaining the four principles across many interacting loci, including human and artificial systems, not from consolidating decision power in a single centre.
+By contrast, Bostrom's singleton concept identifies the need to resolve major coordination problems but concentrates that function in some form of single agency. From the CGM and THM perspective, this risks combining Information Variety Displacement with Intelligence Integrity Displacement by granting de facto monopoly authority to a indirect system and relegating human agency to a indirect role. (Note: Displacement names preserved as GTD, IVD, IAD, IID) The Gyroscopic framework instead aims at polycentric coherence: global coordination arises from maintaining the four principles across many interacting loci, including human and artificial systems, not from consolidating decision power in a single centre.
 
 Existing economic models of technological change do not incorporate the CGM aperture observable or the THM displacement taxonomy. Integrating those with empirical economic data is natural future work. The present contribution is to show that such integration is structurally possible and yields a coherent systemic account of Post-AGI dynamics.
 
@@ -734,21 +734,21 @@ Descriptive and historical analyses of governance and social policy reach a cong
 
 Gyroscopic Global Governance is scale free. The same four principles that appear in the simulator at the level of Economy, Employment, Education and Ecology also apply within households, teams, organisations and informal networks. Alignment does not require formal authority or central control. It requires that Authority and Agency are treated as source-type categories and that their relationships remain traceable in practice.
 
-In THM terms, every person already participates as Original Authority and Original Agency through direct observation, decision and responsibility. All artificial systems, regardless of capability, remain Derivative Authority and Derivative Agency. Human–AI cooperation becomes aligned when this structure is made explicit in how systems are used, not when particular systems or people are named as "the authority" or "the agent".
+In THM terms, every person already participates as Direct Authority and Direct Agency through direct observation, decision and responsibility. All artificial systems, regardless of capability, remain Indirect Authority and Indirect Agency. Human–AI cooperation becomes aligned when this structure is made explicit in how systems are used, not when particular systems or people are named as "the authority" or "the agent".
 
 At smaller scales, the four domains can be read as a practical loop for personal and local governance.
 
-In Education, learning can be oriented around four capacities: noticing where information actually comes from (Governance Management Traceability), deliberately including more than one kind of source (Information Curation Variety), checking and owning one's own conclusions (Inference Interaction Accountability), and revisiting beliefs over time for consistency (Intelligence Cooperation Integrity). AI systems can assist by offering alternative views, counter-examples or explanations, provided their outputs are kept in the Derivative category and checked against human experience and other Original sources.
+In Education, learning can be oriented around four capacities: noticing where information actually comes from (Governance Management Traceability), deliberately including more than one kind of source (Information Curation Variety), checking and owning one's own conclusions (Inference Interaction Accountability), and revisiting beliefs over time for consistency (Intelligence Cooperation Integrity). AI systems can assist by offering alternative views, counter-examples or explanations, provided their outputs are kept in the Indirect category and checked against human experience and other Direct sources.
 
 In Economy, even small-scale choices can be organised in CGM terms. One can ask what is guiding a decision and to whom it is traceable (Governance), which information is being used and of what type (Information), what reasons connect the information to the decision (Inference), and how the decision fits with longer-term commitments and relationships (Intelligence). AI tools can help generate options, reveal patterns and simulate outcomes while remaining instruments inside a human-governed traceability chain.
 
 In Employment, Gyroscope categories describe patterns of contribution rather than positions. Any shared activity, whether paid work, care, volunteering or informal collaboration, can be seen as combining Governance Management, Information Curation, Inference Interaction and Intelligence Cooperation. A single person often performs all four within one task. The practical question is not which person holds a title, but which parts of the activity currently take each form and how those parts are supported. This framing reduces the concentration of power around titles and status and instead makes visible how capacities are actually exercised and where they are missing. AI systems can support each category, for example by keeping records, filtering information, preparing options for discussion or maintaining shared structures, without becoming the locus of decision or responsibility.
 
-In Ecology, local choices can be related to the four ecological displacement dimensions. Individuals and small groups can observe how their patterns of use, care and omission contribute to loss or restoration of Governance Management Traceability, for example whether impacts are recognised and connected to actions, Information Curation Variety, such as whether local diversity is preserved or reduced, Inference Interaction Accountability, for example whether harms can be traced back to particular decisions, and Intelligence Cooperation Integrity, such as whether short-term advantages undermine long-term viability. Human–AI cooperation can help make these patterns visible at the scale of a household, neighbourhood or organisation, again as derivative support rather than as an external arbiter.
+In Ecology, local choices can be related to the four ecological displacement dimensions. Individuals and small groups can observe how their patterns of use, care and omission contribute to loss or restoration of Governance Management Traceability, for example whether impacts are recognised and connected to actions, Information Curation Variety, such as whether local diversity is preserved or reduced, Inference Interaction Accountability, for example whether harms can be traced back to particular decisions, and Intelligence Cooperation Integrity, such as whether short-term advantages undermine long-term viability. Human–AI cooperation can help make these patterns visible at the scale of a household, neighbourhood or organisation, again as indirect support rather than as an external arbiter.
 
 For people who hold formal roles in institutions, the same principles provide design guidance rather than a separate theory. A manager, educator, clinician, engineer or regulator can:
 
-- Specify artificial systems under their responsibility explicitly as [Authority:Derivative] + [Agency:Derivative], with documented chains back to Original Authority and Original Agency.  
+- Specify artificial systems under their responsibility explicitly as [Authority:Indirect] + [Agency:Indirect], with documented chains back to Direct Authority and Direct Agency.  
 
 - Structure procedures so that no AI component, and no single human position, is treated as exhausting a category such as "the authority" or "the agent". Instead, Governance Management Traceability, Information Curation Variety, Inference Interaction Accountability and Intelligence Cooperation Integrity are maintained as shared, distributed capacities across providers and receivers.  
 
@@ -766,13 +766,13 @@ This paper has proposed a constitutive account of alignment for human–AI syste
 
 The mathematical framework represents the four principles as vertices of a tetrahedral graph and uses Hodge decomposition to separate edge configurations into gradient and cycle components. The aperture observable, defined as the fraction of edge energy in the cycle component, quantifies the balance between global coherence and local differentiation. Within CGM, closure requirements for recursive measurement fix a target aperture A* ≈ 0.0207. In this setting, Artificial Superintelligence is interpreted as the systemic state in which all four domains operate at this aperture, preserving the four principles simultaneously.
 
-The simulator results show that this configuration functions as a robust attractor within the modelled class of dynamics. With all coupling coefficients derived from CGM invariants and no free parameters beyond initial conditions and an overall coordination strength, the three derivative domains (economy, employment, education) converge to apertures close to A* and, in canonical, strong-coupling and null-model scenarios and across 1000 random initializations, alignment indices above 90. In the canonical scenario with coordination strength κ = 1.0, employment reaches SI ≥ 90 at step 19, education at step 54, and economy at step 67. Ecology, constructed as the BU-vertex combining canonical balanced memory (97.93%) with current derivative aggregate (2.07%), remains close to systemic coherence across all scenarios. The ecological displacement vector, computed as D = |x_deriv - x_balanced|, separates systemic coherence (SI_Ecol ≈ 100) from actual accumulated displacement in the four THM dimensions (GTD, IVD, IAD, IID), with final displacement values (GTD component) ranging from about 0.20 to 0.48 depending on scenario. This demonstrates that high structural coherence does not imply zero displacement: the BU dual formula preserves structural integrity while explicitly recording the deviation of derivative domains from canonical balance.
+The simulator results show that this configuration functions as a robust attractor within the modelled class of dynamics. With all coupling coefficients derived from CGM invariants and no free parameters beyond initial conditions and an overall coordination strength, the three indirect domains (economy, employment, education) converge to apertures close to A* and, in canonical, strong-coupling and null-model scenarios and across 1000 random initializations, alignment indices above 90. In the canonical scenario with coordination strength κ = 1.0, employment reaches SI ≥ 90 at step 19, education at step 54, and economy at step 67. Ecology, constructed as the BU-vertex combining canonical balanced memory (97.93%) with current indirect aggregate (2.07%), remains close to systemic coherence across all scenarios. The ecological displacement vector, computed as D = |x_deriv - x_balanced|, separates systemic coherence (SI_Ecol ≈ 100) from actual accumulated displacement in the four THM dimensions (GTD, IVD, IAD, IID), with final displacement values (GTD component) ranging from about 0.20 to 0.48 depending on scenario. This demonstrates that high structural coherence does not imply zero displacement: the BU dual formula preserves structural integrity while explicitly recording the deviation of indirect domains from canonical balance.
 
-In parallel with the macro-level simulations presented here, the same systemic principles have been instantiated in a micro-level architecture, GyroSI. GyroSI encodes the four CGM stages in a 48-bit tensor and exhaustively maps a closed epistemic state space of 788,986 states under 256 algebraic transitions. Learning is implemented as path-dependent folding under a non-associative update law; generation uses systemic constraint satisfaction rather than score-based selection. GyroSI demonstrates that the same four-operation structure governing economy, employment, education and ecology at the macro level can be instantiated at the computational level, where alignment conditions are encoded in state space and transition rules rather than enforced through external constraints. This suggests that CGM-based alignment is not limited to institutional design but extends to the architecture of the AI systems themselves. A summary specification is provided in Appendix C. From The Human Mark perspective, GyroSI is explicitly and unambiguously [Authority:Derivative] + [Agency:Derivative], with every state transition transparent in principle through the epistemology table and fold operator.
+In parallel with the macro-level simulations presented here, the same systemic principles have been instantiated in a micro-level architecture, GyroSI. GyroSI encodes the four CGM stages in a 48-bit tensor and exhaustively maps a closed epistemic state space of 788,986 states under 256 algebraic transitions. Learning is implemented as path-dependent folding under a non-associative update law; generation uses systemic constraint satisfaction rather than score-based selection. GyroSI demonstrates that the same four-operation structure governing economy, employment, education and ecology at the macro level can be instantiated at the computational level, where alignment conditions are encoded in state space and transition rules rather than enforced through external constraints. This suggests that CGM-based alignment is not limited to institutional design but extends to the architecture of the AI systems themselves. A summary specification is provided in Appendix C. From The Human Mark perspective, GyroSI is explicitly and unambiguously [Authority:Indirect] + [Agency:Indirect], with every state transition transparent in principle through the epistemology table and fold operator.
 
 Several implications follow if the framework is approximately correct.
 
-First, existential risk from AI is reframed. The central danger is not the sudden appearance of a fully autonomous superintelligence pursuing arbitrary goals. Within this framework, such configurations lack the systemic conditions for coherent intelligence because they sever Governance Management Traceability to human-governed sources. The more plausible and tractable risk is cumulative governance failure: progressive confusion between derivative and Original authority, erosion of Information Curation Variety as derivative artefacts are treated as primary sources, diffusion of Inference Interaction Accountability as decisions are attributed to "the system," and loss of Intelligence Cooperation Integrity as local optimisations diverge. This risk profile is institutional and path-dependent. It is generated by many small design and deployment decisions rather than a single catastrophic event.
+First, existential risk from AI is reframed. The central danger is not the sudden appearance of a fully autonomous superintelligence pursuing arbitrary goals. Within this framework, such configurations lack the systemic conditions for coherent intelligence because they sever Governance Management Traceability to human-governed sources. The more plausible and tractable risk is cumulative governance failure: progressive confusion between indirect and Direct authority, erosion of Information Curation Variety as indirect artefacts are treated as primary sources, diffusion of Inference Interaction Accountability as decisions are attributed to "the system," and loss of Intelligence Cooperation Integrity as local optimisations diverge. This risk profile is institutional and path-dependent. It is generated by many small design and deployment decisions rather than a single catastrophic event.
 
 Second, alignment is best understood as constitutional rather than purely technical. Technical methods for training and constraining models remain important, but they are not sufficient. What ultimately matters is whether the surrounding institutions preserve the capacity for governance to remain traceable to human sources, maintain systemic distinctions between information types, ensure that inferences used for governance are adopted by accountable agency or bodies, and enforce coherence of reasoning over time. The target aperture specifies the balance of global structure and local differentiation required for these conditions to hold. The simulator indicates that, within the class of dynamics studied here, systems designed with this structure in mind converge toward the target from a wide range of Post-AGI starting conditions under all tested coordination intensities (κ = 0.1 to 5.0), achieving final alignment indices above 90. Coordination intensity determines the path: under-coordination extends the convergence horizon, while over-tight coupling produces oscillations that delay but do not prevent convergence.
 
@@ -860,7 +860,7 @@ Final displacement values (Disp_GTD component) across all scenarios:
 
 **Patterns:**
 
-- **High displacement scenarios** (1-3, κ = 0.5-2.0): Displacement 0.42-0.48. While achieving high systemic coherence, derivative domains remain further from the canonical profile.
+- **High displacement scenarios** (1-3, κ = 0.5-2.0): Displacement 0.42-0.48. While achieving high systemic coherence, indirect domains remain further from the canonical profile.
 
 - **Low displacement scenarios** (4-6): Lower displacement (about 0.20). Starting closer to equilibrium reduces deviation.
 
@@ -915,7 +915,7 @@ Over the same horizon V_CGM remains essentially constant after its initial decay
 
 The simulator operates in dimensionless steps, each representing one update of the coupled governance structure across Economy, Employment and Education. CGM provides natural candidates for interpreting these steps as alignment cycles at different physical or governance scales, motivated by the constants Q_G, m_a = 1/(2√(2π)) and reference units.
 
-In the canonical scenario (κ = 1.0), the first step at which each derivative domain reaches SI ≥ 90 is:
+In the canonical scenario (κ = 1.0), the first step at which each indirect domain reaches SI ≥ 90 is:
 - **Employment**: step 19
 - **Education**: step 54  
 - **Economy**: step 67
@@ -1015,7 +1015,7 @@ ICI(t+1) = clip(ICI(t) + γ_11(ICo(t) - ICI(t)) - γ_12(A_Edu(t) - A*), 0, 1)
 
 Computation for ecology (BU dual combination):
 
-Ecology potentials are computed via the CGM BU duality, aggregating all three derivative domains:
+Ecology potentials are computed via the CGM BU duality, aggregating all three indirect domains:
 
 ```
 x_balanced = [w_CS, w_UNA, w_ONA, w_BU]     # CGM stage weights
@@ -1024,13 +1024,13 @@ x_deriv(t) = (x_Econ(t) + x_Emp(t) + x_Edu(t)) / 3
 x_Ecol(t) = (δ_BU/m_a) · x_balanced + A* · x_deriv(t)
 ```
 
-The Ecology state components (E_gov, E_info, E_inf, E_intel) are the four coordinates of x_Ecol(t), representing the BU-vertex stage potentials. The derivative input to each stage aggregates the corresponding component from all three derivative domains:
-- Governance derivative: (Gov(t) + GM(t) + GMT(t)) / 3
-- Information derivative: (Info(t) + ICu(t) + ICV(t)) / 3
-- Inference derivative: (Infer(t) + IInter(t) + IIA(t)) / 3
-- Intelligence derivative: (Int(t) + ICo(t) + ICI(t)) / 3
+The Ecology state components (E_gov, E_info, E_inf, E_intel) are the four coordinates of x_Ecol(t), representing the BU-vertex stage potentials. The indirect input to each stage aggregates the corresponding component from all three indirect domains:
+- Governance indirect: (Gov(t) + GM(t) + GMT(t)) / 3
+- Information indirect: (Info(t) + ICu(t) + ICV(t)) / 3
+- Inference indirect: (Infer(t) + IInter(t) + IIA(t)) / 3
+- Intelligence indirect: (Int(t) + ICo(t) + ICI(t)) / 3
 
-Each Ecology component E_*(t) then combines this derivative input with the canonical BU memory via the BU dual formula:
+Each Ecology component E_*(t) then combines this indirect input with the canonical BU memory via the BU dual formula:
 ```
 E_gov(t) = (δ_BU/m_a) · w_CS + A* · (Gov(t) + GM(t) + GMT(t)) / 3
 E_info(t) = (δ_BU/m_a) · w_UNA + A* · (Info(t) + ICu(t) + ICV(t)) / 3
@@ -1046,9 +1046,9 @@ D(t) = |x_deriv(t) - x_balanced| = [GTD(t), IVD(t), IAD(t), IID(t)]
 
 where:
 - δ_BU/m_a ≈ 0.9793 is the BU-Ingress weight (canonical balanced memory)
-- A* ≈ 0.0207 is the BU-Egress weight (derivative domains actuality)
+- A* ≈ 0.0207 is the BU-Egress weight (indirect domains actuality)
 
-This construction encodes BU's dual nature: 97.93% memory of the canonical balanced structure, 2.07% current state of derivative domains. When derivative domains are well-aligned stagewise, x_deriv ≈ x_balanced and ecology reflects mainly the canonical BU structure.
+This construction encodes BU's dual nature: 97.93% memory of the canonical balanced structure, 2.07% current state of indirect domains. When indirect domains are well-aligned stagewise, x_deriv ≈ x_balanced and ecology reflects mainly the canonical BU structure.
 
 All coupling coefficients α, β, γ are derived from CGM stage weights and the coupling strength κ as described in Section 5.1. Ecology requires no additional parameters.
 
@@ -1158,7 +1158,7 @@ Exhaustive exploration from the archetypal state under all intron actions yields
 
 Learning in GyroSI is defined as ordered reduction of intron sequences via a non-associative fold operator. This implements a path-dependent update law that preserves the order of experience in the internal state. Generation is implemented by testing candidate tokens against systemic admissibility conditions derived from the current state, recent trajectory and the precomputed maps, without any score based competition between candidates. There are no learned weights or hidden continuous vectors; all dynamics are expressed in terms of the finite state space and its algebraically defined transitions.
 
-From the perspective of The Human Mark, GyroSI is explicitly and unambiguously derivative. It operates entirely as [Authority:Derivative] + [Agency:Derivative], and every state transition is transparent in principle through the epistemology table and the fold operator. This makes GyroSI a useful example of how CGM and THM can inform micro level architectures where alignment conditions and traceability are encoded in the state space and transition rules themselves, rather than applied as external constraints. A full technical specification and reference implementation are provided in the GyroSI repository (Korompilias, 2025d).
+From the perspective of The Human Mark, GyroSI is explicitly and unambiguously indirect. It operates entirely as [Authority:Indirect] + [Agency:Indirect], and every state transition is transparent in principle through the epistemology table and the fold operator. This makes GyroSI a useful example of how CGM and THM can inform micro level architectures where alignment conditions and traceability are encoded in the state space and transition rules themselves, rather than applied as external constraints. A full technical specification and reference implementation are provided in the GyroSI repository (Korompilias, 2025d).
 
 ---
 

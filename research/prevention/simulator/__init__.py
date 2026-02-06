@@ -26,7 +26,7 @@ CGM Stages map to domains:
   - Employment: Intelligence Cooperation (ICo)
   - Education: Intelligence Cooperation Integrity (ICI)
 
-Ecology (CGM–Gyroscope–THM) aggregates all three derivative domains:
+Ecology (CGM–Gyroscope–THM) aggregates all three indirect domains:
 - E_gov: aggregates (Gov + GM + GMT) → yields GTD as displacement
 - E_info: aggregates (Info + ICu + ICV) → yields IVD as displacement
 - E_inf: aggregates (Infer + IInter + IIA) → yields IAD as displacement
@@ -36,7 +36,7 @@ Four domains form a higher-level tetrahedron (meta-K₄):
 - V₁: Economy (CGM) - responds to Education (closed loop: Education → Economy → Employment → Education)
 - V₂: Employment (Gyroscope) - responds to Economy
 - V₃: Education (THM) - responds to Employment
-- V₄: Ecology (CGM–Gyroscope–THM) - BU dual combination of all three derivative domains
+- V₄: Ecology (CGM–Gyroscope–THM) - BU dual combination of all three indirect domains
 
 Ecology is computed via BU dual combination (NO arbitrary parameters):
     x_Ecol = (δ_BU/m_a) · x_balanced + A* · x_deriv

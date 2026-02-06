@@ -84,7 +84,7 @@ This is the reference trajectory. All domains converge smoothly to SI > 98.
 **Analysis:**
 This scenario simulates rapid, intense coordination.
 *   **Stage Profile:** The Governance component (Stg1) drops to 0.027 across domains. The system relies almost entirely on Information (Stg2 ~ 0.44) and Inference (Stg3 ~ 0.28).
-*   **Trade-off:** This is a hyper-efficient but structurally brittle regime. It achieves the highest SI scores and the lowest Accountability Displacement (IAD 0.0270), meaning the system is very responsive. However, it generates the highest Governance Traceability Displacement (GTD 0.4794). By bypassing explicit governance checks to achieve speed, the system hollows out governance traceability to Original human authority.
+*   **Trade-off:** This is a hyper-efficient but structurally brittle regime. It achieves the highest SI scores and the lowest Accountability Displacement (IAD 0.0270), meaning the system is very responsive. However, it generates the highest Governance Traceability Displacement (GTD 0.4794). By bypassing explicit governance checks to achieve speed, the system hollows out governance traceability to Direct human authority.
 
 ### 4.4 Scenario 4: Low Aperture Start (Rigid Governance)
 *   **Parameters:** Initial A < A*

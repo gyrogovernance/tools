@@ -8,13 +8,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.6-Mechanistic-Interpretability] - 2026-02-06
+## [1.7-Mechanistic-Interpretability] - 2026-02-06
 
 ### The Human Mark Brief and Mechanistic Interpretability Study
 
 **THM_Brief.md (New Document)**
 *   Defined the fundamental distinction between **Agency** as a source type category and an **agent** as an entity identifier.
-*   Established the epistemic foundation of **Direct** (Original) versus **Indirect** (Derivative) sources.
+*   Established the epistemic foundation of **Direct** versus **Indirect** sources.
 *   Documented the system prompt and role boundary tokens as the primary infrastructure of displacement.
 *   Expanded the framework scope to include the pervasive **category error culture** sustained across the wider data and interaction ecosystem.
 
@@ -39,7 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Preserved** displacement risk acronyms (GTD, IVD, IAD, IID) for consistency with existing research and documentation
 
-- **Renamed** all terminology from "Authentic" to "Original" throughout the codebase for better accessibility and clarity
+- **Renamed** all terminology from "Authentic" to "Direct" throughout the codebase for better accessibility and clarity
 
 - **Updated** all documentation, Python code, test files, and configuration files to reflect the new naming
 

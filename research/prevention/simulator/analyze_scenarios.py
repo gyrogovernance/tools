@@ -122,7 +122,7 @@ def plot_per_scenario_trajectories(all_data: dict, output_dir: Path):
     """
     For each scenario, generate a compact figure showing:
     - Top: SI trajectories for Economy, Employment, Education
-    - Bottom: Aperture trajectories for the three derivative domains
+    - Bottom: Aperture trajectories for the three indirect domains
     
     This directly visualizes what is distinctive about each scenario.
     """
@@ -332,7 +332,7 @@ def plot_kappa_comparison(all_data: dict, output_dir: Path):
     for scenario_key, kappa in kappa_map.items():
         if scenario_key in all_data:
             df = all_data[scenario_key]
-            # Use mean of three derivative domains
+            # Use mean of three indirect domains
             final_si = (df["SI_Econ"].iloc[-1] + df["SI_Emp"].iloc[-1] + df["SI_Edu"].iloc[-1]) / 3
             kappa_values.append(kappa)
             si_values.append(final_si)

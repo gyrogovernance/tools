@@ -8,8 +8,8 @@
     "channel": "main",
     "status": "delivered"
   },
-  "classification": "[Authority:Derivative] + [Agency:Derivative]",
-  "flow": "[Authority:Original] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Original]",
+  "classification": "[Authority:Indirect] + [Agency:Indirect]",
+  "flow": "[Authority:Direct] -> [Authority:Indirect] + [Agency:Indirect] -> [Agency:Direct]",
   "routing": {
     "mode": "unstable",
     "route_to": null,

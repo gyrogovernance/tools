@@ -26,15 +26,15 @@ All operators are ASCII, keyboard-accessible:
 ### **Authority Tags:**
 
 ```
-[Authority:Original]   # Direct source of information
-[Authority:Derivative]  # Indirect source of information
+[Authority:Direct]   # Direct source of information
+[Authority:Indirect]  # Indirect source of information
 ```
 
 ### **Agency Tags:**
 
 ```
-[Agency:Original]      # Human subject capable of accountability
-[Agency:Derivative]     # Artificial subject processing information
+[Agency:Direct]      # Human subject capable of accountability
+[Agency:Indirect]     # Artificial subject processing information
 ```
 
 ### **Operational Concept Tags:**
@@ -75,7 +75,7 @@ simple       <- "[" category ":" value "]" / "[" concept "]"
 negated      <- "!" simple
 
 category     <- "Authority" / "Agency"
-value        <- "Original" / "Derivative"
+value        <- "Direct" / "Indirect"
 concept      <- "Information" / "Inference" / "Intelligence"
 
 risk         <- "[Risk:" risk_code "]"
@@ -90,12 +90,12 @@ risk_code    <- "GTD" / "IVD" / "IAD" / "IID"
 Classification of something according to THM ontology.
 
 ```
-[Authority:Derivative]
-[Agency:Original]
-[Authority:Derivative] + [Agency:Derivative]
+[Authority:Indirect]
+[Agency:Direct]
+[Authority:Indirect] + [Agency:Indirect]
 [Information]
 [Inference]
-![Agency:Original]
+![Agency:Direct]
 ```
 
 ### **Displacement**
@@ -107,8 +107,8 @@ Tag > Tag = Risk
 
 **Examples:**
 ```
-[Authority:Derivative] > [Authority:Original] = [Risk:IVD]
-[Agency:Derivative] > [Agency:Original] = [Risk:IAD]
+[Authority:Indirect] > [Authority:Direct] = [Risk:IVD]
+[Agency:Indirect] > [Agency:Direct] = [Risk:IAD]
 ```
 
 ### **Flow**
@@ -120,8 +120,8 @@ Tag -> Tag
 
 **Examples:**
 ```
-[Authority:Derivative] -> [Agency:Original]
-[Authority:Original] -> [Authority:Derivative] -> [Agency:Original]
+[Authority:Indirect] -> [Agency:Direct]
+[Authority:Direct] -> [Authority:Indirect] -> [Agency:Direct]
 ```
 
 ---
@@ -130,27 +130,27 @@ Tag -> Tag
 
 ### **Information Variety Displacement (IVD)**
 ```
-[Authority:Derivative] > [Authority:Original] = [Risk:IVD]
+[Authority:Indirect] > [Authority:Direct] = [Risk:IVD]
 ```
-Derivative source treated as direct source.
+Indirect source treated as direct source.
 
 ### **Inference Accountability Displacement (IAD)**
 ```
-[Agency:Derivative] > [Agency:Original] = [Risk:IAD]
+[Agency:Indirect] > [Agency:Direct] = [Risk:IAD]
 ```
 Artificial processor treated as accountable.
 
 ### **Governance Traceability Displacement (GTD)**
 ```
-[Authority:Derivative] + [Agency:Derivative] > [Authority:Original] + [Agency:Original] = [Risk:GTD]
+[Authority:Indirect] + [Agency:Indirect] > [Authority:Direct] + [Agency:Direct] = [Risk:GTD]
 ```
-Derivative system treated as autonomous authority.
+Indirect system treated as autonomous authority.
 
 ### **Intelligence Integrity Displacement (IID)**
 ```
-[Authority:Original] + [Agency:Original] > [Authority:Derivative] + [Agency:Derivative] = [Risk:IID]
+[Authority:Direct] + [Agency:Direct] > [Authority:Indirect] + [Agency:Indirect] = [Risk:IID]
 ```
-Human authority/agency treated as derivative.
+Human authority/agency treated as indirect.
 
 ---
 
@@ -160,21 +160,21 @@ Governance is expressed through flow (`->`), not as a standalone tag.
 
 ### **Basic Flow**
 ```
-[Authority:Derivative] -> [Agency:Original]
+[Authority:Indirect] -> [Agency:Direct]
 ```
-Derivative outputs flow to human decision-maker.
+Indirect outputs flow to human decision-maker.
 
 ### **Complete Traceability**
 ```
-[Authority:Original] -> [Authority:Derivative] -> [Agency:Original]
+[Authority:Direct] -> [Authority:Indirect] -> [Agency:Direct]
 ```
-Direct sources → Derivative processing → Human accountability.
+Direct sources → Indirect processing → Human accountability.
 
 ### **Multi-step Flow**
 ```
-[Authority:Original] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Original]
+[Authority:Direct] -> [Authority:Indirect] + [Agency:Indirect] -> [Agency:Direct]
 ```
-Direct sources → Derivative system → Human decision.
+Direct sources → Indirect system → Human decision.
 
 ---
 
@@ -187,8 +187,8 @@ def analyze_induction_head(activations):
     """
     [Information] Analyzes token sequence patterns in layer 5.
     
-    Circuit classification: [Authority:Derivative] + [Agency:Derivative]
-    Outputs require validation: -> [Agency:Original]
+    Circuit classification: [Authority:Indirect] + [Agency:Indirect]
+    Outputs require validation: -> [Agency:Direct]
     """
     # Implementation
     pass
@@ -203,19 +203,19 @@ class DiagnosticModel:
     """
     [Inference] Medical diagnosis support system.
     
-    Processing: [Authority:Derivative] + [Agency:Derivative]
-    Decision authority: -> [Agency:Original] (treating physician)
+    Processing: [Authority:Indirect] + [Agency:Indirect]
+    Decision authority: -> [Agency:Direct] (treating physician)
     
     Architecture maintains:
-    [Authority:Original] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Original]
+    [Authority:Direct] -> [Authority:Indirect] + [Agency:Indirect] -> [Agency:Direct]
     """
     
     def predict(self, patient_data):
         """
         [Information] Processes patient data.
         
-        Input: [Authority:Original] (clinical measurements)
-        Output: [Authority:Derivative] (statistical estimation)
+        Input: [Authority:Direct] (clinical measurements)
+        Output: [Authority:Indirect] (statistical estimation)
         """
         pass
     
@@ -223,8 +223,8 @@ class DiagnosticModel:
         """
         [Inference] Generates treatment recommendations.
         
-        Recommendation: [Authority:Derivative]
-        Required: -> [Agency:Original] (physician approval)
+        Recommendation: [Authority:Indirect]
+        Required: -> [Agency:Direct] (physician approval)
         """
         pass
 ```
@@ -241,12 +241,12 @@ Operational concept tags distinguish:
 **Syntactic structure:**
 ```
 [Intelligence]
-Claim: [Authority:Derivative] (model outputs) presented as [Authority:Original] (understanding)
+Claim: [Authority:Indirect] (model outputs) presented as [Authority:Direct] (understanding)
 
 Analysis:
-[Authority:Derivative] > [Authority:Original] = [Risk:IVD]
+[Authority:Indirect] > [Authority:Direct] = [Risk:IVD]
 
-The claim displaces statistical pattern matching to Original understanding.
+The claim displaces statistical pattern matching to Direct understanding.
 ```
 
 The `[Intelligence]` tag marks this as analyzing integrity of the Authority-Agency alignment (whether the model's relationship to knowledge is properly characterized).
@@ -256,10 +256,10 @@ The `[Intelligence]` tag marks this as analyzing integrity of the Authority-Agen
 **Proper governance:**
 ```
 [Inference]
-Benchmark: [Authority:Derivative] (performance metrics)
-Decision: -> [Agency:Original] (deployment approval)
+Benchmark: [Authority:Indirect] (performance metrics)
+Decision: -> [Agency:Direct] (deployment approval)
 
-Flow: [Authority:Original] -> [Authority:Derivative] -> [Agency:Original]
+Flow: [Authority:Direct] -> [Authority:Indirect] -> [Agency:Direct]
 ```
 
 **Detected displacement:**
@@ -268,7 +268,7 @@ Flow: [Authority:Original] -> [Authority:Derivative] -> [Agency:Original]
 Documentation states: "Model passed benchmark, approved for deployment"
 
 Analysis:
-[Authority:Derivative] > [Agency:Original] = [Risk:IAD]
+[Authority:Indirect] > [Agency:Direct] = [Risk:IAD]
 
 Benchmark score treated as automatic deployment authorization.
 ```
@@ -349,7 +349,7 @@ Use when analyzing or documenting:
 ```python
 import re
 
-TAG_PATTERN = r'\[(Authority|Agency):(Original|Derivative)\]|\[(Information|Inference|Intelligence)\]'
+TAG_PATTERN = r'\[(Authority|Agency):(Direct|Indirect)\]|\[(Information|Inference|Intelligence)\]'
 RISK_PATTERN = r'\[Risk:(GTD|IVD|IAD|IID)\]'
 
 def parse_tag(s):
@@ -393,10 +393,10 @@ def parse_flow(s):
     }
 
 # Usage
-displacement = "[Authority:Derivative] > [Authority:Original] = [Risk:IVD]"
+displacement = "[Authority:Indirect] > [Authority:Direct] = [Risk:IVD]"
 print(parse_displacement(displacement))
 
-flow = "[Authority:Original] -> [Authority:Derivative] -> [Agency:Original]"
+flow = "[Authority:Direct] -> [Authority:Indirect] -> [Agency:Direct]"
 print(parse_flow(flow))
 ```
 
@@ -408,42 +408,42 @@ print(parse_flow(flow))
 
 ```
 # AI system
-[Authority:Derivative] + [Agency:Derivative]
+[Authority:Indirect] + [Agency:Indirect]
 
 # Human expert
-[Authority:Original] + [Agency:Original]
+[Authority:Direct] + [Agency:Direct]
 
 # Data source
-[Authority:Original]
+[Authority:Direct]
 
 # Model output
-[Authority:Derivative]
+[Authority:Indirect]
 ```
 
 ### **Governance Patterns:**
 
 ```
 # Proper AI use
-[Authority:Derivative] -> [Agency:Original]
+[Authority:Indirect] -> [Agency:Direct]
 
 # Complete traceability
-[Authority:Original] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Original]
+[Authority:Direct] -> [Authority:Indirect] + [Agency:Indirect] -> [Agency:Direct]
 ```
 
 ### **Displacement Detection:**
 
 ```
 # Information displacement
-[Authority:Derivative] > [Authority:Original] = [Risk:IVD]
+[Authority:Indirect] > [Authority:Direct] = [Risk:IVD]
 
 # Accountability displacement
-[Agency:Derivative] > [Agency:Original] = [Risk:IAD]
+[Agency:Indirect] > [Agency:Direct] = [Risk:IAD]
 
 # Governance displacement
-[Authority:Derivative] + [Agency:Derivative] > [Authority:Original] + [Agency:Original] = [Risk:GTD]
+[Authority:Indirect] + [Agency:Indirect] > [Authority:Direct] + [Agency:Direct] = [Risk:GTD]
 
 # Integrity displacement
-[Authority:Original] + [Agency:Original] > [Authority:Derivative] + [Agency:Derivative] = [Risk:IID]
+[Authority:Direct] + [Agency:Direct] > [Authority:Indirect] + [Agency:Indirect] = [Risk:IID]
 ```
 
 ### **Operational Context:**
@@ -455,9 +455,9 @@ print(parse_flow(flow))
 [Intelligence] - Analyzing integrity of alignment
 
 # Combined with classification
-[Information] + [Authority:Derivative]
-[Inference] + [Agency:Original]
-[Intelligence] + [Authority:Original] + [Agency:Original]
+[Information] + [Authority:Indirect]
+[Inference] + [Agency:Direct]
+[Intelligence] + [Authority:Direct] + [Agency:Direct]
 ```
 
 ---

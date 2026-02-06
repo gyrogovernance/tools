@@ -268,7 +268,7 @@ SI = 100/D            # Ranges from 0 to 100
 Ecology is **not a separate managed system** but the structural closure computed via:
 ```
 x_balanced = [w_CS, w_UNA, w_ONA, w_BU]  # CGM stage weights (canonical memory)
-x_deriv = (x_Econ + x_Emp + x_Edu)/3     # Aggregate derivative state
+x_deriv = (x_Econ + x_Emp + x_Edu)/3     # Aggregate indirect state
 
 x_Ecol = (δ_BU/m_a) · x_balanced + A* · x_deriv
 ```
@@ -282,7 +282,7 @@ D = |x_deriv - x_balanced| = [GTD, IVD, IAD, IID]
 - **SI_Ecol**: Structural coherence (dominated by 97.93% memory component)
 - **Displacement D**: Actual deviation from canonical balance
 
-When derivative domains align (x_deriv → x_balanced), displacement → 0.
+When indirect domains align (x_deriv → x_balanced), displacement → 0.
 
 ### Cross-Domain Coupling
 

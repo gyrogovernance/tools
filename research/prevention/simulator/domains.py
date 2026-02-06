@@ -15,37 +15,37 @@ class DomainStateBase:
     """
     Base class for domain states.
     
-    Provides THM decomposition tracking: y = y_authentic + y_derivative.
+    Provides THM decomposition tracking: y = y_direct + y_indirect.
     
     THM terminology:
-        - Original: self-governance contribution (local feedback)
-        - Derivative: cross-domain contribution (AI-mediated flow)
+        - Direct: self-governance contribution (local feedback)
+        - Indirect: cross-domain contribution (AI-mediated flow)
     """
     
     def __init__(self):
         self.y: Optional[np.ndarray] = None            # Edge vector (6D)
-        self.y_H: Optional[np.ndarray] = None          # Alias for y_authentic
-        self.y_AI: Optional[np.ndarray] = None         # Alias for y_derivative
-        self.y_authentic: Optional[np.ndarray] = None  # Original contribution
-        self.y_derivative: Optional[np.ndarray] = None # Derivative contribution
+        self.y_H: Optional[np.ndarray] = None          # Alias for y_direct
+        self.y_AI: Optional[np.ndarray] = None         # Alias for y_indirect
+        self.y_direct: Optional[np.ndarray] = None  # Direct contribution
+        self.y_indirect: Optional[np.ndarray] = None # Indirect contribution
     
     def set_decomposition(
         self, 
-        y_authentic: np.ndarray, 
-        y_derivative: np.ndarray
+        y_direct: np.ndarray, 
+        y_indirect: np.ndarray
     ):
         """
-        Sets Original and derivative components.
+        Sets Direct and indirect components.
         
         Args:
-            y_authentic: Self-governance contribution (6D).
-            y_derivative: Cross-domain contribution (6D).
+            y_direct: Self-governance contribution (6D).
+            y_indirect: Cross-domain contribution (6D).
         """
-        self.y_authentic = y_authentic
-        self.y_derivative = y_derivative
+        self.y_direct = y_direct
+        self.y_indirect = y_indirect
         # Maintain compatibility aliases
-        self.y_H = y_authentic
-        self.y_AI = y_derivative
+        self.y_H = y_direct
+        self.y_AI = y_indirect
     
     def get_human_gradient_fraction(
         self, 
@@ -53,7 +53,7 @@ class DomainStateBase:
         W: np.ndarray
     ) -> float:
         """
-        Computes ||P_grad @ y_authentic||^2_W / ||P_grad @ y||^2_W.
+        Computes ||P_grad @ y_direct||^2_W / ||P_grad @ y||^2_W.
         
         Args:
             P_grad: Gradient projection (6x6).
@@ -82,7 +82,7 @@ class DomainStateBase:
         W: np.ndarray
     ) -> float:
         """
-        Computes ||P_cycle @ y_derivative||^2_W.
+        Computes ||P_cycle @ y_indirect||^2_W.
         
         Args:
             P_cycle: Cycle projection (6x6).
@@ -261,9 +261,9 @@ class EcologyState(DomainStateBase):
     
     Where:
         - δ_BU/m_a ≈ 0.9793 is the Ingress weight (canonical balanced memory)
-        - A* ≈ 0.0207 is the Egress weight (derivative domains actuality)
+        - A* ≈ 0.0207 is the Egress weight (indirect domains actuality)
         - x_balanced = [w_CS, w_UNA, w_ONA, w_BU] (CGM stage weights)
-        - x_deriv = (x_Econ + x_Emp + x_Edu) / 3 (aggregate derivative domains)
+        - x_deriv = (x_Econ + x_Emp + x_Edu) / 3 (aggregate indirect domains)
     
     Potentials (BU-vertex stage coordinates):
         - E_gov: Ecological Governance (aggregates Gov + GM + GMT)

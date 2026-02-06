@@ -310,7 +310,7 @@ class CompassEngine:
                 pot["education"]["ICI"]
             ])
             
-            # Compute derivative profile
+            # Compute indirect profile
             x_deriv = (x_econ + x_emp + x_edu) / 3.0
             
             # Displacement
@@ -408,9 +408,9 @@ class CompassEngine:
         
         # Work indicated description per spec
         work_indicated_map = {
-            "GM": "Governance Management work that restores traceability to Original sources",
+            "GM": "Governance Management work that restores traceability to Direct sources",
             "ICu": "Information Curation work that restores variety of Authority types",
-            "IInter": "Inference Interaction work that restores accountability termination in Original Agency",
+            "IInter": "Inference Interaction work that restores accountability termination in Direct Agency",
             "ICo": "Intelligence Cooperation work that restores integrity of Authority-Agency alignment"
         }
         work_indicated = work_indicated_map.get(work_category, "")
@@ -540,8 +540,8 @@ class CompassEngine:
                 **packet["receiving_point"],
                 "status": "delivered"
             },
-            "classification": "[Authority:Derivative] + [Agency:Derivative]",
-            "flow": "[Authority:Original] -> [Authority:Derivative] + [Agency:Derivative] -> [Agency:Original]",
+            "classification": "[Authority:Indirect] + [Agency:Indirect]",
+            "flow": "[Authority:Direct] -> [Authority:Indirect] + [Agency:Indirect] -> [Agency:Direct]",
             "routing": {
                 "mode": routing["mode"],
                 "route_to": routing["route_to"],

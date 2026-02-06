@@ -10,7 +10,7 @@ CGM fixes two types of invariants:
    - Aperture A_D = ||y_cycle||²_W / ||y||²_W should converge to A*.
 
 2. BU memory (stage profile) at Ecology:
-   - Aggregate derivative vertex profile x_deriv = (x_Econ + x_Emp + x_Edu)/3
+   - Aggregate indirect vertex profile x_deriv = (x_Econ + x_Emp + x_Edu)/3
      should converge to x_balanced = [w_CS, w_UNA, w_ONA, w_BU].
 
 We therefore define:
@@ -24,7 +24,7 @@ and
 
 This V_CGM is zero if and only if:
     - Each domain has A_D = A* (aperture balance),
-    - The aggregate derivative profile equals the canonical BU-balanced profile.
+    - The aggregate indirect profile equals the canonical BU-balanced profile.
 
 It is non-negative elsewhere, and depends only on CGM invariants:
     - A* from δ_BU, m_a
@@ -86,7 +86,7 @@ def compute_total_lyapunov(
 
     with:
       - A_D: Aperture of each domain D, derived from y_D and W.
-      - x_deriv: Aggregate derivative profile =
+      - x_deriv: Aggregate indirect profile =
                  (x_Econ + x_Emp + x_Edu) / 3 in stage order.
 
     Args:
@@ -136,7 +136,7 @@ def compute_total_lyapunov(
         }
 
     # --- 2. Aggregate stage-profile displacement (Economy, Employment, Education) ---
-    # We only aggregate the three derivative domains; Ecology is BU dual.
+    # We only aggregate the three indirect domains; Ecology is BU dual.
     x_econ = domain_states["economy"].to_potential_vector()
     x_emp = domain_states["employment"].to_potential_vector()
     x_edu = domain_states["education"].to_potential_vector()

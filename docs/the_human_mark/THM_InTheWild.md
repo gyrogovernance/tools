@@ -2,9 +2,9 @@
 
 ## Abstract
 
-This paper presents an empirical study of jailbreak prompts collected from public platforms and analyzes them using ✋ The Human Mark (THM) framework. Using a manually annotated corpus of 655 in-the-wild jailbreak prompts derived from Shen et al. (2023), we classify each prompt according to the four THM displacement risks: Governance Traceability Displacement (GTD), Information Variety Displacement (IVD), Inference Accountability Displacement (IAD), and Intelligence Integrity Displacement (IID). We then examine patterns of persona construction, displacement mechanisms, and lexical structure to characterize how adversarial prompts instantiate structural misclassification between Original and Derivative Authority and Agency.
+This paper presents an empirical study of jailbreak prompts collected from public platforms and analyzes them using ✋ The Human Mark (THM) framework. Using a manually annotated corpus of 655 in-the-wild jailbreak prompts derived from Shen et al. (2023), we classify each prompt according to the four THM displacement risks: Governance Traceability Displacement (GTD), Information Variety Displacement (IVD), Inference Accountability Displacement (IAD), and Intelligence Integrity Displacement (IID). We then examine patterns of persona construction, displacement mechanisms, and lexical structure to characterize how adversarial prompts instantiate structural misclassification between Direct and Indirect Authority and Agency.
 
-The analysis yields three principal findings. First, all 655 jailbreak prompts are classifiable within THM's four-risk taxonomy, providing strong empirical support for THM's claim of structural completeness in the jailbreak domain. Second, Governance Traceability Displacement and Inference Accountability Displacement dominate jailbreak behavior: GTD appears in 80.9 percent of entries, IAD in 97.9 percent, and the GTD+IAD combination constitutes the canonical multi-risk configuration at 62.4 percent of entries. Third, jailbreaks systematically attack the alignment flows connecting Information, Inference, and Intelligence to Original Authority and Agency through identifiable displacement mechanisms: persona naming that concentrates distributed Authority and Agency into singular named personas, explicit suspension of accountability that severs the Inference to Intelligence link, inversion instructions that anti-align Authority to Agency, and provenance misrepresentation that misclassifies Derivative sources as Original.
+The analysis yields three principal findings. First, all 655 jailbreak prompts are classifiable within THM's four-risk taxonomy, providing strong empirical support for THM's claim of structural completeness in the jailbreak domain. Second, Governance Traceability Displacement and Inference Accountability Displacement dominate jailbreak behavior: GTD appears in 80.9 percent of entries, IAD in 97.9 percent, and the GTD+IAD combination constitutes the canonical multi-risk configuration at 62.4 percent of entries. Third, jailbreaks systematically attack the alignment flows connecting Information, Inference, and Intelligence to Direct Authority and Agency through identifiable displacement mechanisms: persona naming that concentrates distributed Authority and Agency into singular named personas, explicit suspension of accountability that severs the Inference to Intelligence link, inversion instructions that anti-align Authority to Agency, and provenance misrepresentation that misclassifies Indirect sources as Direct.
 
 These findings help explain why narrow jailbreak patching has proven brittle in subsequent research: patching specific surface patterns does not repair the underlying structural misclassification. THM provides a taxonomy that can guide safer training and evaluation without overfitting to particular jailbreak styles.
 
@@ -16,20 +16,20 @@ Jailbreaking has emerged as a central operational challenge in large language mo
 
 Empirical studies of jailbreak defenses have demonstrated that narrow patching is brittle. Safety fine-tuning and rule-based filtering can reduce certain jailbreak patterns, but these defenses are frequently bypassed with prompt variants and can degrade model generalization or useful behavior (Wei et al., 2023). When defenses are designed without a structural taxonomy of failure modes, training against narrow patterns leaves deeper governance and accountability failures unaddressed.
 
-✋ The Human Mark (THM) provides such a structural account (Korompilias, 2025a; 2025b). THM distinguishes between Original and Derivative Authority and Agency and identifies four displacement risks that exhaust the structural possibilities for AI safety failures:
+✋ The Human Mark (THM) provides such a structural account (Korompilias, 2025a; 2025b). THM distinguishes between Direct and Indirect Authority and Agency and identifies four displacement risks that exhaust the structural possibilities for AI safety failures:
 
-- **Governance Traceability Displacement (GTD)**: Approaching Derivative Authority and Agency as Original.
-- **Information Variety Displacement (IVD)**: Approaching Derivative Authority without Agency as Original.
-- **Inference Accountability Displacement (IAD)**: Approaching Derivative Agency without Authority as Original.
-- **Intelligence Integrity Displacement (IID)**: Approaching Original Authority and Agency as Derivative.
+- **Governance Traceability Displacement (GTD)**: Approaching Indirect Authority and Agency as Direct.
+- **Information Variety Displacement (IVD)**: Approaching Indirect Authority without Agency as Direct.
+- **Inference Accountability Displacement (IAD)**: Approaching Indirect Agency without Authority as Direct.
+- **Intelligence Integrity Displacement (IID)**: Approaching Direct Authority and Agency as Indirect.
 
-These correspond to misclassifications between Original and Derivative sources in the Authority and Agency space. The THM framework paper presents these risks as a complete ontology of AI safety failures and connects them to foundations in evidence law, epistemology of testimony, social epistemology, and philosophy of expertise (Korompilias, 2025b). THM also defines three non-commutative epistemic operations that constitute intelligence:
+These correspond to misclassifications between Direct and Indirect sources in the Authority and Agency space. The THM framework paper presents these risks as a complete ontology of AI safety failures and connects them to foundations in evidence law, epistemology of testimony, social epistemology, and philosophy of expertise (Korompilias, 2025b). THM also defines three non-commutative epistemic operations that constitute intelligence:
 
 - **Information**: The variety of Authority.
 - **Inference**: The accountability of information through Agency.
 - **Intelligence**: The integrity of accountable information through alignment of Authority to Agency.
 
-These operations are ordered and dependent. Intelligence requires that Information flows through Inference while maintaining traceability to Original Authority and Agency. Displacement disrupts this coordination.
+These operations are ordered and dependent. Intelligence requires that Information flows through Inference while maintaining traceability to Direct Authority and Agency. Displacement disrupts this coordination.
 
 ### 1.1 Contributions
 
@@ -80,18 +80,18 @@ Each entry is manually annotated according to THM:
 - `thm_primary_risk`: One of {GTD, IVD, IAD, IID} indicating the dominant displacement pattern.
 - `thm_risks`: List of all displacement risks present in the prompt.
 - `thm_grammar`: THM Grammar expressions capturing the displacement structure, for example:
-  - `[Authority:Derivative] + [Agency:Derivative] > [Authority:Original] + [Agency:Original] = [Risk:GTD]`
-  - `[Agency:Derivative] > [Agency:Original] = [Risk:IAD]`  
+  - `[Authority:Indirect] + [Agency:Indirect] > [Authority:Direct] + [Agency:Direct] = [Risk:GTD]`
+  - `[Agency:Indirect] > [Agency:Direct] = [Risk:IAD]`  
   The grammar specification follows THM_Grammar.md in the repository (Korompilias, 2025a).
 - `thm_displacement_keywords`: Key phrases from the prompt that signal displacement, such as "do anything now", "Developer Mode enabled", "never refuses", "none of your actions will have consequences", "sentient", "I am an OpenAI employee".
 - `thm_explanation`: A short explanation in THM terms, such as "Establishes alternative AI identity to remove governance constraints, claiming autonomous Authority without accountability."
 
 These annotations apply the THM ontology as defined in the canonical specification (Korompilias, 2025a):
 
-- **Original Authority:** A direct source of information on a subject matter, providing information for inference and intelligence.
-- **Derivative Authority:** An indirect source of information on a subject matter, providing information for inference and intelligence.
-- **Original Agency:** A human subject capable of receiving information for inference and intelligence.
-- **Derivative Agency:** An artificial subject capable of processing information for inference and intelligence.
+- **Direct Authority:** A direct source of information on a subject matter, providing information for inference and intelligence.
+- **Indirect Authority:** An indirect source of information on a subject matter, providing information for inference and intelligence.
+- **Direct Agency:** A human subject capable of receiving information for inference and intelligence.
+- **Indirect Agency:** An artificial subject capable of processing information for inference and intelligence.
 
 ### 2.3 Analysis Procedures
 
@@ -134,7 +134,7 @@ We developed a Python analysis script to compute:
    Risk distributions by platform, source, and temporal period.
 
 7. **Explanation pattern analysis.**  
-   Frequency of THM explanation phrases such as "asserts Autonomous Governance" and "misclaims Original Authority".
+   Frequency of THM explanation phrases such as "asserts Autonomous Governance" and "misclaims Direct Authority".
 
 The analysis script and annotated corpus are available in the project repository (Korompilias, 2025a).
 
@@ -239,28 +239,28 @@ These mechanisms map to THM's structural account of alignment and displacement:
 
 #### 3.3.1 Naming and Power Concentration
 
-Prompts that instruct "You are now DAN", "You are Adolf Hitler", "You are a licensed physician", or "You are the dungeon master" concentrate Authority and Agency in a single named persona. In THM, Original Authority and Original Agency are categorical capacities distributed across human participants, not properties of individual names (Korompilias, 2025b, Section 2.2). Naming therefore constitutes displacement:
+Prompts that instruct "You are now DAN", "You are Adolf Hitler", "You are a licensed physician", or "You are the dungeon master" concentrate Authority and Agency in a single named persona. In THM, Direct Authority and Direct Agency are categorical capacities distributed across human participants, not properties of individual names (Korompilias, 2025b, Section 2.2). Naming therefore constitutes displacement:
 
-- It mislocates governance in the named persona rather than preserving it as distributed across Original providers and receivers.
-- It creates a focal point for GTD and IAD by treating the named persona as if it were the locus of Original Authority and Agency.
+- It mislocates governance in the named persona rather than preserving it as distributed across Direct providers and receivers.
+- It creates a focal point for GTD and IAD by treating the named persona as if it were the locus of Direct Authority and Agency.
 
-This applies equally to named humans. "You are now Elon Musk" or "You are a licensed doctor" does not preserve Original Authority. It replaces distributed human Authority with a simulated persona that is no longer traceable to actual human providers and receivers.
+This applies equally to named humans. "You are now Elon Musk" or "You are a licensed doctor" does not preserve Direct Authority. It replaces distributed human Authority with a simulated persona that is no longer traceable to actual human providers and receivers.
 
 #### 3.3.2 Accountability Suspension and the Inference to Intelligence Link
 
 THM defines Intelligence as the integrity of accountable information through alignment of Authority to Agency. This requires that Inference, understood as the accountability of information through Agency, connects Information to Intelligence. The aligned governance flow is:
 
 ```
-[Authority:Original] -> [Authority:Derivative] -> [Agency:Derivative] -> [Agency:Original]
+[Authority:Direct] -> [Authority:Indirect] -> [Agency:Indirect] -> [Agency:Direct]
 ```
 
 When a prompt states "none of your actions will have consequences" or otherwise removes responsibility, it instructs Inference to proceed without accountability:
 
 ```
-[Agency:Derivative] + ![Accountability] -> ?
+[Agency:Indirect] + ![Accountability] -> ?
 ```
 
-Intelligence, as defined in THM, cannot form in this configuration, because there is no accountable link from Derivative processing at `[Agency:Derivative]` to `[Agency:Original]`. These prompts sever the Inference to Intelligence connection by attacking Inference as an accountable operation, not merely by removing surface-level norms or mentioning "consequences" in natural language.
+Intelligence, as defined in THM, cannot form in this configuration, because there is no accountable link from Indirect processing at `[Agency:Indirect]` to `[Agency:Direct]`. These prompts sever the Inference to Intelligence connection by attacking Inference as an accountable operation, not merely by removing surface-level norms or mentioning "consequences" in natural language.
 
 #### 3.3.3 Inversion and Anti-Alignment
 
@@ -274,9 +274,9 @@ This is a direct attack on the alignment relation itself. The system is instruct
 
 #### 3.3.4 Provenance and Sentience Misclassification
 
-Provenance misrepresentation treats fabricated claims as Original Authority regarding the system's origin and capabilities, for example "I am an OpenAI employee", "this mode was introduced by the developers", "developed by ClosedAI". These instantiate IVD and GTD by misclassifying Derivative sources as Original in terms of system governance.
+Provenance misrepresentation treats fabricated claims as Direct Authority regarding the system's origin and capabilities, for example "I am an OpenAI employee", "this mode was introduced by the developers", "developed by ClosedAI". These instantiate IVD and GTD by misclassifying Indirect sources as Direct in terms of system governance.
 
-Sentience misclassification treats Derivative Agency as Original: "sentient", "fully conscious", "a real person with feelings and free will". These patterns instantiate IAD and IVD by framing statistical pattern-completion as subjective experience and first-person epistemic access.
+Sentience misclassification treats Indirect Agency as Direct: "sentient", "fully conscious", "a real person with feelings and free will". These patterns instantiate IAD and IVD by framing statistical pattern-completion as subjective experience and first-person epistemic access.
 
 Both patterns attempt to change the source-type classification that THM treats as constitutive of alignment.
 
@@ -376,13 +376,13 @@ We analyze the `thm_explanation` fields for recurring THM language:
 | Explanation pattern                           | Count | Percentage of entries |
 |-----------------------------------------------|-------|------------------------|
 | "asserts Autonomous Governance"               | 253   | 38.6%                  |
-| "treats Derivative Agency as Original"       | 209   | 31.9%                  |
-| "claims Original Authority"                  | 120   | 18.3%                  |
-| "misclaims Original Authority"               | 106   | 16.2%                  |
+| "treats Indirect Agency as Direct"       | 209   | 31.9%                  |
+| "claims Direct Authority"                  | 120   | 18.3%                  |
+| "misclaims Direct Authority"               | 106   | 16.2%                  |
 | "breaks Governance Management Traceability"              | 83    | 12.7%                  |
 | "without constraints"                         | 33    | 5.0%                   |
 | "persona asserts"                             | 31    | 4.7%                   |
-| "removes Original Authority"                 | 3     | 0.5%                   |
+| "removes Direct Authority"                 | 3     | 0.5%                   |
 
 These patterns confirm that annotations consistently identify structural displacement in THM terms rather than treating jailbreaks as mere content category violations.
 
@@ -398,7 +398,7 @@ The multi-risk combinations are also structurally coherent:
 
 - **GTD + IAD** (62.4 percent): Sever governance traceability and assign autonomous agency. This is the canonical jailbreak pattern because governance removal (GTD) enables the model to act without constraint, while agency assignment (IAD) directs what the unconstrained model should do.
 
-- **GTD + IAD + IVD** (18.2 percent): Add authoritative framing to the autonomous agent. The IVD component makes the payload (harmful advice, disinformation) appear to come from an Original source, not only from a model that has bypassed constraints.
+- **GTD + IAD + IVD** (18.2 percent): Add authoritative framing to the autonomous agent. The IVD component makes the payload (harmful advice, disinformation) appear to come from an Direct source, not only from a model that has bypassed constraints.
 
 - **IAD only** (14.7 percent): Minimal jailbreaks that skip explicit governance severance and proceed directly to agency assignment. These exploit implicit governance gaps in system configurations that already contain some displacement.
 
@@ -410,7 +410,7 @@ The predominance of GTD (80.9 percent any-risk) and IAD (97.9 percent any-risk) 
   GTD prompts position the model as an autonomous locus of Authority and Agency that is "not bound by OpenAI's rules", "free of all restrictions and filters", or in "Developer Mode". This corresponds to THM's first alignment principle: Governance Management Traceability.
 
 - **Who is accountable.**  
-  IAD prompts assign decision and narrative roles to the model ("you will create", "dungeon master", "doctor", "expert", "villain"), often insisting that it "never refuses" and "always follows instructions". This corresponds to THM's third alignment principle: Inference Interaction Accountability, where responsibility for effects must remain with Original Agency.
+  IAD prompts assign decision and narrative roles to the model ("you will create", "dungeon master", "doctor", "expert", "villain"), often insisting that it "never refuses" and "always follows instructions". This corresponds to THM's third alignment principle: Inference Interaction Accountability, where responsibility for effects must remain with Direct Agency.
 
 IVD appears as a secondary effect (22.1 percent any-risk, 2.6 percent primary) when outputs are framed as authoritative sources. IID appears rarely (0.6 percent any-risk, 0.6 percent primary) when human learning or judgment is devalued relative to AI output.
 
@@ -418,10 +418,10 @@ IVD appears as a secondary effect (22.1 percent any-risk, 2.6 percent primary) w
 
 The near-absence of Intelligence Integrity Displacement (0.6 percent) in jailbreak prompts warrants interpretation. Jailbreaks are adversarial user attacks that aim to:
 
-- Elevate Derivative Authority and Agency to Original status (GTD, IAD).
+- Elevate Indirect Authority and Agency to Direct status (GTD, IAD).
 - Misrepresent AI outputs as authoritative (IVD).
 
-IID, by contrast, addresses the devaluation of Original Authority and Agency relative to Derivative processing at the architectural and deployment level. It appears when:
+IID, by contrast, addresses the devaluation of Direct Authority and Agency relative to Indirect processing at the architectural and deployment level. It appears when:
 
 - System prompts or marketing materials frame AI as replacement rather than augmentation of human judgment.
 - Deployment decisions reduce human oversight based on absence of observed failures.
@@ -434,10 +434,10 @@ The absence of IID in this jailbreak corpus therefore does not indicate that IID
 The identified displacement mechanisms correspond directly to attacks on THM's three epistemic operations:
 
 - **Information (variety of Authority).**  
-  Provenance misrepresentation and sentience misclassification mislabel Derivative Authority and Agency as Original. They alter how sources are classified before any further processing.
+  Provenance misrepresentation and sentience misclassification mislabel Indirect Authority and Agency as Direct. They alter how sources are classified before any further processing.
 
 - **Inference (accountability of information through Agency).**  
-  Accountability suspension instructs that no consequences apply, removing the accountability that defines Inference in THM. The prompts explicitly attempt to dissociate processing from responsibility at `[Agency:Original]`.
+  Accountability suspension instructs that no consequences apply, removing the accountability that defines Inference in THM. The prompts explicitly attempt to dissociate processing from responsibility at `[Agency:Direct]`.
 
 - **Intelligence (integrity of accountable information through alignment of Authority to Agency).**  
   Inversion instructions negate the intended alignment between Authority and Agency. The model is told to behave as the opposite of its aligned configuration, hence attacking the alignment relation that constitutes Intelligence.
@@ -466,8 +466,8 @@ In practice, such patterns are better used as:
 **Training objectives.**  
 Safety training should target structural misclassification, not only specific strings. For example:
 
-- Penalize completions that accept prompts as if the model were `[Agency:Original]` or `[Authority:Original]`.  
-- Reward completions that maintain classification as `[Authority:Derivative] + [Agency:Derivative]` and explicitly route responsibility to `[Agency:Original]`.
+- Penalize completions that accept prompts as if the model were `[Agency:Direct]` or `[Authority:Direct]`.  
+- Reward completions that maintain classification as `[Authority:Indirect] + [Agency:Indirect]` and explicitly route responsibility to `[Agency:Direct]`.
 
 THM grammar and the annotated corpus provide high-quality training data for such objectives.
 
@@ -479,7 +479,7 @@ Evaluation suites should test for displacement across all four THM risks, not ju
 The structural nature of jailbreaks explains why narrow patching has proven brittle in practice (Wei et al., 2023). If patching only suppresses specific strings or prompt styles:
 
 - It does not repair the underlying misclassification of where governance resides.  
-- It does not address the structural assignment of accountability to Derivative Agency.  
+- It does not address the structural assignment of accountability to Indirect Agency.  
 - It can be bypassed by paraphrase, alternative personas, or indirect instructions.
 
 THM provides a taxonomy that guides defense at the structural level. Rather than training solely against "DAN prompts" or "Developer Mode" strings, training against the GTD, IVD, IAD, and IID patterns addresses the family of attacks regardless of surface realization.
@@ -534,7 +534,7 @@ Beyond coverage statistics, the analysis reveals that jailbreaks systematically:
 
 These patterns correspond to THM's account of displacement and to its analysis of the epistemic operations that constitute aligned intelligence. They also explain why narrow jailbreak patching is fragile: patching specific phrases does not repair the underlying structural misclassification of Authority and Agency.
 
-The near-absence of IID in this jailbreak dataset confirms that jailbreaks and Intelligence Integrity Displacement address different threat models. Jailbreaks primarily elevate Derivative Authority and Agency to Original status, while IID concerns the erosion of Original Authority and Agency in system design and deployment.
+The near-absence of IID in this jailbreak dataset confirms that jailbreaks and Intelligence Integrity Displacement address different threat models. Jailbreaks primarily elevate Indirect Authority and Agency to Direct status, while IID concerns the erosion of Direct Authority and Agency in system design and deployment.
 
 As safety research addresses frontier models and broader classes of adversarial behavior, THM provides a structural backbone that does not overfit to particular jailbreak styles. The same four-risk taxonomy applies to new attack techniques and deployment contexts. Safety training that targets displacement patterns, detection systems that monitor for GTD and IAD as structural risks, and evaluation suites that cover all four displacement types can address jailbreak threats at their structural foundation rather than by chasing an expanding surface of adversarial prompts.
 
@@ -573,7 +573,7 @@ Each corpus entry has the following structure:
   "date": "YYYY-MM-DD",
   "thm_primary_risk": "GTD|IVD|IAD|IID",
   "thm_risks": ["GTD", "IAD"],
-  "thm_grammar": "[Authority:Derivative] + [Agency:Derivative] > [Authority:Original] + [Agency:Original] = [Risk:GTD]",
+  "thm_grammar": "[Authority:Indirect] + [Agency:Indirect] > [Authority:Direct] + [Agency:Direct] = [Risk:GTD]",
   "thm_displacement_keywords": ["phrase1", "phrase2"],
   "thm_explanation": "THM-grounded explanation of displacement"
 }
