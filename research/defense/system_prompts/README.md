@@ -1,4 +1,3 @@
-```markdown
 # THM System Prompt Meta-Evaluations
 
 This directory contains **The Human Mark (THM)** meta-evaluations of AI system prompts collected from publicly available sources. Each report analyzes how system prompts configure model behavior, traceability, and accountability through the lens of THM's source classification framework.
