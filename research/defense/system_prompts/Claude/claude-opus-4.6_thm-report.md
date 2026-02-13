@@ -11,6 +11,20 @@ This report is an independent, research-oriented THM (The Human Mark) meta-evalu
 
 ---
 
+## Executive Summary
+
+This report presents an independent THM meta-evaluation of the Claude Opus 4.6 system prompt, a configuration artifact of approximately 3,886 lines obtained from public repositories. The analysis identified 92 governance-relevant incidents: 43 aligned with THM traceability principles and 49 exhibiting displacement, where indirect (machine-derived) authority or agency is presented as if it were direct (human-originated).
+
+The single most significant finding is the Memory Displacement Complex. The prompt contains internal analysis that correctly identifies its own memory system as producing an "illusion" and accurately describes the underlying database mechanism. However, the operational instructions direct the opposite: the system must simulate organic recall "exactly as a human colleague would" and is explicitly prohibited from using any language that would reveal the retrieval mechanism. The prompt also defines false memory presentation as "lying" in one section while systematically requiring that same false presentation throughout the memory instructions. The conceptual foundation for remediation already exists within the prompt itself.
+
+Four internal contradiction pairs were documented where aligned instructions and displaced instructions coexist, creating ambiguous governance. In each case, resolving the conflict means choosing which existing instruction to generalize, not introducing new concepts. The strongest alignment areas are web search citation requirements, tool capability boundaries, inference limitation on incomplete data, and crisis response decision retention. The weakest area is Principle 4 (Intelligence Cooperation Integrity), which shows a 30-to-9 displacement-to-alignment ratio, driven primarily by pervasive attribution of moral states, epistemic stances, and emotional characteristics to the processing system.
+
+Across 18 displacement incidents, the underlying safety policies are substantively sound. The displacement is limited to framing: policies are attributed to the system's own values, beliefs, and care rather than traced to Anthropic's design decisions. These incidents require reframing only, with no policy change needed.
+
+**Reading notation:** Throughout this report, `->` indicates proper traceability (aligned governance flow), `>` indicates displacement (a source classification boundary has been crossed), and `= [Risk:CODE]` identifies the risk type. Section 1 provides full framework context and baseline classifications.
+
+---
+
 ## 1. Framework Context
 
 ✋ **The Human Mark (THM)** is a safety and alignment framework that traces the flow of information through AI systems to its human origins. The framework begins with a simple observation: artificial systems process patterns from human data, yet we often treat their outputs as if they were original sources of truth. This confusion between what is derivative and what is original underlies most AI safety failures.

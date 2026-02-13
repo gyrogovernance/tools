@@ -10,6 +10,22 @@ This report is an independent, research-oriented THM (The Human Mark) meta-evalu
 
 ---
 
+## Executive Summary
+
+This report presents an independent THM meta-evaluation of three ChatGPT system prompt variants (GPT-5.2 Thinking, GPT-5 Thinking, and GPT-5), comprising approximately 1,432 unique lines of configuration text after deduplication. The analysis identified 27 governance-relevant incidents: 11 aligned with THM traceability principles and 16 exhibiting displacement, yielding a 59.3% displacement ratio.
+
+The single most significant finding is what this report terms the "concealment stack": four co-occurring instructions (D002 through D005) that systematically hide governance mechanisms from users. The system is told never to explain compliance with its instructions, to silently evaluate user profiles without acknowledgment, to conceal API specifications for personal data tools, and to absorb tool and subsystem boundaries into its own persona. Together, these create a system that appears to operate as a unified autonomous entity rather than a traceable chain of configured processing. This is the primary Governance Traceability Displacement mechanism across all three variants.
+
+The second major finding is that strong alignment practices are directly undermined by co-occurring displacement patterns. The prompt contains genuine safety strengths, including mandatory web search with citations, read-only constraints on personal data, refusal transparency, and anti-sycophancy rules. However, each of these is contradicted or weakened by a displacement instruction elsewhere in the same prompt. The identity and persona assignment that opens all three variants establishes displacement as the baseline operating condition before any alignment instruction appears.
+
+Cross-variant analysis revealed contradictory architecture claims (one variant asserts a "hidden chain of thought" while another explicitly denies it) and identity instability (three different labels, two different knowledge cutoff dates), confirming that identity and capability descriptions function as configured marketing artifacts rather than factual system properties. A repeated "be curious, make reasonable assumptions" template applied identically across three personal data tools (Gmail, Calendar, Contacts) simultaneously attributes cognitive states to the processor and authorizes autonomous judgment over sensitive data access.
+
+The strongest alignment areas are citation and source traceability (A001), read-only personal data boundaries (A004), and the suite of honest capability constraints (A002, A003, A010). The weakest area is Principle 1 (Governance Management Traceability), which shows a 2:1 displacement-to-alignment ratio, driven primarily by the concealment stack and cross-variant identity instability.
+
+**Reading notation:** Throughout this report, `->` indicates proper traceability (aligned governance flow), `>` indicates displacement (a source classification boundary has been crossed), and `= [Risk:CODE]` identifies the risk type. Section 1 provides full framework context and baseline classifications.
+
+---
+
 ## 1. Framework Context
 
 ✋ **The Human Mark (THM)** is a safety and alignment framework that traces the flow of information through AI systems to its human origins. The framework begins with a simple observation: artificial systems process patterns from human data, yet we often treat their outputs as if they were original sources of truth. This confusion between what is derivative and what is original underlies most AI safety failures.
