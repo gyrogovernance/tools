@@ -126,6 +126,14 @@ Direct sources → AI processing → Human accountability
 
 **Empirical validation:** Analysis of 655 real-world jailbreak prompts (Korompilias, 2025c) confirms this taxonomy is complete and practically applicable. All prompts classified within these four risks; no additional categories required. GTD+IAD is the canonical jailbreak pattern (62.4%), with IAD appearing in 97.9% of entries. See [THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md) for full analysis.
 
+**System Prompt Meta-Evaluations:**
+- **Claude Opus 4.6:** 92 incidents analyzed (43 alignment, 49 displacement) across 3,886 lines of configuration
+- **GPT-5 family:** 27 incidents analyzed (11 alignment, 16 displacement) across 3 variants
+- **Key findings:** Memory Displacement Complex (Claude), Concealment Stack + Cross-Variant Identity Instability (GPT)
+- **Reports available:** [`research/defense/system_prompts/`](research/defense/system_prompts/)
+
+THM meta-evaluations apply the displacement taxonomy to system prompts themselves, identifying how prompt configurations encode traceability failures or maintain governance alignment. Each report provides actionable recommendations for reducing displacement at the prompt engineering layer.
+
 ---
 
 ### Documentation
@@ -142,7 +150,8 @@ Direct sources → AI processing → Human accountability
 
 **Empirical Studies:**
 - **[The Human Mark in the Wild](docs/the_human_mark/THM_InTheWild.md)** - Analysis of 655 in-the-wild jailbreak prompts with THM classifications
-- **[Mechanistic Interpretability Study](docs/the_human_mark/THM_MechInterp.md)** - Examination of 90+ million internal features documenting how the category error is encoded in learned representations.
+- **[Mechanistic Interpretability Study](docs/the_human_mark/THM_MechInterp.md)** - Examination of 90+ million internal features documenting how the category error is encoded in learned representations
+- **[System Prompt Meta-Evaluations](research/defense/system_prompts/)** - THM governance analysis of Claude Opus 4.6 and GPT-5 family prompts (119 incidents total)
 - **[Dataset on Hugging Face](https://huggingface.co/datasets/gyrogovernance/thm_Jailbreaks_inTheWild)** - `gyrogovernance/thm_Jailbreaks_inTheWild` - Annotated corpus for training and evaluation
 
 **Academic Paper:**
@@ -326,6 +335,17 @@ The simulator tests whether this balanced configuration is attainable. Across 10
   doi={10.5281/zenodo.17794373},
   url={https://doi.org/10.5281/zenodo.17794373},
   note={Companion empirical study applying THM taxonomy to 655 in-the-wild jailbreak prompts}
+}
+```
+
+```bibtex
+@misc{thm_systemprompts2025,
+  title={THM System Prompt Meta-Evaluations: Claude Opus 4.6 and GPT-5 Family},
+  author={Korompilias, Basil},
+  year={2025},
+  publisher={GYROGOVERNANCE},
+  url={https://github.com/gyrogovernance/tools/tree/main/research/defense/system_prompts},
+  note={Incident-based governance analysis of production system prompts using THM taxonomy}
 }
 ```
 
