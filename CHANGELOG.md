@@ -8,6 +8,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.8-THM_System-Prompts_Meta-Evals] - 2026-02-12, 2026-02-13
+
+**Type:** Research — System Prompt Meta-Evaluation  
+**Status:** Published
+
+### Changes
+
+**Added:**
+- Claude Opus 4.6 THM report (92 incidents: 43 alignment, 49 displacement)
+- GPT-5 family THM report (27 incidents: 11 alignment, 16 displacement)
+- Automated report scanner (`report_scan.py`) with grammar-consistent parsing
+- Report template and system_prompts folder README
+- Source material scope disclosure (line counts, incident density metrics)
+
+**Key Findings:**
+- Claude: 0.88:1 A:D ratio, 23.7 incidents/1k lines, Memory Displacement Complex pattern
+- GPT: 0.69:1 A:D ratio, 18.9 incidents/1k lines, Concealment Stack + Cross-Variant Identity Instability
+
+**Files:**
+```
+research/defense/system_prompts/
+├── README.md
+├── template-report.md
+├── Claude/
+│   ├── claude-opus-4.6_thm-report.md
+│   └── report_scan.py
+└── GPT/
+    ├── gpt-5-2-thinking_thm-report.md
+    └── report_scan.py
+```
+
+---
+
 ## [1.7-Mechanistic-Interpretability] - 2026-02-06
 
 ### The Human Mark Brief and Mechanistic Interpretability Study
