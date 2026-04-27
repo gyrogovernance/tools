@@ -5,6 +5,13 @@ All notable changes to the AI Quality Governance tools (Gyroscope and The Human 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+---
+
+## [1.9-THM_Update] - 2026-04-28
+
+### Changed
+
+- **Unified THM definition across all documentation files.** Introduced locked three-paragraph definition establishing THM as "a risk management taxonomy designed to prevent harms from AI power concentration by distinguishing knowledge capacity as a matter of temporal and topological origination of source-types." Authority and Agency now consistently described as "types of capacity, not identifications of entities or parties." Applied to README.md, THM_Brief.md, THM_Specs.md, and THM_Paper.md.
 
 ---
 

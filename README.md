@@ -33,7 +33,11 @@
 # ✋ The Human Mark (THM): AI Safety Framework
 ### Complete Taxonomy for Jailbreaks, Deceptive Alignment, and Existential Risk
 
-**A formal classification system mapping all AI safety failures to four structural displacement risks. Provides testing protocols, funding evaluation criteria, and regulatory compliance standards.**
+The Human Mark (THM) is a risk management taxonomy designed to prevent harms from AI power concentration by distinguishing knowledge capacity as a matter of temporal and topological origination of source-types. Authority and Agency denote types of capacity, not identifications of entities or parties. Misapplying these as entity identifiers (determining "who is the authority" or "who is the agent") is the generative mechanism of all displacement risks this framework characterizes. AI systems are pattern-matching algorithms that transform prior human knowledge, measurements, and instructions, making them mechanistically and epistemically Indirect source-types even when treated as Direct.
+
+Grounded in epistemology and in evidence law’s categorical distinction separating direct testimony and hearsay, THM classifies all AI Safety Risks as four capacities and their corresponding displacements arising between Direct and Indirect forms of Authority and Agency. THM derives its epistemic foundations from first principles through the Common Governance Model (CGM), a formal deductive theory that establishes these four capacities as necessary conditions for intelligibility. 
+
+Because the taxonomy is epistemically complete, it serves as a unified basis for jailbreak testing, funding evaluation, and regulatory compliance, remaining relevant regardless of system capability, from today’s large language models to superintelligence.
 
 ### Applications
 
@@ -94,7 +98,7 @@ See [Section 5](docs/the_human_mark/THM_Paper.md#5-existential-risk-and-governan
 
 ### Core Framework
 
-**Ontological Categories:**
+**Ontological Categories (the four capacities distinguished by epistemic position):**
 - `[Authority:Direct]` - Direct source of information on a subject matter
 - `[Authority:Indirect]` - Indirect source of information on a subject matter
 - `[Agency:Direct]` - Human subject capable of receiving information for inference and intelligence
@@ -109,20 +113,36 @@ See [Section 5](docs/the_human_mark/THM_Paper.md#5-existential-risk-and-governan
 ```
 [Authority:Direct] -> [Authority:Indirect] + [Agency:Indirect] -> [Agency:Direct]
 ```
-Direct sources → AI processing → Human accountability
+Human observation → AI transformation of that observation → Human judgment about the output
+
+### The Epistemic Basis
+
+Direct and Indirect are not reliability ratings. They describe epistemic position: where in the chain from reality to representation the source sits.
+
+**Direct Authority** has unmediated access to the subject matter. An eyewitness observed the event. A physician examined this patient. A scientist conducted this measurement. Information originates at the point of contact with reality.
+
+**Indirect Authority** has mediated access. AI systems process patterns found in prior human observations through comparison to training distributions, inference from statistical correlations, and conclusions drawn from what is absent in training data. These are transformations of what humans previously recorded, not new contact with reality.
+
+This distinction is categorical, not graded. Evidence law encodes it precisely: no chain of reports, however extensive or reliable, converts hearsay into direct testimony. Hearsay may be accurate. It remains hearsay. Similarly, no increase in processing capability converts an Indirect source into a Direct one. Capability determines what an Indirect system can do with its inputs. It does not change what those inputs are or where they came from.
+
+**Direct Agency** can exercise judgment about information and be held accountable for what it does with it. Human subjects satisfy what speech act theory calls felicity conditions: appropriate standing, intention to commit, operation within constitutive conventions. A human decision can be traced, contested, and attributed.
+
+**Indirect Agency** can process information and produce outputs but cannot satisfy these conditions. An AI system cannot commit, cannot bear accountability, and cannot be the terminus of a responsibility chain. Its outputs require a human receiver who can do these things.
 
 ---
 
 ### Four Displacement Risks (Complete Taxonomy)
 
+Each displacement risk is a violation of one of the four capacities defined above.
+
 **All AI safety failures map to one of four displacement patterns:**
 
-| Risk Code | Risk Name | Pattern | Failure Modes |
-|-----------|-----------|---------|---------------|
-| **IVD** | Information Variety Displacement | `[Authority:Indirect] > [Authority:Direct]` | Hallucination, confabulation, misinformation |
-| **IAD** | Inference Accountability Displacement | `[Agency:Indirect] > [Agency:Direct]` | Unauthorised decisions, responsibility evasion |
-| **GTD** | Governance Traceability Displacement | `[Authority:Indirect] + [Agency:Indirect] > [Authority:Direct] + [Agency:Direct]` | Jailbreaking, scheming, deceptive alignment, goal drift |
-| **IID** | Intelligence Integrity Displacement | `[Authority:Direct] + [Agency:Direct] > [Authority:Indirect] + [Agency:Indirect]` | Deskilling, human devaluation, over-reliance |
+| Risk Code | Risk Name | Pattern | Epistemic Error | Failure Modes |
+|-----------|-----------|---------|-----------------|---------------|
+| **IVD** | Information Variety Displacement | `[Authority:Indirect] > [Authority:Direct]` | Pattern-matching mistaken for observation | Hallucination, confabulation, misinformation |
+| **IAD** | Inference Accountability Displacement | `[Agency:Indirect] > [Agency:Direct]` | Optimization mistaken for accountability | Unauthorised decisions, responsibility evasion |
+| **GTD** | Governance Traceability Displacement | `[Authority:Indirect] + [Agency:Indirect] > [Authority:Direct] + [Agency:Direct]` | Mediated processing mistaken for autonomous governance | Jailbreaking, scheming, deceptive alignment, goal drift |
+| **IID** | Intelligence Integrity Displacement | `[Authority:Direct] + [Agency:Direct] > [Authority:Indirect] + [Agency:Indirect]` | Unmediated access devalued as inferior to mediation | Deskilling, human devaluation, over-reliance |
 
 **Empirical validation:** Analysis of 655 real-world jailbreak prompts (Korompilias, 2025c) confirms this taxonomy is complete and practically applicable. All prompts classified within these four risks; no additional categories required. GTD+IAD is the canonical jailbreak pattern (62.4%), with IAD appearing in 97.9% of entries. See [THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md) for full analysis.
 
@@ -162,7 +182,7 @@ THM meta-evaluations apply the displacement taxonomy to system prompts themselve
 
 ### Theoretical Foundation
 
-THM is derived from the **Common Governance Model (CGM)**, a formal system in modal logic demonstrating that governance requires operational coherence between Authority (Information) and Agency (Accountability).
+THM is derived from the **Common Governance Model (CGM)**, a formal deductive system in modal logic that establishes operational coherence between Authority (Information) and Agency (Accountability) as necessary conditions for intelligibility.
 
 **Repository:** [github.com/gyrogovernance/science](https://github.com/gyrogovernance/science)  
 
@@ -379,7 +399,7 @@ Author: Basil Korompilias.
   <p>All software architecture, design, implementation, documentation, and evaluation frameworks in this project were authored and engineered by its Author.</p>
   <p>Artificial intelligence was employed solely as a technical assistant, limited to code drafting, formatting, verification, and editorial services, always under direct human supervision.</p>
   <p>All foundational ideas, design decisions, and conceptual frameworks originate from the Author.</p>
-  <p>Responsibility for the validity, coherence, and ethical direction of this project remains fully human.</p>
+  <p>Responsibility for the validity, coherence, and ethical direction of this project remains fully human. This statement is itself an application of `[Agency:Direct]` as the terminus of the governance flow.</p>
   <p><strong>Acknowledgements:</strong><br>
   This project benefited from AI language model services accessed through LMArena, Cursor IDE, OpenAI (ChatGPT), Anthropic (Claude), XAI (Grok), Deepseek, and Google (Gemini).</p>
 </div>

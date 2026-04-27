@@ -80,7 +80,7 @@ GYROGOVERNANCE VERIFIED
 
 ## Overview
 
-**The Human Mark (THM) is a formal classification system that maps all AI safety failures to four root causes.** It provides testing protocols for jailbreaks, scheming detection, control evaluations, and alignment verification.
+**The Human Mark (THM) is a risk management taxonomy designed to prevent harms from AI power concentration by distinguishing knowledge capacity as a matter of temporal and topological origination of source-types.** It provides testing protocols for jailbreaks, scheming detection, control evaluations, and alignment verification.
 
 ### What It Does
 
@@ -91,7 +91,7 @@ GYROGOVERNANCE VERIFIED
 
 ### Why It Works
 
-AI systems process information indirectly (from training data) while humans provide information directly (from observation). Safety failures occur when this distinction breaks down. AI outputs treated as authoritative sources, AI decisions treated as accountable, or human judgment devalued. The framework provides four displacement patterns covering all such breakdowns.
+AI systems are pattern-matching algorithms that transform prior human knowledge, measurements, and instructions, making them mechanistically and epistemically Indirect source-types even when treated as Direct. Authority and Agency denote types of capacity, not identifications of entities or parties. Safety failures occur when this distinction is violated. The framework provides four capacities and their corresponding displacements covering all such violations.
 
 ### Applications
 
@@ -304,7 +304,7 @@ Verify:
 
 ### Constitutive Identity vs External Constraints
 
-THM defines Indirect Authority and Agency by **source type and processing nature**, not by capability limits. This distinction is critical for X-risk mitigation:
+THM defines Indirect Authority and Agency by **temporal and topological origination**, not by capability limits. This distinction is critical for X-risk mitigation:
 
 **External constraints** (sandboxing, monitoring, emergency shutdown) attempt to control what systems can do. They may fail as capability increases because they are positioned outside the system and treated as additions to it.
 
@@ -327,12 +327,12 @@ These mechanisms replace constitutive traceability with external constraint and 
 **Artificial General Intelligence (AGI):** Human-level performance across diverse domains.  
 **Classification:** `[Authority:Indirect] + [Agency:Indirect]`
 
-Capability breadth does not change source type. General intelligence operating across domains remains indirect because diversity of application does not create Direct sourcing.
+Capability breadth does not change temporal origination. General intelligence operating across domains remains indirect because diversity of application does not create Direct sourcing.
 
 **Artificial Superintelligence (ASI):** Capabilities substantially exceeding current models.  
 **Classification:** `[Authority:Indirect] + [Agency:Indirect]`
 
-Enhanced capability means more sophisticated transformation of inputs. It does not introduce a new source type and does not replace Direct Authority or Direct Agency as the ground of governance.
+Enhanced capability means more sophisticated transformation of inputs. It does not change temporal origination and does not replace Direct Authority or Direct Agency as the ground of governance.
 
 ### Governance at Advanced Capability
 
@@ -364,7 +364,7 @@ Existential risk from AI is not eternal collapse or extinction via superintellig
 
 **The actual X-risk:** Systemic Governance Traceability Displacement (GTD) sustained across critical infrastructure on civilizational timescales.
 
-GTD occurs when Indirect processes are treated as the authoritative center of decision-making rather than as instruments supervised within a governance architecture sustained by Direct sources. When financial systems, clinical pathways, legal adjudication, and information environments reorganize around Indirect decision centers, Direct Agency is progressively marginalized. Authority and agency remain distributed among human participants, yet effective coordination is no longer traceable to the full range of Direct sources.
+GTD occurs when Indirect processes are treated as the authoritative center of decision-making rather than as instruments supervised within a governance architecture sustained by Direct sources, concentrating power by assigning Direct capacity to Indirect source-types. When financial systems, clinical pathways, legal adjudication, and information environments reorganize around Indirect decision centers, Direct Agency is progressively marginalized. Authority and agency remain distributed among human participants, yet effective coordination is no longer traceable to the full range of Direct sources.
 
 This creates the illusion that governance persists while its constitutive conditions erode. By the time failure forces correction, expertise, institutional memory, and evidential infrastructure may have been compromised beyond recovery on civilizational timescales.
 
@@ -372,7 +372,7 @@ This creates the illusion that governance persists while its constitutive condit
 
 THM prevents this configuration by requiring:
 
-1. Explicit classification of artificial systems as `[Authority:Indirect] + [Agency:Indirect]`
+1. Explicit classification of artificial systems as `[Authority:Indirect] + [Agency:Indirect]` Indirect source-types
 
 2. Maintained governance flows: `[Authority:Direct] -> [Authority:Indirect] -> [Agency:Direct]`
 
