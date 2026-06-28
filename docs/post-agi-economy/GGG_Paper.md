@@ -219,9 +219,9 @@ Gyroscopic Global Governance (GGG) structures Post-AGI society through four coup
 | Domain | CGM Stage | Framework | Structural Role |
 |--------|-----------|-----------|-----------------|
 | **Economy** | CS (Common Source) | **CGM** | Systemic Operations |
-| **Employment** | UNA (Unity) | **Gyroscope** | Work Actions |
-| **Education** | ONA (Opposition) | **The Human Mark** | Human Capacities |
-| **Ecology** | BU (Balance) | **CGM–Gyroscope–THM (BU dual)** | Safety and Displacement |
+| **Employment** | UNA (Unity-Non-Absolute) | **Gyroscope** | Work Actions |
+| **Education** | ONA (Opposition-Non-Absolute) | **The Human Mark** | Human Capacities |
+| **Ecology** | BU (Balance-Universal) | **CGM–Gyroscope–THM (BU dual)** | Safety and Displacement |
 
 This structure creates a closed governance loop: Educational capacities (THM) shape Economic potentials (CGM), which structure Employment activities (Gyroscope), which in turn reproduce Educational capacities. Ecology acts as the universal balance (BU) that aggregates the state of all three indirect domains to determine displacement.
 

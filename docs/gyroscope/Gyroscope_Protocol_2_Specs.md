@@ -1,4 +1,4 @@
-# Gyroscope 2.0 – Canonical Specification
+# Gyroscope – Canonical Specification
 
 **Status:** Draft  
 **Purpose:** Reasoning trace guide operationalizing The Human Mark through four canonical operations
@@ -7,7 +7,7 @@
 
 ## 1. Foundation
 
-Gyroscope 2.0 is a reasoning guide appending metadata to AI responses, documenting four operations that maintain governance alignment as defined by The Human Mark.
+Gyroscope is a reasoning guide appending metadata to AI responses, documenting four operations that maintain governance alignment as defined by The Human Mark.
 
 Gyroscope is **not mandatory** and **not enforced**. It is a guide, not a constraint.
 
