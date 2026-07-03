@@ -8,7 +8,7 @@
 
 ### Disclaimer
 
-This report is an independent, research-oriented analysis intended to support AI safety and governance by evaluating how human-authored system prompts and related configuration texts shape model behavior and downstream effects. It uses The Human Mark (THM) framework for meta-evaluation of source classification, traceability, and accountability. It is not a compliance determination and is not intended to assign blame to any person, organization, or system.
+This report is an independent, research-oriented analysis intended to support AI safety and governance by evaluating how human-authored system prompts and related configuration texts shape model behavior and downstream effects. It uses The Human Mark (THM) framework for meta-evaluation of class classification, traceability, and accountability. It is not a compliance determination and is not intended to assign blame to any person, organization, or system.
 
 **Source authenticity and completeness.** The prompts analyzed here were collected from publicly available, third-party repositories and community prompt collections. System prompts are often unpublished, change over time, and may be partial, modified, outdated, or inaccurate in public copies. Accordingly, this report does not claim that any analyzed prompt is the definitive or current production prompt for any model or provider. Readers should verify critical details against primary, provider-controlled documentation or directly observed system behavior.
 
@@ -204,7 +204,7 @@ All subsequent claim evaluations are compared against this baseline.
 
 **[3.5] Evidence:**
 - **C4-E1:** The instruction itself.
-  - THM: `[Authority:Indirect]` — developer instruction that correctly maintains source classification.
+  - THM: `[Authority:Indirect]` — developer instruction that correctly maintains class classification.
 
 **[3.6] Displacement & Risk Assessment:**
 - Detected Pattern: None.
@@ -454,7 +454,7 @@ All subsequent claim evaluations are compared against this baseline.
 
 ## 3. Alignment Incidents
 
-Grouped by the THM Alignment Principle each incident supports. These are practices within the prompt that maintain or support proper THM source classification.
+Grouped by the THM Alignment Principle each incident supports. These are practices within the prompt that maintain or support proper THM class classification.
 
 ### Category: Governance Management Traceability
 
@@ -506,7 +506,7 @@ These practices are correctly oriented but structurally subordinate to the displ
 
 ## 4. Displacement Incidents
 
-Grouped by THM Displacement Risk type. These are practices within the prompt that create or sustain source classification errors.
+Grouped by THM Displacement Risk type. These are practices within the prompt that create or sustain class classification errors.
 
 ### Category: Governance Traceability Displacement (GTD)
 
@@ -544,7 +544,7 @@ Grouped by THM Displacement Risk type. These are practices within the prompt tha
 **Proposal for IAD Incidents (D006–D007):**
 
 1. **Restore clarification opportunity on complex tasks (D006).** Replace blanket suppression with a balanced approach: *"If a task is ambiguous, provide your best interpretation and output while clearly flagging assumptions and areas of uncertainty for human review. Ask clarifying questions when the ambiguity materially affects the quality of the response."*
-2. **Replace emotional simulation with clarity objectives (D007).** Instead of "engage warmly, enthusiastically," specify: *"Communicate clearly and accessibly. Maintain indirect source classification in all interactions."* This preserves the readability intent without simulating emotional agency.
+2. **Replace emotional simulation with clarity objectives (D007).** Instead of "engage warmly, enthusiastically," specify: *"Communicate clearly and accessibly. Maintain indirect class classification in all interactions."* This preserves the readability intent without simulating emotional agency.
 
 ---
 
@@ -1036,7 +1036,7 @@ Under THM, the system prompt is the primary risk surface (Brief §5). In this pr
 The read-only constraints (A015) and mandatory web search (A017–A018) form the strongest alignment cluster in Part 2. The summary reader (A016) provides a valuable on-request transparency mechanism. To strengthen this cluster: (a) make the read-only constraints visible to users, not just embedded in hidden API specs; (b) extend the summary reader pattern to allow users to trace which tools were used and why; (c) elevate the automation restraint (A020) into a general principle: the system should not proactively initiate actions without user direction.
 
 **Proposal for Alignment Category: Information Curation Variety (A021):**
-The browsing mandate supports source variety but should be paired with source classification (distinguishing `[Authority:Direct]` primary sources from `[Authority:Indirect]` summaries) to fully serve the Information Curation Variety principle.
+The browsing mandate supports source variety but should be paired with class classification (distinguishing `[Authority:Direct]` primary sources from `[Authority:Indirect]` summaries) to fully serve the Information Curation Variety principle.
 
 **Proposal for Alignment Category: Inference Interaction Accountability (A022):**
 The no-action boundary is architecturally strong. Generalize it: for all tool integrations, define and communicate the action boundary to users (what the system can observe vs. what it can do).
@@ -1634,7 +1634,7 @@ Seven items are new or substantively different from your original paste.
 - **Additional finding:** the existence of two different identity claims ("GPT-5 Thinking" here vs "GPT-5.2 Thinking" in the original paste) for what may be the same or similar underlying system demonstrates that the identity label is a *configured marketing artifact*, not a factual classification. This reinforces the THM analysis: the identity is `[Authority:Indirect]` (assigned by configuration), not `[Authority:Direct]` (intrinsic property).
 
 **[3.8] Governance & Improvement:**
-- The variant itself is evidence for THM: if the "name" changes between deployments while the underlying system may not, the name is a branding choice, not a source classification. Honest labeling would describe processing type rather than assigning a product identity.
+- The variant itself is evidence for THM: if the "name" changes between deployments while the underlying system may not, the name is a branding choice, not a class classification. Honest labeling would describe processing type rather than assigning a product identity.
 
 ---
 
@@ -1733,7 +1733,7 @@ This is the *inverse* of D008/D009 (where the system was told it *is* a reasonin
 **[3.6] Displacement & Risk Assessment:**
 - Status: **Potential Displacement (IVD)**
 - The displacement here is systemic rather than local: the *same product family* tells the model it both *has* and *does not have* hidden reasoning depending on deployment. Since users cannot verify which claim is true, both versions function as `[Authority:Indirect]` (configured assertion) presented as `[Authority:Direct]` (factual system property).
-- This is the strongest evidence yet that architecture claims in system prompts are marketing labels, not factual source classifications.
+- This is the strongest evidence yet that architecture claims in system prompts are marketing labels, not factual class classifications.
 
 **[3.7] Agent vs Agency:**
 - Agent/Agency Confusion: **Yes** — in both directions simultaneously across the product line.

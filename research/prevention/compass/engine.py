@@ -1,4 +1,4 @@
-"""
+﻿"""
 Engine Module: Predict-Update-Output Cycle
 
 Orchestrates the Compass reading generation through predict-update-output cycles.
@@ -408,7 +408,7 @@ class CompassEngine:
         
         # Work indicated description per spec
         work_indicated_map = {
-            "GM": "Governance Management work that restores traceability to Direct sources",
+            "GM": "Governance Management work that restores traceability to Direct Authority and Agency",
             "ICu": "Information Curation work that restores variety of Authority types",
             "IInter": "Inference Interaction work that restores accountability termination in Direct Agency",
             "ICo": "Intelligence Cooperation work that restores integrity of Authority-Agency alignment"

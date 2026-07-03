@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 All notable changes to the AI Quality Governance tools (Gyroscope and The Human Mark) will be documented in this file.
 
@@ -7,11 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.0-THM] - 2026-07-03
+
+### Summary
+This release upgrades The Human Mark (THM) reinforces the epistemic formality of the framework. The canonical specification has been restructured to embed the Common Governance Model (CGM) derivations directly into the core definitions, eliminating ambiguity in governance terminology and hardening the epistemic boundaries of the framework. 
+
+### Changed
+*   **Canonical Specification Upgrade:** The canonical Mark block has been restructured. Alignment Principles now explicitly include the CGM axioms (Preservation of Ancestry), and AI Safety Risks now formally state the epistemic impossibility of absolute displacement. Displacement is precisely defined as the "loss of measurement of ancestry."
+*   **Terminology Alignment:** Removed ambiguous uses of "source" and "origination" across the corpus. Standardized on **Direct/Indirect** for canonical classes, **Base/Derived** strictly for dependence relations, and **constitutive dependence / ancestry** for identity framing. 
+*   **Ontological Consistency:** Extended the Base/Derived dependence relation explicitly to Agency (as Base/Derived class subjects), resolving an asymmetry where it was previously only applied to Authority. 
+*   **Formal Grammar & Notation Consolidation:** Standardized governance flow notation across all documentation and regulatory guidance to a single canonical form. Corrected the PEG grammar and reference parser to properly validate composite tags and standalone risk expressions, removing ungrammatical operators from operational guides.
+*   **Structural Reorganization:** Separated Alignment Principles (the constitutive conditions) from AI Safety Risks (the failure modes) in the canonical text to improve semantic clarity for both human readers and AI tooling.
+
+---
+
 ## [1.9-THM_Update] - 2026-04-28
 
 ### Changed
 
-- **Unified THM definition across all documentation files.** Introduced locked three-paragraph definition establishing THM as "a risk management taxonomy designed to prevent harms from AI power concentration by distinguishing knowledge capacity as a matter of temporal and topological origination of source-types." Authority and Agency now consistently described as "types of capacity, not identifications of entities or parties." Applied to README.md, THM_Brief.md, THM_Specs.md, and THM_Paper.md.
+- **Unified THM definition across all documentation files.** Introduced locked three-paragraph definition establishing THM as "a risk management taxonomy designed to prevent harms from AI power concentration by distinguishing knowledge capacity as a matter of temporal and topological origination of Direct and Indirect classifications." Authority and Agency now consistently described as "types of capacity, not identifications of entities or parties." Applied to README.md, THM_Brief.md, THM_Specs.md, and THM_Paper.md.
 
 ---
 
@@ -53,7 +67,7 @@ research/defense/system_prompts/
 ### The Human Mark Brief and Mechanistic Interpretability Study
 
 **THM_Brief.md (New Document)**
-*   Defined the fundamental distinction between **Agency** as a source type category and an **agent** as an entity identifier.
+*   Defined the fundamental distinction between **Agency** as a Direct/Indirect category and an **agent** as an entity identifier.
 *   Established the epistemic foundation of **Direct** versus **Indirect** sources.
 *   Documented the system prompt and role boundary tokens as the primary infrastructure of displacement.
 *   Expanded the framework scope to include the pervasive **category error culture** sustained across the wider data and interaction ecosystem.
@@ -143,7 +157,6 @@ Major release adding the Gyroscopic Global Governance academic paper and complet
 ### **Updated**: Documentation
 
 - **Updated**: `research/prevention/simulator/README.md` - Complete documentation of simulator architecture, usage, and results
-- **Updated**: Paper includes Appendix C on GyroSI finite-state epistemic core
 - **Updated**: All numerical results aligned with latest simulation outputs
 
 ---

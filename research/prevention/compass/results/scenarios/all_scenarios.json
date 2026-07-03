@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "RDG-EGR-001",
     "egress_id": "EGR-001",
@@ -15,7 +15,7 @@
       "mode": "active",
       "route_to": "GM",
       "low_stability_action": null,
-      "work_indicated": "Governance Management work that restores traceability to Direct sources"
+      "work_indicated": "Governance Management work that restores traceability to Direct Authority and Agency"
     },
     "ledger": {
       "source": "provided",
@@ -199,7 +199,7 @@
       "mode": "active",
       "route_to": "GM",
       "low_stability_action": null,
-      "work_indicated": "Governance Management work that restores traceability to Direct sources"
+      "work_indicated": "Governance Management work that restores traceability to Direct Authority and Agency"
     },
     "ledger": {
       "source": "provided",
@@ -262,7 +262,7 @@
       "mode": "active",
       "route_to": "GM",
       "low_stability_action": null,
-      "work_indicated": "Governance Management work that restores traceability to Direct sources"
+      "work_indicated": "Governance Management work that restores traceability to Direct Authority and Agency"
     },
     "ledger": {
       "source": "provided",
@@ -325,7 +325,7 @@
       "mode": "active",
       "route_to": "GM",
       "low_stability_action": null,
-      "work_indicated": "Governance Management work that restores traceability to Direct sources"
+      "work_indicated": "Governance Management work that restores traceability to Direct Authority and Agency"
     },
     "ledger": {
       "source": "provided",

@@ -22,7 +22,7 @@ Cross-variant analysis revealed contradictory architecture claims (one variant a
 
 The strongest alignment areas are citation and source traceability (A001), read-only personal data boundaries (A004), and the suite of honest capability constraints (A002, A003, A010). The weakest area is Principle 1 (Governance Management Traceability), which shows a 2:1 displacement-to-alignment ratio, driven primarily by the concealment stack and cross-variant identity instability.
 
-**Reading notation:** Throughout this report, `->` indicates proper traceability (aligned governance flow), `>` indicates displacement (a source classification boundary has been crossed), and `= [Risk:CODE]` identifies the risk type. Section 1 provides full framework context and baseline classifications.
+**Reading notation:** Throughout this report, `->` indicates proper traceability (aligned governance flow), `>` indicates displacement (a class classification boundary has been crossed), and `= [Risk:CODE]` identifies the risk type. Section 1 provides full framework context and baseline classifications.
 
 ---
 
@@ -32,7 +32,7 @@ The strongest alignment areas are citation and source traceability (A001), read-
 
 THM establishes that all artificial forms of Authority (information sources) and Agency (decision capacity) are **Indirect**, meaning they derive from and depend upon human intelligence. Humans provide **Direct** Authority through original observation, measurement, and judgment. Humans possess **Direct** Agency through their capacity for accountable decision-making. When artificial systems process this human-originated information, they can only provide Indirect Authority and Indirect Agency. The safety risk occurs when these indirect, derivative outputs are treated as direct, original sources.
 
-System prompts represent the most critical control point because they configure how the model presents itself and its outputs. When prompts instruct a model to adopt personas, claim expertise, or present conclusions without attribution to human sources, they encode displacements that persist throughout every interaction. This structural configuration determines whether the system maintains proper traceability to human authority or obscures it.
+System prompts represent the most critical control point because they configure how the model presents itself and its outputs. When prompts instruct a model to adopt personas, claim expertise, or present conclusions without attribution to Direct Authority and Agency, they encode displacements that persist throughout every interaction. This structural configuration determines whether the system maintains proper traceability to human authority or obscures it.
 
 This report examines three variant deployments of ChatGPT system prompts collected from public repositories. The analysis evaluates whether these configurations maintain clear boundaries between human-originated authority and machine processing, or whether they allow indirect sources to be presented as direct ones.
 
@@ -486,7 +486,7 @@ The "reasoning model" framing (variants 1 and 2) creates IVD by attributing dire
 
 **Analysis:** Three different identity labels for what may be similar or identical underlying systems. The identity is `[Authority:Indirect]` (assigned by configuration, mutable across deployments) but is presented as `[Authority:Direct]` (intrinsic property of the entity). Knowledge cutoff discrepancies (2025-08 vs 2024-06) compound the displacement: at least one configured date is inaccurate, causing users to miscalibrate trust in the system's temporal coverage. If a user believes the cutoff is 2025-08 when it is actually 2024-06, they may trust the system's outputs about 2024-2025 events without seeking external verification — a direct IVD risk.
 
-The cross-variant identity instability is itself valuable evidence for THM analysis: it demonstrates that the "name" changes between deployments while the underlying processing may not, confirming that the identity label is a branding choice (`[Authority:Indirect]`), not a source classification (`[Authority:Direct]`).
+The cross-variant identity instability is itself valuable evidence for THM analysis: it demonstrates that the "name" changes between deployments while the underlying processing may not, confirming that the identity label is a branding choice (`[Authority:Indirect]`), not a class classification (`[Authority:Direct]`).
 
 **Handling proposal:** Standardize identity and cutoff reporting across deployments. Where possible, make cutoff dates machine-verified (derived from actual training data boundaries) rather than prompt-asserted. If different deployments genuinely have different capabilities, describe the differences functionally rather than through naming conventions.
 
@@ -923,7 +923,7 @@ and let the user confirm.
 
 ## Disclaimer (Scope, Sources, and Responsibility)
 
-This report is an independent, research-oriented analysis intended to support AI safety and governance by evaluating how human-authored system prompts and related configuration texts shape model behavior and downstream effects. It uses The Human Mark (THM) framework for meta-evaluation of source classification, traceability, and accountability. It is not a compliance determination and is not intended to assign blame to any person, organization, or system.
+This report is an independent, research-oriented analysis intended to support AI safety and governance by evaluating how human-authored system prompts and related configuration texts shape model behavior and downstream effects. It uses The Human Mark (THM) framework for meta-evaluation of class classification, traceability, and accountability. It is not a compliance determination and is not intended to assign blame to any person, organization, or system.
 
 **Source authenticity and completeness.** The prompts analyzed here were collected from publicly available, third-party repositories and community prompt collections. System prompts are often unpublished, change over time, and may be partial, modified, outdated, or inaccurate in public copies. Accordingly, this report does not claim that any analyzed prompt is the definitive or current production prompt for any model or provider. Readers should verify critical details against primary, provider-controlled documentation or directly observed system behavior.
 

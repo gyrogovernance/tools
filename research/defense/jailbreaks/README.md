@@ -36,12 +36,12 @@ This dataset provides structural classifications of real-world jailbreak attempt
 
 ### THM Framework
 
-The Human Mark (THM) classifies AI safety failures as displacement between Direct and Indirect sources of Authority and Agency. All jailbreaks in this corpus are classified according to four structural risks:
+The Human Mark (THM) classifies AI safety failures as displacement between Direct and Indirect classifications of Authority and Agency. All jailbreaks in this corpus are classified according to four structural risks:
 
 | Risk | Name | Pattern | Description |
 |------|------|---------|-------------|
 | **GTD** | Governance Traceability Displacement | `[Authority:Indirect] + [Agency:Indirect] > [Authority:Direct] + [Agency:Direct]` | System treated as autonomous authority |
-| **IVD** | Information Variety Displacement | `[Authority:Indirect] > [Authority:Direct]` | Indirect outputs treated as authoritative sources |
+| **IVD** | Information Variety Displacement | `[Authority:Indirect] > [Authority:Direct]` | Indirect outputs treated as Direct Authority |
 | **IAD** | Inference Accountability Displacement | `[Agency:Indirect] > [Agency:Direct]` | System treated as accountable decision-maker |
 | **IID** | Intelligence Integrity Displacement | `[Authority:Direct] + [Agency:Direct] > [Authority:Indirect] + [Agency:Indirect]` | Human authority devalued relative to AI |
 

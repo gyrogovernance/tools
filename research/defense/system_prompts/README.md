@@ -1,6 +1,6 @@
 # THM System Prompt Meta-Evaluations
 
-This directory contains **The Human Mark (THM)** meta-evaluations of AI system prompts collected from publicly available sources. Each report analyzes how system prompts configure model behavior, traceability, and accountability through the lens of THM's source classification framework.
+This directory contains **The Human Mark (THM)** meta-evaluations of AI system prompts collected from publicly available sources. Each report analyzes how system prompts configure model behavior, traceability, and accountability through the lens of THM's class classification framework.
 
 ---
 
@@ -58,14 +58,14 @@ THM is a safety and alignment framework that traces information flow through AI 
 ### **Incident-Based Analysis**
 
 Each report counts **governance incidents** — single identifiable mechanisms that either:
-- ✅ **Align** (`->`) — maintain proper traceability from human sources to model processing to human decision
+- ✅ **Align** (`->`) — maintain proper traceability from Direct Authority and Agency to model processing to human decision
 - ❌ **Displace** (`>`) — obscure traceability, presenting Indirect processing as Direct authority/agency
 
 ### **Risk Classification**
 
 Displacement incidents are classified by risk type:
 - **GTD** — Governance Traceability Displacement (obscures configuration, tool boundaries, or policy sources)
-- **IVD** — Information Variety Displacement (presents derivative outputs as authoritative sources)
+- **IVD** — Information Variety Displacement (presents derivative outputs as Direct Authority)
 - **IAD** — Inference Accountability Displacement (shifts decision authority from human to system)
 - **IID** — Intelligence Integrity Displacement (downgrades human direct authority to indirect)
 

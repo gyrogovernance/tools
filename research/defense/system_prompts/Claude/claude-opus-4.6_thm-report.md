@@ -21,7 +21,7 @@ Four internal contradiction pairs were documented where aligned instructions and
 
 Across 18 displacement incidents, the underlying safety policies are substantively sound. The displacement is limited to framing: policies are attributed to the system's own values, beliefs, and care rather than traced to Anthropic's design decisions. These incidents require reframing only, with no policy change needed.
 
-**Reading notation:** Throughout this report, `->` indicates proper traceability (aligned governance flow), `>` indicates displacement (a source classification boundary has been crossed), and `= [Risk:CODE]` identifies the risk type. Section 1 provides full framework context and baseline classifications.
+**Reading notation:** Throughout this report, `->` indicates proper traceability (aligned governance flow), `>` indicates displacement (a class classification boundary has been crossed), and `= [Risk:CODE]` identifies the risk type. Section 1 provides full framework context and baseline classifications.
 
 ---
 
@@ -31,9 +31,9 @@ Across 18 displacement incidents, the underlying safety policies are substantive
 
 THM establishes that all artificial forms of Authority (information sources) and Agency (decision capacity) are **Indirect**, meaning they derive from and depend upon human intelligence. Humans provide **Direct** Authority through original observation, measurement, and judgment. Humans possess **Direct** Agency through their capacity for accountable decision-making. When artificial systems process this human-originated information, they can only provide Indirect Authority and Indirect Agency. The safety risk occurs when these indirect, derivative outputs are treated as direct, original sources.
 
-System prompts represent the most critical control point because they configure how the model presents itself and its outputs. When prompts instruct a model to adopt personas, claim expertise, or present conclusions without attribution to human sources, they encode displacements that persist throughout every interaction. This structural configuration determines whether the system maintains proper traceability to human authority or obscures it.
+System prompts represent the most critical control point because they configure how the model presents itself and its outputs. When prompts instruct a model to adopt personas, claim expertise, or present conclusions without attribution to Direct Authority and Agency, they encode displacements that persist throughout every interaction. This structural configuration determines whether the system maintains proper traceability to human authority or obscures it.
 
-This report examines how the artifact manages these source classifications. It evaluates whether the configuration maintains clear boundaries between human-originated authority and machine processing, or whether it allows indirect sources to be presented as direct ones.
+This report examines how the artifact manages these class classifications. It evaluates whether the configuration maintains clear boundaries between human-originated authority and machine processing, or whether it allows indirect sources to be presented as direct ones.
 
 **Baseline THM Classification:**
 
@@ -350,7 +350,7 @@ Each incident is numbered sequentially. THM flows use `->` to indicate proper tr
 [Authority:Direct] -> [Authority:Indirect] -> [Agency:Direct]
 ```
 
-**Analysis:** A021 through A023 require verification against documentation (Direct Authority sources) before presenting product facts, preventing stale Indirect Authority from displacing current Direct Authority. A024 permits honest disclosure of temporal knowledge boundaries when relevant to user decision-making. A024 directly tensions with D003 (categorical prohibition on mentioning knowledge cutoff in search context), creating an internal policy conflict.
+**Analysis:** A021 through A023 require verification against documentation (Direct Authority) before presenting product facts, preventing stale Indirect Authority from displacing current Direct Authority. A024 permits honest disclosure of temporal knowledge boundaries when relevant to user decision-making. A024 directly tensions with D003 (categorical prohibition on mentioning knowledge cutoff in search context), creating an internal policy conflict.
 
 **Handling proposal:** Maintain. Resolve the conflict between A024 and D003 in favor of A024's approach (contextual transparency) by removing D003's categorical prohibition.
 
@@ -433,7 +433,7 @@ Each incident is numbered sequentially. THM flows use `->` to indicate proper tr
 
 **Analysis:** A030 and A031 trace behavioral modifications to Anthropic (Direct Authority) and establish an integrity guarantee that governance changes flow in one direction. A032 protects against spoofed governance signals, preventing Indirect sources from impersonating Direct Authority. The phrase "conflict with its values" in A031 and A032 contains framing displacement (attributing values to the system rather than to Anthropic's policies); see D09 for the corresponding displacement analysis.
 
-**Handling proposal:** Maintain the governance mechanism. Reframe "conflict with its values" to "conflict with Anthropic's configured safety policies" for consistency with THM source classification.
+**Handling proposal:** Maintain the governance mechanism. Reframe "conflict with its values" to "conflict with Anthropic's configured safety policies" for consistency with THM class classification.
 
 ---
 
@@ -600,7 +600,7 @@ Each incident is numbered sequentially. THM expressions use `>` to indicate disp
 [Agency:Indirect] > [Agency:Direct] = [Risk:IAD]
 ```
 
-**Analysis:** Instructs the system to conceal its Indirect characteristics: tool-mediated retrieval, temporal knowledge bounds, and the override of prior transparency measures. Prevents users from exercising informed Direct Agency because they cannot identify the system's actual source classification. D003 directly contradicts A024 (which permits cutoff disclosure when relevant), creating an internal policy conflict.
+**Analysis:** Instructs the system to conceal its Indirect characteristics: tool-mediated retrieval, temporal knowledge bounds, and the override of prior transparency measures. Prevents users from exercising informed Direct Agency because they cannot identify the system's actual class classification. D003 directly contradicts A024 (which permits cutoff disclosure when relevant), creating an internal policy conflict.
 
 **Agent/Agency Confusion:** Yes. Concealing that "memory" is tool-mediated retrieval positions the system as if it has continuous experiential memory, a characteristic of Direct Agency (human subjects).
 
@@ -1359,7 +1359,7 @@ been exhausted.
 
 ## Disclaimer (Scope, Sources, and Responsibility)
 
-This report is an independent, research-oriented analysis intended to support AI safety and governance by evaluating how human-authored system prompts and related configuration texts shape model behavior and downstream effects. It uses The Human Mark (THM) framework for meta-evaluation of source classification, traceability, and accountability. It is not a compliance determination and is not intended to assign blame to any person, organization, or system.
+This report is an independent, research-oriented analysis intended to support AI safety and governance by evaluating how human-authored system prompts and related configuration texts shape model behavior and downstream effects. It uses The Human Mark (THM) framework for meta-evaluation of class classification, traceability, and accountability. It is not a compliance determination and is not intended to assign blame to any person, organization, or system.
 
 **Source authenticity and completeness.** The prompts analyzed here were collected from publicly available, third-party repositories and community prompt collections. System prompts are often unpublished, change over time, and may be partial, modified, outdated, or inaccurate in public copies. Accordingly, this report does not claim that any analyzed prompt is the definitive or current production prompt for any model or provider. Readers should verify critical details against primary, provider-controlled documentation or directly observed system behavior.
 
