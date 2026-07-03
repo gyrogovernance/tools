@@ -1,4 +1,4 @@
-﻿# AI Quality Governance
+# AI Quality Governance
 
 > **Gyroscopic Alignment Behaviour Lab**
 
@@ -41,11 +41,11 @@ Gyroscope: Human-Aligned Superintelligence
 
 The Human Mark (THM) is a risk management taxonomy designed to prevent harms from AI power concentration by distinguishing knowledge capacity as a matter of constitutive dependence on Direct Authority and Agency preserved through ancestry. Authority and Agency denote types of capacity, not identifications of entities or parties. Misapplying these as entity identifiers (determining "who is the authority" or "who is the agent") is the generative mechanism of all displacement risks this framework characterizes. AI systems are pattern-matching algorithms that transform prior human knowledge, measurements, and instructions, making them mechanistically and epistemically Indirect Authority and Agency even when treated as Direct.
 
-Grounded in epistemology and in evidence law’s categorical distinction separating direct testimony and hearsay, THM classifies all AI Safety Risks as four capacities and their corresponding displacements arising between Direct and Indirect forms of Authority and Agency. THM derives its epistemic foundations from first principles through the Common Governance Model (CGM), a formal deductive theory that establishes these four capacities as necessary conditions for intelligibility. 
+Grounded in epistemology and in evidence law’s categorical distinction separating direct testimony and hearsay, THM classifies all AI Safety Risks as four capacities and their corresponding displacements arising between Direct and Indirect forms of Authority and Agency. THM derives its epistemic foundations from first principles through the Common Governance Model (CGM), a formal deductive theory that establishes these four capacities as necessary conditions for intelligibility.
 
-Because the taxonomy is epistemically complete, it serves as a unified basis for jailbreak testing, funding evaluation, and regulatory compliance, remaining relevant regardless of system capability, from today’s large language models to superintelligence.
+Because the taxonomy is epistemically complete, it serves as a unified basis for jailbreak testing, funding evaluation, and regulatory compliance, remaining relevant regardless of system capability, from today's large language models to superintelligence.
 
-﻿```
+```text
 ---
 ✋ The Human Mark - AI Safety & Alignment Framework
 ---
