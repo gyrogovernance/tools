@@ -11,6 +11,7 @@ Defines constants derived from the Common Governance Model:
 Reference: CGM Paper Section 3
 """
 
+import math
 import numpy as np
 from typing import Dict
 
@@ -30,11 +31,32 @@ M_A = 1 / (2 * np.sqrt(2 * np.pi))
 # Quantum gravity horizon
 Q_G = 4 * np.pi  # Q_G = 4π ≈ 12.566
 
-# BU monodromy defect
-DELTA_BU = 0.195342176580  # δ_BU ≈ 0.1953 rad
 
-# Canonical aperture: A* = 1 - δ_BU/m_a ≈ 0.0207
-A_STAR = 1 - (DELTA_BU / M_A)
+def _half_rapidity_tanh(beta: float) -> float:
+    """Beltrami–Klein half-rapidity map k(β) = β / (1 + √(1 − β²))."""
+    b = float(beta)
+    if not (0.0 <= b < 1.0):
+        raise ValueError("beta must satisfy 0 <= beta < 1")
+    return b / (1.0 + math.sqrt(1.0 - b * b))
+
+
+def bu_holonomy_angle(
+    theta_ona: float | None = None,
+    m_a: float | None = None,
+) -> float:
+    """
+    Analytic BU Dual-Pole Loop angle under the declared CGM embedding.
+
+    δ_BU = 4 · arctan(k(θ_ONA) · k(m_a)), with θ_ONA = π/4 at the canonical thresholds.
+    """
+    th = float(np.pi / 4) if theta_ona is None else float(theta_ona)
+    ma = float(M_A) if m_a is None else float(m_a)
+    return 4.0 * math.atan(_half_rapidity_tanh(th) * _half_rapidity_tanh(ma))
+
+
+# BU holonomy angle and continuous aperture gap (simulator A*)
+DELTA_BU = bu_holonomy_angle()  # ≈ 0.195342178258 rad
+A_STAR = 1.0 - (DELTA_BU / M_A)  # Δ ≈ 0.020699545503
 
 # Default initial aperture for Post-AGI deployment states
 # Based on GGG paper estimates: current Post-AGI deployment states around A ≈ 0.12–0.15

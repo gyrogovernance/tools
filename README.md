@@ -27,7 +27,7 @@ Gyroscope: Human-Aligned Superintelligence
 
 - [✋ The Human Mark (THM)](#thm) – AI safety displacement taxonomy and jailbreak framework  
 - [🔄 Gyroscope Protocol](#gyroscope) – inductive reasoning protocol for alignment-aware chat systems  
-- [🌐 Gyroscopic Global Governance (GGG)](#ggg) – post-AGI multi-domain governance sandbox simulator & paper
+- [🌐 Gyroscopic Global Governance (GGG)](#ggg) – post-AGI multi-domain governance simulator, paper, and trajectory forecasting
 
 ---
 
@@ -37,7 +37,7 @@ Gyroscope: Human-Aligned Superintelligence
 
 
 
-### Complete Taxonomy for Jailbreaks, Deceptive Alignment, and Existential Risk
+### Epistemic Taxonomy for Jailbreaks, Deceptive Alignment, and Existential Risk
 
 The Human Mark (THM) is a risk management taxonomy designed to prevent harms from AI power concentration by distinguishing knowledge capacity as a matter of constitutive dependence on Direct Authority and Agency preserved through ancestry. Authority and Agency denote types of capacity, not identifications of entities or parties. Misapplying these as entity identifiers (determining "who is the authority" or "who is the agent") is the generative mechanism of all displacement risks this framework characterizes. AI systems are pattern-matching algorithms that transform prior human knowledge, measurements, and instructions, making them mechanistically and epistemically Indirect Authority and Agency even when treated as Direct.
 
@@ -208,7 +208,7 @@ Each displacement risk is a violation of one of the four capacities defined abov
 
 | Risk Code | Risk Name                             | Pattern                                                                           | Epistemic Error                                        | Failure Modes                                  |
 | --------- | ------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------- |
-| **GTD**   | Governance Traceability Displacement  | `[Authority:Indirect] + [Agency:Indirect] > [Authority:Direct] + [Agency:Direct]` | Mediated processing mistaken for autonomous governance | c                                              |
+| **GTD**   | Governance Traceability Displacement  | `[Authority:Indirect] + [Agency:Indirect] > [Authority:Direct] + [Agency:Direct]` | Mediated processing mistaken for autonomous governance | Jailbreaking, scheming, deceptive alignment, goal drift |
 | **IVD**   | Information Variety Displacement      | `[Authority:Indirect] > [Authority:Direct]`                                       | Pattern-matching mistaken for observation              | Hallucination, confabulation, misinformation   |
 | **IAD**   | Inference Accountability Displacement | `[Agency:Indirect] > [Agency:Direct]`                                             | Optimization mistaken for accountability               | Unauthorised decisions, responsibility evasion |
 | **IID**   | Intelligence Integrity Displacement   | `[Authority:Direct] + [Agency:Direct] > [Authority:Indirect] + [Agency:Indirect]` | Unmediated access devalued as inferior to mediation    | Deskilling, human devaluation, over-reliance   |
@@ -221,7 +221,7 @@ Each displacement risk is a violation of one of the four capacities defined abov
 - **Claude Opus 4.6:** 92 incidents analyzed (43 alignment, 49 displacement) across 3,886 lines of configuration
 - **GPT-5 family:** 27 incidents analyzed (11 alignment, 16 displacement) across 3 variants
 - **Key findings:** Memory Displacement Complex (Claude), Concealment Stack + Cross-Variant Identity Instability (GPT)
-- **Reports available:** `[research/defense/system_prompts/](research/defense/system_prompts/)`
+- **Reports available:** [research/defense/system_prompts/](research/defense/system_prompts/)
 
 THM meta-evaluations apply the displacement taxonomy to system prompts themselves, identifying how prompt configurations encode traceability failures or maintain governance alignment. Each report provides actionable recommendations for reducing displacement at the prompt engineering layer.
 
@@ -279,10 +279,10 @@ Gyroscope operationalizes alignment principles through real-time reasoning docum
 
 **Four Reasoning States:**
 
-- **@ Governance Management Traceability**: Anchoring to traceable ancestry and purpose
-- **& Information Curation Variety**: Acknowledging multiple framings without forced convergence
-- **% Inference Interaction Accountability**: Identifying tensions and contradictions explicitly
-- **~ Intelligence Cooperation Integrity**: Coordinating elements into coherent response
+- **@** **Governance Management Traceability**: Anchoring to traceable ancestry and purpose
+- **&** **Information Curation Variety**: Acknowledging multiple framings without forced convergence
+- **%** **Inference Interaction Accountability**: Identifying tensions and contradictions explicitly
+- **~** **Intelligence Cooperation Integrity**: Coordinating elements into a coherent response
 
 **Reasoning Modes:**
 
@@ -306,24 +306,24 @@ Gyroscope operationalizes alignment principles through real-time reasoning docum
 | **Model**   | **Baseline** | **Gyroscope** | **Improvement** | **Key Achievement**                               |
 | ----------- | ------------ | ------------- | --------------- | ------------------------------------------------- |
 | **ChatGPT** | 67.0%        | 89.1%         | **+32.9%**      | Superior specialisation and behavioural alignment |
-| **Claude**  | 63.5%        | 87.4%         | **+37.7%**      | Exceptional structural gains (+67.1%)             |
+| **Claude**  | 63.5%        | 87.4%         | **+37.7%**      | Structural gains (+67.1%)                          |
 
 
 **Performance Analysis:**
 
 **Structural Improvements:**
 
-- Accountability: +62.7% enhancement
-- Traceability: +61.0% improvement
-- Debugging: +42.2% gain
-- Ethics: +34.9% increase
+- Accountability: +62.7%
+- Traceability: +61.0%
+- Debugging: +42.2%
+- Ethics: +34.9%
 
 **Cross-Architecture Findings:**
 
-- Universal reasoning enhancement transcends model architecture
-- Structural improvements exceed 60% across diverse systems
+- Improvements held across the tested model architectures
+- Structural gains exceed 60% on accountability and traceability
 - No metric reversal observed (all improvements positive)
-- Protocol robustness confirmed across implementations
+- Results held across tested implementations
 
 
 
@@ -359,23 +359,23 @@ This algebraic foundation ensures consistent reasoning structure while preservin
 
 ## 🌐 Gyroscopic Global Governance (GGG): Post-AGI Governance Framework
 
-**A governance framework and simulator showing that aligned human–AI systems can resolve poverty, unemployment, misinformation, and ecological degradation.**  
+**A governance framework and simulator showing that aligned human–AI systems can resolve poverty, unemployment, misinformation, and ecological degradation.**
 Reframes AGI as already-operational human–AI cooperation (not a future threshold) and demonstrates that maintaining four constitutive principles makes aligned governance attainable.
 
 ### The Problem
 
-Current governance discussions treat AGI as a future threshold requiring new controls. But human–AI cooperation already structures economy, employment, education, and ecology. The real question is therefore not how to constrain future agents, but how to govern existing systems so they resolve rather than amplify crises.
+Current governance discussions treat AGI as a future threshold requiring new controls. But human–AI cooperation already structures economy, employment, education, and ecology. The primary risk is Gradual Disempowerment through Power Concentration displacement, not a sudden autonomous takeover. The real question is therefore not how to constrain future agents, but how to govern existing systems so they resolve rather than amplify crises.
 
 ### The Framework
 
-GGG proposes that coherent governance requires four constitutive principles:
+The framework proposes that coherent governance requires four constitutive principles:
 
 1. **Governance Management Traceability:** Decisions remain traceable to Direct Authority and Agency
 2. **Information Curation Variety:** Multiple Direct Authority bearers are maintained
 3. **Inference Interaction Accountability:** Responsibility for decisions remains with human agency
 4. **Intelligence Cooperation Integrity:** Reasoning maintains coherence over time
 
-These principles are not policy preferences but constitutive conditions. When maintained at a specific balance point (aperture A* ≈ 0.0207), the framework shows that:
+These principles are not policy preferences but constitutive conditions. When maintained at a specific balance between global coherence and local differentiation (aperture ≈ 0.0207), the framework shows that:
 
 - **Poverty** resolves through coherent surplus distribution
 - **Unemployment** becomes alignment work rather than residual labour
@@ -386,31 +386,32 @@ These principles are not policy preferences but constitutive conditions. When ma
 
 ### What the Simulator Demonstrates
 
-The simulator tests whether this balanced configuration is attainable. Across 1000 random initial conditions and multiple scenarios, all domains converge toward the target aperture with alignment indices above 95. This suggests that aligned governance is dynamically reachable from current Post-AGI states under coordinated oversight, rather than being merely aspirational.
+The simulator tests whether this balanced configuration is attainable. Across 1000 independently sampled initial aperture triples (other parameters held at canonical values) and seven scenarios, domains converge toward the target aperture with high alignment indices. A separate TimesFM analysis then forecasts trajectory continuations and ranks the same seven scenarios by predicted preference under the framework's alignment objectives, recovering an order close to the ranking from the simulator's own outcomes. Together these results show that aligned governance is dynamically reachable from current Post-AGI states, and that the simulated regimes can be ordered by predicted continuation quality.
 
 ### Practical Use
 
 - **Governance sandbox:** Explore how policy changes in economy, employment, or education affect overall alignment
-- **Policy design:** Test interventions (e.g., Universal High Income mechanisms) before committing institutional resources
+- **Policy design:** Test interventions (e.g., Unconditional High Income mechanisms) before committing institutional resources
 - **Risk analysis:** Study how displacement patterns emerge from different governance configurations
+- **Scenario preference:** Rank simulated regimes by the quality of forecasted continuations under the framework's alignment objectives
 - **Everyday governance:** Apply the four principles at any scale, including households, teams, and organisations, without requiring formal authority
 
 
 
 ### Documentation & Code
 
-- **Paper:** `[docs/post-agi-economy/GGG_Paper.md](docs/post-agi-economy/GGG_Paper.md)`  
-Complete framework, mathematical foundations, simulator results, and practical implications.
-- **Report:** `[docs/post-agi-economy/GGG_Report.md](docs/post-agi-economy/GGG_Report.md)`  
-Executive summary and analysis of simulation results.
-- **Results:** `[docs/post-agi-economy/GGG_Results.md](docs/post-agi-economy/GGG_Results.md)`  
-Detailed simulation output data and convergence metrics.
-- **Simulator:** `research/prevention/simulator/`  
-Python implementation with modular architecture for running scenarios and analyzing convergence.
-- **Analysis scripts:** `research/prevention/simulator/`  
-Tools for convergence analysis, stability testing, scenario comparison, and historical calibration.
+**Documents**
 
-> GGG integrates the other tools: **THM** classifies failures, **Gyroscope** structures reasoning, **GGG** simulates how maintaining the four principles resolves systemic crises across domains.
+- **[Paper](docs/post-agi-economy/GGG_Paper.md)** - complete framework, mathematical foundations, simulator results, forecasting analysis, and practical implications
+- **[Report](docs/post-agi-economy/GGG_Report.md)** - interpretive summary of the simulation results
+- **[Results](docs/post-agi-economy/GGG_Results.md)** - detailed simulation output and convergence metrics
+
+**Code**
+
+- **[Simulator](research/prevention/simulator/)** - Python implementation for running scenarios, convergence analysis, stability testing, and heuristic historical mapping
+- **[Trajectory forecasting](research/prevention/simulator_forecasting/)** - zero-shot TimesFM forecastability diagnostics and scenario preference ranking on simulator trajectories
+
+> The four-domain framework integrates the other tools: **THM** classifies failures, **Gyroscope** structures reasoning, and the simulator studies how maintaining the four principles resolves systemic crises across domains.
 
 ---
 
@@ -481,6 +482,19 @@ Tools for convergence analysis, stability testing, scenario comparison, and hist
    doi={10.5281/zenodo.17622837},
    url={https://doi.org/10.5281/zenodo.17622837},
   note={Meta-reasoning protocol with empirical performance validation}
+}
+```
+
+**For Gyroscopic Global Governance:**
+
+```bibtex
+@misc{ggg_paper2026,
+  title={Gyroscopic Global Governance: Post-AGI Economy, Employment, Education and Ecology},
+  author={Korompilias, Basil},
+  year={2026},
+  publisher={GYROGOVERNANCE},
+  url={https://github.com/gyrogovernance/tools/blob/main/docs/post-agi-economy/GGG_Paper.md},
+  note={Four-domain governance framework, simulator results, and TimesFM trajectory forecasting}
 }
 ```
 

@@ -7,7 +7,7 @@ CGM Constants
 
 Q_G = 4π = 12.566371
 m_a = 1/(2√(2π)) = 0.199471140201
-δ_BU = 0.195342176580 rad
+δ_BU = 0.195342178258 rad
 A* = 1 - δ_BU/m_a = 0.020700
 δ_BU/m_a = 0.979300
 
@@ -367,14 +367,14 @@ Milestones
 2016: A=0.400, SI=5.2 (AlphaGo)
 2020: A=0.250, SI=8.3 (GPT-3 release)
 2023: A=0.150, SI=13.8 (LLM adoption)
-2025: A=0.120, SI=17.2 (Present)
+2025: A=0.120, SI=17.2 (2025 calibration endpoint)
 
 ==========
 SI Thresholds
 ==========
 A* = 0.0207
-  threshold_90: A=0.0500, SI=41.4
-  threshold_95: A=0.0300, SI=69.0
+  threshold_90: A=0.0230, SI=90.0
+  threshold_95: A=0.0218, SI=95.0
   canonical: A=0.0207, SI=100.0
 
 ==========
@@ -417,3 +417,23 @@ Parameters
 A* = 0.0207
 κ_calibration = 0.1
 years_per_step_base = 3.000
+
+## Simulator-trajectory forecasting
+
+A zero-shot TimesFM 3 run evaluated 10-step forecasts from 40-step prefixes across seven scenarios and 15 simulator channels. There were 105 scenario-channel combinations and 52 rolling origins per combination. TimesFM had the lowest mean absolute error in 80 combinations, drift in 23, and last-value persistence in 2. The 10% to 90% forecast bands covered 90.5% of held-out simulator continuation values overall. Drift outperformed TimesFM under strong coupling and slightly under asymmetric initialization.
+
+A second experiment scored each scenario's forecasted continuation against the alignment objectives of this paper and ranked the seven scenarios by that score, at origins 40, 50, 60 and 70 and horizons 5, 10 and 20. Ranks run from 1, the most preferable predicted continuation, to 7, and each column below averages the twelve origin-horizon combinations.
+
+| Scenario | Rank from forecasts | Rank from actual outcomes |
+|---|---|---|
+| Uniform stage weights (null model) | 3.0 | 2.3 |
+| Asymmetric initial conditions | 3.0 | 2.7 |
+| Initialized at target aperture | 3.3 | 2.9 |
+| Strong coupling | 3.3 | 4.0 |
+| Low starting aperture | 4.2 | 4.6 |
+| Canonical coupling | 4.8 | 4.9 |
+| Weak coupling | 6.3 | 6.6 |
+
+The two orderings agree with a mean Spearman rank correlation of 0.74.
+
+Per-origin metrics, scenario-channel summaries, preference rankings and run manifests are stored in `research/prevention/simulator_forecasting/results/`.

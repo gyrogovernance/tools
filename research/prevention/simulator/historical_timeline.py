@@ -43,16 +43,22 @@ HISTORICAL_MILESTONES: List[Tuple[int, float, str]] = [
     (2016, 0.40, "AlphaGo"),
     (2020, 0.25, "GPT-3 release"),
     (2023, 0.15, "LLM adoption"),
-    (2025, 0.12, "Present"),
+    (2025, 0.12, "2025 calibration endpoint"),
 ]
 
-# Aperture values used for threshold comparisons
-# Note: These aperture values correspond to SI values of approximately 41.4 and 69.0,
-# not SI >= 90 or SI >= 95. The labels are historical and may need revision.
+
+def aperture_threshold(si_threshold: float, a_star: float = A_STAR) -> float:
+    """Aperture required for SI >= si_threshold on the descending branch A > A*."""
+    if not 0 < si_threshold <= 100:
+        raise ValueError("si_threshold must be in (0, 100]")
+    return a_star * (100.0 / si_threshold)
+
+
+# Projection thresholds derived from the SI formula, not hard-coded apertures.
 SI_THRESHOLDS: List[Tuple[str, float, str]] = [
-    ("threshold_90", 0.05, "A = 0.05 (SI ≈ 41.4)"),
-    ("threshold_95", 0.03, "A = 0.03 (SI ≈ 69.0)"),
-    ("canonical", 0.0207, "A = A* (SI = 100.0)"),
+    ("threshold_90", aperture_threshold(90.0), "A for SI >= 90"),
+    ("threshold_95", aperture_threshold(95.0), "A for SI >= 95"),
+    ("canonical", A_STAR, "A = A* (SI = 100.0)"),
 ]
 
 CURRENT_YEAR = 2025

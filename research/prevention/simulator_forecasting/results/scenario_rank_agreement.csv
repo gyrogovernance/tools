@@ -1,0 +1,13 @@
+origin,horizon,spearman,top_forecast,top_actual,top_match,n_scenarios
+40,5,0.8214285714285715,strong_coupling,uniform_weights,False,7
+40,10,0.7500000000000002,uniform_weights,uniform_weights,True,7
+40,20,0.3571428571428572,asymmetric,at_astar,False,7
+50,5,0.642857142857143,at_astar,strong_coupling,False,7
+50,10,0.7500000000000002,low_aperture,at_astar,False,7
+50,20,0.4642857142857144,low_aperture,asymmetric,False,7
+60,5,0.8571428571428573,asymmetric,strong_coupling,False,7
+60,10,0.8571428571428573,asymmetric,asymmetric,True,7
+60,20,0.8928571428571429,asymmetric,asymmetric,True,7
+70,5,0.9642857142857145,strong_coupling,uniform_weights,False,7
+70,10,0.9285714285714288,uniform_weights,uniform_weights,True,7
+70,20,0.642857142857143,asymmetric,asymmetric,True,7

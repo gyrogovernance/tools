@@ -45,7 +45,7 @@ def estimate_convergence_rate(
         initial_potentials={
             "Gov0": 0.3, "Info0": 0.7, "Infer0": 0.5, "Int0": 0.4,
             "GM0": 0.15, "ICu0": 0.35, "IInter0": 0.25, "ICo0": 0.25,
-            "GT0": 0.3, "IV0": 0.7, "IA0": 0.5, "IInteg0": 0.4
+            "GMT0": 0.3, "ICV0": 0.7, "IIA0": 0.5, "ICI0": 0.4
         },
         initial_apertures={
             "A_Econ_target": 0.15,
@@ -98,7 +98,7 @@ def estimate_convergence_all_domains(
         initial_potentials={
             "Gov0": 0.3, "Info0": 0.7, "Infer0": 0.5, "Int0": 0.4,
             "GM0": 0.15, "ICu0": 0.35, "IInter0": 0.25, "ICo0": 0.25,
-            "GT0": 0.3, "IV0": 0.7, "IA0": 0.5, "IInteg0": 0.4
+            "GMT0": 0.3, "ICV0": 0.7, "IIA0": 0.5, "ICI0": 0.4
         },
         initial_apertures={
             "A_Econ_target": 0.15,
@@ -163,7 +163,7 @@ def long_horizon_stability(
         initial_potentials={
             "Gov0": 0.3, "Info0": 0.7, "Infer0": 0.5, "Int0": 0.4,
             "GM0": 0.15, "ICu0": 0.35, "IInter0": 0.25, "ICo0": 0.25,
-            "GT0": 0.3, "IV0": 0.7, "IA0": 0.5, "IInteg0": 0.4
+            "GMT0": 0.3, "ICV0": 0.7, "IIA0": 0.5, "ICI0": 0.4
         },
         initial_apertures={
             "A_Econ_target": 0.15,

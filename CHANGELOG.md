@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1-GGG_2nd_Edition] - 2026-09-03 2026-09-04
+
+### Summary
+
+Second edition of Gyroscopic Global Governance (GGG). The paper, interpretive report, and results materials are updated together with the four-domain simulator and a new trajectory-forecasting package. The edition keeps the constitutional thesis of the first public draft, tightens numerical and citation integrity, and adds zero-shot forecasting plus scenario preference ranking on the same simulated regimes.
+
+### Added
+
+*   **Simulator-trajectory forecasting:** Zero-shot TimesFM 3 evaluation of continuation accuracy across the seven scenarios, with transparent persistence and drift baselines, plus preference ranking of forecasted continuations under the framework's alignment objectives (mean Spearman agreement 0.74 with rankings from actual simulator continuations).
+*   **Forecasting package:** `research/prevention/simulator_forecasting/` (adapters, evaluation, scenario scoring and ranking, run manifests, and result tables).
+*   **Closed-form aperture constants:** Simulator and compass now derive `δ_BU = 4 arctan(k(π/4) k(m_a))` and `A* = 1 − δ_BU/m_a` from the Common Governance Model holonomy analysis (continuous target ≈ 0.020699545503), with the finite byte companion `5/256` kept distinct from the Hodge target.
+
+### Changed
+
+*   **GGG Paper (Edition 2):** Full revision of `docs/post-agi-economy/GGG_Paper.md`. Aperture is introduced as a specific balance between global coherence and local differentiation (aperture ≈ 0.0207). ASI, surplus, and ecological claims are scoped to the framework and to what the simulator actually tests. Convergence claims are aligned with the reported tables (including SI ≥ 95 timings, non-monotonic Employment paths, A*-targeting methods notes, and narrowed 1000-run and null-model interpretations). Citations corrected (verified Stechemesser entry, Ord restored, uncited references removed, single alphabetical reference list).
+*   **Interpretive Report and Results:** `GGG_Report.md` and `GGG_Results.md` updated for the same numerical story, with surplus and ecology readings tied to metrics rather than over-claimed as direct fiscal or environmental measurements, and with heuristic historical mapping language replacing present-year calibration framing.
+*   **Historical thresholds:** SI crossing apertures are computed from the SI formula rather than hard-coded values; fitted SI ≥ 95 years under the heuristic mapping remain 2034 / 2028 / 2025 for κ = 0.5 / 1.0 / 2.0.
+*   **Repository README:** GGG section updated for forecasting, Unconditional High Income naming, and the same aperture balance phrasing used in the paper.
+
+### Notes
+
+*   Re-running all seven scenarios and the long-horizon stability test with the closed-form A* leaves published result digits unchanged at the precision reported in the paper and results tables.
+
+---
+
 ## [2.0-THM] - 2026-07-03
 
 ### Summary

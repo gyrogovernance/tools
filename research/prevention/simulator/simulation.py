@@ -51,11 +51,11 @@ class ScenarioConfig:
         # Note: Ecology initial values are CGM-derived from indirect domains
         # via BU dual combination: x_Ecol = (δ_BU/m_a)·x_balanced + A*·x_deriv
         # No arbitrary initial ecology parameters needed.
-        # Target apertures
-        A_Econ_target: Optional[float] = 0.0207,
-        A_Emp_target: Optional[float] = 0.0207,
-        A_Edu_target: Optional[float] = 0.0207,
-        A_Ecol_target: Optional[float] = 0.0207,
+        # Target apertures (default: continuous CGM aperture gap A*)
+        A_Econ_target: Optional[float] = A_STAR,
+        A_Emp_target: Optional[float] = A_STAR,
+        A_Edu_target: Optional[float] = A_STAR,
+        A_Ecol_target: Optional[float] = A_STAR,
         # Enable/disable ecology
         include_ecology: bool = True,
         # Update parameters

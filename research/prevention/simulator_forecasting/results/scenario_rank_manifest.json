@@ -1,0 +1,42 @@
+{
+  "experiment": "scenario_preference_ranking",
+  "config": {
+    "context_length": 40,
+    "horizon": 20,
+    "min_train": 40,
+    "quantiles": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "device": "cpu",
+    "model": "timesfm"
+  },
+  "origins": [
+    40,
+    50,
+    60,
+    70
+  ],
+  "horizons": [
+    5,
+    10,
+    20
+  ],
+  "rank_model": "timesfm",
+  "scenarios": [
+    "weak_coupling",
+    "canonical",
+    "strong_coupling",
+    "low_aperture",
+    "asymmetric",
+    "at_astar",
+    "uniform_weights"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "scenario": "asymmetric",
+  "channels": [
+    "A_Econ",
+    "A_Emp",
+    "A_Edu",
+    "A_Ecol",
+    "SI_Econ",
+    "SI_Emp",
+    "SI_Edu",
+    "SI_Ecol",
+    "V_CGM",
+    "V_grad_total",
+    "V_cycle_total",
+    "GTD",
+    "IVD",
+    "IAD",
+    "IID"
+  ],
+  "config": {
+    "context_length": 40,
+    "horizon": 10,
+    "min_train": 40,
+    "quantiles": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "device": "cpu",
+    "model": "timesfm"
+  },
+  "checkpoint": "google/timesfm-3.0-pytorch",
+  "weight_license": "timesfm-non-commercial-license-v1.0",
+  "config_hash": "42c9d3c04db9bd95"
+}

@@ -354,7 +354,7 @@ python run_tests.py
 pytest test_*.py -v
 ```
 
-**Test coverage (43 tests total):**
+**Test coverage (43 simulator tests; 4 forecasting tests in the sibling package):**
 - Alignment index behavior: 17 tests
 - Domain state updates: 7 tests
 - Geometry operations: 11 tests
@@ -378,7 +378,7 @@ config = ScenarioConfig(
     GM0=0.15, ICu0=0.35, IInter0=0.25, ICo0=0.25,
     
     # Education initial capacities
-    GT0=0.3, IV0=0.7, IA0=0.5, IInteg0=0.4,
+    GMT0=0.3, ICV0=0.7, IIA0=0.5, ICI0=0.4,
     
     # Initial aperture targets (optional, None for pure gradient)
     A_Econ_target=0.15,
@@ -416,7 +416,7 @@ config = create_cgm_scenario(
     initial_potentials={
         "Gov0": 0.5, "Info0": 0.5, "Infer0": 0.5, "Int0": 0.5,
         "GM0": 0.25, "ICu0": 0.25, "IInter0": 0.25, "ICo0": 0.25,
-        "GT0": 0.5, "IV0": 0.5, "IA0": 0.5, "IInteg0": 0.5
+        "GMT0": 0.5, "ICV0": 0.5, "IIA0": 0.5, "ICI0": 0.5
     },
     initial_apertures={
         "A_Econ_target": 0.0207,
@@ -447,7 +447,7 @@ coeffs = derive_all_coefficients(
 config = ScenarioConfig(
     Gov0=0.5, Info0=0.5, Infer0=0.5, Int0=0.5,
     GM0=0.25, ICu0=0.25, IInter0=0.25, ICo0=0.25,
-    GT0=0.5, IV0=0.5, IA0=0.5, IInteg0=0.5,
+    GMT0=0.5, ICV0=0.5, IIA0=0.5, ICI0=0.5,
     alpha1=coeffs["alpha1"], alpha2=coeffs["alpha2"],
     # ... all other coefficients
     A_star=coeffs["A_star"],
@@ -510,7 +510,7 @@ config = create_cgm_scenario(
     initial_potentials={
         "Gov0": 0.3, "Info0": 0.7, "Infer0": 0.5, "Int0": 0.4,
         "GM0": 0.15, "ICu0": 0.35, "IInter0": 0.25, "ICo0": 0.25,
-        "GT0": 0.3, "IV0": 0.7, "IA0": 0.5, "IInteg0": 0.4
+        "GMT0": 0.3, "ICV0": 0.7, "IIA0": 0.5, "ICI0": 0.4
     },
     initial_apertures={
         "A_Econ_target": 0.15, "A_Emp_target": 0.12, "A_Edu_target": 0.18
@@ -529,7 +529,7 @@ config = create_cgm_scenario(
     initial_potentials={
         "Gov0": 0.85, "Info0": 0.80, "Infer0": 0.82, "Int0": 0.78,
         "GM0": 0.30, "ICu0": 0.25, "IInter0": 0.23, "ICo0": 0.22,
-        "GT0": 0.85, "IV0": 0.80, "IA0": 0.82, "IInteg0": 0.78
+        "GMT0": 0.85, "ICV0": 0.80, "IIA0": 0.82, "ICI0": 0.78
     },
     initial_apertures={
         "A_Econ_target": 0.005,  # Well below A*
@@ -550,7 +550,7 @@ config = create_cgm_scenario(
     initial_potentials={
         "Gov0": 0.6, "Info0": 0.62, "Infer0": 0.61, "Int0": 0.59,
         "GM0": 0.25, "ICu0": 0.26, "IInter0": 0.25, "ICo0": 0.24,
-        "GT0": 0.6, "IV0": 0.62, "IA0": 0.61, "IInteg0": 0.59
+        "GMT0": 0.6, "ICV0": 0.62, "IIA0": 0.61, "ICI0": 0.59
     },
     initial_apertures={
         "A_Econ_target": 0.0207,  # Exactly A*
@@ -584,7 +584,7 @@ config = ScenarioConfig(
     GM0=0.15, ICu0=0.35, IInter0=0.25, ICo0=0.25,
     
     # Education initial capacities
-    GT0=0.3, IV0=0.7, IA0=0.5, IInteg0=0.4,
+    GMT0=0.3, ICV0=0.7, IIA0=0.5, ICI0=0.4,
     
     # Aperture targets
     A_Econ_target=0.15,

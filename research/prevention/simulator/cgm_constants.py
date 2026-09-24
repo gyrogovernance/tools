@@ -11,6 +11,7 @@ Defines constants derived from the Common Governance Model:
 Reference: CGM Paper Section 3
 """
 
+import math
 import numpy as np
 from typing import Dict
 
@@ -24,21 +25,44 @@ S_P = np.pi / 2          # CS threshold: π/2 ≈ 1.5708
 U_P = 1 / np.sqrt(2)     # UNA threshold: 1/√2 ≈ 0.7071
 O_P = np.pi / 4          # ONA threshold: π/4 ≈ 0.7854
 
-# Aperture scale (BU threshold)
-M_A = 1 / (2 * np.sqrt(2 * np.pi))  # m_a = 1/(2√(2π)) ≈ 0.1995
-M_A_EXACT = 0.199471140201
+# Aperture scale (BU threshold): m_a = 1/(2√(2π))
+M_A = 1 / (2 * np.sqrt(2 * np.pi))
+M_A_EXACT = float(M_A)
 
 # Quantum gravity horizon
 Q_G = 4 * np.pi  # Q_G = 4π ≈ 12.566
 
-# BU monodromy defect
-DELTA_BU = 0.195342176580  # δ_BU ≈ 0.1953 rad
 
-# Canonical aperture: A* = 1 - δ_BU/m_a ≈ 0.0207
-A_STAR = 1 - (DELTA_BU / M_A_EXACT)
+def _half_rapidity_tanh(beta: float) -> float:
+    """Beltrami–Klein half-rapidity map k(β) = β / (1 + √(1 − β²))."""
+    b = float(beta)
+    if not (0.0 <= b < 1.0):
+        raise ValueError("beta must satisfy 0 <= beta < 1")
+    return b / (1.0 + math.sqrt(1.0 - b * b))
 
-# BU duality ratio (Ingress/Egress asymmetry)
-BU_DUALITY_RATIO = DELTA_BU / M_A_EXACT  # ≈ 0.9793
+
+def bu_holonomy_angle(
+    theta_ona: float | None = None,
+    m_a: float | None = None,
+) -> float:
+    """
+    Analytic BU Dual-Pole Loop angle under the declared CGM embedding.
+
+    δ_BU = 4 · arctan(k(θ_ONA) · k(m_a)), with θ_ONA = π/4 at the canonical thresholds.
+    See science docs/Findings/Analysis_Holonomy.md.
+    """
+    th = float(np.pi / 4) if theta_ona is None else float(theta_ona)
+    ma = float(M_A) if m_a is None else float(m_a)
+    return 4.0 * math.atan(_half_rapidity_tanh(th) * _half_rapidity_tanh(ma))
+
+
+# BU holonomy angle, closure ratio, and continuous aperture gap (Hodge / simulator A*)
+DELTA_BU = bu_holonomy_angle()  # ≈ 0.195342178258 rad
+BU_DUALITY_RATIO = DELTA_BU / M_A_EXACT  # ρ = δ_BU/m_a ≈ 0.979300454497
+A_STAR = 1.0 - BU_DUALITY_RATIO  # Δ = 1 − ρ ≈ 0.020699545503
+
+# Finite byte-horizon companion (hQVM); not the continuous Hodge target used below.
+APERTURE_GAP_Q256 = 5  # 5/256 ≈ 0.01953125
 
 
 # ==========
