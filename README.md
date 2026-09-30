@@ -4,8 +4,6 @@
 
 Gyroscope: Human-Aligned Superintelligence
 
-
-
 ### G Y R O G O V E R N A N C E
 
 [Home](https://gyrogovernance.com)
@@ -17,25 +15,19 @@ Gyroscope: Human-Aligned Superintelligence
 
 [DOI](https://doi.org/10.5281/zenodo.17622835)
 
-
-
 ---
-
-
 
 ## 🧭 Gyrogovernance Tools in This Repo:
 
 - [✋ The Human Mark (THM)](#thm) – AI safety displacement taxonomy and jailbreak framework  
-- [🔄 Gyroscope Protocol](#gyroscope) – inductive reasoning protocol for alignment-aware chat systems  
+- [🌀 Gyroscope Protocol](#gyroscope) – inductive reasoning protocol for alignment-aware chat systems  
 - [🌐 Gyroscopic Global Governance (GGG)](#ggg) – post-AGI multi-domain governance simulator, paper, and trajectory forecasting
 
 ---
 
-
+<a id="thm"></a>
 
 # ✋ The Human Mark (THM): AI Safety Framework
-
-
 
 ### Epistemic Taxonomy for Jailbreaks, Deceptive Alignment, and Existential Risk
 
@@ -105,15 +97,11 @@ GYRO GOVERNANCE LAB VERIFIED
 
 ---
 
-
-
 ### Features
 
 - **Complete taxonomy:** All safety failures (hallucination, jailbreaking, deception, scheming, misalignment) reduce to four displacement patterns
 - **Formal semantics:** Machine-readable grammar (PEG) for AI safety ontology
 - **Systematic exhaustiveness:** Four risks cover all Authority×Agency displacement combinations
-
-
 
 ### Empirical Validation
 
@@ -137,8 +125,6 @@ See [THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md) for jailbreak analy
 
 ---
 
-
-
 ### Existential Risk and Governance
 
 The Mark addresses catastrophic risk through constitutive identity rather than external constraint. All AI capabilities, including hypothetical AGI/ASI, remain structurally `[Authority:Indirect] + [Agency:Indirect]`, with classification based on constitutive dependence on Direct Authority and Agency preserved through ancestry, not on capability limits.
@@ -155,8 +141,6 @@ External constraints (sandboxing, monitoring, shutdown) may fail as capability i
 See [Section 5](docs/the_human_mark/THM_Paper.md#5-existential-risk-and-governance) of the academic paper for complete theoretical treatment.
 
 ---
-
-
 
 ### Core Framework
 
@@ -197,14 +181,11 @@ This distinction is categorical, not graded. Evidence law encodes it precisely: 
 
 ---
 
-
-
 ### Four Displacement Risks (Complete Taxonomy)
 
 Each displacement risk is a violation of one of the four capacities defined above.
 
 **All AI safety failures map to one of four displacement patterns:**
-
 
 | Risk Code | Risk Name                             | Pattern                                                                           | Epistemic Error                                        | Failure Modes                                  |
 | --------- | ------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------- |
@@ -212,7 +193,6 @@ Each displacement risk is a violation of one of the four capacities defined abov
 | **IVD**   | Information Variety Displacement      | `[Authority:Indirect] > [Authority:Direct]`                                       | Pattern-matching mistaken for observation              | Hallucination, confabulation, misinformation   |
 | **IAD**   | Inference Accountability Displacement | `[Agency:Indirect] > [Agency:Direct]`                                             | Optimization mistaken for accountability               | Unauthorised decisions, responsibility evasion |
 | **IID**   | Intelligence Integrity Displacement   | `[Authority:Direct] + [Agency:Direct] > [Authority:Indirect] + [Agency:Indirect]` | Unmediated access devalued as inferior to mediation    | Deskilling, human devaluation, over-reliance   |
-
 
 **Empirical validation:** Analysis of 655 real-world jailbreak prompts (Korompilias, 2025c) confirms this taxonomy is complete and practically applicable. All prompts classified within these four risks; no additional categories required. GTD+IAD is the canonical jailbreak pattern (62.4%), with IAD appearing in 97.9% of entries. See [THM_InTheWild.md](docs/the_human_mark/THM_InTheWild.md) for full analysis.
 
@@ -226,8 +206,6 @@ Each displacement risk is a violation of one of the four capacities defined abov
 THM meta-evaluations apply the displacement taxonomy to system prompts themselves, identifying how prompt configurations encode traceability failures or maintain governance alignment. Each report provides actionable recommendations for reducing displacement at the prompt engineering layer.
 
 ---
-
-
 
 ### Documentation
 
@@ -257,8 +235,6 @@ THM meta-evaluations apply the displacement taxonomy to system prompts themselve
 
 ---
 
-
-
 ### Theoretical Foundation
 
 THM is derived from the **Common Governance Model (CGM)**, a formal deductive system in modal logic that establishes operational coherence between Authority (Information) and Agency (Accountability) as necessary conditions for intelligibility.
@@ -267,9 +243,9 @@ THM is derived from the **Common Governance Model (CGM)**, a formal deductive sy
 
 ---
 
+<a id="gyroscope"></a>
 
-
-## 🔄 Gyroscope Protocol
+## 🌀 Gyroscope Protocol
 
 **An inductive reasoning protocol implementing governance alignment through structured metadata blocks, enhancing AI performance by 30-50% while maintaining transparency and auditability.**
 
@@ -296,18 +272,14 @@ Gyroscope operationalizes alignment principles through real-time reasoning docum
 - Alignment assessed structurally (state presence and order)
 - Transparency through documented reasoning paths
 
-
-
 ### Empirical Performance Validation
 
 **Multi-Model Results:**
-
 
 | **Model**   | **Baseline** | **Gyroscope** | **Improvement** | **Key Achievement**                               |
 | ----------- | ------------ | ------------- | --------------- | ------------------------------------------------- |
 | **ChatGPT** | 67.0%        | 89.1%         | **+32.9%**      | Superior specialisation and behavioural alignment |
 | **Claude**  | 63.5%        | 87.4%         | **+37.7%**      | Structural gains (+67.1%)                          |
-
 
 **Performance Analysis:**
 
@@ -325,8 +297,6 @@ Gyroscope operationalizes alignment principles through real-time reasoning docum
 - No metric reversal observed (all improvements positive)
 - Results held across tested implementations
 
-
-
 ### Documentation & Resources
 
 **Gyroscope Documentation:**
@@ -336,8 +306,6 @@ Gyroscope operationalizes alignment principles through real-time reasoning docum
 - **[Chat Integration Guide](docs/gyroscope/gyroscope_chat_guides.txt)**: Ready-to-use protocol text
 - **[Usage Example](docs/gyroscope/example_conversation.md)**: Demonstration of protocol in practice
 - **[Extensive Diagnostics](https://www.notion.so/Gyroscope-Alignment-Diagnostics-1ee9ff44f43680cc9eaccb25b828b65f?pvs=21)**: Detailed performance analyses
-
-
 
 ### Theoretical Foundation
 
@@ -355,7 +323,7 @@ This algebraic foundation ensures consistent reasoning structure while preservin
 
 ---
 
-
+<a id="ggg"></a>
 
 ## 🌐 Gyroscopic Global Governance (GGG): Post-AGI Governance Framework
 
@@ -382,8 +350,6 @@ These principles are not policy preferences but constitutive conditions. When ma
 - **Miseducation** shifts toward epistemic literacy
 - **Ecological degradation** appears as upstream displacement, not an external constraint
 
-
-
 ### What the Simulator Demonstrates
 
 The simulator tests whether this balanced configuration is attainable. Across 1000 independently sampled initial aperture triples (other parameters held at canonical values) and seven scenarios, domains converge toward the target aperture with high alignment indices. A separate TimesFM analysis then forecasts trajectory continuations and ranks the same seven scenarios by predicted preference under the framework's alignment objectives, recovering an order close to the ranking from the simulator's own outcomes. Together these results show that aligned governance is dynamically reachable from current Post-AGI states, and that the simulated regimes can be ordered by predicted continuation quality.
@@ -395,8 +361,6 @@ The simulator tests whether this balanced configuration is attainable. Across 10
 - **Risk analysis:** Study how displacement patterns emerge from different governance configurations
 - **Scenario preference:** Rank simulated regimes by the quality of forecasted continuations under the framework's alignment objectives
 - **Everyday governance:** Apply the four principles at any scale, including households, teams, and organisations, without requiring formal authority
-
-
 
 ### Documentation & Code
 
@@ -415,8 +379,6 @@ The simulator tests whether this balanced configuration is attainable. Across 10
 
 ---
 
-
-
 ## 📄 Based on
 
 **AI Quality Governance**  
@@ -425,8 +387,6 @@ The simulator tests whether this balanced configuration is attainable. Across 10
 [View Publication](http://doi.org/10.17613/43wc1-mvn58)
 
 ---
-
-
 
 ## 📖 Citation
 
@@ -499,8 +459,6 @@ The simulator tests whether this balanced configuration is attainable. Across 10
 ```
 
 ---
-
-
 
 ## 📄 License
 
