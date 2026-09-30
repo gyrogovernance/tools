@@ -2,18 +2,29 @@
 
 > **Gyroscopic Alignment Behaviour Lab**
 
-Gyroscope: Human-Aligned Superintelligence
+<div align="center">
 
-### G Y R O G O V E R N A N C E
+![Superintelligence](/assets/gyro_cover_tools.png)
 
-[Home](https://gyrogovernance.com)
-[Apps](https://github.com/gyrogovernance/apps)
-[Diagnostics](https://github.com/gyrogovernance/diagnostics)
-[Tools](https://github.com/gyrogovernance/tools)
-[Science](https://github.com/gyrogovernance/science)
-[Superintelligence](https://github.com/gyrogovernance/superintelligence)
+</div>
 
-[DOI](https://doi.org/10.5281/zenodo.17622835)
+<div align="center">
+
+**G Y R O  - G O V E R N A N C E**
+
+[![Home](/assets/menu/gg_icon_home.svg)](https://gyrogovernance.com)
+[![Apps](/assets/menu/gg_icon_apps.svg)](https://github.com/gyrogovernance/apps)
+[![Diagnostics](/assets/menu/gg_icon_diagnostics.svg)](https://github.com/gyrogovernance/diagnostics)
+[![Tools](/assets/menu/gg_icon_tools.svg)](https://github.com/gyrogovernance/tools)
+[![Science](/assets/menu/gg_icon_science.svg)](https://github.com/gyrogovernance/science)
+[![Superintelligence](/assets/menu/gg_icon_asi.svg)](https://github.com/gyrogovernance/superintelligence)
+
+</div>
+
+---
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
 
 ---
 
